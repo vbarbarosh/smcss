@@ -1,0 +1,11 @@
+{
+  "name": "smcss",
+  "version": "1.0.0",
+  "description": "A CSS Framework for Prototyping",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (http://github.com/vbarbarosh)",
+  "license": "ISC"
+}
