@@ -1,11 +1,11 @@
 /* scrollbar */
 
-.scrollbar-off {
+.scrollbar-none {
     overflow: scroll;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
 }
 
-.scrollbar-off::-webkit-scrollbar {
+.scrollbar-none::-webkit-scrollbar {
     display: none;
 }

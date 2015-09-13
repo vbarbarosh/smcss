@@ -2,10 +2,15 @@
 
 .r-m * { margin: 0; }
 
-/* .ma should come before .m* in order to allow the latter to override it */
+/* .xm has the lowest priority.
+ * Everything from the next will be able to override any part of margin. */
+
+.xm { margin: 0; }
+
+/* .ma should come after .xm and before any other margin overriding classes.
+ * That way we can write something like .ma.mv10 which gives us margin: 10px auto. */
 
 .ma { margin: auto; }
-.xm { margin: 0; }
 
 .m5 { margin: 5px; }
 .m10 { margin: 10px; }

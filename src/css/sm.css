@@ -12,6 +12,11 @@
 @import "line-height.css";
 @import "z-index.css";
 @import "overflow.css";
+@import "box.css";
+@import "box-sizing.css";
+@import "box-shadow.css";
+@import "opacity.css";
+@import "scrollbar.css";
 
 @import "box-sizing.css";
 @import "background.css";
