@@ -1,3 +1,5 @@
 /* overflow */
 
-.oh { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-scroll { overflow: scroll; }

@@ -1,5 +1,7 @@
 /* background */
 
+.xbg { background: none; }
+
 /* http://css-tricks.com/perfect-full-page-background-image/ */
 .background-cover {
     background: transparent no-repeat center center;
@@ -9,7 +11,16 @@
     background-size: cover;
 }
 
-/* simple backgrounds for debugging */
+/* Simple backgrounds for debugging */
+
+.black { background: #000; }
+.gray { background: #888; }
+.white { background: #fff; }
+.red { background: #f88; }
+.green { background: #8f8; }
+.blue { background: #88f; }
+.yellow { background: #ff8; }
+.cyan { background: #8ff; }
 
 .bg888 { background: #888; }
 .bg88f { background: #88f; }
@@ -19,5 +30,3 @@
 .bgf8f { background: #f8f; }
 .bgff8 { background: #ff8; }
 .bgfff { background: #fff; }
-
-.xbg { background: none; }

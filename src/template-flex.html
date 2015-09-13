@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flex Layout | sm</title>
+    <style type="text/css">
+        .border {
+            border: 5px solid black;
+        }
+
+        .border1 {
+            border: 1px solid black;
+        }
+
+        .fixed-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .w400 {
+            width: 400px;
+        }
+
+        .overflow-auto {
+            overflow: auto;
+        }
+
+        .container-box {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .box-height {
+            box-sizing: border-box;
+            height: 100%;
+        }
+    </style>
+    <link href="sm.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<p class="border1 flex flex-align-center">
+    <span class="fs14 red">Lorem ipsum</span>
+    <span class="fs30 blue">Dolor sit amet</span>
+</p>
+
+<div class="fixed-box flex-row-center overflow-auto mt50">
+    <div class="flex-column box-height w400 border">
+        <div class="red">
+            <p>Nam vel metus fermentum, ultricies nulla tempor, egestas est. In volutpat, odio id consequat egestas, elit velit egestas eros, gravida viverra nisi risus eget enim. Quisque ac turpis nulla. Fusce feugiat eros sed tortor pulvinar, vitae imperdiet massa dictum. Proin tempus odio erat, ac gravida tortor aliquam id. Phasellus lorem justo, finibus sed lacus a, venenatis convallis massa</p>
+        </div>
+        <div class="green">
+            <p>Donec ac tellus eu ex facilisis tincidunt ut tempor nisl. Proin in sapien urna. Integer justo nulla, suscipit non elementum id, semper non urna. Vivamus volutpat ligula mi, semper semper urna facilisis eget. Phasellus imperdiet mi vitae est volutpat, sed cursus diam faucibus. Quisque scelerisque ex sed purus pellentesque pretium.</p>
+        </div>
+        <div class="blue flex-grow overflow-auto" style="min-height: 100px;">
+            <p>Vivamus faucibus, nibh eu aliquet molestie, nulla mauris bibendum dolor, ut auctor ante erat in dolor. Donec eu aliquam ipsum, nec ultricies mauris. Sed cursus tempor risus, quis gravida eros auctor et. Nulla facilisi. Curabitur commodo, nisi at cursus scelerisque, ante eros eleifend orci, semper faucibus justo nisl vitae odio. Maecenas aliquet cursus tortor vitae faucibus. Sed sed augue in risus venenatis blandit. Quisque quam erat, malesuada et luctus ac, laoreet sed eros. Praesent mollis, lacus non tincidunt tristique, turpis eros ultricies leo, non convallis risus velit ut enim. Integer quis gravida turpis. Cras tincidunt lorem sed metus vestibulum mattis ac quis mauris. Proin sit amet ultrices dui. Maecenas pharetra mauris quis neque pulvinar fringilla.</p>
+            <p>Mauris malesuada ante in velit sollicitudin, at vulputate risus tristique. Ut risus turpis, feugiat eu erat a, luctus luctus ex. Vivamus vitae justo nec est dictum fermentum. In imperdiet eros in nunc posuere convallis. Pellentesque sed orci ac massa bibendum vehicula. Etiam vitae risus nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+    </div>
+    <div class="flex-column box-height w400 border">
+        <div class="red">
+            <p>Nam vel metus fermentum, ultricies nulla tempor, egestas est. In volutpat, odio id consequat egestas, elit velit egestas eros, gravida viverra nisi risus eget enim. Quisque ac turpis nulla. Fusce feugiat eros sed tortor pulvinar, vitae imperdiet massa dictum. Proin tempus odio erat, ac gravida tortor aliquam id. Phasellus lorem justo, finibus sed lacus a, venenatis convallis massa</p>
+        </div>
+        <div class="blue flex-grow overflow-auto" style="min-height: 100px;">
+            <p>Vivamus faucibus, nibh eu aliquet molestie, nulla mauris bibendum dolor, ut auctor ante erat in dolor. Donec eu aliquam ipsum, nec ultricies mauris. Sed cursus tempor risus, quis gravida eros auctor et. Nulla facilisi. Curabitur commodo, nisi at cursus scelerisque, ante eros eleifend orci, semper faucibus justo nisl vitae odio. Maecenas aliquet cursus tortor vitae faucibus. Sed sed augue in risus venenatis blandit. Quisque quam erat, malesuada et luctus ac, laoreet sed eros. Praesent mollis, lacus non tincidunt tristique, turpis eros ultricies leo, non convallis risus velit ut enim. Integer quis gravida turpis. Cras tincidunt lorem sed metus vestibulum mattis ac quis mauris. Proin sit amet ultrices dui. Maecenas pharetra mauris quis neque pulvinar fringilla.</p>
+            <p>Mauris malesuada ante in velit sollicitudin, at vulputate risus tristique. Ut risus turpis, feugiat eu erat a, luctus luctus ex. Vivamus vitae justo nec est dictum fermentum. In imperdiet eros in nunc posuere convallis. Pellentesque sed orci ac massa bibendum vehicula. Etiam vitae risus nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+        <div class="green">
+            <p>Donec ac tellus eu ex facilisis tincidunt ut tempor nisl. Proin in sapien urna. Integer justo nulla, suscipit non elementum id, semper non urna. Vivamus volutpat ligula mi, semper semper urna facilisis eget. Phasellus imperdiet mi vitae est volutpat, sed cursus diam faucibus. Quisque scelerisque ex sed purus pellentesque pretium.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
