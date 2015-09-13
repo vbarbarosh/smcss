@@ -1,0 +1,33 @@
+/* margin-chain */
+
+/* xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ *           |          |          |
+ *         margin     margin     margin
+ */
+
+/*
+.mlg5 > * + * { margin-left: 5px; }
+.mlg10 > * + * { margin-left: 10px; }
+.mlg15 > * + * { margin-left: 15px; }
+.mlg20 > * + * { margin-left: 20px; }
+.mlg25 > * + * { margin-left: 25px; }
+.mlg30 > * + * { margin-left: 30px; }
+.mlg35 > * + * { margin-left: 35px; }
+.mlg40 > * + * { margin-left: 40px; }
+.mlg45 > * + * { margin-left: 45px; }
+.mlg50 > * + * { margin-left: 50px; }
+*/
+
+.mc5 > *:not(:last-child) { margin-right: 5px; }
+.mc10 > *:not(:last-child) { margin-right: 10px; }
+.mc15 > *:not(:last-child) { margin-right: 15px; }
+.mc20 > *:not(:last-child) { margin-right: 20px; }
+.mc25 > *:not(:last-child) { margin-right: 25px; }
+.mc30 > *:not(:last-child) { margin-right: 30px; }
+.mc35 > *:not(:last-child) { margin-right: 35px; }
+.mc40 > *:not(:last-child) { margin-right: 40px; }
+.mc45 > *:not(:last-child) { margin-right: 45px; }
+.mc50 > *:not(:last-child) { margin-right: 50px; }

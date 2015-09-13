@@ -476,41 +476,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .lh99 { line-height: 99px; }
 
-.lh10m { line-height: 1em * 10/10; }
+.lh10m { line-height: 1em; }
 
-.lh15m { line-height: 1em * 15/10; }
+.lh15m { line-height: 1em; }
 
-.lh20m { line-height: 1em * 20/10; }
+.lh20m { line-height: 1em; }
 
-.lh25m { line-height: 1em * 25/10; }
+.lh25m { line-height: 1em; }
 
-.lh30m { line-height: 1em * 30/10; }
+.lh30m { line-height: 1em; }
 
-.lh35m { line-height: 1em * 35/10; }
+.lh35m { line-height: 1em; }
 
-.lh40m { line-height: 1em * 40/10; }
+.lh40m { line-height: 1em; }
 
-.lh45m { line-height: 1em * 45/10; }
+.lh45m { line-height: 1em; }
 
-.lh50m { line-height: 1em * 50/10; }
+.lh50m { line-height: 1em; }
 
-.lh55m { line-height: 1em * 55/10; }
+.lh55m { line-height: 1em; }
 
-.lh60m { line-height: 1em * 60/10; }
+.lh60m { line-height: 1em; }
 
-.lh65m { line-height: 1em * 65/10; }
+.lh65m { line-height: 1em; }
 
-.lh70m { line-height: 1em * 70/10; }
+.lh70m { line-height: 1em; }
 
-.lh75m { line-height: 1em * 75/10; }
+.lh75m { line-height: 1em; }
 
-.lh80m { line-height: 1em * 80/10; }
+.lh80m { line-height: 1em; }
 
-.lh85m { line-height: 1em * 85/10; }
+.lh85m { line-height: 1em; }
 
-.lh90m { line-height: 1em * 90/10; }
+.lh90m { line-height: 1em; }
 
-.lh95m { line-height: 1em * 95/10; }
+.lh95m { line-height: 1em; }
 
 .ls1 { letter-spacing: 1px; }
 
@@ -710,25 +710,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .ls99 { letter-spacing: 99px; }
 
-.m0 { margin: 0px; }
+.m0 { margin: 0; }
 
-.ml0 { margin-left: 0px; }
+.ml0 { margin-left: 0; }
 
-.mr0 { margin-right: 0px; }
+.mr0 { margin-right: 0; }
 
-.mv0 { margin-top: 0px; margin-bottom: 0px; }
+.mv0 { margin-top: 0; margin-bottom: 0; }
 
-.mh0 { margin-left: 0px; margin-right: 0px; }
+.mh0 { margin-left: 0; margin-right: 0; }
 
-.p0 { padding: 0px; }
+.p0 { padding: 0; }
 
-.pl0 { padding-left: 0px; }
+.pl0 { padding-left: 0; }
 
-.pr0 { padding-right: 0px; }
+.pr0 { padding-right: 0; }
 
-.pv0 { padding-top: 0px; padding-bottom: 0px; }
+.pv0 { padding-top: 0; padding-bottom: 0; }
 
-.ph0 { padding-left: 0px; padding-right: 0px; }
+.ph0 { padding-left: 0; padding-right: 0; }
 
 .m5 { margin: 5px; }
 

@@ -1,0 +1,17 @@
+/* inline menu
+ *
+ * <ul class="im">
+ * <li><a href="a.html">aaaaa</li>
+ * <li class="active"><a href="a.html">bbbbb</li>
+ * <li><a href="a.html">ccccc</li>
+ * <li><a href="a.html">ddddd</li>
+ * <li><a href="a.html">eeeee</li>
+ * <li><a href="a.html">fffff</li>
+ * </ul>
+ *
+ * aaaaa bbbbb ccccc ddddd eeeee fffff
+ */
+
+.im a { display: block; text-decoration: none; text-transform: uppercase; padding-left: 1em; padding-right: 1em; }
+.im li { display: inline-block; margin-left: -0.2em; margin-right: -0.2em; }
+.im .active a { font-weight: 600; }

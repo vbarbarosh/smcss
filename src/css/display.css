@@ -1,0 +1,12 @@
+/* display
+ * http://reference.sitepoint.com/css/display */
+
+.dn { display: none; }
+.db { display: block; }
+.di { display: inline; }
+.dib { display: inline-block; }
+
+.hidden { display: none; }
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }

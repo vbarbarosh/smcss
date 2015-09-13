@@ -1,0 +1,31 @@
+/* grid */
+
+/* reference
+ * http://css-tricks.com/dont-overthink-it-grids/
+ *
+ * CSS Grids - YUI Library
+ * http://yuilibrary.com/yui/docs/cssgrids/index.html
+ */
+
+/* http://compass-style.org/reference/compass/utilities/general/clearfix/ */
+.grid {
+    *zoom: 1;
+}
+
+.grid:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.grid2 { overflow: hidden; }
+.grid2 > .col1 { float: left; width: 50%; }
+.grid2 > .col2 { float: left; width: 50%; }
+
+.grid3 { overflow: hidden; }
+.grid3 > .col1 { float: left; width: 33.333333%; }
+.grid3 > .col2 { float: left; width: 33.333333%; }
+.grid3 > .col3 { float: left; width: 33.333333%; }

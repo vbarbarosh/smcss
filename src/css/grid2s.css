@@ -1,0 +1,25 @@
+/* 2s -- two columns, each columns should be placed at sides (1st at
+ * left, 2nd at right) */
+
+/*
+	.grid2s { overflow: hidden; }
+	.grid2s > .col1 { float: left; }
+	.grid2s > .col2 { float: right; }
+*/
+
+/* http://compass-style.org/reference/compass/utilities/general/clearfix/ */
+.grid2s {
+    *zoom: 1;
+}
+
+.grid2s:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.grid2s > .col1 { float: left; }
+.grid2s > .col2 { float: right; }

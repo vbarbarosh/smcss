@@ -1,0 +1,11 @@
+/**
+ * Installation
+ * ============
+ *
+ * $ autoprefixer transition.orig.css -o transition.css
+ *
+ */
+
+.transition-opacity {
+    transition: opacity .5s ease-in-out;
+}

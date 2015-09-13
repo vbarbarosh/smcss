@@ -1,0 +1,66 @@
+/* margin-group */
+
+/* margin group
+ *
+ * TODO
+ * consider to change .mgN to .vN (vertical space between adjacent
+ * siblings)
+ *
+ * DESIGNATION
+ * separate siblings from each other by equal amount of space
+ *
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ */
+
+/*
+.mg5 > * + * { margin-top: 5px; }
+.mg10 > * + * { margin-top: 10px; }
+.mg15 > * + * { margin-top: 15px; }
+.mg20 > * + * { margin-top: 20px; }
+.mg25 > * + * { margin-top: 25px; }
+.mg30 > * + * { margin-top: 30px; }
+.mg35 > * + * { margin-top: 35px; }
+.mg40 > * + * { margin-top: 40px; }
+.mg45 > * + * { margin-top: 45px; }
+.mg50 > * + * { margin-top: 50px; }
+
+.mg05m > * + * { margin-top: 0.5em; }
+.mg10m > * + * { margin-top: 1.0em; }
+.mg15m > * + * { margin-top: 1.5em; }
+.mg20m > * + * { margin-top: 2.0em; }
+.mg25m > * + * { margin-top: 2.5em; }
+.mg30m > * + * { margin-top: 3.0em; }
+.mg35m > * + * { margin-top: 3.5em; }
+.mg40m > * + * { margin-top: 4.0em; }
+.mg45m > * + * { margin-top: 4.5em; }
+.mg50m > * + * { margin-top: 5.0em; }
+*/
+
+.mg5 > *:not(:last-child) { margin-bottom: 5px; }
+.mg10 > *:not(:last-child) { margin-bottom: 10px; }
+.mg15 > *:not(:last-child) { margin-bottom: 15px; }
+.mg20 > *:not(:last-child) { margin-bottom: 20px; }
+.mg25 > *:not(:last-child) { margin-bottom: 25px; }
+.mg30 > *:not(:last-child) { margin-bottom: 30px; }
+.mg35 > *:not(:last-child) { margin-bottom: 35px; }
+.mg40 > *:not(:last-child) { margin-bottom: 40px; }
+.mg45 > *:not(:last-child) { margin-bottom: 45px; }
+.mg50 > *:not(:last-child) { margin-bottom: 50px; }

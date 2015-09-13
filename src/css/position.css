@@ -1,0 +1,24 @@
+/* position
+ * http://reference.sitepoint.com/css/position */
+
+.stat { position: static; }
+
+.ar5 { position: absolute; right: 5px; }
+.ar10 { position: absolute; right: 10px; }
+.ar15 { position: absolute; right: 15px; }
+.ar20 { position: absolute; right: 20px; }
+.ar25 { position: absolute; right: 25px; }
+.ar30 { position: absolute; right: 30px; }
+.ar35 { position: absolute; right: 35px; }
+.ar40 { position: absolute; right: 40px; }
+.ar45 { position: absolute; right: 45px; }
+.ar50 { position: absolute; right: 50px; }
+.ar55 { position: absolute; right: 55px; }
+.ar60 { position: absolute; right: 60px; }
+.ar65 { position: absolute; right: 65px; }
+.ar70 { position: absolute; right: 70px; }
+.ar75 { position: absolute; right: 75px; }
+.ar80 { position: absolute; right: 80px; }
+.ar85 { position: absolute; right: 85px; }
+.ar90 { position: absolute; right: 90px; }
+.ar95 { position: absolute; right: 95px; }

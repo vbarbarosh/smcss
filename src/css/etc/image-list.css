@@ -1,0 +1,31 @@
+/* image list
+ *
+ * <ul class="il10">
+ * <li><img src="a.jpg"></li>
+ * <li><img src="b.jpg"></li>
+ * <li><img src="c.jpg"></li>
+ * <li><img src="d.jpg"></li>
+ * <li><img src="e.jpg"></li>
+ * <li><img src="f.jpg"></li>
+ * <li><img src="g.jpg"></li>
+ * <li><img src="h.jpg"></li>
+ * <li><img src="i.jpg"></li>
+ * <li><img src="j.jpg"></li>
+ * <li><img src="k.jpg"></li>
+ * <li><img src="l.jpg"></li>
+ * </ul>
+ *
+ * aaaaaa.bbbbbb.cccccc.dddddd.eeeeee.ffffff
+ * aaaaaa.bbbbbb.cccccc.dddddd.eeeeee.ffffff
+ * aaaaaa.bbbbbb.cccccc.dddddd.eeeeee.ffffff
+ * ......................................... - magin
+ * gggggg.hhhhhh.iiiiii.jjjjjj.kkkkkk.llllll
+ * gggggg.hhhhhh.iiiiii.jjjjjj.kkkkkk.llllll
+ * gggggg.hhhhhh.iiiiii.jjjjjj.kkkkkk.llllll
+ *       |      |      |      |      |
+ *     margin margin margin margin margin
+ */
+
+.il10 { margin-left: -10px; margin-top: -10px; overflow: hidden; }
+.il10 li { margin-left: 10px; margin-top: 10px; float: left; }
+.il10 img { display: block; }

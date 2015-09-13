@@ -1,0 +1,16 @@
+/* capitalization / text-transform */
+
+.uc { text-transform: uppercase; } /* upper case */
+.lc { text-transform: lowercase; } /* lower case */
+.cc { text-transform: capitalize; } /* camel case */
+.xc { text-transform: none; } /* remove capitalization (remain text as is) */
+
+.r-uc * { text-transform: uppercase; } /* recursive upper case */
+.r-lc * { text-transform: lowercase; } /* recursive lower case */
+.r-cc * { text-transform: capitalize; } /* recursive camel case */
+.r-xc * { text-transform: none; } /* recursive remove capitalization (remain text as is) */
+
+.h-uc:hover { text-transform: uppercase; } /* upper case */
+.h-lc:hover { text-transform: lowercase; } /* lower case */
+.h-cc:hover { text-transform: capitalize; } /* camel case */
+.h-xc:hover { text-transform: none; } /* remove capitalization (remain text as is) */
