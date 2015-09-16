@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>switch | sm</title>
+    <style type="text/css">
+
+        .container {
+            width: 100px;
+            margin: 140px auto 0;
+        }
+
+        /* http://uilang.com */
+        /* http://www.thesaurus.com/browse/client */
+
+        .switch,
+        .switch-thumb {
+            transition: .4s;
+        }
+
+        .switch {
+            cursor: pointer;
+            border: 2px solid #e8eaec;
+            border-radius: 999px;
+            background: #fafafb;
+        }
+
+        .switch.active {
+            border-color: #41c955;
+            background: #52d468;
+        }
+
+        .switch-frame {
+            margin: 0 25px;
+        }
+
+        .switch-thumb {
+            position: relative;
+            left: 0;
+            margin-left: -25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 999px;
+            box-shadow: 0 4px 4px rgba(26, 53, 71, .25), 0 0 0 1px rgba(26, 53, 71, .07);
+            background: #fff;
+        }
+
+        .switch.active .switch-thumb {
+            left: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="switch">
+        <div class="switch-frame">
+            <div class="switch-thumb"></div>
+        </div>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).on('click', '.switch', function () {
+        $(this).toggleClass('active');
+    });
+</script>
+
+</body>
+</html>
