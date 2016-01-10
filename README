@@ -3,6 +3,16 @@ css_sm: a css framework for prototyping
 
 A CSS Framework for Prototyping
 
+Configuration
+-------------
+
+$ bin/configure
+
+Building
+--------
+
+$ bin/build
+
 Reference
 ---------
 
