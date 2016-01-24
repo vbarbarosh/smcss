@@ -1,0 +1,21 @@
+.table-mg5 > tr + tr > td {
+    padding-top: 5px;
+}
+
+.rainbow > :nth-child(1n) {
+    background: #f88;
+}
+
+.rainbow > :nth-child(2n) {
+    background: #8f8;
+}
+
+.rainbow > :nth-child(3n) {
+    background: #88f;
+}
+
+.tmp > :before {
+    content: 'xx';
+    border: 2px solid green;
+    margin-top: 1px;
+}

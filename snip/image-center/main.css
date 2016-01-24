@@ -1,0 +1,6 @@
+/* http://www.mademyday.de/css-height-equals-width-with-pure-css.html */
+.expand-height:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}

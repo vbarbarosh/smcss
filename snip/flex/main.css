@@ -1,0 +1,33 @@
+.border {
+    border: 5px solid black;
+}
+
+.border1 {
+    border: 1px solid black;
+}
+
+.fixed-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.w400 {
+    width: 400px;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.container-box {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.box-height {
+    box-sizing: border-box;
+    height: 100%;
+}

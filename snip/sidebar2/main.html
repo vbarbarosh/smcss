@@ -1,0 +1,104 @@
+<table class="sidebar-table silver">
+<tbody>
+    <tr class="sidebar-tr-red">
+        <td>
+            <label for="sidebar-size">
+                Size
+            </label>
+            <input id="sidebar-size" class="w75" type="text" />
+        </td>
+        <td>
+            <button>Apply Size</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-pink sidebar-tr-separator">
+        <td>
+            <label for="sidebar-background-color-1">
+                Background Color
+            </label>
+        </td>
+        <td>
+            <input id="sidebar-background-color-1" type="color" />
+            <input type="color" />
+            <button>R</button>
+            <button>S</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-pink">
+        <td>
+            <label for="sidebar-shape-color-1">
+                Shape Color
+            </label>
+        </td>
+        <td>
+            <input id="sidebar-shape-color-1" type="color" />
+            <input type="color" />
+            <button>R</button>
+            <button>S</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-blue sidebar-tr-separator">
+        <td>
+            <label for="sidebar-shape-scale-plus">
+                Shape Scale
+            </label>
+        </td>
+        <td>
+            <button id="sidebar-shape-scale-plus">+</button>
+            <button>-</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-green sidebar-tr-separator">
+        <td>
+            <input id="sidebar-inner-shadow" type="checkbox" v-model="innerShadow" />
+            <label for="sidebar-inner-shadow">
+                Inner Shadow
+            </label>
+        </td>
+        <td class="r">
+            <button v-show="innerShadow">settings</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-green">
+        <td>
+            <input id="sidebar-drop-shadow" type="checkbox" v-model="dropShadow" />
+            <label for="sidebar-drop-shadow">
+                Drop Shadow
+            </label>
+        </td>
+        <td class="r">
+            <button v-show="dropShadow">settings</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-green">
+        <td>
+            <input id="sidebar-gloss" type="checkbox" v-model="gloss" />
+            <label for="sidebar-gloss">
+                Gloss
+            </label>
+        </td>
+        <td class="r">
+            <button v-show="gloss">settings</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-yellow sidebar-tr-separator">
+        <td>
+            Background
+        </td>
+        <td class="r">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+        </td>
+    </tr>
+    <tr class="sidebar-tr-yellow">
+        <td colspan="2" style="max-width: 200px; white-space: normal;">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda, delectus doloremque hic incidunt ipsam molestias porro possimus. Culpa, delectus eligendi facere ipsam iste laudantium nemo numquam odio sapiente totam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda, delectus doloremque hic incidunt ipsam molestias porro possimus. Culpa, delectus eligendi facere ipsam iste laudantium nemo numquam odio sapiente totam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda, delectus doloremque hic incidunt ipsam molestias porro possimus. Culpa, delectus eligendi facere ipsam iste laudantium nemo numquam odio sapiente totam.
+        </td>
+    </tr>
+</tbody>
+</table>
