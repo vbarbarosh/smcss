@@ -5,8 +5,20 @@
 .db { display: block; }
 .di { display: inline; }
 .dib { display: inline-block; }
+.xd { display: none; }
 
-.hidden { display: none; }
-.block { display: block; }
-.inline { display: inline; }
-.inline-block { display: inline-block; }
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}

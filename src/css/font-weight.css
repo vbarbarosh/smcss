@@ -17,6 +17,8 @@
 .b7 { font-weight: 700; }
 .b8 { font-weight: 800; }
 
+.bold { font-weight: bold; }
+
 .h-b:hover { font-weight: bold; }
 .h-bb:hover { font-weight: 800; }
 .h-b3:hover { font-weight: 300; }

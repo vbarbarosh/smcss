@@ -31,3 +31,15 @@
 .bgf8f { background: #f8f; }
 .bgff8 { background: #ff8; }
 .bgfff { background: #fff; }
+
+.rainbow > :nth-child(1n) {
+    background: #f88;
+}
+
+.rainbow > :nth-child(2n) {
+    background: #8f8;
+}
+
+.rainbow > :nth-child(3n) {
+    background: #88f;
+}

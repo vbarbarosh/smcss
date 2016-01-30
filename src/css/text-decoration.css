@@ -7,7 +7,10 @@
 .u.s { text-decoration: underline line-through; }
 .o.s { text-decoration: overline line-through; }
 .u.o.s { text-decoration: underline overline line-through; }
+
+/* taken by display: none
 .xd { text-decoration: none; }
+*/
 
 .h-u:hover { text-decoration: underline; }
 .h-o:hover { text-decoration: overline; }
@@ -16,4 +19,6 @@
 .h-u.h-s:hover { text-decoration: underline line-through; }
 .h-o.h-s:hover { text-decoration: overline line-through; }
 .h-u.h-o.h-s:hover { text-decoration: underline overline line-through; }
+/*
 .h-xd:hover { text-decoration: none; }
+*/

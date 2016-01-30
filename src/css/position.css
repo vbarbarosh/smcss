@@ -2,6 +2,7 @@
  * http://reference.sitepoint.com/css/position */
 
 .stat { position: static; }
+.static { position: static; }
 
 .ar5 { position: absolute; right: 5px; }
 .ar10 { position: absolute; right: 10px; }
