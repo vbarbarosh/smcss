@@ -1,6 +1,16 @@
 .sidebar-separator > td {
+    padding-top: 20px !important;
+}
+
+.sidebar-separator > td {
     border-top: 1px solid rgba(255, 255, 255, 0.5)
 }
+
+/*
+.sep > td {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="1"><rect width="100" height="1" style="fill:rgba(255,255,255,0.5);" /></svg>') repeat-x center;
+}
+*/
 
 .sidebar-red > td:first-child,
 .sidebar-pink > td:first-child,
