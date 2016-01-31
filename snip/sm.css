@@ -10,35 +10,81 @@
  * Dictionary for creating layouts from TABLE elements
  */
 
+
+
 /**
- * .tbody-tr***
- *  Space between rows
+ * .tbody-*** whole TBODY as a unit
  */
 
-.tbody-tr6 > tr:nth-child(n+2) > td {
+.tbody-pg6 > tr:nth-child(n+2) > td {
     padding-top: 3px;
 }
 
-.tbody-tr6 > tr:nth-last-child(n+2) > td {
+.tbody-pg6 > tr:nth-last-child(n+2) > td {
     padding-bottom: 3px;
 }
 
-/**
- * .tbody-td***
- * Space between cells
- */
 
-.tbody-td5 > tr > td:nth-child(n+2) {
+
+.tbody-pig5 > tr > td:nth-child(n+2) {
     padding-left: 5px;
 }
 
+
+
+.tbody-p5 > tr:first-child > td {
+    padding-top: 5px;
+}
+
+.tbody-p5 > tr:last-child > td {
+    padding-bottom: 5px;
+}
+
+.tbody-p5 > tr > td:first-child {
+    padding-left: 5px;
+}
+
+.tbody-p5 > tr > td:last-child {
+    padding-right: 5px;
+}
+
+
+
+.tbody-ph5 > tr:first-child > td {
+    padding-top: 5px;
+}
+
+.tbody-ph5 > tr:last-child > td {
+    padding-bottom: 5px;
+}
+
+
+
 /**
- * .tbody-mig***
- * Space between elements in each cell. This is just a shortcut
- * for not adding .mig*** for each td cell.
+ * .tr-*** each row as a unit
  */
 
-.tbody-mig5 > tr > td > :nth-child(n+2) {
+.tr-pig5 > tr > td:nth-child(n+2) {
+    padding-left: 5px;
+}
+
+
+
+.tr-ph5 > tr > td:first-child {
+    padding-left: 5px;
+}
+
+.tr-ph5 > tr > td:last-child {
+    padding-right: 5px;
+}
+
+
+
+/**
+ * .td-*** each cell as a unit
+ */
+
+.td-mig5 > tr > td > :nth-child(n+2) {
     margin-left: 5px;
 }
 /* background */
