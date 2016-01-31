@@ -7,6 +7,11 @@
  * By the method they may be: margin groups and padding groups.
  */
 
+/* for details about specificity take a look at layout-table.css */
+.child-xm > :nth-child(n) {
+    margin: 0;
+}
+
 /**
  * Margin Groups
  *
