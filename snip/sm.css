@@ -1,26 +1,174 @@
-/* display
- * http://reference.sitepoint.com/css/display */
+/* text alignment: l (left), r (right), c (center), j (justify)
+ * font sizes: fs8, fs9, fs10, fs11, ... (font-size: 8/9/10/...)
+ * line heights: lh8, lh9, lh10, ..., lh05m, lh10m, lh15m, ...
+ * capitalization: uc (upper), lc (lower), cc (camel), xc (remove)
+ * padding: p5, p10, ..., p05m, p10m, p15m, ...
+ * margin groups: mg5, mg10, mg15, ..., mg05, mg10, mg15, ...
+ */
 
-.dn { display: none; }
-.db { display: block; }
-.di { display: inline; }
-.dib { display: inline-block; }
-.xd { display: none; }
+/**
+ * Dictionary for creating layouts from TABLE elements
+ */
 
-.hidden {
-    display: none;
+/**
+ * .tbody-tr***
+ *  Space between rows
+ */
+
+.tbody-tr6 > tr:nth-child(n+2) > td {
+    padding-top: 3px;
 }
 
-.block {
+.tbody-tr6 > tr:nth-last-child(n+2) > td {
+    padding-bottom: 3px;
+}
+
+/**
+ * .tbody-td***
+ * Space between cells
+ */
+
+.tbody-td5 > tr > td:nth-child(n+2) {
+    padding-left: 5px;
+}
+
+/**
+ * .tbody-mig***
+ * Space between elements in each cell. This is just a shortcut
+ * for not adding .mig*** for each td cell.
+ */
+
+.tbody-mig5 > tr > td > :nth-child(n+2) {
+    margin-left: 5px;
+}
+/* background */
+
+.xbg { background: none; }
+
+/* http://css-tricks.com/perfect-full-page-background-image/ */
+.background-cover {
+    background: transparent no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Simple backgrounds for debugging */
+
+.black { background: #000; }
+.gray { background: #888; }
+.silver { background: #ccc; }
+.white { background: #fff; }
+.red { background: #f88; }
+.green { background: #8f8; }
+.blue { background: #88f; }
+.yellow { background: #ff8; }
+.cyan { background: #8ff; }
+
+.bg888 { background: #888; }
+.bg88f { background: #88f; }
+.bg8f8 { background: #8f8; }
+.bg8ff { background: #8ff; }
+.bgf88 { background: #f88; }
+.bgf8f { background: #f8f; }
+.bgff8 { background: #ff8; }
+.bgfff { background: #fff; }
+
+.rainbow > :nth-child(1n) {
+    background: #f88;
+}
+
+.rainbow > :nth-child(2n) {
+    background: #8f8;
+}
+
+.rainbow > :nth-child(3n) {
+    background: #88f;
+}
+
+.gray-rainbow > :nth-child(1n) {
+    background: #bbb;
+}
+
+.gray-rainbow > :nth-child(2n) {
+    background: #ccc;
+}
+/* border radius */
+
+.br5 { border-radius: 5px; }
+.br10 { border-radius: 10px; }
+.br15 { border-radius: 15px; }
+.br20 { border-radius: 20px; }
+.br25 { border-radius: 25px; }
+.br30 { border-radius: 30px; }
+.xbr { border-radius: 0; }
+/* border */
+
+.border-none {
+    border: none;
+}
+/* box shadow (inner glow, outer glow) */
+
+.xbs { box-shadow: none; }
+
+.bs,
+.og {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .75);
+}
+
+.ig {
+    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .75);
+}
+/* box-sizing */
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+/* box */
+
+.box {
+    width: 100%;
+    height: 100%;
+}
+
+.box25 {
+    width: 25px;
+    height: 25px;
+}
+
+.box50 {
+    width: 50px;
+    height: 50px;
+}
+
+.box100 {
+    width: 100px;
+    height: 100px;
+}
+
+.box-max,
+.box-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+/* http://compass-style.org/reference/compass/utilities/general/clearfix/ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "\0020";
     display: block;
-}
-
-.inline {
-    display: inline;
-}
-
-.inline-block {
-    display: inline-block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
 }
 /* display-flex */
 /* https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties */
@@ -62,6 +210,85 @@
 .flex-justify-center { justify-content: center; }
 .flex-justify-between { justify-content: space-between; }
 .flex-justify-around { justify-content: space-around; }
+/* display
+ * http://reference.sitepoint.com/css/display */
+
+.dn { display: none; }
+.db { display: block; }
+.di { display: inline; }
+.dib { display: inline-block; }
+.xd { display: none; }
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+/* image list
+ *
+ * <ul class="il10">
+ * <li><img src="a.jpg"></li>
+ * <li><img src="b.jpg"></li>
+ * <li><img src="c.jpg"></li>
+ * <li><img src="d.jpg"></li>
+ * <li><img src="e.jpg"></li>
+ * <li><img src="f.jpg"></li>
+ * <li><img src="g.jpg"></li>
+ * <li><img src="h.jpg"></li>
+ * <li><img src="i.jpg"></li>
+ * <li><img src="j.jpg"></li>
+ * <li><img src="k.jpg"></li>
+ * <li><img src="l.jpg"></li>
+ * </ul>
+ *
+ * aaaaaa.bbbbbb.cccccc.dddddd.eeeeee.ffffff
+ * aaaaaa.bbbbbb.cccccc.dddddd.eeeeee.ffffff
+ * aaaaaa.bbbbbb.cccccc.dddddd.eeeeee.ffffff
+ * ......................................... - magin
+ * gggggg.hhhhhh.iiiiii.jjjjjj.kkkkkk.llllll
+ * gggggg.hhhhhh.iiiiii.jjjjjj.kkkkkk.llllll
+ * gggggg.hhhhhh.iiiiii.jjjjjj.kkkkkk.llllll
+ *       |      |      |      |      |
+ *     margin margin margin margin margin
+ */
+
+.il10 { margin-left: -10px; margin-top: -10px; overflow: hidden; }
+.il10 li { margin-left: 10px; margin-top: 10px; float: left; }
+.il10 img { display: block; }
+/* inline menu
+ *
+ * <ul class="im">
+ * <li><a href="a.html">aaaaa</li>
+ * <li class="active"><a href="a.html">bbbbb</li>
+ * <li><a href="a.html">ccccc</li>
+ * <li><a href="a.html">ddddd</li>
+ * <li><a href="a.html">eeeee</li>
+ * <li><a href="a.html">fffff</li>
+ * </ul>
+ *
+ * aaaaa bbbbb ccccc ddddd eeeee fffff
+ */
+
+.im a { display: block; text-decoration: none; text-transform: uppercase; padding-left: 1em; padding-right: 1em; }
+.im li { display: inline-block; margin-left: -0.2em; margin-right: -0.2em; }
+.im .active a { font-weight: 600; }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /* float */
 
 .fl { float: left; }
@@ -173,6 +400,565 @@
 .fs97 { font-size: 97px; }
 .fs98 { font-size: 98px; }
 .fs99 { font-size: 99px; }
+/* font-style */
+
+.i { font-style: italic; }
+.italic { font-style: italic; }
+/* font-weight */
+
+/* http://www.google.com/webfonts/specimen/Open+Sans
+ * http://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
+ * Book 300
+ * Normal 400
+ * Semi-Bold 600
+ * Bold 700
+ * Extra-Bold 800 */
+
+.b { font-weight: bold; }
+.bb { font-weight: 800; }
+.b3 { font-weight: 300; }
+.b4 { font-weight: 400; }
+.b5 { font-weight: 500; }
+.b6 { font-weight: 600; }
+.b7 { font-weight: 700; }
+.b8 { font-weight: 800; }
+
+.bold { font-weight: bold; }
+
+.h-b:hover { font-weight: bold; }
+.h-bb:hover { font-weight: 800; }
+.h-b3:hover { font-weight: 300; }
+.h-b4:hover { font-weight: 400; }
+.h-b5:hover { font-weight: 500; }
+.h-b6:hover { font-weight: 600; }
+.h-b7:hover { font-weight: 700; }
+.h-b8:hover { font-weight: 800; }
+
+.xb { font-weight: normal; }
+.h-xb:hover { font-weight: normal; }
+/* grid */
+
+/* reference
+ * http://css-tricks.com/dont-overthink-it-grids/
+ *
+ * CSS Grids - YUI Library
+ * http://yuilibrary.com/yui/docs/cssgrids/index.html
+ */
+
+/* http://compass-style.org/reference/compass/utilities/general/clearfix/ */
+.grid {
+    *zoom: 1;
+}
+
+.grid:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.grid2 { overflow: hidden; }
+.grid2 > .col1 { float: left; width: 50%; }
+.grid2 > .col2 { float: left; width: 50%; }
+
+.grid3 { overflow: hidden; }
+.grid3 > .col1 { float: left; width: 33.333333%; }
+.grid3 > .col2 { float: left; width: 33.333333%; }
+.grid3 > .col3 { float: left; width: 33.333333%; }
+/* 2s -- two columns, each columns should be placed at sides (1st at
+ * left, 2nd at right) */
+
+/*
+	.grid2s { overflow: hidden; }
+	.grid2s > .col1 { float: left; }
+	.grid2s > .col2 { float: right; }
+*/
+
+/* http://compass-style.org/reference/compass/utilities/general/clearfix/ */
+.grid2s {
+    *zoom: 1;
+}
+
+.grid2s:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.grid2s > .col1 { float: left; }
+.grid2s > .col2 { float: right; }
+/**
+ * Groups - Separates adjacent siblings by equal amount of space.
+ *
+ * Can be of two types: 1) group of blocks, and 2) group of inline
+ * elemenents.
+ *
+ * By the method they may be: margin groups and padding groups.
+ */
+
+/**
+ * Margin Groups
+ *
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ */
+
+.mg5 > :nth-child(n+2) {
+    margin-top: 5px;
+}
+
+/**
+ * Margin Inline Groups
+ *
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ *           |          |          |
+ *           margin     margin     margin
+ */
+
+.mig5 > :nth-child(n+2) {
+    margin-left: 5px;
+}
+
+
+/**
+ * Padding Groups are the same as Margin Groups with the difference
+ * that instead of margin-top padding-top is used.
+ */
+
+.pg5 > :nth-child(n+2) {
+    padding-top: 5px;
+}
+
+/**
+ * Padding Inline Groups are the same as Margin Inline Groups with the
+ * difference that instead of margin-left padding-left is used.
+ */
+
+.pig5 > :nth-child(n+2) {
+    padding-left: 5px;
+}
+
+
+
+
+
+/* margin-chain */
+
+/* xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ * xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+ *           |          |          |
+ *         margin     margin     margin
+ */
+
+/*
+.mlg5 > * + * { margin-left: 5px; }
+.mlg10 > * + * { margin-left: 10px; }
+.mlg15 > * + * { margin-left: 15px; }
+.mlg20 > * + * { margin-left: 20px; }
+.mlg25 > * + * { margin-left: 25px; }
+.mlg30 > * + * { margin-left: 30px; }
+.mlg35 > * + * { margin-left: 35px; }
+.mlg40 > * + * { margin-left: 40px; }
+.mlg45 > * + * { margin-left: 45px; }
+.mlg50 > * + * { margin-left: 50px; }
+*/
+
+/*
+.mc5 > *:not(:last-child) { margin-right: 5px; }
+.mc10 > *:not(:last-child) { margin-right: 10px; }
+.mc15 > *:not(:last-child) { margin-right: 15px; }
+.mc20 > *:not(:last-child) { margin-right: 20px; }
+.mc25 > *:not(:last-child) { margin-right: 25px; }
+.mc30 > *:not(:last-child) { margin-right: 30px; }
+.mc35 > *:not(:last-child) { margin-right: 35px; }
+.mc40 > *:not(:last-child) { margin-right: 40px; }
+.mc45 > *:not(:last-child) { margin-right: 45px; }
+.mc50 > *:not(:last-child) { margin-right: 50px; }
+*/
+
+
+
+
+
+/* margin-group */
+
+/* margin group
+ *
+ * TODO
+ * consider to change .mgN to .vN (vertical space between adjacent
+ * siblings)
+ *
+ * DESIGNATION
+ * separate siblings from each other by equal amount of space
+ *
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * ...................... - margin
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ * xxxxxxxxxxxxxxxxxxxxxx
+ */
+
+/*
+.mg5 > * + * { margin-top: 5px; }
+.mg10 > * + * { margin-top: 10px; }
+.mg15 > * + * { margin-top: 15px; }
+.mg20 > * + * { margin-top: 20px; }
+.mg25 > * + * { margin-top: 25px; }
+.mg30 > * + * { margin-top: 30px; }
+.mg35 > * + * { margin-top: 35px; }
+.mg40 > * + * { margin-top: 40px; }
+.mg45 > * + * { margin-top: 45px; }
+.mg50 > * + * { margin-top: 50px; }
+
+.mg05m > * + * { margin-top: 0.5em; }
+.mg10m > * + * { margin-top: 1.0em; }
+.mg15m > * + * { margin-top: 1.5em; }
+.mg20m > * + * { margin-top: 2.0em; }
+.mg25m > * + * { margin-top: 2.5em; }
+.mg30m > * + * { margin-top: 3.0em; }
+.mg35m > * + * { margin-top: 3.5em; }
+.mg40m > * + * { margin-top: 4.0em; }
+.mg45m > * + * { margin-top: 4.5em; }
+.mg50m > * + * { margin-top: 5.0em; }
+*/
+
+/*
+.mg5 > *:not(:last-child) { margin-bottom: 5px; }
+.mg10 > *:not(:last-child) { margin-bottom: 10px; }
+.mg15 > *:not(:last-child) { margin-bottom: 15px; }
+.mg20 > *:not(:last-child) { margin-bottom: 20px; }
+.mg25 > *:not(:last-child) { margin-bottom: 25px; }
+.mg30 > *:not(:last-child) { margin-bottom: 30px; }
+.mg35 > *:not(:last-child) { margin-bottom: 35px; }
+.mg40 > *:not(:last-child) { margin-bottom: 40px; }
+.mg45 > *:not(:last-child) { margin-bottom: 45px; }
+.mg50 > *:not(:last-child) { margin-bottom: 50px; }
+*/
+/* height */
+
+.h5 { height: 5px; }
+.h10 { height: 10px; }
+.h15 { height: 15px; }
+.h20 { height: 20px; }
+.h25 { height: 25px; }
+.h30 { height: 30px; }
+.h35 { height: 35px; }
+.h40 { height: 40px; }
+.h45 { height: 45px; }
+.h50 { height: 50px; }
+.h55 { height: 55px; }
+.h60 { height: 60px; }
+.h65 { height: 65px; }
+.h70 { height: 70px; }
+.h75 { height: 75px; }
+.h80 { height: 80px; }
+.h85 { height: 85px; }
+.h90 { height: 90px; }
+.h95 { height: 95px; }
+.h100 { height: 100px; }
+.h105 { height: 105px; }
+.h110 { height: 110px; }
+.h115 { height: 115px; }
+.h120 { height: 120px; }
+.h125 { height: 125px; }
+.h130 { height: 130px; }
+.h135 { height: 135px; }
+.h140 { height: 140px; }
+.h145 { height: 145px; }
+.h150 { height: 150px; }
+.h155 { height: 155px; }
+.h160 { height: 160px; }
+.h165 { height: 165px; }
+.h170 { height: 170px; }
+.h175 { height: 175px; }
+.h180 { height: 180px; }
+.h185 { height: 185px; }
+.h190 { height: 190px; }
+.h195 { height: 195px; }
+.h200 { height: 200px; }
+.h205 { height: 205px; }
+.h210 { height: 210px; }
+.h215 { height: 215px; }
+.h220 { height: 220px; }
+.h225 { height: 225px; }
+.h230 { height: 230px; }
+.h235 { height: 235px; }
+.h240 { height: 240px; }
+.h245 { height: 245px; }
+.h250 { height: 250px; }
+.h255 { height: 255px; }
+.h260 { height: 260px; }
+.h265 { height: 265px; }
+.h270 { height: 270px; }
+.h275 { height: 275px; }
+.h280 { height: 280px; }
+.h285 { height: 285px; }
+.h290 { height: 290px; }
+.h295 { height: 295px; }
+.h300 { height: 300px; }
+.h305 { height: 305px; }
+.h310 { height: 310px; }
+.h315 { height: 315px; }
+.h320 { height: 320px; }
+.h325 { height: 325px; }
+.h330 { height: 330px; }
+.h335 { height: 335px; }
+.h340 { height: 340px; }
+.h345 { height: 345px; }
+.h350 { height: 350px; }
+.h355 { height: 355px; }
+.h360 { height: 360px; }
+.h365 { height: 365px; }
+.h370 { height: 370px; }
+.h375 { height: 375px; }
+.h380 { height: 380px; }
+.h385 { height: 385px; }
+.h390 { height: 390px; }
+.h395 { height: 395px; }
+.h400 { height: 400px; }
+.h405 { height: 405px; }
+.h410 { height: 410px; }
+.h415 { height: 415px; }
+.h420 { height: 420px; }
+.h425 { height: 425px; }
+.h430 { height: 430px; }
+.h435 { height: 435px; }
+.h440 { height: 440px; }
+.h445 { height: 445px; }
+.h450 { height: 450px; }
+.h455 { height: 455px; }
+.h460 { height: 460px; }
+.h465 { height: 465px; }
+.h470 { height: 470px; }
+.h475 { height: 475px; }
+.h480 { height: 480px; }
+.h485 { height: 485px; }
+.h490 { height: 490px; }
+.h495 { height: 495px; }
+.h500 { height: 500px; }
+
+.h5p { height: 5%; }
+.h10p { height: 10%; }
+.h15p { height: 15%; }
+.h20p { height: 20%; }
+.h25p { height: 25%; }
+.h30p { height: 30%; }
+.h35p { height: 35%; }
+.h40p { height: 40%; }
+.h45p { height: 45%; }
+.h50p { height: 50%; }
+.h55p { height: 55%; }
+.h60p { height: 60%; }
+.h65p { height: 65%; }
+.h70p { height: 70%; }
+.h75p { height: 75%; }
+.h80p { height: 80%; }
+.h85p { height: 85%; }
+.h90p { height: 90%; }
+.h95p { height: 95%; }
+.h100p { height: 100%; }
+
+.hh { height: 999999999px; }
+.xh { height: 0; }
+/* letter spacing */
+
+.ls1 { letter-spacing: 1px; }
+.ls2 { letter-spacing: 2px; }
+.ls3 { letter-spacing: 3px; }
+.ls4 { letter-spacing: 4px; }
+.ls5 { letter-spacing: 5px; }
+.ls6 { letter-spacing: 6px; }
+.ls7 { letter-spacing: 7px; }
+.ls8 { letter-spacing: 8px; }
+.ls9 { letter-spacing: 9px; }
+.xls { letter-spacing: 0; }
+/* line height */
+
+/* XXX
+ *
+ * FireFox UA Stylesheet
+ * resource://gre-resources/forms.css
+ * > input {
+ * >	[...]
+ * >	line-height: normal !important;
+ * >	[...]
+ * > }
+ *
+ * http://www.456bereastreet.com/archive/201108/line-height_in_input_fields/
+ * > The problem is !important, which makes it impossible to override
+ * > this rule from an author stylesheet, not even if you use
+ * > !important. This has been discussed for years in the
+ * >
+ * >	CSS Property line-height has no effects on input text fields bug
+ * >	https://bugzilla.mozilla.org/show_bug.cgi?id=349259
+ * >
+ * > It currently doesn't look like a fix is coming any time soon.
+ *
+ * Blog: Bulletproof CSS input button heights
+ * http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights
+ * > - Disabled top and bottom padding
+ * > - Set the height of the button to be 40px tall
+ * > - Set vertical-align to middle
+ */
+
+.lh8 { line-height: 8px; }
+.lh9 { line-height: 9px; }
+.lh10 { line-height: 10px; }
+.lh11 { line-height: 11px; }
+.lh12 { line-height: 12px; }
+.lh13 { line-height: 13px; }
+.lh14 { line-height: 14px; }
+.lh15 { line-height: 15px; }
+.lh16 { line-height: 16px; }
+.lh17 { line-height: 17px; }
+.lh18 { line-height: 18px; }
+.lh19 { line-height: 19px; }
+.lh20 { line-height: 20px; }
+.lh21 { line-height: 21px; }
+.lh22 { line-height: 22px; }
+.lh23 { line-height: 23px; }
+.lh24 { line-height: 24px; }
+.lh25 { line-height: 25px; }
+.lh26 { line-height: 26px; }
+.lh27 { line-height: 27px; }
+.lh28 { line-height: 28px; }
+.lh29 { line-height: 29px; }
+.lh30 { line-height: 30px; }
+.lh31 { line-height: 31px; }
+.lh32 { line-height: 32px; }
+.lh33 { line-height: 33px; }
+.lh34 { line-height: 34px; }
+.lh35 { line-height: 35px; }
+.lh36 { line-height: 36px; }
+.lh37 { line-height: 37px; }
+.lh38 { line-height: 38px; }
+.lh39 { line-height: 39px; }
+.lh40 { line-height: 40px; }
+.lh41 { line-height: 41px; }
+.lh42 { line-height: 42px; }
+.lh43 { line-height: 43px; }
+.lh44 { line-height: 44px; }
+.lh45 { line-height: 45px; }
+.lh46 { line-height: 46px; }
+.lh47 { line-height: 47px; }
+.lh48 { line-height: 48px; }
+.lh49 { line-height: 49px; }
+.lh50 { line-height: 50px; }
+.lh51 { line-height: 51px; }
+.lh52 { line-height: 52px; }
+.lh53 { line-height: 53px; }
+.lh54 { line-height: 54px; }
+.lh55 { line-height: 55px; }
+.lh56 { line-height: 56px; }
+.lh57 { line-height: 57px; }
+.lh58 { line-height: 58px; }
+.lh59 { line-height: 59px; }
+.lh60 { line-height: 60px; }
+.lh61 { line-height: 61px; }
+.lh62 { line-height: 62px; }
+.lh63 { line-height: 63px; }
+.lh64 { line-height: 64px; }
+.lh65 { line-height: 65px; }
+.lh66 { line-height: 66px; }
+.lh67 { line-height: 67px; }
+.lh68 { line-height: 68px; }
+.lh69 { line-height: 69px; }
+.lh70 { line-height: 70px; }
+.lh71 { line-height: 71px; }
+.lh72 { line-height: 72px; }
+.lh73 { line-height: 73px; }
+.lh74 { line-height: 74px; }
+.lh75 { line-height: 75px; }
+.lh76 { line-height: 76px; }
+.lh77 { line-height: 77px; }
+.lh78 { line-height: 78px; }
+.lh79 { line-height: 79px; }
+.lh80 { line-height: 80px; }
+.lh81 { line-height: 81px; }
+.lh82 { line-height: 82px; }
+.lh83 { line-height: 83px; }
+.lh84 { line-height: 84px; }
+.lh85 { line-height: 85px; }
+.lh86 { line-height: 86px; }
+.lh87 { line-height: 87px; }
+.lh88 { line-height: 88px; }
+.lh89 { line-height: 89px; }
+.lh90 { line-height: 90px; }
+.lh91 { line-height: 91px; }
+.lh92 { line-height: 92px; }
+.lh93 { line-height: 93px; }
+.lh94 { line-height: 94px; }
+.lh95 { line-height: 95px; }
+.lh96 { line-height: 96px; }
+.lh97 { line-height: 97px; }
+.lh98 { line-height: 98px; }
+.lh99 { line-height: 99px; }
+
+.lh05m { line-height: 0.5em; }
+.lh10m { line-height: 1.0em; }
+.lh15m { line-height: 1.5em; }
+.lh20m { line-height: 2.0em; }
+.lh25m { line-height: 2.5em; }
+.lh30m { line-height: 3.0em; }
+.lh35m { line-height: 3.5em; }
+.lh40m { line-height: 4.0em; }
+.lh45m { line-height: 4.5em; }
+.lh50m { line-height: 5.0em; }
+.lh55m { line-height: 5.5em; }
+.lh60m { line-height: 6.0em; }
+.lh65m { line-height: 6.5em; }
+.lh70m { line-height: 7.0em; }
+.lh75m { line-height: 7.5em; }
+.lh80m { line-height: 8.0em; }
+.lh85m { line-height: 8.5em; }
+.lh90m { line-height: 9.0em; }
+.lh95m { line-height: 9.5em; }
+/* list-style */
+
+.list-style-none {
+    list-style: none;
+}
 /* margin */
 
 .r-m * { margin: 0; }
@@ -435,72 +1221,40 @@
 .xmb { margin-bottom: 0; }
 .xmv { margin-top: 0; margin-bottom: 0; }
 .xmh { margin-left: 0; margin-right: 0; }
-/* margin-group */
+/* opacity */
 
-/* margin group
- *
- * TODO
- * consider to change .mgN to .vN (vertical space between adjacent
- * siblings)
- *
- * DESIGNATION
- * separate siblings from each other by equal amount of space
- *
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * ...................... - margin
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * ...................... - margin
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * ...................... - margin
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- * xxxxxxxxxxxxxxxxxxxxxx
- */
+.opacity25 {
+    opacity: 0.25;
+}
 
-/*
-.mg5 > * + * { margin-top: 5px; }
-.mg10 > * + * { margin-top: 10px; }
-.mg15 > * + * { margin-top: 15px; }
-.mg20 > * + * { margin-top: 20px; }
-.mg25 > * + * { margin-top: 25px; }
-.mg30 > * + * { margin-top: 30px; }
-.mg35 > * + * { margin-top: 35px; }
-.mg40 > * + * { margin-top: 40px; }
-.mg45 > * + * { margin-top: 45px; }
-.mg50 > * + * { margin-top: 50px; }
+.opacity50 {
+    opacity: 0.5;
+}
 
-.mg05m > * + * { margin-top: 0.5em; }
-.mg10m > * + * { margin-top: 1.0em; }
-.mg15m > * + * { margin-top: 1.5em; }
-.mg20m > * + * { margin-top: 2.0em; }
-.mg25m > * + * { margin-top: 2.5em; }
-.mg30m > * + * { margin-top: 3.0em; }
-.mg35m > * + * { margin-top: 3.5em; }
-.mg40m > * + * { margin-top: 4.0em; }
-.mg45m > * + * { margin-top: 4.5em; }
-.mg50m > * + * { margin-top: 5.0em; }
-*/
+.opacity75 {
+    opacity: 0.75;
+}
 
-.mg5 > *:not(:last-child) { margin-bottom: 5px; }
-.mg10 > *:not(:last-child) { margin-bottom: 10px; }
-.mg15 > *:not(:last-child) { margin-bottom: 15px; }
-.mg20 > *:not(:last-child) { margin-bottom: 20px; }
-.mg25 > *:not(:last-child) { margin-bottom: 25px; }
-.mg30 > *:not(:last-child) { margin-bottom: 30px; }
-.mg35 > *:not(:last-child) { margin-bottom: 35px; }
-.mg40 > *:not(:last-child) { margin-bottom: 40px; }
-.mg45 > *:not(:last-child) { margin-bottom: 45px; }
-.mg50 > *:not(:last-child) { margin-bottom: 50px; }
+.opacity100 {
+    opacity: 1.0;
+}
+/* outline */
+
+.xoutline { outline: none; }
+.outline-none { outline: none; }
+
+.outline-red {
+    outline: 1px dashed red;
+}
+/* overflow */
+
+.oa { overflow: auto; }
+.oh { overflow: hidden; }
+.os { overflow: scroll; }
+
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+.overflow-scroll { overflow: scroll; }
 /* padding */
 
 /* recursive padding */
@@ -638,6 +1392,184 @@
 .pt40 { padding-top: 40px; }
 .pt45 { padding-top: 45px; }
 .pt50 { padding-top: 50px; }
+/* position: absolute */
+
+.abs { position: absolute; }
+.abs-box { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.abs-box-5 { position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; }
+.abs-box-10 { position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; }
+
+.abs-box-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+/*
+    width: 100%;
+    height: 100%;
+*/
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.abs-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* position: fixed */
+
+.fix {
+    position: fixed;
+}
+
+.fix-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* position: relative */
+
+.rel {
+    position: relative;
+}
+/* position
+ * http://reference.sitepoint.com/css/position */
+
+.stat { position: static; }
+.static { position: static; }
+
+.ar5 { position: absolute; right: 5px; }
+.ar10 { position: absolute; right: 10px; }
+.ar15 { position: absolute; right: 15px; }
+.ar20 { position: absolute; right: 20px; }
+.ar25 { position: absolute; right: 25px; }
+.ar30 { position: absolute; right: 30px; }
+.ar35 { position: absolute; right: 35px; }
+.ar40 { position: absolute; right: 40px; }
+.ar45 { position: absolute; right: 45px; }
+.ar50 { position: absolute; right: 50px; }
+.ar55 { position: absolute; right: 55px; }
+.ar60 { position: absolute; right: 60px; }
+.ar65 { position: absolute; right: 65px; }
+.ar70 { position: absolute; right: 70px; }
+.ar75 { position: absolute; right: 75px; }
+.ar80 { position: absolute; right: 80px; }
+.ar85 { position: absolute; right: 85px; }
+.ar90 { position: absolute; right: 90px; }
+.ar95 { position: absolute; right: 95px; }
+/* scrollbar */
+
+.scrollbar-none {
+    overflow: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+/* text alignment: l (left), r (right), c (center), j (justify)
+ * font sizes: fs8, fs9, fs10, fs11, ... (font-size: 8/9/10/...)
+ * line heights: lh8, lh9, lh10, ..., lh05m, lh10m, lh15m, ...
+ * capitalization: uc (upper), lc (lower), cc (camel), xc (remove)
+ * padding: p5, p10, ..., p05m, p10m, p15m, ...
+ * margin groups: mg5, mg10, mg15, ..., mg05, mg10, mg15, ...
+ */
+/* text alignment */
+
+.l { text-align: left; }
+.r { text-align: right; }
+.c { text-align: center; }
+.j { text-align: justify; }
+/* text-decoration */
+
+.u { text-decoration: underline; }
+.o { text-decoration: overline; }
+.s { text-decoration: line-through; } /* strike over */
+.u.o { text-decoration: underline overline; }
+.u.s { text-decoration: underline line-through; }
+.o.s { text-decoration: overline line-through; }
+.u.o.s { text-decoration: underline overline line-through; }
+
+/* taken by display: none
+.xd { text-decoration: none; }
+*/
+
+.h-u:hover { text-decoration: underline; }
+.h-o:hover { text-decoration: overline; }
+.h-s:hover { text-decoration: line-through; } /* strike over */
+.h-u.h-o:hover { text-decoration: underline overline; }
+.h-u.h-s:hover { text-decoration: underline line-through; }
+.h-o.h-s:hover { text-decoration: overline line-through; }
+.h-u.h-o.h-s:hover { text-decoration: underline overline line-through; }
+/*
+.h-xd:hover { text-decoration: none; }
+*/
+/* capitalization / text-transform */
+
+.uc { text-transform: uppercase; } /* upper case */
+.lc { text-transform: lowercase; } /* lower case */
+.cc { text-transform: capitalize; } /* camel case */
+.xc { text-transform: none; } /* remove capitalization (remain text as is) */
+
+.r-uc * { text-transform: uppercase; } /* recursive upper case */
+.r-lc * { text-transform: lowercase; } /* recursive lower case */
+.r-cc * { text-transform: capitalize; } /* recursive camel case */
+.r-xc * { text-transform: none; } /* recursive remove capitalization (remain text as is) */
+
+.h-uc:hover { text-transform: uppercase; } /* upper case */
+.h-lc:hover { text-transform: lowercase; } /* lower case */
+.h-cc:hover { text-transform: capitalize; } /* camel case */
+.h-xc:hover { text-transform: none; } /* remove capitalization (remain text as is) */
+/* transform */
+
+.scale50 {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+}
+
+.scale65 {
+    -webkit-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    transform: scale(0.65);
+}
+
+.scale75 {
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+}
+/**
+ * Installation
+ * ============
+ *
+ * $ autoprefixer transition.orig.css -o transition.css
+ *
+ */
+
+.transition-opacity {
+    transition: opacity .5s ease-in-out;
+}
+/* user-select */
+
+.user-select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* vertical-align */
+
+.vm { vertical-align: middle; }
+.vt { vertical-align: top; }
+.vb { vertical-align: bottom; }
 /* width */
 
 .w5 { width: 5px; }
@@ -764,294 +1696,6 @@
 
 .ww { width: 999999999px; }
 .xw { width: 0; }
-/* height */
-
-.h5 { height: 5px; }
-.h10 { height: 10px; }
-.h15 { height: 15px; }
-.h20 { height: 20px; }
-.h25 { height: 25px; }
-.h30 { height: 30px; }
-.h35 { height: 35px; }
-.h40 { height: 40px; }
-.h45 { height: 45px; }
-.h50 { height: 50px; }
-.h55 { height: 55px; }
-.h60 { height: 60px; }
-.h65 { height: 65px; }
-.h70 { height: 70px; }
-.h75 { height: 75px; }
-.h80 { height: 80px; }
-.h85 { height: 85px; }
-.h90 { height: 90px; }
-.h95 { height: 95px; }
-.h100 { height: 100px; }
-.h105 { height: 105px; }
-.h110 { height: 110px; }
-.h115 { height: 115px; }
-.h120 { height: 120px; }
-.h125 { height: 125px; }
-.h130 { height: 130px; }
-.h135 { height: 135px; }
-.h140 { height: 140px; }
-.h145 { height: 145px; }
-.h150 { height: 150px; }
-.h155 { height: 155px; }
-.h160 { height: 160px; }
-.h165 { height: 165px; }
-.h170 { height: 170px; }
-.h175 { height: 175px; }
-.h180 { height: 180px; }
-.h185 { height: 185px; }
-.h190 { height: 190px; }
-.h195 { height: 195px; }
-.h200 { height: 200px; }
-.h205 { height: 205px; }
-.h210 { height: 210px; }
-.h215 { height: 215px; }
-.h220 { height: 220px; }
-.h225 { height: 225px; }
-.h230 { height: 230px; }
-.h235 { height: 235px; }
-.h240 { height: 240px; }
-.h245 { height: 245px; }
-.h250 { height: 250px; }
-.h255 { height: 255px; }
-.h260 { height: 260px; }
-.h265 { height: 265px; }
-.h270 { height: 270px; }
-.h275 { height: 275px; }
-.h280 { height: 280px; }
-.h285 { height: 285px; }
-.h290 { height: 290px; }
-.h295 { height: 295px; }
-.h300 { height: 300px; }
-.h305 { height: 305px; }
-.h310 { height: 310px; }
-.h315 { height: 315px; }
-.h320 { height: 320px; }
-.h325 { height: 325px; }
-.h330 { height: 330px; }
-.h335 { height: 335px; }
-.h340 { height: 340px; }
-.h345 { height: 345px; }
-.h350 { height: 350px; }
-.h355 { height: 355px; }
-.h360 { height: 360px; }
-.h365 { height: 365px; }
-.h370 { height: 370px; }
-.h375 { height: 375px; }
-.h380 { height: 380px; }
-.h385 { height: 385px; }
-.h390 { height: 390px; }
-.h395 { height: 395px; }
-.h400 { height: 400px; }
-.h405 { height: 405px; }
-.h410 { height: 410px; }
-.h415 { height: 415px; }
-.h420 { height: 420px; }
-.h425 { height: 425px; }
-.h430 { height: 430px; }
-.h435 { height: 435px; }
-.h440 { height: 440px; }
-.h445 { height: 445px; }
-.h450 { height: 450px; }
-.h455 { height: 455px; }
-.h460 { height: 460px; }
-.h465 { height: 465px; }
-.h470 { height: 470px; }
-.h475 { height: 475px; }
-.h480 { height: 480px; }
-.h485 { height: 485px; }
-.h490 { height: 490px; }
-.h495 { height: 495px; }
-.h500 { height: 500px; }
-
-.h5p { height: 5%; }
-.h10p { height: 10%; }
-.h15p { height: 15%; }
-.h20p { height: 20%; }
-.h25p { height: 25%; }
-.h30p { height: 30%; }
-.h35p { height: 35%; }
-.h40p { height: 40%; }
-.h45p { height: 45%; }
-.h50p { height: 50%; }
-.h55p { height: 55%; }
-.h60p { height: 60%; }
-.h65p { height: 65%; }
-.h70p { height: 70%; }
-.h75p { height: 75%; }
-.h80p { height: 80%; }
-.h85p { height: 85%; }
-.h90p { height: 90%; }
-.h95p { height: 95%; }
-.h100p { height: 100%; }
-
-.hh { height: 999999999px; }
-.xh { height: 0; }
-/* vertical-align */
-
-.vm { vertical-align: middle; }
-.vt { vertical-align: top; }
-.vb { vertical-align: bottom; }
-/* capitalization / text-transform */
-
-.uc { text-transform: uppercase; } /* upper case */
-.lc { text-transform: lowercase; } /* lower case */
-.cc { text-transform: capitalize; } /* camel case */
-.xc { text-transform: none; } /* remove capitalization (remain text as is) */
-
-.r-uc * { text-transform: uppercase; } /* recursive upper case */
-.r-lc * { text-transform: lowercase; } /* recursive lower case */
-.r-cc * { text-transform: capitalize; } /* recursive camel case */
-.r-xc * { text-transform: none; } /* recursive remove capitalization (remain text as is) */
-
-.h-uc:hover { text-transform: uppercase; } /* upper case */
-.h-lc:hover { text-transform: lowercase; } /* lower case */
-.h-cc:hover { text-transform: capitalize; } /* camel case */
-.h-xc:hover { text-transform: none; } /* remove capitalization (remain text as is) */
-/* line height */
-
-/* XXX
- *
- * FireFox UA Stylesheet
- * resource://gre-resources/forms.css
- * > input {
- * >	[...]
- * >	line-height: normal !important;
- * >	[...]
- * > }
- *
- * http://www.456bereastreet.com/archive/201108/line-height_in_input_fields/
- * > The problem is !important, which makes it impossible to override
- * > this rule from an author stylesheet, not even if you use
- * > !important. This has been discussed for years in the
- * >
- * >	CSS Property line-height has no effects on input text fields bug
- * >	https://bugzilla.mozilla.org/show_bug.cgi?id=349259
- * >
- * > It currently doesn't look like a fix is coming any time soon.
- *
- * Blog: Bulletproof CSS input button heights
- * http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights
- * > - Disabled top and bottom padding
- * > - Set the height of the button to be 40px tall
- * > - Set vertical-align to middle
- */
-
-.lh8 { line-height: 8px; }
-.lh9 { line-height: 9px; }
-.lh10 { line-height: 10px; }
-.lh11 { line-height: 11px; }
-.lh12 { line-height: 12px; }
-.lh13 { line-height: 13px; }
-.lh14 { line-height: 14px; }
-.lh15 { line-height: 15px; }
-.lh16 { line-height: 16px; }
-.lh17 { line-height: 17px; }
-.lh18 { line-height: 18px; }
-.lh19 { line-height: 19px; }
-.lh20 { line-height: 20px; }
-.lh21 { line-height: 21px; }
-.lh22 { line-height: 22px; }
-.lh23 { line-height: 23px; }
-.lh24 { line-height: 24px; }
-.lh25 { line-height: 25px; }
-.lh26 { line-height: 26px; }
-.lh27 { line-height: 27px; }
-.lh28 { line-height: 28px; }
-.lh29 { line-height: 29px; }
-.lh30 { line-height: 30px; }
-.lh31 { line-height: 31px; }
-.lh32 { line-height: 32px; }
-.lh33 { line-height: 33px; }
-.lh34 { line-height: 34px; }
-.lh35 { line-height: 35px; }
-.lh36 { line-height: 36px; }
-.lh37 { line-height: 37px; }
-.lh38 { line-height: 38px; }
-.lh39 { line-height: 39px; }
-.lh40 { line-height: 40px; }
-.lh41 { line-height: 41px; }
-.lh42 { line-height: 42px; }
-.lh43 { line-height: 43px; }
-.lh44 { line-height: 44px; }
-.lh45 { line-height: 45px; }
-.lh46 { line-height: 46px; }
-.lh47 { line-height: 47px; }
-.lh48 { line-height: 48px; }
-.lh49 { line-height: 49px; }
-.lh50 { line-height: 50px; }
-.lh51 { line-height: 51px; }
-.lh52 { line-height: 52px; }
-.lh53 { line-height: 53px; }
-.lh54 { line-height: 54px; }
-.lh55 { line-height: 55px; }
-.lh56 { line-height: 56px; }
-.lh57 { line-height: 57px; }
-.lh58 { line-height: 58px; }
-.lh59 { line-height: 59px; }
-.lh60 { line-height: 60px; }
-.lh61 { line-height: 61px; }
-.lh62 { line-height: 62px; }
-.lh63 { line-height: 63px; }
-.lh64 { line-height: 64px; }
-.lh65 { line-height: 65px; }
-.lh66 { line-height: 66px; }
-.lh67 { line-height: 67px; }
-.lh68 { line-height: 68px; }
-.lh69 { line-height: 69px; }
-.lh70 { line-height: 70px; }
-.lh71 { line-height: 71px; }
-.lh72 { line-height: 72px; }
-.lh73 { line-height: 73px; }
-.lh74 { line-height: 74px; }
-.lh75 { line-height: 75px; }
-.lh76 { line-height: 76px; }
-.lh77 { line-height: 77px; }
-.lh78 { line-height: 78px; }
-.lh79 { line-height: 79px; }
-.lh80 { line-height: 80px; }
-.lh81 { line-height: 81px; }
-.lh82 { line-height: 82px; }
-.lh83 { line-height: 83px; }
-.lh84 { line-height: 84px; }
-.lh85 { line-height: 85px; }
-.lh86 { line-height: 86px; }
-.lh87 { line-height: 87px; }
-.lh88 { line-height: 88px; }
-.lh89 { line-height: 89px; }
-.lh90 { line-height: 90px; }
-.lh91 { line-height: 91px; }
-.lh92 { line-height: 92px; }
-.lh93 { line-height: 93px; }
-.lh94 { line-height: 94px; }
-.lh95 { line-height: 95px; }
-.lh96 { line-height: 96px; }
-.lh97 { line-height: 97px; }
-.lh98 { line-height: 98px; }
-.lh99 { line-height: 99px; }
-
-.lh05m { line-height: 0.5em; }
-.lh10m { line-height: 1.0em; }
-.lh15m { line-height: 1.5em; }
-.lh20m { line-height: 2.0em; }
-.lh25m { line-height: 2.5em; }
-.lh30m { line-height: 3.0em; }
-.lh35m { line-height: 3.5em; }
-.lh40m { line-height: 4.0em; }
-.lh45m { line-height: 4.5em; }
-.lh50m { line-height: 5.0em; }
-.lh55m { line-height: 5.5em; }
-.lh60m { line-height: 6.0em; }
-.lh65m { line-height: 6.5em; }
-.lh70m { line-height: 7.0em; }
-.lh75m { line-height: 7.5em; }
-.lh80m { line-height: 8.0em; }
-.lh85m { line-height: 8.5em; }
-.lh90m { line-height: 9.0em; }
-.lh95m { line-height: 9.5em; }
 /* z-index */
 
 .zn2 { z-index: -2; }
@@ -1067,195 +1711,3 @@
 .z7 { z-index: 7; }
 .z8 { z-index: 8; }
 .z9 { z-index: 9; }
-/* overflow */
-
-.oa { overflow: auto; }
-.oh { overflow: hidden; }
-.os { overflow: scroll; }
-
-.overflow-auto { overflow: auto; }
-.overflow-hidden { overflow: hidden; }
-.overflow-scroll { overflow: scroll; }
-/* box */
-
-.box {
-    width: 100%;
-    height: 100%;
-}
-
-.box25 {
-    width: 25px;
-    height: 25px;
-}
-
-.box50 {
-    width: 50px;
-    height: 50px;
-}
-
-.box100 {
-    width: 100px;
-    height: 100px;
-}
-
-.box-max,
-.box-image {
-    max-width: 100%;
-    max-height: 100%;
-}
-/* box-sizing */
-
-.border-box {
-    box-sizing: border-box;
-}
-
-.content-box {
-    box-sizing: content-box;
-}
-/* box shadow (inner glow, outer glow) */
-
-.xbs { box-shadow: none; }
-
-.bs,
-.og {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .75);
-}
-
-.ig {
-    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, .75);
-}
-/* opacity */
-
-.opacity25 {
-    opacity: 0.25;
-}
-
-.opacity50 {
-    opacity: 0.5;
-}
-
-.opacity75 {
-    opacity: 0.75;
-}
-
-.opacity100 {
-    opacity: 1.0;
-}
-/* scrollbar */
-
-.scrollbar-none {
-    overflow: scroll;
-    overflow: -moz-scrollbars-none;
-    -ms-overflow-style: none;
-}
-
-.scrollbar-none::-webkit-scrollbar {
-    display: none;
-}
-/* background */
-
-.xbg { background: none; }
-
-/* http://css-tricks.com/perfect-full-page-background-image/ */
-.background-cover {
-    background: transparent no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/* Simple backgrounds for debugging */
-
-.black { background: #000; }
-.gray { background: #888; }
-.silver { background: #ccc; }
-.white { background: #fff; }
-.red { background: #f88; }
-.green { background: #8f8; }
-.blue { background: #88f; }
-.yellow { background: #ff8; }
-.cyan { background: #8ff; }
-
-.bg888 { background: #888; }
-.bg88f { background: #88f; }
-.bg8f8 { background: #8f8; }
-.bg8ff { background: #8ff; }
-.bgf88 { background: #f88; }
-.bgf8f { background: #f8f; }
-.bgff8 { background: #ff8; }
-.bgfff { background: #fff; }
-
-.rainbow > :nth-child(1n) {
-    background: #f88;
-}
-
-.rainbow > :nth-child(2n) {
-    background: #8f8;
-}
-
-.rainbow > :nth-child(3n) {
-    background: #88f;
-}
-
-.gray-rainbow > :nth-child(1n) {
-    background: #bbb;
-}
-
-.gray-rainbow > :nth-child(2n) {
-    background: #ccc;
-}
-/* position: absolute */
-
-.abs { position: absolute; }
-.abs-box { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
-.abs-box-5 { position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; }
-.abs-box-10 { position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; }
-
-.abs-box-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-/*
-    width: 100%;
-    height: 100%;
-*/
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.abs-bottom {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-/* position: relative */
-
-.rel {
-    position: relative;
-}
-/* position: fixed */
-
-.fix {
-    position: fixed;
-}
-
-.fix-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* text alignment: l (left), r (right), c (center), j (justify)
- * font sizes: fs8, fs9, fs10, fs11, ... (font-size: 8/9/10/...)
- * line heights: lh8, lh9, lh10, ..., lh05m, lh10m, lh15m, ...
- * capitalization: uc (upper), lc (lower), cc (camel), xc (remove)
- * padding: p5, p10, ..., p05m, p10m, p15m, ...
- * margin groups: mg5, mg10, mg15, ..., mg05, mg10, mg15, ...
- */

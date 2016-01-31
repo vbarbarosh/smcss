@@ -1,53 +1,39 @@
-.sidebar-table > tbody > tr > td:first-child {
-    padding-left: 5px;
-}
-
-.sidebar-table > tbody > tr > td:last-child {
-    padding-right: 5px;
-}
-
-.sidebar-table > tbody > tr > td {
-    white-space: nowrap;
-    padding-bottom: 5px;
-}
-
-.sidebar-table > tbody > tr:first-child > td,
-.sidebar-table > tbody > tr.sidebar-tr-separator > td {
-    padding-top: 5px;
-}
-
-.sidebar-table > tbody > tr > td:nth-child(2) {
-    padding-left: 5px;
-}
-
-.sidebar-tr-separator {
+.sidebar-separator {
     border-top: 1px solid rgba(255, 255, 255, 0.5)
 }
 
-.sidebar-tr-red,
-.sidebar-tr-pink,
-.sidebar-tr-blue,
-.sidebar-tr-green,
-.sidebar-tr-yellow {
+.sidebar-red,
+.sidebar-pink,
+.sidebar-blue,
+.sidebar-green,
+.sidebar-yellow {
     border-left: 5px solid black;
 }
 
-.sidebar-tr-red {
+.sidebar-red > td:first-child,
+.sidebar-pink > td:first-child,
+.sidebar-blue > td:first-child,
+.sidebar-green > td:first-child,
+.sidebar-yellow > td:first-child {
+    padding-left: 5px;
+}
+
+.sidebar-red {
     border-left-color: #f77a97;
 }
 
-.sidebar-tr-pink {
+.sidebar-pink {
     border-left-color: #f77af3;
 }
 
-.sidebar-tr-blue {
+.sidebar-blue {
     border-left-color: #867af7;
 }
 
-.sidebar-tr-green {
+.sidebar-green {
     border-left-color: #7af786;
 }
 
-.sidebar-tr-yellow {
+.sidebar-yellow {
     border-left-color: #f3f77a;
 }

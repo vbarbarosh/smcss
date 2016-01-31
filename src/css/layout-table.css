@@ -1,0 +1,35 @@
+/**
+ * Dictionary for creating layouts from TABLE elements
+ */
+
+/**
+ * .tbody-tr***
+ *  Space between rows
+ */
+
+.tbody-tr6 > tr:nth-child(n+2) > td {
+    padding-top: 3px;
+}
+
+.tbody-tr6 > tr:nth-last-child(n+2) > td {
+    padding-bottom: 3px;
+}
+
+/**
+ * .tbody-td***
+ * Space between cells
+ */
+
+.tbody-td5 > tr > td:nth-child(n+2) {
+    padding-left: 5px;
+}
+
+/**
+ * .tbody-mig***
+ * Space between elements in each cell. This is just a shortcut
+ * for not adding .mig*** for each td cell.
+ */
+
+.tbody-mig5 > tr > td > :nth-child(n+2) {
+    margin-left: 5px;
+}
