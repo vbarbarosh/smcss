@@ -1,9 +1,13 @@
-.sidebar-separator > td {
-    padding-top: 20px !important;
+.sidebar-separate-after + tr > td {
+    border-top: 1px solid rgba(255, 255, 255, 0.5)
 }
 
-.sidebar-separator > td {
-    border-top: 1px solid rgba(255, 255, 255, 0.5)
+.sidebar-separate-after > td {
+    padding-bottom: 6px !important;
+}
+
+.sidebar-separate-after + tr > td {
+    padding-top: 6px !important;
 }
 
 /*
