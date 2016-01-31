@@ -1,21 +1,11 @@
-.table-mg5 > tr + tr > td {
-    padding-top: 5px;
+.tbody-mg5 > tr:nth-child(n+2) > td {
+    border-top: 5px solid transparent;
 }
 
-.rainbow > :nth-child(1n) {
-    background: #f88;
+.tbody-mg5 > tr > td:nth-child(1) {
+    text-align: right;
 }
 
-.rainbow > :nth-child(2n) {
-    background: #8f8;
-}
-
-.rainbow > :nth-child(3n) {
-    background: #88f;
-}
-
-.tmp > :before {
-    content: 'xx';
-    border: 2px solid green;
-    margin-top: 1px;
+.tbody-mg5 > tr > td:nth-child(2) > * {
+    margin-left: 5px;
 }

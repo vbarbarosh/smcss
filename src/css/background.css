@@ -43,3 +43,11 @@
 .rainbow > :nth-child(3n) {
     background: #88f;
 }
+
+.gray-rainbow > :nth-child(1n) {
+    background: #bbb;
+}
+
+.gray-rainbow > :nth-child(2n) {
+    background: #ccc;
+}

@@ -1,20 +1,29 @@
 /* display
  * http://reference.sitepoint.com/css/display */
 
-.r {
-    text-align: right;
-}
-
 .dn { display: none; }
 .db { display: block; }
 .di { display: inline; }
 .dib { display: inline-block; }
+.xd { display: none; }
 
-.hidden { display: none; }
-.block { display: block; }
-.inline { display: inline; }
-.inline-block { display: inline-block; }
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
 /* display-flex */
+/* https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties */
 
 .flex-row,
 .flex-row-center {
@@ -458,6 +467,7 @@
  * xxxxxxxxxxxxxxxxxxxxxx
  */
 
+/*
 .mg5 > * + * { margin-top: 5px; }
 .mg10 > * + * { margin-top: 10px; }
 .mg15 > * + * { margin-top: 15px; }
@@ -479,8 +489,8 @@
 .mg40m > * + * { margin-top: 4.0em; }
 .mg45m > * + * { margin-top: 4.5em; }
 .mg50m > * + * { margin-top: 5.0em; }
+*/
 
-/*
 .mg5 > *:not(:last-child) { margin-bottom: 5px; }
 .mg10 > *:not(:last-child) { margin-bottom: 10px; }
 .mg15 > *:not(:last-child) { margin-bottom: 15px; }
@@ -491,8 +501,6 @@
 .mg40 > *:not(:last-child) { margin-bottom: 40px; }
 .mg45 > *:not(:last-child) { margin-bottom: 45px; }
 .mg50 > *:not(:last-child) { margin-bottom: 50px; }
-*/
-
 /* padding */
 
 /* recursive padding */
@@ -1048,6 +1056,7 @@
 
 .zn2 { z-index: -2; }
 .zn1 { z-index: -1; }
+
 .z0 { z-index: 0; }
 .z1 { z-index: 1; }
 .z2 { z-index: 2; }
@@ -1059,6 +1068,10 @@
 .z8 { z-index: 8; }
 .z9 { z-index: 9; }
 /* overflow */
+
+.oa { overflow: auto; }
+.oh { overflow: hidden; }
+.os { overflow: scroll; }
 
 .overflow-auto { overflow: auto; }
 .overflow-hidden { overflow: hidden; }
@@ -1079,10 +1092,26 @@
     width: 50px;
     height: 50px;
 }
+
+.box100 {
+    width: 100px;
+    height: 100px;
+}
+
+.box-max,
+.box-image {
+    max-width: 100%;
+    max-height: 100%;
+}
 /* box-sizing */
 
-.border-box { box-sizing: border-box; }
-.content-box { box-sizing: content-box; }
+.border-box {
+    box-sizing: border-box;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
 /* box shadow (inner glow, outer glow) */
 
 .xbs { box-shadow: none; }
@@ -1097,7 +1126,21 @@
 }
 /* opacity */
 
-.opacity50 { opacity: 0.5; }
+.opacity25 {
+    opacity: 0.25;
+}
+
+.opacity50 {
+    opacity: 0.5;
+}
+
+.opacity75 {
+    opacity: 0.75;
+}
+
+.opacity100 {
+    opacity: 1.0;
+}
 /* scrollbar */
 
 .scrollbar-none {
@@ -1142,6 +1185,26 @@
 .bgf8f { background: #f8f; }
 .bgff8 { background: #ff8; }
 .bgfff { background: #fff; }
+
+.rainbow > :nth-child(1n) {
+    background: #f88;
+}
+
+.rainbow > :nth-child(2n) {
+    background: #8f8;
+}
+
+.rainbow > :nth-child(3n) {
+    background: #88f;
+}
+
+.gray-rainbow > :nth-child(1n) {
+    background: #bbb;
+}
+
+.gray-rainbow > :nth-child(2n) {
+    background: #ccc;
+}
 /* position: absolute */
 
 .abs { position: absolute; }
@@ -1172,11 +1235,22 @@
 }
 /* position: relative */
 
-.rel { position: relative; }
+.rel {
+    position: relative;
+}
 /* position: fixed */
 
-.fix { position: fixed; }
-.fix-box { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+.fix {
+    position: fixed;
+}
+
+.fix-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
 /* text alignment: l (left), r (right), c (center), j (justify)
  * font sizes: fs8, fs9, fs10, fs11, ... (font-size: 8/9/10/...)
