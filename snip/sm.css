@@ -36,15 +36,10 @@
     padding-top: 3px;
 }
 
-.tbody-pg6 > tr + tr > td {
+.tbody-pg6 > tr + tr:not(:last-child) > td {
     padding-bottom: 3px;
 }
 
-
-
-.tbody-pig5 > tr > td + td {
-    padding-left: 5px;
-}
 
 
 

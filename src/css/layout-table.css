@@ -28,7 +28,7 @@
     padding-top: 3px;
 }
 
-.tbody-pg6 > tr + tr > td {
+.tbody-pg6 > tr + tr:not(:last-child) > td {
     padding-bottom: 3px;
 }
 
