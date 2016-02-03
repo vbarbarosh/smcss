@@ -1,0 +1,29 @@
+body {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 100px;
+    border: 1px dashed blue;
+}
+
+.border2 {
+    border: 2px solid black;
+}
+
+.circle {
+    border-radius:100%;
+}
+
+.xp { padding: 0; }
+
+.box25 { width: 25px; height: 25px; }
+.box50 { width: 50px; height: 50px; }
+.box100 { width: 100px; height: 100px; }
+.box200 { width: 200px; height: 200px; }
+.box400 { width: 400px; height: 400px; }
+
+/* .box25 .circle --> .circle25 */
+.circle25 { border-radius:100%; width: 25px; height: 25px; }
+.circle50 { border-radius:100%; width: 50px; height: 50px; }
+.circle100 { border-radius:100%; width: 100px; height: 100px; }
+.circle200 { border-radius:100%; width: 200px; height: 200px; }
+.circle400 { border-radius:100%; width: 400px; height: 400px; }
