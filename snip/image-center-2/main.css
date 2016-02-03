@@ -1,0 +1,12 @@
+.thumb {
+    display: inline-block;
+    width: 500px;
+    font-size: 0;
+    line-height: 400px;
+    text-align: center;
+    background: #f88;
+}
+
+.thumb img {
+    vertical-align: middle;
+}
