@@ -1,0 +1,17 @@
+/* .wt width top,
+ * .wb width bottom */
+.child-wt200 > * {
+    max-width: 200px;
+}
+
+.child-w200 > * {
+    width: 200px;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.w900 {
+    width: 900px;
+}
