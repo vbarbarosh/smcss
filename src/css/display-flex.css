@@ -1,9 +1,17 @@
 /* display-flex */
 /* https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties */
 
+.flex,
+.flex-row,
+.flex-row-center,
+.flex-column,
+.flex-column-center
+{
+    display: flex;
+}
+
 .flex-row,
 .flex-row-center {
-    display: flex;
     flex-direction: row;
 }
 
@@ -12,15 +20,12 @@
 }
 
 .flex-column {
-    display: flex;
     flex-direction: column;
 }
 
 .flex-grow {
     flex-grow: 1;
 }
-
-.flex { display: flex; }
 
 .flex-dir-row { flex-direction: row; }
 .flex-dir-row-r { flex-direction: row-reverse; }
