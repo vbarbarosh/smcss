@@ -1,0 +1,67 @@
+.xls {
+    list-style: none;
+}
+
+.client-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.client-container > * {
+    position: relative;
+    width: 25%;
+    height: 120px;
+}
+
+.client-container > *:nth-child(4n-3),
+.client-container > *:nth-child(4n-2),
+.client-container > *:nth-child(4n-1) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*
+.client-container > *:last-child {
+    border-right: none;
+}
+*/
+
+.client-container > * {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* http://keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts/#solution */
+.client-container > *:nth-child(4n+1):nth-last-child(-n+4),
+.client-container > *:nth-child(4n+1):nth-last-child(-n+4) ~ * {
+    border-bottom: none;
+}
+
+.client-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    x-max-width: 140px;
+    x-max-height: 60px;
+    x-opacity: 0.3;
+    transition: opaticy 1s;
+}
+
+.client-image:hover {
+    opacity: 1;
+}
+
+/* new terms */
+
+.o30 {
+    opacity: 0.3;
+}
+
+.hover-o100:hover {
+    opacity: 1;
+}
