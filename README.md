@@ -1,20 +1,16 @@
-css_sm: a css framework for prototyping
-=======================================
+# CSS for Developers --- smcss
 
-A CSS Framework for Prototyping
+CSS for Developers
 
-Configuration
--------------
+## Configuration
 
-$ bin/configure
+    $ bin/configure
 
-Building
---------
+## Building
 
-$ bin/build
+    $ bin/build
 
-Reference
----------
+## Reference
 
 SitePoint CSS Reference
 http://reference.sitepoint.com/css/
