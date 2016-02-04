@@ -15,7 +15,13 @@
     <div class="fix-box">
         <div class="abs-box gray opacity50 zn1" onclick="alert(1)"></div>
         <div class="flex-row-center box overflow-auto" style="padding: 10px">
-            <div class="ma white" style="max-width: 800px; max-height: 600px; min-width: 200px; min-height: 150px;">
+            <div v-bind:class="{box: boxClass}" class="ma white" style="max-width: 800px; max-height: 600px; min-width: 200px; min-height: 150px;">
+                <p><button v-on:click="toggleBoxClass">toggle <strong>.box</strong> class</button></p>
+                <p>
+                    .box class (<code>width: 100%; height: 100%</code>) tells that block should be as big as possible,
+                    at the same time pay respect to min/max-width/height. Without it a block will be as big as content
+                    in it.
+                </p>
                 <p>Praesent non suscipit lectus. Integer in lectus quam. Sed sed cursus mi. Maecenas mattis, metus ac volutpat vehicula, lacus felis vulputate est, at euismod tortor augue sed neque. Duis porttitor nisl et sapien efficitur, eget feugiat purus dapibus. Nam mattis aliquam felis, in tempor metus tempus at. In molestie vestibulum dolor ut consectetur.</p>
                 <p>Vestibulum aliquet enim quis sodales tincidunt. Donec vulputate magna diam, id feugiat nisi aliquam in. Cras gravida odio ac metus tincidunt pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum porttitor laoreet neque vel tincidunt. Integer eu scelerisque purus, quis porta ligula. Donec molestie risus ac malesuada laoreet. Duis eleifend enim tincidunt sagittis efficitur. Nunc maximus libero eget rutrum sollicitudin. Praesent cursus non justo sed auctor. Phasellus nibh nibh, egestas eget leo quis, molestie varius felis. In lobortis porta ultrices. Nunc gravida semper diam, a tincidunt urna porta ut. Proin cursus mi quam, vitae lobortis nunc feugiat eu. Maecenas ut gravida lectus, eget tincidunt ante.</p>
             </div>
