@@ -10,6 +10,7 @@
  *	class="pv10 pt5" top=5px, bottom=10px
  *	class="p5 xpt"
  */
+.p0 { padding: 0; }
 .p5 { padding: 5px; }
 .p10 { padding: 10px; }
 .p15 { padding: 15px; }

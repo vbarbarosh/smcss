@@ -1,5 +1,6 @@
 /* letter spacing */
 
+.ls0 { letter-spacing: 0; }
 .ls1 { letter-spacing: 1px; }
 .ls2 { letter-spacing: 2px; }
 .ls3 { letter-spacing: 3px; }
@@ -9,4 +10,6 @@
 .ls7 { letter-spacing: 7px; }
 .ls8 { letter-spacing: 8px; }
 .ls9 { letter-spacing: 9px; }
+
+/* this term may be used for list-style: none */
 .xls { letter-spacing: 0; }

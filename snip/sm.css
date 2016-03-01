@@ -862,6 +862,7 @@
 .xh { height: 0; }
 /* letter spacing */
 
+.ls0 { letter-spacing: 0; }
 .ls1 { letter-spacing: 1px; }
 .ls2 { letter-spacing: 2px; }
 .ls3 { letter-spacing: 3px; }
@@ -871,6 +872,8 @@
 .ls7 { letter-spacing: 7px; }
 .ls8 { letter-spacing: 8px; }
 .ls9 { letter-spacing: 9px; }
+
+/* this term may be used for list-style: none */
 .xls { letter-spacing: 0; }
 /* line height */
 
@@ -1032,6 +1035,7 @@
 
 .ma { margin: auto; }
 
+.m0 { margin: 0; }
 .m5 { margin: 5px; }
 .m10 { margin: 10px; }
 .m15 { margin: 15px; }
@@ -1326,6 +1330,7 @@
  *	class="pv10 pt5" top=5px, bottom=10px
  *	class="p5 xpt"
  */
+.p0 { padding: 0; }
 .p5 { padding: 5px; }
 .p10 { padding: 10px; }
 .p15 { padding: 15px; }

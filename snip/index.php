@@ -29,14 +29,14 @@ else {
     <title>Title of the Page</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="sm.css" type="text/css" rel="stylesheet">
+    <style>
+        .border {
+            border: 1px dashed rgba(0, 0, 0, 0.25);
+        }
+    </style>
     <?php if (isset($snip_css) && file_exists($snip_css)): ?>
         <link rel="stylesheet" href="<?php echo $snip_css ?>">
     <?php endif ?>
-    <style>
-        .border {
-            border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
 
