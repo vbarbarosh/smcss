@@ -59,3 +59,15 @@
 .flex-justify-center { justify-content: center; }
 .flex-justify-between { justify-content: space-between; }
 .flex-justify-around { justify-content: space-around; }
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-rev {
+    flex-wrap: wrap-reverse;
+}
