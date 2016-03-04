@@ -6,6 +6,23 @@
  * > Percentages: refer to width of containing block
  */
 
+/*
+!* http://www.mademyday.de/css-height-equals-width-with-pure-css.html *!
+.expand-height:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+<div class="w300">
+    <div class="rel bgf88 expand-height">
+        <img class="abs-box-image border-box p10" src="https://unsplash.it/400?random" alt="">
+    </div>
+</div>
+
+In the previous realization **position: relative** should be specified manually.
+Now it is specified. What is reason this two approaches?
+*/
+
 .expand-1-1,
 .expand-1-2,
 .expand-1-3,
