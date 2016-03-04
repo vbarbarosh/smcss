@@ -27,7 +27,9 @@ else {
         <base href="//<?php echo htmlspecialchars($_SERVER['SERVER_NAME'] . dirname($_SERVER['SCRIPT_NAME']) . "/$snip") ?>" />
     -->
     <title>Title of the Page</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!--
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    -->
     <link href="sm.css" type="text/css" rel="stylesheet">
     <style>
         .border {
@@ -59,7 +61,9 @@ else {
 <?php endif ?>
 
 <script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+-->
 <?php if (isset($snip_js) && file_exists($snip_js)): ?>
     <script src="//cdn.jsdelivr.net/vue/1.0.13/vue.min.js" type="text/javascript"></script>
     <script type="text/javascript">
