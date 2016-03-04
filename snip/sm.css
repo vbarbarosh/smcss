@@ -339,6 +339,7 @@
 }
 
 .flex-cols,
+.flex-cols-center,
 /* obsolete */ .flex-column {
     flex-direction: column;
 }
