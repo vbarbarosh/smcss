@@ -7,12 +7,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .client-container > * {
     position: relative;
     width: 25%;
     height: 120px;
+    box-sizing: border-box;
 }
 
 .client-container > *:nth-child(4n-3),
