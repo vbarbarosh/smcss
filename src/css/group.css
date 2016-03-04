@@ -40,6 +40,10 @@
     margin-top: 5px;
 }
 
+.mg10 > :nth-child(n+2) {
+    margin-top: 10px;
+}
+
 /**
  * Margin Inline Groups
  *
@@ -55,6 +59,10 @@
     margin-left: 5px;
 }
 
+.mig10 > :nth-child(n+2) {
+    margin-left: 10px;
+}
+
 
 /**
  * Padding Groups are the same as Margin Groups with the difference
@@ -65,6 +73,10 @@
     padding-top: 5px;
 }
 
+.pg10 > :nth-child(n+2) {
+    padding-top: 10px;
+}
+
 /**
  * Padding Inline Groups are the same as Margin Inline Groups with the
  * difference that instead of margin-left padding-left is used.
@@ -72,6 +84,10 @@
 
 .pig5 > :nth-child(n+2) {
     padding-left: 5px;
+}
+
+.pig10 > :nth-child(n+2) {
+    padding-left: 10px;
 }
 
 

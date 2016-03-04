@@ -1,6 +1,10 @@
-.mg10 > :nth-child(n+2) {
-  margin-top: 10px;
-}
+/* References
+ *
+ * http://zzzzbov.com/blag/scalable-videos-with-aspect-ratio
+ * http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
+ * https://www.w3.org/TR/CSS2/box.html#propdef-padding-top
+ * > Percentages: refer to width of containing block
+ */
 .aspect-ratio-1-1,
 .aspect-ratio-1-2,
 .aspect-ratio-1-3,
