@@ -6,7 +6,7 @@
  * margin groups: mg5, mg10, mg15, ..., mg05, mg10, mg15, ...
  */
 
-@import "aspect-ratio.css";
+@import "expand.css";
 @import "layout-table.css";
 @import "background.css";
 @import "border-radius.css";
