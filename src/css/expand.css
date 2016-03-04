@@ -17,9 +17,9 @@
 .expand-9-16,
 .expand-16-9 {
   /*
-    display: block;
     max-width: 100%;
     */
+  display: block;
   position: relative;
   /*
     > * {

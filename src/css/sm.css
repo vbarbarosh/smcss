@@ -6,7 +6,10 @@
  * margin groups: mg5, mg10, mg15, ..., mg05, mg10, mg15, ...
  */
 
+/* This module should come first in order to allow other
+ * modules overwhite display: block */
 @import "expand.css";
+
 @import "layout-table.css";
 @import "background.css";
 @import "border-radius.css";
