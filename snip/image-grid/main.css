@@ -1,17 +1,7 @@
-/* .wt width top,
- * .wb width bottom */
-.child-wt200 > * {
-    max-width: 200px;
+.w800 {
+    width: 800px;
 }
 
-.child-w200 > * {
-    width: 200px;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.w900 {
-    width: 900px;
+.bs5 {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
 }

@@ -1,19 +1,16 @@
-<div class="w900 ma flex-row flex-wrap child-w200 red">
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_523fda1064048_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52509afaba7b1_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52aeb5843f96c_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52a077d68d6e9_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52be0803ecaec_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52cb185a63c25_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52dbe5349541f_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52dbe5607f0db_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=unsplash.s3.amazonaws.com/batch%202/02.jpg" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=unsplash.s3.amazonaws.com/batch%202/05.jpg" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=unsplash.s3.amazonaws.com/batch%202/09.jpg" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=unsplash.s3.amazonaws.com/batch%202/10.jpg" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_529f43206a94b_1.JPG" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=unsplash.s3.amazonaws.com/batch%203/jerry-adney.jpg" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=unsplash.s3.amazonaws.com/batch%207/tuscany.jpg" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=unsplash.s3.amazonaws.com/batch%209/DeepInTheForest_cre8art4life_JulieGeiger.jpg" /></div>
-    <div class="m10"><img class="box-image" src="//images.weserv.nl/?w=300&url=ssl:s3.amazonaws.com/ooomf-com-files/MFqGDInrRoC7l5f86CN0_IMG_9852.jpg" /></div>
+<div class="mg10">
+    <select v-model="grid">
+        <option v-for="i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]" :value="'grid' + i">
+            {{ 'grid' + i }}
+        </option>
+    </select>
+    <div class="w800 border">
+        <div :class="[grid]" class="flex-rows flex-wrap">
+            <div v-for="image in images" class="col1">
+                <a class="expand-4-3 m5 bs5" href="#">
+                    <img :src="image" class="abs-box-image border-box p5" />
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
