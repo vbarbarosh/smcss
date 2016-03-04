@@ -1,5 +1,10 @@
 /* display-flex */
-/* https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties */
+
+/* References
+ *
+ * https://github.com/philipwalton/flexbugs
+ * https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
+ */
 
 .flex,
 .flex-rows,
