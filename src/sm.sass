@@ -1,0 +1,155 @@
+/*
+  Welcome to Compass.
+  In this file you should write your main styles. (or centralize your imports)
+  Import this file using the following HTML or equivalent:
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+// @import compass/reset
+
+// display
+.dn
+    display: none
+.db
+    display: block
+.di
+    display: inline
+.dib
+    display: inline-block
+
+// horizontal alignment
+.l
+    text-align: left
+.r
+    text-align: right
+.c
+    text-align: center
+.j
+    text-align: justify
+
+// vertical alignment
+.vm
+    vertical-align: middle
+.vt
+    vertical-align: top
+.vb
+    vertical-align: bottom
+
+// font style
+//
+// http://www.google.com/webfonts/specimen/Open+Sans
+// http://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
+// > Book 300
+// > Normal 400
+// > Semi-Bold 600
+// > Bold 700
+// > Extra-Bold 800
+.b
+    font-weight: bold
+.bb
+    font-weight: 800
+.b3
+    font-weight: 300
+.b4
+    font-weight: 400
+.b5
+    font-weight: 500
+.b6
+    font-weight: 600
+.b7
+    font-weight: 700
+.b8
+    font-weight: 800
+.i
+    font-style: italic
+.u
+    text-decoration: underline
+.o
+    text-decoration: overline
+.s
+    text-decoration: line-through
+.u.o
+    text-decoration: underline overline
+.u.s
+    text-decoration: underline line-through
+.o.s
+    text-decoration: overline line-through
+.u.o.s
+    text-decoration: underline overline line-through
+.xd
+    text-decoration: none
+
+// text transformations
+.uc
+    text-transform: uppercase
+.lc
+    text-transform: lowercase
+.cc
+    text-transform: capitalize
+.xc
+    text-transform: none
+
+// font size
+@each $i in 0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+    .fs#{$i}
+        font-size: #{$i}px
+
+// line height
+@each $i in 0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+    .lh#{$i}
+        line-height: #{$i}px
+
+@each $i in 05, 10, 15, 20
+    .lh#{$i}m
+        line-height: #{$i}em
+
+// letter spacing
+@each $i in 0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+    .ls#{$i}
+        letter-spacing: #{$i}px
+
+// margin and padding
+@each $i in 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50
+    .m#{$i}
+        margin: #{$i}px
+    .ml#{$i}
+        margin-left: #{$i}px
+    .mr#{$i}
+        margin-right: #{$i}px
+    .mv#{$i}
+        margin-top: #{$i}px
+        margin-bottom: #{$i}px
+    .mh#{$i}
+        margin-left: #{$i}px
+        margin-right: #{$i}px
+    .p#{$i}
+        padding: #{$i}px
+    .pl#{$i}
+        padding-left: #{$i}px
+    .pr#{$i}
+        padding-right: #{$i}px
+    .pv#{$i}
+        padding-top: #{$i}px
+        padding-bottom: #{$i}px
+    .ph#{$i}
+        padding-left: #{$i}px
+        padding-right: #{$i}px
+
+// margin and padding groups
+@each $i in 5, 10, 15, 20, 25, 30, 35, 40, 45, 50
+    .mg#{$i} > :nth-child(n + 2)
+        margin-top: #{$i}px
+    .mig#{$i} > :nth-child(n + 2)
+        margin-left: #{$i}px
+    .pg#{$i} > :nth-child(n + 2)
+        padding-top: #{$i}px
+    .pig#{$i} > :nth-child(n + 2)
+        padding-left: #{$i}px
+
+// z-index
+@each $i in 1, 2, 3, 4, 5
+    .z#{$i}
+        z-index: #{$i}
+
+// custom
+h2
+    @extend .b
