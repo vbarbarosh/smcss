@@ -145,13 +145,15 @@
 }
 /* border radius */
 
+.br0 { border-radius: 0; }
 .br5 { border-radius: 5px; }
 .br10 { border-radius: 10px; }
 .br15 { border-radius: 15px; }
 .br20 { border-radius: 20px; }
 .br25 { border-radius: 25px; }
 .br30 { border-radius: 30px; }
-.xbr { border-radius: 0; }
+
+/* obsolete */ .xbr { border-radius: 0; }
 /* border */
 
 .border-none {
@@ -223,24 +225,34 @@
 /* https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties */
 
 .flex,
-.flex-row,
-.flex-row-center,
-.flex-column,
-.flex-column-center
+.flex-rows,
+.flex-rows-center,
+.flex-cols,
+.flex-cols-center,
+/* obsolete */ .flex-row,
+/* obsolete */ .flex-row-center,
+/* obsolete */ .flex-column,
+/* obsolete */ .flex-column-center
 {
     display: flex;
 }
 
-.flex-row,
-.flex-row-center {
+.flex-rows,
+.flex-rows-center,
+/* obsolete */ .flex-row,
+/* obsolete */ .flex-row-center {
     flex-direction: row;
 }
 
-.flex-row-center {
+.flex-cols-center,
+.flex-rows-center,
+/* obsolete */ .flex-row-center {
+    align-items: center;
     justify-content: center;
 }
 
-.flex-column {
+.flex-cols,
+/* obsolete */ .flex-column {
     flex-direction: column;
 }
 
@@ -248,10 +260,10 @@
     flex-grow: 1;
 }
 
-.flex-dir-row { flex-direction: row; }
-.flex-dir-row-r { flex-direction: row-reverse; }
-.flex-dir-col { flex-direction: column; }
-.flex-dir-col-r { flex-direction: column-reverse; }
+/* obsolete */ .flex-dir-row { flex-direction: row; }
+/* obsolete */ .flex-dir-row-r { flex-direction: row-reverse; }
+/* obsolete */ .flex-dir-col { flex-direction: column; }
+/* obsolete */ .flex-dir-col-r { flex-direction: column-reverse; }
 
 .flex-align-start { align-items: flex-start; }
 .flex-align-end { align-items: flex-end; }
