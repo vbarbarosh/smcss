@@ -19,3 +19,7 @@
     box-sizing: border-box;
     height: 100%;
 }
+
+.flex-align-center {
+    display: flex;
+}

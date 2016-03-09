@@ -1,0 +1,87 @@
+// References
+//
+// https://github.com/philipwalton/flexbugs
+// https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
+
+.flex
+    @extend .flex-wrap
+
+// wrap
+.flex-wrap
+    display: flex
+    flex-wrap: wrap
+
+.flex-nowrap
+    display: flex
+    flex-wrap: nowrap
+
+.flex-wrap-rev
+    display: flex
+    flex-wrap: wrap-reverse
+
+// rows
+.flex-rows
+    @extend .flex
+    flex-direction: row
+
+.flex-rows-center
+    @extend .flex-rows
+    align-items: center
+    justify-content: center
+
+// columns
+.flex-cols
+    @extend .flex
+    flex-direction: column
+
+.flex-cols-center
+    @extend .flex-cols
+    align-items: center
+    justify-content: center
+
+// alignment
+.flex-align-start
+    @extend .flex
+    align-items: flex-start
+
+.flex-align-end
+    @extend .flex
+    align-items: flex-end
+
+.flex-align-center
+    @extend .flex
+    align-items: center
+
+.flex-align-baseline
+    @extend .flex
+    align-items: baseline
+
+.flex-align-stretch
+    @extend .flex
+    align-items: stretch
+
+// justify
+.flex-justify-start
+    @extend .flex
+    justify-content: flex-start
+
+.flex-justify-end
+    @extend .flex
+    justify-content: flex-end
+
+.flex-justify-center
+    @extend .flex
+    justify-content: center
+
+.flex-justify-between
+    @extend .flex
+    justify-content: space-between
+
+.flex-justify-around
+    @extend .flex
+    justify-content: space-around
+
+// growing
+.flex-grow
+    @extend .flex
+    flex-grow: 1
