@@ -43,7 +43,7 @@ else {
 <body>
 
 <?php if (isset($snip_html)): ?>
-    <div class="flex-row-center mv25">
+    <div class="flex-rows-center mv25">
         <div id="app">
             <?php include $snip_html ?>
         </div>
