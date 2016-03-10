@@ -2190,52 +2190,62 @@
 
 /* This module should come first in order to allow other
  * modules overwhite display: block */
-/* text alignment */
+.l {
+  text-align: left; }
 
-.l { text-align: left; }
-.r { text-align: right; }
-.c { text-align: center; }
-.j { text-align: justify; }
-/* text-decoration */
+.r {
+  text-align: right; }
 
-.u { text-decoration: underline; }
-.o { text-decoration: overline; }
-.s { text-decoration: line-through; } /* strike over */
-.u.o { text-decoration: underline overline; }
-.u.s { text-decoration: underline line-through; }
-.o.s { text-decoration: overline line-through; }
-.u.o.s { text-decoration: underline overline line-through; }
+.c {
+  text-align: center; }
 
-/* taken by display: none
-.xd { text-decoration: none; }
-*/
+.j {
+  text-align: justify; }
 
-.h-u:hover { text-decoration: underline; }
-.h-o:hover { text-decoration: overline; }
-.h-s:hover { text-decoration: line-through; } /* strike over */
-.h-u.h-o:hover { text-decoration: underline overline; }
-.h-u.h-s:hover { text-decoration: underline line-through; }
-.h-o.h-s:hover { text-decoration: overline line-through; }
-.h-u.h-o.h-s:hover { text-decoration: underline overline line-through; }
-/*
-.h-xd:hover { text-decoration: none; }
-*/
-/* capitalization / text-transform */
+.vm {
+  vertical-align: middle; }
 
-.uc { text-transform: uppercase; } /* upper case */
-.lc { text-transform: lowercase; } /* lower case */
-.cc { text-transform: capitalize; } /* camel case */
-.xc { text-transform: none; } /* remove capitalization (remain text as is) */
+.vt {
+  vertical-align: top; }
 
-.r-uc * { text-transform: uppercase; } /* recursive upper case */
-.r-lc * { text-transform: lowercase; } /* recursive lower case */
-.r-cc * { text-transform: capitalize; } /* recursive camel case */
-.r-xc * { text-transform: none; } /* recursive remove capitalization (remain text as is) */
+.vb {
+  vertical-align: bottom; }
 
-.h-uc:hover { text-transform: uppercase; } /* upper case */
-.h-lc:hover { text-transform: lowercase; } /* lower case */
-.h-cc:hover { text-transform: capitalize; } /* camel case */
-.h-xc:hover { text-transform: none; } /* remove capitalization (remain text as is) */
+.u, .h-u:hover {
+  text-decoration: underline; }
+
+.o, .h-o:hover {
+  text-decoration: overline; }
+
+.s, .h-s:hover {
+  text-decoration: line-through; }
+
+.u.o, .o.h-u:hover, .h-u.h-o:hover, .u.h-o:hover {
+  text-decoration: underline overline; }
+
+.u.s, .s.h-u:hover, .h-u.h-s:hover, .u.h-s:hover {
+  text-decoration: underline line-through; }
+
+.o.s, .s.h-o:hover, .h-o.h-s:hover, .o.h-s:hover {
+  text-decoration: overline line-through; }
+
+.u.o.s, .o.s.h-u:hover, .s.h-u.h-o:hover, .h-u.h-o.h-s:hover, .o.h-u.h-s:hover, .u.s.h-o:hover, .u.h-o.h-s:hover, .u.o.h-s:hover {
+  text-decoration: underline overline line-through; }
+
+.x, .h-x:hover {
+  text-decoration: none; }
+
+.uc, .h-uc:hover {
+  text-transform: uppercase; }
+
+.lc, .h-lc:hover {
+  text-transform: lowercase; }
+
+.cc, .h-cc:hover {
+  text-transform: capitalize; }
+
+.xc, .h-xc:hover {
+  text-transform: none; }
 /* transform */
 
 .scale50 {
@@ -2274,11 +2284,6 @@
     -ms-user-select: none;
     user-select: none;
 }
-/* vertical-align */
-
-.vm { vertical-align: middle; }
-.vt { vertical-align: top; }
-.vb { vertical-align: bottom; }
 /* width */
 
 .w5 { width: 5px; }

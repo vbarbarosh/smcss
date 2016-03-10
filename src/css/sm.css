@@ -45,12 +45,9 @@
 @import "position.css";
 @import "scrollbar.css";
 @import "sm.css";
-@import "text-align.css";
-@import "text-decoration.css";
-@import "text-transform.css";
+@import "text.css";
 @import "transform.css";
 @import "transition.css";
 @import "user-select.css";
-@import "vertical-align.css";
 @import "width.css";
 @import "z-index.css";

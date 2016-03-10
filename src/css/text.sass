@@ -1,0 +1,73 @@
+// horizontal alignment
+.l
+    text-align: left
+.r
+    text-align: right
+.c
+    text-align: center
+.j
+    text-align: justify
+
+// vertical alignment
+.vm
+    vertical-align: middle
+.vt
+    vertical-align: top
+.vb
+    vertical-align: bottom
+
+// decoration
+.u
+    text-decoration: underline
+.o
+    text-decoration: overline
+.s
+    text-decoration: line-through // strike over
+.u.o
+    text-decoration: underline overline
+.u.s
+    text-decoration: underline line-through
+.o.s
+    text-decoration: overline line-through
+.u.o.s
+    text-decoration: underline overline line-through
+.x
+    text-decoration: none
+
+// decoration under hover
+.h-u:hover
+    @extend .u
+.h-o:hover
+    @extend .o
+.h-s:hover
+    @extend .s
+.h-u.h-o:hover
+    @extend .u.o
+.h-u.h-s:hover
+    @extend .u.s
+.h-o.h-s:hover
+    @extend .o.s
+.h-u.h-o.h-s:hover
+    @extend .u.o.s
+.h-x:hover
+    @extend .x
+
+// text transformations
+.uc
+    text-transform: uppercase
+.lc
+    text-transform: lowercase
+.cc
+    text-transform: capitalize
+.xc
+    text-transform: none
+
+// text transformations under hover
+.h-uc:hover
+    @extend .uc
+.h-lc:hover
+    @extend .lc
+.h-cc:hover
+    @extend .cc
+.h-xc:hover
+    @extend .xc
