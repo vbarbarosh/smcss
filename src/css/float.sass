@@ -1,0 +1,24 @@
+.fl
+    float: left
+.fr
+    float: right
+.xf
+    float: none
+
+.cl
+    clear: left
+.cr
+    clear: right
+.cb
+    clear: both
+
+// http://compass-style.org/reference/compass/utilities/general/clearfix/
+.clearfix
+    *zoom: 1
+    &:after
+        content: "\0020"
+        display: block
+        height: 0
+        clear: both
+        overflow: hidden
+        visibility: hidden

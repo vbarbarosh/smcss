@@ -1,0 +1,45 @@
+.xbg
+    background: none
+
+// http://css-tricks.com/perfect-full-page-background-image/
+.background-cover
+    background: transparent no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+// Simple backgrounds for debugging
+.black
+    background: #000
+.gray
+    background: #888
+.silver
+    background: #ccc
+.white
+    background: #fff
+.red
+    background: #f88
+.green
+    background: #8f8
+.blue
+    background: #88f
+.yellow
+    background: #ff8
+.cyan
+    background: #8ff
+
+// Backgrounds for containers (with several children like TABLE)
+.rainbow
+    & > :nth-child(1n)
+        @extend .red
+    & > :nth-child(2n)
+        @extend .green
+    & > :nth-child(3n)
+        @extend .blue
+
+.gray-rainbow
+    & > :nth-child(1n)
+        @extend .gray
+    & > :nth-child(2n)
+        @extend .silver

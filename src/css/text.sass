@@ -71,3 +71,100 @@
     @extend .cc
 .h-xc:hover
     @extend .xc
+
+// Letter spacing
+@each $size in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    .ls#{$size}
+        letter-spacing: #{$size}px
+
+// Line height
+//
+// FireFox UA Stylesheet
+// resource://gre-resources/forms.css
+// > input {
+// >	[...]
+// >	line-height: normal !important;
+// >	[...]
+// > }
+//
+// http://www.456bereastreet.com/archive/201108/line-height_in_input_fields/
+// > The problem is !important, which makes it impossible to override
+// > this rule from an author stylesheet, not even if you use
+// > !important. This has been discussed for years in the
+// >
+// >	CSS Property line-height has no effects on input text fields bug
+// >	https://bugzilla.mozilla.org/show_bug.cgi?id=349259
+// >
+// > It currently doesn't look like a fix is coming any time soon.
+//
+// Blog: Bulletproof CSS input button heights
+// http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights
+// > - Disabled top and bottom padding
+// > - Set the height of the button to be 40px tall
+// > - Set vertical-align to middle
+
+@each $size in (8, 9, 10, 11, 12, 13, 14, 15, 16)
+    .lh#{$size}
+        line-height: #{$size}px
+
+@each $size in (5)
+    .lh0#{$size}m
+        line-height: 0#{$size}em
+
+@each $size in (10, 15, 20)
+    .lh#{$size}m
+        line-height: #{$size}em
+
+// Font size
+@for $size from 0 through 32
+    .fs#{$size}
+        font-size: #{$size}px
+
+// Font weight
+//
+// http://www.google.com/webfonts/specimen/Open+Sans
+// http://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
+// Book 300
+// Normal 400
+// Semi-Bold 600
+// Bold 700
+// Extra-Bold 800
+
+.b
+    font-weight: bold
+.bb
+    font-weight: 800
+.b3
+    font-weight: 300
+.b4
+    font-weight: 400
+.b5
+    font-weight: 500
+.b6
+    font-weight: 600
+.b7
+    font-weight: 700
+.b8
+    font-weight: 800
+.xb
+    font-weight: normal
+
+// Font weight under hover
+.h-b:hover
+    @extend .b
+.h-bb:hover
+    @extend .bb
+.h-b3:hover
+    @extend .b3
+.h-b4:hover
+    @extend .b4
+.h-b5:hover
+    @extend .b5
+.h-b6:hover
+    @extend .b6
+.h-b7:hover
+    @extend .b7
+.h-b8:hover
+    @extend .b7
+.h-xb:hover
+    @extend .xb
