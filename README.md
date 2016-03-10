@@ -44,3 +44,6 @@ http://flexbox.io/
 
 Basscss
 http://www.basscss.com/
+
+Solved by Flexbox — Cleaner, hack-free CSS
+https://philipwalton.github.io/solved-by-flexbox/
