@@ -1,14 +1,42 @@
 // box, fit, fill, size, resize
 
-.bbox
-    box-sizing: border-box
+//.box {
+//    width: 100%;
+//    height: 100%;
+//}
+//
+//.box25 {
+//    width: 25px;
+//    height: 25px;
+//}
+//
+//.box50 {
+//    width: 50px;
+//    height: 50px;
+//}
+//
+//.box100 {
+//    width: 100px;
+//    height: 100px;
+//}
+//
+//.box-max,
+//.box-image {
+//    max-width: 100%;
+//    max-height: 100%;
+//}
 
-.cbox
-    box-sizing: content-box
-
-.box
+.size
     width: 100%
     height: 100%
+
+.size25
+    width: 25px
+    height: 25px
+
+.size50
+    width: 50px
+    height: 50px
 
 .fit
     width: 100%
@@ -58,81 +86,7 @@
     max-width: 100%
     max-height: 50%
 
-.lim,
-.limit
-    max-width: 100%
-    max-height: 100%
-
-.lim800
-    max-width: 800px
-    max-height: 800px
-
-.lim-w,
-.limit-w
-    max-width: 100%
-
-.lim-h,
-.limit-h
-    max-height: 100%
-
-.box
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-
-.box-b
-    left: 0
-    right: 0
-    bottom: 0
-
-.box-br
-    right: 0
-    bottom: 0
-
-.box-tl
-    top: 0
-    left: 0
-
-// t0 r0
-.box-tr
-    top: 0
-    right: 0
-
-.box5
-    top: 5px
-    left: 5px
-    right: 5px
-    bottom: 5px
-
-.box-bottom
-    left: 0
-    right: 0
-    bottom: 0
-
-@each $size in (25, 50, 75, 100, 200, 300, 400)
-    .box#{$size}
-        width: #{$size}px
-        height: #{$size}px
-
-// box-max, box-image, limit
-.box-max,
-.box-image
-    max-width: 100%
-    max-height: 100%
-
-.abs
-    position: absolute
-
-.abs-box
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0
-
-.abs-box-5 { position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; }
-
-.abs-box-10 { position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; }
-
-// abs box limit ma
-// abs box lim ma
+// abs box max ma
 .abs-box-image
     position: absolute
     top: 0
@@ -145,7 +99,7 @@
     max-width: 100%
     max-height: 100%
 
-// abs box-bottom
+// abs box ta
 // abs box-b
 .abs-bottom
     position: absolute

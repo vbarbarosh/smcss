@@ -1,0 +1,57 @@
+// .xm has the lowest priority
+//
+//     .xm.ml5 will give margin: 0 0 0 5px
+//
+//  Everything from the next
+// will be able to override any part of margin.
+// The following should be able to do: .xm.ml5 which will give margin: 0 0 0 5px
+.xm
+    margin: 0
+.xp
+    padding: 0
+
+// .ma should come after .xm and before any other margin overriding classes.
+// That way we can write something like .ma.mv10 which gives us margin: 10px auto
+.ma
+    margin: auto
+
+@each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
+    .m#{$size}
+        margin: #{$size}px
+    .p#{$size}
+        padding: #{$size}px
+
+// .mv* and .mh* should come after .ma and .m* in order
+// to override them partially
+@each $size in (5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
+    .mv#{$size}
+        margin-top: #{$size}px
+        margin-bottom: #{$size}px
+    .mh#{$size}
+        margin-left: #{$size}px
+        margin-right: #{$size}px
+    .pv#{$size}
+        padding-top: #{$size}px
+        padding-bottom: #{$size}px
+    .ph#{$size}
+        padding-left: #{$size}px
+        padding-right: #{$size}px
+
+// .ml*, .mr*, .mt*, and .mb* should come after .m*, .mv*, and .mh* */
+@each $size in (0, 5, 10, 15)
+    .ml#{$size}
+        margin-left: #{$size}px
+    .mr#{$size}
+        margin-right: #{$size}px
+    .mt#{$size}
+        margin-top: #{$size}px
+    .mb#{$size}
+        margin-bottom: #{$size}px
+    .pl#{$size}
+        padding-left: #{$size}px
+    .pr#{$size}
+        padding-right: #{$size}px
+    .pt#{$size}
+        padding-top: #{$size}px
+    .pb#{$size}
+        padding-bottom: #{$size}px

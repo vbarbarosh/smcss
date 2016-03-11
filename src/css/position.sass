@@ -6,3 +6,47 @@
     position: absolute
 .fix
     position: fixed
+
+.box
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+.box-b
+    left: 0
+    right: 0
+    bottom: 0
+
+.box-br
+    right: 0
+    bottom: 0
+
+.box-tl
+    top: 0
+    left: 0
+
+.tlrb
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+@each $distance in (0, 5, 10, 15)
+    .t#{$distance}
+        top: #{$distance}px
+    .l#{$distance}
+        left: #{$distance}px
+    .r#{$distance}
+        right: #{$distance}px
+    .b#{$distance}
+        bottom: #{$distance}px
+
+.xt
+    top: auto
+.xl
+    left: auto
+.xr
+    right: auto
+.xb
+    bottom: auto

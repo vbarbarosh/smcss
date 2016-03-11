@@ -1,6 +1,8 @@
 // How to compile
 // $ sudo gem install --pre sass-css-importer
-// $ sass -r sass-css-importer sm.sass
+// $ sudo npm install -g autoprefixer
+// $ sass -r sass-css-importer sm.sass > sm.css
+// $ autoprefixer sm.css -o sm.prefix.css
 //
 // References
 // https://github.com/chriseppstein/sass-css-importer
@@ -9,11 +11,11 @@
 
 @import "CSS:layout-table"
 @import "background"
-@import "CSS:border-radius"
-@import "CSS:border"
-@import "CSS:box-shadow"
-@import "CSS:box-sizing"
-@import "CSS:box"
+@import "border-radius"
+@import "border"
+@import "box-shadow"
+@import "box-sizing"
+@import "box"
 @import "flex"
 @import "float"
 @import "display"
@@ -23,16 +25,15 @@
 @import "grid"
 @import "size"
 @import "CSS:group"
-@import "CSS:list-style"
-@import "CSS:margin"
-@import "CSS:opacity"
+@import "list"
+@import "margin"
+@import "opacity"
 @import "CSS:outline"
-@import "CSS:overflow"
-@import "CSS:padding"
+@import "overflow"
 @import "position"
-@import "CSS:scrollbar"
+@import "scrollbar"
 @import "text"
-@import "CSS:transform"
-@import "CSS:transition"
-@import "CSS:user-select"
-@import "CSS:z-index"
+@import "transform"
+@import "transition"
+@import "user-select"
+@import "z-index"

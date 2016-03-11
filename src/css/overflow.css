@@ -1,9 +1,0 @@
-/* overflow */
-
-.oa { overflow: auto; }
-.oh { overflow: hidden; }
-.os { overflow: scroll; }
-
-.overflow-auto { overflow: auto; }
-.overflow-hidden { overflow: hidden; }
-.overflow-scroll { overflow: scroll; }

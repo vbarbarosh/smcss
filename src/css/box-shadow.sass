@@ -1,0 +1,9 @@
+// box shadow (inner glow, outer glow)
+
+// .xbs { box-shadow: none; }
+
+@each $size in (5, 10, 15, 20, 25)
+    .og#{$size}
+        box-shadow: 0 0 #{$size}px rgba(0, 0, 0, 0.75)
+    .ig#{$size}
+        box-shadow: inset 0 0 #{$size}px rgba(0, 0, 0, 0.75)

@@ -47,3 +47,9 @@ http://www.basscss.com/
 
 Solved by Flexbox — Cleaner, hack-free CSS
 https://philipwalton.github.io/solved-by-flexbox/
+
+Lea Verou | 10 things you might not know about CSS3
+https://vimeo.com/31719130
+
+Lea Verou | The humble border-radius
+https://vimeo.com/70171266
