@@ -1,8 +1,0 @@
-/* outline */
-
-.xoutline { outline: none; }
-.outline-none { outline: none; }
-
-.outline-red {
-    outline: 1px dashed red;
-}
