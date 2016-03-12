@@ -1,6 +1,6 @@
 {
   "name": "smcss",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A CSS Framework for Prototyping",
   "main": "index.js",
   "scripts": {

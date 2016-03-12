@@ -53,3 +53,6 @@ https://vimeo.com/31719130
 
 Lea Verou | The humble border-radius
 https://vimeo.com/70171266
+
+Absolute Centering in CSS
+http://codepen.io/shshaw/pen/gEiDt
