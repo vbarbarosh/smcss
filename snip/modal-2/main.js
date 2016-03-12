@@ -1,10 +1,10 @@
 ({
     data: {
-        boxClass: true
+        fitClass: false
     },
     methods: {
-        toggleBoxClass: function () {
-            this.boxClass = !this.boxClass;
+        toggleFitClass: function () {
+            this.fitClass = !this.fitClass;
         }
     }
 })

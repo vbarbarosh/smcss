@@ -10,18 +10,18 @@
     .h#{$size}p
         height: percentage($size / 100)
 
-// resize (other terms: fit, fill, size, set-size - ss)
-.rs
+// fit, fill, size, resize, set-size
+.fit
     width: 100%
     height: 100%
 
 @each $size in (25, 50)
-    .rs#{$size}
+    .fit#{$size}
         width: $size * 1px
         height: $size * 1px
 
 @each $size in (25, 50, 75)
-    .rs#{$size}p
+    .fit#{$size}p
         width: $size * 1%
         height: $size * 1%
 

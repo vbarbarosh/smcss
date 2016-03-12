@@ -1,4 +1,4 @@
-<div class="scrollbar-none fix-box">
+<div class="fix box scrollbar-none">
 
     <div class="w600 ma mv50">
         <p>Nullam convallis quam urna. Fusce et efficitur risus, at vulputate orci. Duis eget ante tincidunt, mattis enim non, sagittis libero. Aenean lacinia eros vel risus malesuada bibendum. Sed accumsan urna odio, feugiat aliquam mi feugiat non. Etiam vel est mi. Proin vitae dolor ut dolor consectetur mattis vitae varius dui. Duis non pulvinar ante. Vivamus et urna eget nulla dapibus suscipit vel quis felis. Vestibulum bibendum ornare nunc, eget condimentum nibh finibus nec. Sed erat purus, tempus commodo finibus in, mollis non purus. Curabitur ut sem ac quam aliquet scelerisque et eget diam.</p>
@@ -12,13 +12,13 @@
         <p>Mauris euismod iaculis nisi sed ultrices. Pellentesque consectetur ullamcorper massa, vel ornare nulla lacinia eu. Maecenas ac dui leo. Ut eget auctor nisi. Sed faucibus vehicula mi ac feugiat. Nam ut sapien nibh. Vestibulum convallis neque id mollis feugiat. Nullam mattis id justo viverra feugiat. Mauris quis rutrum diam, ut tempor arcu. Donec imperdiet lacinia cursus. Vestibulum congue odio lorem. Vestibulum in tincidunt justo.</p>
     </div>
 
-    <div class="fix-box">
-        <div class="abs-box gray opacity50 zn1" onclick="alert(1)"></div>
-        <div class="flex-row-center box overflow-auto" style="padding: 10px">
-            <div v-bind:class="{box: boxClass}" class="ma white" style="max-width: 800px; max-height: 600px; min-width: 200px; min-height: 150px;">
-                <p><button v-on:click="toggleBoxClass">toggle <strong>.box</strong> class</button></p>
+    <div class="fix box">
+        <div class="abs box gray o50 z1n" onclick="alert(1)"></div>
+        <div class="flex-rows-center fit bbox p10 oa">
+            <div v-bind:class="{fit: fitClass}" class="max800x600 min200x150 ma white">
+                <p><button v-on:click="toggleFitClass">toggle <strong>.fit</strong> class</button></p>
                 <p>
-                    .box class (<code>width: 100%; height: 100%</code>) tells that block should be as big as possible,
+                    .fit class (<code>width: 100%; height: 100%</code>) tells that block should be as big as possible,
                     at the same time pay respect to min/max-width/height. Without it a block will be as big as content
                     in it.
                 </p>

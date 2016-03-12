@@ -1,7 +1,3 @@
-.xls {
-    list-style: none;
-}
-
 .client-container {
     display: flex;
     flex-direction: row;
@@ -55,15 +51,5 @@
 }
 
 .client-image:hover {
-    opacity: 1;
-}
-
-/* new terms */
-
-.o30 {
-    opacity: 0.3;
-}
-
-.hover-o100:hover {
     opacity: 1;
 }

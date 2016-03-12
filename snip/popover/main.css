@@ -3,22 +3,13 @@ label {
     font-weight: normal;
 }
 
-.c {
-    text-align: center;
-}
-
 .p4 {
     padding: 4px;
 }
 
-.box20 {
+.fit20 {
     width: 20px;
     height: 20px;
-}
-
-.box25 {
-    width: 25px;
-    height: 25px;
 }
 
 .bg-popover {
