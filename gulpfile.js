@@ -12,12 +12,12 @@ gulp.task('clean', function () {
 });
 
 gulp.task('copy', function () {
-    return gulp.src('src/*.html')
+    return gulp.src()
         .pipe(gulp.dest('build'));
 });
 
 gulp.task('css', function () {
-    return gulp.src('src/css/sm.css')
+    return gulp.src('src/sm.sass')
         .pipe(postcss([postcssImport], {syntax: sm}))
         .pipe(gulp.dest('build'));
 });

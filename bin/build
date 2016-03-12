@@ -13,4 +13,8 @@ scriptname=`basename $script`
 d=`cd $scriptdir; git rev-parse --show-toplevel`
 
 cd $d
-gulp
+# gulp
+
+rm -rf build
+mkdir build
+sass -r sass-css-importer src/sm.sass | postcss --use autoprefixer -o build/sm.css
