@@ -26,12 +26,6 @@
     top: 0
     left: 0
 
-.tlrb
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-
 @each $distance in (0, 5, 10, 15)
     .t#{$distance}
         top: #{$distance}px
@@ -42,6 +36,8 @@
     .b#{$distance}
         bottom: #{$distance}px
 
+// The following classes may be renamed to *ta, la, ra, ba*.
+// This will allow .xb to use for font-weight: normal
 .xt
     top: auto
 .xl
@@ -50,3 +46,10 @@
     right: auto
 .xb
     bottom: auto
+
+// z-index
+@each $z in (1, 2, 3, 4, 5)
+    .z#{$z}
+        z-index: $z
+    .z#{$z}n
+        z-index: $z * -1

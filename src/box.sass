@@ -1,3 +1,85 @@
+// box-sizing
+.bbox
+    box-sizing: border-box
+.cbox
+    box-sizing: content-box
+
+// border
+.border-none
+    border: none
+
+// width and height
+@each $size in (0, 5, 10, 15, 20, 25, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800)
+    .w#{$size}
+        width: $size * 1px
+    .h#{$size}
+        height: $size * 1px
+
+@each $size in (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100)
+    .w#{$size}p
+        width: $size * 1%
+    .h#{$size}p
+        height: $size * 1%
+
+// fit, fill, size, resize, set-size
+.fit
+    width: 100%
+    height: 100%
+
+@each $size in (25, 50)
+    .fit#{$size}
+        width: $size * 1px
+        height: $size * 1px
+
+@each $size in (25, 50, 75)
+    .fit#{$size}p
+        width: $size * 1%
+        height: $size * 1%
+
+.min
+    min-width: 100%
+    min-height: 100%
+
+.min-w
+    min-width: 100%
+
+.min-h
+    min-height: 100%
+
+.max
+    max-width: 100%
+    max-height: 100%
+
+.max-w
+    max-width: 100%
+
+.max-h
+    max-height: 100%
+
+.min200
+    min-width: 200px
+    min-height: 200px
+
+.max800
+    max-width: 800px
+    max-height: 800px
+
+.max800x600
+    max-width: 800px
+    max-height: 600px
+
+.max50p
+    max-width: 50%
+    max-height: 50%
+
+.max50px75p
+    max-width: 50%
+    max-height: 75%
+
+.max100px50p
+    max-width: 100%
+    max-height: 50%
+
 // .xm has the lowest priority
 //
 //     .xm.ml5 will give margin: 0 0 0 5px
@@ -23,7 +105,7 @@
 
 // .mv* and .mh* should come after .ma and .m* in order
 // to override them partially
-@each $size in (5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
+@each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
     .mv#{$size}
         margin-top: #{$size}px
         margin-bottom: #{$size}px
