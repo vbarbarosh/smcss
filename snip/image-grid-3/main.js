@@ -1,6 +1,6 @@
 ({
     data: {
-        grid: 'grid8',
+        grid: 'grid6',
         images: ['//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_523fda1064048_1.JPG',
             '//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52509afaba7b1_1.JPG',
             '//images.weserv.nl/?w=300&url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52aeb5843f96c_1.JPG',

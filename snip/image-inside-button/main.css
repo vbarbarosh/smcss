@@ -1,9 +1,11 @@
+/*
 body {
     display: inline-block;
     white-space: nowrap;
     padding: 100px;
     border: 1px dashed blue;
 }
+*/
 
 .border2 {
     border: 2px solid black;
