@@ -41,6 +41,9 @@ if (isset($_GET['s'])) {
         </div>
     </div>
 <?php else: ?>
+    <div class="w200">
+        <?php include 'nav.php' ?>
+    </div>
     <div class="w600 ma mv25 bbox p10 og25">
         <h2>Expand</h2>
         <p>Expand block's <code>height</code> proportionally to its <code>width</code></p>
