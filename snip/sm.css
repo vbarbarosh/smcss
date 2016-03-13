@@ -497,7 +497,7 @@
 .di {
   display: inline; }
 
-.dd {
+.dl {
   display: inline-block; }
 
 .grid1 > .col1 {
@@ -2927,16 +2927,16 @@
   line-height: 16px; }
 
 .lh05m {
-  line-height: 05em; }
+  line-height: 0.5em; }
 
 .lh10m {
-  line-height: 10em; }
+  line-height: 1em; }
 
 .lh15m {
-  line-height: 15em; }
+  line-height: 1.5em; }
 
 .lh20m {
-  line-height: 20em; }
+  line-height: 2em; }
 
 .fs0 {
   font-size: 0px; }

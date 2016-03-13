@@ -36,7 +36,7 @@ if (isset($_GET['s'])) {
         <div class="w200">
             <?php include 'nav.php' ?>
         </div>
-        <div class="w600 og10" id="app">
+        <div class="w600 og10 p10 pv5" id="app">
             <?php include $snip_html ?>
         </div>
     </div>

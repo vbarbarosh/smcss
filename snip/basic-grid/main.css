@@ -1,0 +1,11 @@
+.dashed {
+    border: 1px dashed black;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.child-fl > {
+    float: left;
+}
