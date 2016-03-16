@@ -1,0 +1,12 @@
+<p>
+    How to ignore width of <em>outer</em> absolutely positioned box?
+    The solution is to use <code>margin-right: -99999px</code>, taken
+    from <a href="http://stackoverflow.com/a/33786832/1478566">here</a>.
+</p>
+
+<div class="abs og25">
+    <button>11 22 33</button>
+    <div class="abs og25 white max-w300" style="margin-right: -999999px;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque ipsa veritatis natus aliquam qui temporibus facere quaerat cumque hic, officiis alias, harum provident atque. Tempore quidem minima temporibus, natus!
+    </div>
+</div>
