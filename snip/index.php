@@ -195,7 +195,7 @@ if (isset($_GET['s'])) {
 <?php endif ?>
 
 <script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="//cdn.jsdelivr.net/vue/1.0.13/vue.min.js" type="text/javascript"></script>
+<script src="//vuejs.org/js/vue.js" type="text/javascript"></script>
 <?php if (isset($snip_js) && file_exists($snip_js)): ?>
     <script src="//cdn.jsdelivr.net/vue/1.0.13/vue.min.js" type="text/javascript"></script>
     <script type="text/javascript">
