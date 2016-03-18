@@ -1,8 +1,8 @@
-# CSS for Developers --- smcss
+# CSS for Prototyping — smcss
 
-CSS for Developers. The goal of this project is to eliminate css context
-(aka cascading) as much as possible. (Style for some element should be
-specified in just one place.)
+CSS for Prototyping. The goal of this project is to eliminate css
+context (aka cascading) as much as possible. (Style for some element
+should be specified in just one place.)
 
 ## Configuration
 
