@@ -1,28 +1,23 @@
-/**
- * Dictionary for creating layouts from TABLE elements
- *
- * .tbody-*** whole TBODY as a unit
- * .tr-*** each row as a unit
- * .td-*** each cell as a unit
- *
- */
+// Dictionary for creating layouts from TABLE elements
+//
+// .tbody-*** whole TBODY as a unit
+// .tr-*** each row as a unit
+// .td-*** each cell as a unit
 
-/**
- * Note about specificity
- * ======================
- *
- * In order to be able to override propertines from TD elements,
- * it is necessary, in here, to use CSS selectors with as low
- * specificity as possible...
- *
- * Using https://specificity.keegan.st/
- *
- * * 13 for .tbody-pg6 > tr + tr > td
- * * 22 for .tbody-pg6 > tr:nth-child(n+2) > td
- *
- * .mg***, .mig***, .pg***, and .pig*** was build around :nth-child,
- * so they specificity will be higher.
- */
+// Note about specificity
+// ======================
+//
+// In order to be able to override propertines from TD elements,
+// it is necessary, in here, to use CSS selectors with as low
+// specificity as possible...
+//
+// Using https://specificity.keegan.st/
+//
+// * 13 for .tbody-pg6 > tr + tr > td
+// * 22 for .tbody-pg6 > tr:nth-child(n+2) > td
+//
+// .mg***, .mig***, .pg***, and .pig*** was build around :nth-child,
+// so they specificity will be higher.
 
 .tbody-pg6 > tr + tr > td
     padding-top: 3px
