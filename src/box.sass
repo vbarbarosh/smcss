@@ -8,6 +8,11 @@
 .border-none
     border: none
 
+.wa
+    width: auto
+.ha
+    height: auto
+
 // width and height
 @each $size in (0, 5, 10, 15, 20, 25, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800)
     .w#{$size}
@@ -39,27 +44,22 @@
 .min
     min-width: 100%
     min-height: 100%
-
-.min-w
-    min-width: 100%
-
-.min-h
-    min-height: 100%
-
 .max
     max-width: 100%
     max-height: 100%
 
+.min-w
+    min-width: 100%
+.min-h
+    min-height: 100%
 .max-w
     max-width: 100%
-
 .max-h
     max-height: 100%
 
 .min200
     min-width: 200px
     min-height: 200px
-
 .max800
     max-width: 800px
     max-height: 800px
@@ -67,44 +67,34 @@
 .max800x600
     max-width: 800px
     max-height: 600px
-
 .max50p
     max-width: 50%
     max-height: 50%
-
 .max50px75p
     max-width: 50%
     max-height: 75%
-
 .max100px50p
     max-width: 100%
     max-height: 50%
 
-// .xm has the lowest priority
-//
-//     .xm.ml5 will give margin: 0 0 0 5px
-//
-//  Everything from the next
-// will be able to override any part of margin.
-// The following should be able to do: .xm.ml5 which will give margin: 0 0 0 5px
+// .xm.mt5 should yield margin: 5px 0 0 0
 .xm
     margin: 0
 .xp
     padding: 0
 
-// .ma should come after .xm and before any other margin overriding classes.
-// That way we can write something like .ma.mv10 which gives us margin: 10px auto
+// .ma.mv5 should yield margin: 5px auto 5px auto
 .ma
     margin: auto
 
+// .m5 should yield margin: 5px
 @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
     .m#{$size}
         margin: #{$size}px
     .p#{$size}
         padding: #{$size}px
 
-// .mv* and .mh* should come after .ma and .m* in order
-// to override them partially
+// .m5.mv10 should yield margin: 10px 5px 10px 5px
 @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
     .mv#{$size}
         margin-top: #{$size}px
@@ -119,8 +109,8 @@
         padding-left: #{$size}px
         padding-right: #{$size}px
 
-// .ml*, .mr*, .mt*, and .mb* should come after .m*, .mv*, and .mh* */
-@each $size in (0, 5, 10, 15)
+// .m5.mt10 should yield margin: 10px 5px 5px 5px
+@each $size in (5, 10, 15)
     .ml#{$size}
         margin-left: #{$size}px
     .mr#{$size}
@@ -137,3 +127,21 @@
         padding-top: #{$size}px
     .pb#{$size}
         padding-bottom: #{$size}px
+
+// .m5.xmt should yield margin: 0 5px 5px 5px
+.xml
+    margin-left: 0
+.xmr
+    margin-right: 0
+.xmt
+    margin-top: 0
+.xmb
+    margin-bottom: 0
+.xpl
+    padding-left: 0
+.xpr
+    padding-right: 0
+.xpt
+    padding-top: 0
+.xpb
+    padding-bottom: 0
