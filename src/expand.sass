@@ -1,24 +1,10 @@
 // References
 //
+// http://www.mademyday.de/css-height-equals-width-with-pure-css.html
 // http://zzzzbov.com/blag/scalable-videos-with-aspect-ratio
 // http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
 // https://www.w3.org/TR/CSS2/box.html#propdef-padding-top
 // > Percentages: refer to width of containing block
-
-// /* http://www.mademyday.de/css-height-equals-width-with-pure-css.html */
-// .expand-height:before {
-//     content: '';
-//     display: block;
-//     padding-top: 100%;
-// }
-// <div class="w300">
-//     <div class="rel bgf88 expand-height">
-//         <img class="abs-box-image border-box p10" src="https://unsplash.it/400?random" alt="">
-//     </div>
-// </div>
-//
-// In the previous realization **position: relative** should be specified manually.
-// Now it is specified. What is reason this two approaches?
 
 // Reason for specifying **display: block**
 // ========================================
@@ -26,12 +12,12 @@
 // <div class="flex-rows grid8">
 //     <div class="col1">
 //         <a class="expand-4-3 m5 bs5" href="#">
-//             <img class="abs-box-image border-box p5" src="//images.weserv.nl/?w=300&amp;url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_523fda1064048_1.JPG" />
+//             <img class="abs box ma fit bbox p5" src="//images.weserv.nl/?w=300&amp;url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_523fda1064048_1.JPG" />
 //         </a>
 //     </div>
 //     <div class="col1">
 //         <a class="expand-4-3 m5 bs5" href="#">
-//             <img class="abs-box-image border-box p5" src="//images.weserv.nl/?w=300&amp;url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52509afaba7b1_1.JPG" />
+//             <img class="abs box ma fit bbox p5" src="//images.weserv.nl/?w=300&amp;url=666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52509afaba7b1_1.JPG" />
 //         </a>
 //     </div>
 // </div>

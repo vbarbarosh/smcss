@@ -13,28 +13,15 @@
     right: 0
     bottom: 0
 
-.box-b
-    left: 0
-    right: 0
-    bottom: 0
-
-.box-br
-    right: 0
-    bottom: 0
-
-.box-tl
-    top: 0
-    left: 0
-
-@each $distance in (0, 5, 10, 15)
+@each $distance in (5, 10, 15, 20, 25)
     .t#{$distance}
-        top: #{$distance}px
+        top: $distance * 1px
     .l#{$distance}
-        left: #{$distance}px
+        left: $distance * 1px
     .r#{$distance}
-        right: #{$distance}px
+        right: $distance * 1px
     .b#{$distance}
-        bottom: #{$distance}px
+        bottom: $distance * 1px
 
 // The following classes may be renamed to *ta, la, ra, ba*.
 // This will allow .xb to use for font-weight: normal

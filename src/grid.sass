@@ -8,10 +8,10 @@
 // Initially .grid also specified float to its children.
 // Now .grid manages only width of them. There are several
 // ways for children: float, inline-block, flex. All of
-// them could be specified like this: .child-fl, child-dib,
+// them could be specified like this: .child-fl, child-dl,
 // .flex-rows, or .flex-cols
 
-@for $grid-size from 1 through 30
+@for $grid-size from 1 through 20
     @for $col-size from 1 through $grid-size
         .grid#{$grid-size} > .col#{$col-size}
             width: $col-size / $grid-size * 100%
