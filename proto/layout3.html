@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title of the Page</title>
+    <link href="sm.css" type="text/css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="fix box checkerboard">
+
+        <div class="vsplit">
+            <div class="box__title">
+                <h2>
+                    <i class="icon icon-6"></i>
+                    Logo Gallery {{ rows }}
+                </h2>
+                <div class="box__title-button">
+                    <a v-on:click="addClipart" href="#popup-cliparts" class="btn btn--white btn--small btn-add btn--middle open-popup">
+                        <i class="icon icon-10"></i>
+                        ADD CLIPART
+                    </a>
+                </div>
+            </div>
+            <div class="vsplit x-m10 x-mg10">
+                <div class="select">
+                    <div class="select-styled">
+                        {{ category.title }}
+                    </div>
+                </div>
+                <div class="hh grow oa">
+                    <p>Fruitcake macaroon candy canes marshmallow gummi bears biscuit I love dessert. Oat cake sugar plum marzipan gummi bears marshmallow I love brownie jelly bonbon. Sweet roll apple pie wafer fruitcake. Gummi bears lemon drops sesame snaps. Biscuit tiramisu sugar plum. Carrot cake pastry cupcake tootsie roll chocolate jujubes. Pudding muffin sweet. Cheesecake candy canes wafer gingerbread sweet.</p>
+                    <p>Liquorice candy canes cake. Gummies wafer tart topping pastry soufflé I love pie. Cake cookie croissant cupcake chocolate cake. Liquorice jelly beans pudding sugar plum biscuit fruitcake. Soufflé tootsie roll macaroon pudding. Chocolate cake cake sesame snaps sugar plum biscuit I love croissant icing. Caramels jelly dessert candy bonbon bear claw chocolate bar cheesecake icing. Toffee I love cake gingerbread jelly-o tootsie roll. Sesame snaps pie cupcake sweet. Croissant danish brownie gummies lollipop chupa chups gummies danish.</p>
+                    <p>Chupa chups pudding topping caramels pie. Tart jujubes ice cream muffin sugar plum. Soufflé candy canes I love lollipop pastry brownie danish apple pie. Apple pie chupa chups biscuit chocolate bar I love muffin I love. Caramels cupcake I love sugar plum icing candy canes I love macaroon. Marzipan danish cheesecake marshmallow jelly. Jelly-o sugar plum liquorice donut I love pastry candy donut. I love gummi bears chocolate.</p>
+                    <p>Gingerbread toffee pastry gingerbread I love toffee. Biscuit jelly wafer I love cheesecake candy canes chocolate cake. I love cake I love cotton candy muffin oat cake I love I love. I love bonbon macaroon toffee powder chupa chups cotton candy tootsie roll chocolate. Croissant dessert chocolate bar. Apple pie I love croissant sugar plum cotton candy I love. Candy canes jelly I love. Jelly beans cupcake brownie pudding lemon drops</p>
+                    <p>Cheesecake macaroon toffee sesame snaps cotton candy cotton candy I love. Cake sugar plum sweet marshmallow I love. Soufflé liquorice ice cream candy canes I love tootsie roll marzipan biscuit jelly. I love I love tiramisu donut. I love bear claw pastry toffee. Cheesecake apple pie bonbon bear claw jelly-o topping tootsie roll chocolate bar. Cake bonbon toffee donut macaroon chocolate lemon drops gummies gummies. Jelly beans chocolate bar cotton candy halvah fruitcake.</p></p>
+                </div>
+                <div class="hsplit">
+                    <a href="#" class="uc btn btn--blue btn--small btn--middle prev-page">
+                        <i class="icon icon-13"></i>
+                        prev
+                    </a>
+                    <span class="grow db c xws">
+                        1 of 20
+                    </span>
+                    <a href="#" class="uc btn btn--blue btn--small btn--middle btn--icon-right next-page">
+                        next
+                        <i class="icon icon-14"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

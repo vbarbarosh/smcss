@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>flex-shrink</title>
+    <link href="sm.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .child-default > * { min-height: 0; }
+        .child-0-0-auto > * { flex: 0 0 auto; min-height: 0; }
+        .child-0-1-auto > * { flex: 0 1 auto; min-height: 0; }
+        .child-1-0-auto > * { flex: 1 0 auto; min-height: 0; }
+        .child-1-1-auto > * { flex: 1 1 auto; min-height: 0; }
+        .child-0-0-none > * { flex: 0 0; min-height: 0; }
+        .child-0-1-none > * { flex: 0 1; min-height: 0; }
+        .child-1-0-none > * { flex: 1 0; min-height: 0; }
+        .child-1-1-none > * { flex: 1 1; min-height: 0; }
+        .l10p { left: 10%; }
+        .l20p { left: 20%; }
+        .l30p { left: 30%; }
+        .l40p { left: 40%; }
+        .l50p { left: 50%; }
+        .l60p { left: 60%; }
+        .l70p { left: 70%; }
+        .l80p { left: 80%; }
+        .l90p { left: 90%; }
+        code { background: cyan; }
+    </style>
+</head>
+<body class="checkerboard">
+
+<!--
+
+    flex: 0 1 auto;
+    flex-grow: 0;       flex item will be growed by that factor (to fill available space)
+    flex-shrink: 1;     flex item will be shrinked by that factor (but no more than min-height)
+    flex-basis: auto;   initial size
+    min-height: 0;      minimal size
+
+    1. initial size is set to whatever is higher - min-height, or basis
+    2. if there is free space
+        1. grow each growable element as much as possible
+    3. if there not enough space
+        1. shrink each shrinkable element until it reached min-height
+
+-->
+
+    <div class="fix box w10p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-default">
+            <div>
+                <code>default</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fix box w10p l10p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-0-0-auto">
+            <div>
+                <code>flex: 0 0 auto</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fix box w10p l20p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-0-1-auto">
+            <div>
+                <code>flex: 0 1 auto</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fix box w10p l30p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-1-0-auto">
+            <div>
+                <code>flex: 1 0 auto</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fix box w10p l40p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-1-1-auto">
+            <div>
+                <code>flex: 1 1 auto</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fix box w10p l50p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-0-0-none">
+            <div>
+                <code>flex: 0 0</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fix box w10p l60p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-0-1-none">
+            <div>
+                <code>flex: 0 1</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fix box w10p l70p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-1-0-none">
+            <div>
+                <code>flex: 1 0</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+    <div class="fix box w10p l80p">
+        <div class="hh flex-cols flex-nowrap rainbow5 child-1-1-none">
+            <div>
+                <code>flex: 1 1</code>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+            <div>
+                <p>In sed lorem id eros maximus blandit sit amet vitae urna.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

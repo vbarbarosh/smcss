@@ -15,6 +15,16 @@ d=`cd $scriptdir; git rev-parse --show-toplevel`
 cd $d
 # gulp
 
+function run_sass()
+{
+    sass -r sass-css-importer src/sm.sass
+}
+
+function run_postcss()
+{
+    postcss --use autoprefixer --autoprefixer.browsers '> 5%, last 5 versions' -o build/sm.css
+}
+
 rm -rf build
 mkdir build
-sass -r sass-css-importer src/sm.sass | postcss --use autoprefixer -o build/sm.css
+run_sass | run_postcss

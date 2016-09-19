@@ -1,0 +1,23 @@
+.hsplit
+    @extend .flex-rows
+    @extend .flex-nowrap
+    & > *
+        flex-shrink: 0
+    & > .vsplit
+        flex-shrink: 1
+    & > .grow
+        @extend .flex-grow
+        flex-shrink: 1
+
+.vsplit
+    @extend .flex-cols
+    @extend .flex-nowrap
+    @extend .hh
+    & > *
+        flex-shrink: 0
+    & > .vsplit
+        flex-shrink: 1
+    & > .grow
+        @extend .flex-grow
+        flex-shrink: 1
+        height: 0               // FireFox ESR 45.3.0 (Debian 8.5)
