@@ -4,8 +4,10 @@
     & > *
         flex-shrink: 0
     & > .grow
-        @extend .flex-grow
-        flex-shrink: 1
+        // @extend .flex-grow
+        // flex-shrink: 1
+        flex: 1 1 auto
+        min-height: 0
 
 .vsplit
     @extend .flex-cols
@@ -14,6 +16,8 @@
     & > *
         flex-shrink: 0
     & > .grow
-        @extend .flex-grow
-        flex-shrink: 1
-        height: 0               // FireFox ESR 45.3.0 (Debian 8.5)
+        flex: 1 1 auto
+        min-height: 0
+        // @extend .flex-grow
+        // flex-shrink: 1
+        // height: 0               // FireFox ESR 45.3.0 (Debian 8.5)

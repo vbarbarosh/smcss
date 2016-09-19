@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hsplit</title>
+    <link href="../sm.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+    <!--
+        split horizontal space evenly between elements
+        * element may define its own width. in that case it wont be
+          resized
+        * element may define to take all remaining space
+    -->
+
+    <div class="fix box flex-cols flex-nowrap rainbow">
+        <div>
+            header
+        </div>
+        <div class="flex-grow rel">
+            <div class="abs box flex-cols flex-nowrap rainbow2">
+                <div>top</div>
+                <div class="flex-grow">gallery</div>
+                <div>buttons</div>
+            </div>
+        </div>
+        <div>
+            footer
+        </div>
+    </div>
+
+</body>
+</html>
