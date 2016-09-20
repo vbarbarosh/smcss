@@ -1,23 +1,13 @@
 .hsplit
-    @extend .flex-rows
-    @extend .flex-nowrap
+    @extend .flex-rows, .flex-nowrap
     & > *
-        flex-shrink: 0
+        @extend .flex-noshrink
     & > .grow
-        // @extend .flex-grow
-        // flex-shrink: 1
-        flex: 1 1 auto
-        min-height: 0
+        @extend .flex-grow, .flex-shrink
 
 .vsplit
-    @extend .flex-cols
-    @extend .flex-nowrap
-    @extend .hh
+    @extend .flex-cols, .flex-nowrap
     & > *
-        flex-shrink: 0
+        @extend .flex-noshrink
     & > .grow
-        flex: 1 1 auto
-        min-height: 0
-        // @extend .flex-grow
-        // flex-shrink: 1
-        // height: 0               // FireFox ESR 45.3.0 (Debian 8.5)
+        @extend .flex-grow, .flex-shrink

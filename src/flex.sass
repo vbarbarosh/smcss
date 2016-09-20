@@ -40,6 +40,7 @@
 
 .flex-center
     align-items: center
+    align-content: center
     justify-content: center
 
 // alignment
@@ -94,6 +95,8 @@
 
 .flex-shrink
     flex-shrink: 1
+    flex-basis: 0   // necessary for IE11
+    min-height: 0   // necessary for FF
 
 .flex-noshrink
     flex-shrink: 0
