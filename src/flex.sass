@@ -28,9 +28,7 @@
     flex-direction: row
 
 .flex-rows-center
-    @extend .flex-rows
-    align-items: center
-    justify-content: center
+    @extend .flex-rows, .flex-center
 
 // columns
 .flex-cols
@@ -38,7 +36,9 @@
     flex-direction: column
 
 .flex-cols-center
-    @extend .flex-cols
+    @extend .flex-cols, .flex-center
+
+.flex-center
     align-items: center
     justify-content: center
 
@@ -88,3 +88,12 @@
 .flex-grow
     // @extend .flex
     flex-grow: 1
+
+.flex-nogrow
+    flex-grow: 0
+
+.flex-shrink
+    flex-shrink: 1
+
+.flex-noshrink
+    flex-shrink: 0
