@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>modal1</title>
-    <link href="sm.css" type="text/css" rel="stylesheet">
+    <title>modal3</title>
+    <link href="../sm.css" type="text/css" rel="stylesheet">
     <style type="text/css">
     .border {
         border: 1px solid black;
@@ -30,17 +30,24 @@
         http://stackoverflow.com/q/24538100/1478566
         http://stackoverflow.com/a/33455342/1478566 
         http://stackoverflow.com/a/33856609/1478566
+        https://css-tricks.com/centering-in-the-unknown/
 
-        NOTE This solution will cut a piece of child's top if child is
-             higher than its container.
+        1. The solution with flex auto margins worksn in Chrome and FF
+           (not IE, neither Safari).
+        2. The solution with .flex-cols.flex-center cuts a piece of
+           child's top if child is higher than its container.
     -->
 
-    <div class="flex-cols flex-center fix box oa" style="background: rgba(0, 0, 0, 0.25)">
+    <div class="fix box oa" style="background: rgba(0, 0, 0, 0.25)">
+    <div style="display: table; width: 100%; height: 100%;">
+    <div style="display: table-cell; vertical-align: middle;">
         <div class="w600 ma mv15 white border og25">
             <!-- content -->
             <p>Praesent non suscipit lectus. Integer in lectus quam. Sed sed cursus mi. Maecenas mattis, metus ac volutpat vehicula, lacus felis vulputate est, at euismod tortor augue sed neque. Duis porttitor nisl et sapien efficitur, eget feugiat purus dapibus. Nam mattis aliquam felis, in tempor metus tempus at. In molestie vestibulum dolor ut consectetur.</p>
             <p>Vestibulum aliquet enim quis sodales tincidunt. Donec vulputate magna diam, id feugiat nisi aliquam in. Cras gravida odio ac metus tincidunt pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum porttitor laoreet neque vel tincidunt. Integer eu scelerisque purus, quis porta ligula. Donec molestie risus ac malesuada laoreet. Duis eleifend enim tincidunt sagittis efficitur. Nunc maximus libero eget rutrum sollicitudin. Praesent cursus non justo sed auctor. Phasellus nibh nibh, egestas eget leo quis, molestie varius felis. In lobortis porta ultrices. Nunc gravida semper diam, a tincidunt urna porta ut. Proin cursus mi quam, vitae lobortis nunc feugiat eu. Maecenas ut gravida lectus, eget tincidunt ante.</p>
         </div>
+    </div>
+    </div>
     </div>
 
 </body>
