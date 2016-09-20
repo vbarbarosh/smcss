@@ -5,11 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title of the Page</title>
-    <link href="sm.css" type="text/css" rel="stylesheet">
+    <link href="../../sm.css" type="text/css" rel="stylesheet">
     <style type="text/css">
     .l300 { left: 300px; }
     table { border-collapse: collapse; }
     table, tr, td { border: none; padding: 0; }
+    .vsplit {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+    .vsplit > * {
+        display: table-row;
+        height: 0;
+    }
+    .vsplit > .grow {
+        height: auto;
+    }
+    .cell {
+        display: table-cell;
+    }
     </style>
 </head>
 <body>
@@ -18,22 +33,19 @@
 
         <div class="fix box w300 red">
 
-            <!-- hsplit -->
-            <table class="abs box ww hh">
-            <tr class="yellow">
-                <td>top</td>
-            </tr>
-            <tr class="hh blue">
-                <td class="rel">
-                    <div class="abs box oa">
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam elementum neque sit amet maximus congue. Phasellus mollis libero sed volutpat pulvinar. Donec dignissim elementum dictum. Curabitur maximus sodales lobortis. Phasellus risus augue, dignissim et libero at, semper lobortis quam. Quisque maximus magna et leo sodales, at dapibus ex mattis. Integer ipsum dolor, dapibus sed augue et, sagittis vulputate massa. Aenean massa mauris, facilisis ac gravida quis, imperdiet sed sapien. Curabitur quis consectetur ex, quis auctor augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <div class="vsplit">
+                <div class="yellow">
+                    top
+                </div>
+                <div class="grow blue">
+                    <div class="cell rel">
+                        <div class="abs box oa">
+                            vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; nullam elementum neque sit amet maximus congue. Phasellus mollis libero sed volutpat pulvinar. Donec dignissim elementum dictum. Curabitur maximus sodales lobortis. Phasellus risus augue, dignissim et libero at, semper lobortis quam. Quisque maximus magna et leo sodales, at dapibus ex mattis. Integer ipsum dolor, dapibus sed augue et, sagittis vulputate massa. Aenean massa mauris, facilisis ac gravida quis, imperdiet sed sapien. Curabitur quis consectetur ex, quis auctor augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </div>
                     </div>
-                </td>
-            </tr>
-            <tr class="cyan">
-                <td>bottom</td>
-            </tr>
-            </table>
+                </div>
+                <div class="cyan">bottom</div>
+            </div>
 
         </div>
         <div class="fix box l300 green oa">
