@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gallery 2</title>
+    <link href="../sm.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+.max80p { max-width: 80%; max-height: 80%; }
+
+.borders > * {
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*
+   Targeting first and last rows in CSS grid layouts
+   http://keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts/#solution
+*/
+
+.borders > *:nth-child(5n-4),
+.borders > *:nth-child(5n-3),
+.borders > *:nth-child(5n-2),
+.borders > *:nth-child(5n-1) {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.borders > *:nth-child(5n+1):nth-last-child(-n+5),
+.borders > *:nth-child(5n+1):nth-last-child(-n+5) ~ * {
+    border-bottom: none;
+}
+    </style>
+</head>
+<body v-show="true" style="display: none;">
+
+<br>
+<br>
+
+    <div class="w600 ma p10 og25">
+        <div style="border: 5px solid red;">
+            <div class="grid5 flex-rows borders">
+                <div v-for="url in images" class="col1">
+                    <a class="expand-4-3" href="#">
+                        <img v-bind:src="url" class="og25 abs box ma bbox p5 max80p" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../vue.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+new Vue({
+    el: 'body',
+    data: {
+        images: [
+            'https://unsplash.it/200/300/?random=1',
+            'https://unsplash.it/300/200/?random=2',
+            'https://unsplash.it/200/200/?random=3',
+            'https://unsplash.it/50/50/?random=4',
+            'https://unsplash.it/200/300/?random=5',
+            'https://unsplash.it/200/300/?random=6',
+            'https://unsplash.it/200/300/?random=7',
+            'https://unsplash.it/200/300/?random=8',
+            'https://unsplash.it/200/300/?random=9',
+            'https://unsplash.it/200/300/?random=10',
+            'https://unsplash.it/200/300/?random=11',
+            'https://unsplash.it/200/300/?random=12',
+            'https://unsplash.it/200/300/?random=13',
+            'https://unsplash.it/200/300/?random=14',
+            'https://unsplash.it/200/300/?random=15'
+        ]
+    }
+});
+</script>
+
+</body>
+</html>

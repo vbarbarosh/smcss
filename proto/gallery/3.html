@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gallery 3</title>
+    <link href="../sm.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    .border { border: 1px solid black; }
+    .mt5n { margin-top: -5px; }
+    .ml5n { margin-left: -5px; }
+    .mt10n { margin-top: -10px; }
+    .ml10n { margin-left: -10px; }
+    .foo  {
+        justify-content: space-between;
+    }
+    .foo > * {
+        min-width: 50px;
+    }
+    </style>
+</head>
+<body v-show="true" style="display: none; overflow: hidden; /* to prevent flickering */">
+
+<!--
+
+    https://medium.com/@ryancat/flex-box-and-justify-content-space-between-e08ce97205a#.wf16pjjo1
+
+-->
+
+<br>
+<br>
+
+    <div class="w600 ma mv10">
+        <label class="hsplit">
+            <span>width ({{ width }})</span>
+            <input class="grow" v-model="width" type="range" min="200" max="800" step="1">
+        </label>
+    </div>
+    <div v-bind:style="{width: width + 'px'}" class="ma p10 og25">
+        <div style="border: 5px solid red;">
+            <div class="foo flex-rows flex-wrap mt5n ml5n">
+                <div v-for="url in images" class="mt5 ml5">
+                    <a class="expand-4-3 border" href="#">
+                        <img v-bind:src="url" class="abs box ma bbox p5 max" />
+                    </a>
+                </div>
+                <!-- 15 - estimated maximum number of cols in a row -->
+                <div v-for="i in 15" class="red ml5 x-h0">1</div>
+            </div>
+        </div>
+    </div>
+
+<script src="../vue.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+new Vue({
+    el: 'body',
+    data: {
+        width: 600,
+        images: [
+            'https://unsplash.it/200/300/?random=1',
+            'https://unsplash.it/300/200/?random=2',
+            'https://unsplash.it/200/200/?random=3',
+            'https://unsplash.it/50/50/?random=4',
+            'https://unsplash.it/200/300/?random=5',
+            'https://unsplash.it/200/300/?random=6',
+            'https://unsplash.it/200/300/?random=7',
+            'https://unsplash.it/200/300/?random=8',
+            'https://unsplash.it/200/300/?random=9',
+            'https://unsplash.it/200/300/?random=10',
+            'https://unsplash.it/200/300/?random=11',
+            'https://unsplash.it/200/300/?random=12',
+            'https://unsplash.it/200/300/?random=13',
+            'https://unsplash.it/200/300/?random=14',
+            'https://unsplash.it/200/300/?random=15'
+        ]
+    }
+});
+</script>
+
+</body>
+</html>
