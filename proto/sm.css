@@ -879,7 +879,7 @@
 .xpb {
   padding-bottom: 0; }
 
-.flex-wrap, .flex, .flex-rows, .flex-rows-center, .hsplit, .flex-cols, .flex-cols-center, .vsplit {
+.flex-wrap, .flex, .flex-rows, .flex-rows-center, .flow2-5, .flow2-10, .flow2-15, .flow2-20, .flow2-25, .flow3-5, .flow3-10, .flow3-15, .flow3-20, .flow3-25, .flow4-5, .flow4-10, .flow4-15, .flow4-20, .flow4-25, .flow5-5, .flow5-10, .flow5-15, .flow5-20, .flow5-25, .hsplit, .flex-cols, .flex-cols-center, .vsplit {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -915,7 +915,7 @@
       -ms-flex-line-pack: start;
           align-content: flex-start; }
 
-.flex-rows, .flex-rows-center, .hsplit {
+.flex-rows, .flex-rows-center, .flow2-5, .flow2-10, .flow2-15, .flow2-20, .flow2-25, .flow3-5, .flow3-10, .flow3-15, .flow3-20, .flow3-25, .flow4-5, .flow4-10, .flow4-15, .flow4-20, .flow4-25, .flow5-5, .flow5-10, .flow5-15, .flow5-20, .flow5-25, .hsplit {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -1704,6 +1704,106 @@
 
 .grid20 > .col20 {
   width: 100%; }
+
+.flow2-5 > * {
+  width: calc(100%/2 - 1/2*5px); }
+.flow2-5 > :not(:nth-child(2n + 1)) {
+  margin-left: 5px; }
+
+.flow2-10 > * {
+  width: calc(100%/2 - 1/2*10px); }
+.flow2-10 > :not(:nth-child(2n + 1)) {
+  margin-left: 10px; }
+
+.flow2-15 > * {
+  width: calc(100%/2 - 1/2*15px); }
+.flow2-15 > :not(:nth-child(2n + 1)) {
+  margin-left: 15px; }
+
+.flow2-20 > * {
+  width: calc(100%/2 - 1/2*20px); }
+.flow2-20 > :not(:nth-child(2n + 1)) {
+  margin-left: 20px; }
+
+.flow2-25 > * {
+  width: calc(100%/2 - 1/2*25px); }
+.flow2-25 > :not(:nth-child(2n + 1)) {
+  margin-left: 25px; }
+
+.flow3-5 > * {
+  width: calc(100%/3 - 2/3*5px); }
+.flow3-5 > :not(:nth-child(3n + 1)) {
+  margin-left: 5px; }
+
+.flow3-10 > * {
+  width: calc(100%/3 - 2/3*10px); }
+.flow3-10 > :not(:nth-child(3n + 1)) {
+  margin-left: 10px; }
+
+.flow3-15 > * {
+  width: calc(100%/3 - 2/3*15px); }
+.flow3-15 > :not(:nth-child(3n + 1)) {
+  margin-left: 15px; }
+
+.flow3-20 > * {
+  width: calc(100%/3 - 2/3*20px); }
+.flow3-20 > :not(:nth-child(3n + 1)) {
+  margin-left: 20px; }
+
+.flow3-25 > * {
+  width: calc(100%/3 - 2/3*25px); }
+.flow3-25 > :not(:nth-child(3n + 1)) {
+  margin-left: 25px; }
+
+.flow4-5 > * {
+  width: calc(100%/4 - 3/4*5px); }
+.flow4-5 > :not(:nth-child(4n + 1)) {
+  margin-left: 5px; }
+
+.flow4-10 > * {
+  width: calc(100%/4 - 3/4*10px); }
+.flow4-10 > :not(:nth-child(4n + 1)) {
+  margin-left: 10px; }
+
+.flow4-15 > * {
+  width: calc(100%/4 - 3/4*15px); }
+.flow4-15 > :not(:nth-child(4n + 1)) {
+  margin-left: 15px; }
+
+.flow4-20 > * {
+  width: calc(100%/4 - 3/4*20px); }
+.flow4-20 > :not(:nth-child(4n + 1)) {
+  margin-left: 20px; }
+
+.flow4-25 > * {
+  width: calc(100%/4 - 3/4*25px); }
+.flow4-25 > :not(:nth-child(4n + 1)) {
+  margin-left: 25px; }
+
+.flow5-5 > * {
+  width: calc(100%/5 - 4/5*5px); }
+.flow5-5 > :not(:nth-child(5n + 1)) {
+  margin-left: 5px; }
+
+.flow5-10 > * {
+  width: calc(100%/5 - 4/5*10px); }
+.flow5-10 > :not(:nth-child(5n + 1)) {
+  margin-left: 10px; }
+
+.flow5-15 > * {
+  width: calc(100%/5 - 4/5*15px); }
+.flow5-15 > :not(:nth-child(5n + 1)) {
+  margin-left: 15px; }
+
+.flow5-20 > * {
+  width: calc(100%/5 - 4/5*20px); }
+.flow5-20 > :not(:nth-child(5n + 1)) {
+  margin-left: 20px; }
+
+.flow5-25 > * {
+  width: calc(100%/5 - 4/5*25px); }
+.flow5-25 > :not(:nth-child(5n + 1)) {
+  margin-left: 25px; }
 
 .mg5 > :nth-child(n+2) {
   margin-top: 5px; }

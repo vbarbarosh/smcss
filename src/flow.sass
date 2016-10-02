@@ -1,0 +1,11 @@
+@mixin flow($cols, $margin)
+    @extend .flex-rows
+    & > *
+        width: calc(100%/#{$cols} - #{$cols - 1}/#{$cols}*#{$margin*1px})
+    & > :not(:nth-child(#{$cols}n + 1))
+        margin-left: $margin*1px
+
+@for $col from 2 through 5
+    @each $margin in (5, 10, 15, 20, 25)
+        .flow#{$col}-#{$margin}
+            @include flow($col, $margin)
