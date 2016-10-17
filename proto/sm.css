@@ -1019,16 +1019,12 @@
       -ms-flex-positive: 0;
           flex-grow: 0; }
 
-.flex-shrink, .hsplit > .grow, .vsplit > .grow {
+.flex-shrink, .hsplit > .shrink, .vsplit > .shrink {
   -webkit-flex-shrink: 1;
       -ms-flex-negative: 1;
-          flex-shrink: 1;
-  -webkit-flex-basis: 0;
-      -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-  min-height: 0; }
+          flex-shrink: 1; }
 
-.flex-noshrink, .hsplit > *, .vsplit > * {
+.flex-noshrink, .hsplit > :not(.shrink), .vsplit > :not(.shrink) {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
@@ -1959,7 +1955,7 @@
 .ig25 {
   box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.75); }
 
-.oa {
+.oa, .hsplit > *, .vsplit > * {
   overflow: auto; }
 
 .oh {

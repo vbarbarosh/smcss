@@ -1,13 +1,21 @@
 .hsplit
     @extend .flex-rows, .flex-nowrap
     & > *
+        @extend .oa
+    & > :not(.shrink)
         @extend .flex-noshrink
     & > .grow
-        @extend .flex-grow, .flex-shrink
+        @extend .flex-grow
+    & > .shrink
+        @extend .flex-shrink
 
 .vsplit
     @extend .flex-cols, .flex-nowrap
     & > *
+        @extend .oa
+    & > :not(.shrink)
         @extend .flex-noshrink
     & > .grow
-        @extend .flex-grow, .flex-shrink
+        @extend .flex-grow
+    & > .shrink
+        @extend .flex-shrink
