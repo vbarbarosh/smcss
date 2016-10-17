@@ -2,16 +2,16 @@
     @extend .flex-rows, .flex-nowrap
     & > *
         @extend .flex-noshrink
-        flex-basis: 0   // necessary for IE11
-        min-height: 0   // necessary for FF
     & > .grow
         @extend .flex-grow, .flex-shrink
+        flex-basis: 0   // necessary for IE11
+        min-height: 0   // necessary for FF
 
 .vsplit
     @extend .flex-cols, .flex-nowrap
     & > *
         @extend .flex-noshrink
-        flex-basis: 0   // necessary for IE11
-        min-height: 0   // necessary for FF
     & > .grow
         @extend .flex-grow, .flex-shrink
+        flex-basis: 0   // necessary for IE11
+        min-height: 0   // necessary for FF
