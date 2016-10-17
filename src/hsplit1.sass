@@ -2,7 +2,7 @@
     @extend .flex-rows, .flex-nowrap
     & > *
         @extend .flex-noshrink
-    & > .fill
+    & > .fluid
         @extend .flex-grow, .flex-shrink
         flex-basis: 0   // necessary for IE11
         min-height: 0   // necessary for FF
@@ -11,7 +11,7 @@
     @extend .flex-cols, .flex-nowrap
     & > *
         @extend .flex-noshrink
-    & > .fill
+    & > .fluid
         @extend .flex-grow, .flex-shrink
         flex-basis: 0   // necessary for IE11
         min-height: 0   // necessary for FF
