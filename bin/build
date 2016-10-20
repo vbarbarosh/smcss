@@ -14,7 +14,7 @@ d=`cd $scriptdir; git rev-parse --show-toplevel`
 
 function run_sass()
 {
-    (cat src/sm.sass src/hsplit1.sass | sass -I $PWD/src -r sass-css-importer)
+    sass -r sass-css-importer src/sm.sass
 }
 
 function run_postcss()

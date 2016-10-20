@@ -1,0 +1,24 @@
+// flex-basis: 0 // necessary for IE11
+// min-height: 0 // necessary for FF
+
+.hsplit
+    @extend .flex-rows, .flex-nowrap
+    & > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid)
+        @extend .flex-noshrink
+    & > .shrink
+        @extend .flex-shrink
+    & > .grow
+        @extend .flex-grow
+    & > .fluid
+        @extend .flex-fluid
+
+.vsplit
+    @extend .flex-cols, .flex-nowrap
+    & > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid)
+        @extend .flex-noshrink
+    & > .shrink
+        @extend .flex-shrink
+    & > .grow
+        @extend .flex-grow
+    & > .fluid
+        @extend .flex-fluid

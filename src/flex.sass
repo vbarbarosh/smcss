@@ -85,9 +85,14 @@
     // @extend .flex
     justify-content: space-around
 
+// IE 10-11 flex-basis property behaves differently than webkit browsers
+// http://stackoverflow.com/q/28117862/1478566
+
+// flex-basis: 0 vs flex-basis: auto
+// https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg
+
 // growing
 .flex-grow
-    // @extend .flex
     flex-grow: 1
 
 .flex-nogrow
@@ -95,6 +100,13 @@
 
 .flex-shrink
     flex-shrink: 1
+    flex-basis: auto
+    min-height: 0
 
 .flex-noshrink
     flex-shrink: 0
+
+.flex-fluid
+    @extend .flex-grow, .flex-shrink
+    // Fix for IE10 and IE11; *flex-basis: auto* doesn't work
+    -ms-flex-preferred-size: 0
