@@ -1028,7 +1028,7 @@
           flex-basis: auto;
   min-height: 0; }
 
-.flex-noshrink, .hsplit > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid):not(.flex-fluid), .vsplit > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid):not(.flex-fluid) {
+.flex-noshrink, .hsplit > *, .vsplit > * {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
