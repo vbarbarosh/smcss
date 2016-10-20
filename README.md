@@ -14,6 +14,13 @@ should be specified in just one place.)
 
 ## Reference
 
+### nth-child
+
+* [:kids—an nth-child tester](https://codepen.io/sacha/full/cAJEo)
+* [Targeting first and last rows in CSS grid layouts](http://keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts/)
+
+### other
+
 * [SitePoint CSS Reference](http://reference.sitepoint.com/css/)
 * [Object-Oriented CSS](http://oocss.org/)
 * [Object-Oriented CSS](http://www.slideshare.net/stubbornella/object-oriented-css)
