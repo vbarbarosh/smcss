@@ -11,11 +11,17 @@
 // > .fluid):not(.vsplit > .fluid):not(.hsplit > .shrink):not(.vsplit
 // > .shrink):not(.flex-fluid):not(.hsplit > .fluid):not(.vsplit >
 // .fluid)
+//
+// .hsplit > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid)
+//     @extend .flex-noshrink
+// 
+// .vsplit > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid)
+//     @extend .flex-noshrink
 
-.hsplit > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid)
+.hsplit > *
     @extend .flex-noshrink
 
-.vsplit > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid)
+.vsplit > *
     @extend .flex-noshrink
 
 .hsplit
