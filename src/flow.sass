@@ -2,15 +2,26 @@
 // alongs side such classes as .floats, or .flex-rows.
 
 // IE10 required that children be of type *display: block*
-@mixin flow($cols, $margin)
-    & > *
-        width: calc(100%/#{$cols} - #{$cols - 1}/#{$cols}*#{$margin*1px})
-    & > :not(:nth-child(#{$cols}n + 1))
-        margin-left: $margin*1px
-    & > :nth-child(n + #{$cols + 1})
-        margin-top: $margin*1px
+@mixin flow($cols, $margin: 0)
+    @if ($margin == 0)
+        & > *
+            width: 100%/$cols
+    @else
+        & > *
+            width: calc(100%/#{$cols} - #{$cols - 1}/#{$cols}*#{$margin*1px})
+        & > :not(:nth-child(#{$cols}n + 1))
+            margin-left: $margin*1px
+        & > :nth-child(n + #{$cols + 1})
+            margin-top: $margin*1px
 
-@for $col from 2 through 5
+@mixin flow-class($cols, $margin: 0)
+    @if ($margin == 0)
+        .flow#{$cols}
+            @include flow($cols)
+    @else
+        .flow#{$cols}m#{$margin}
+            @include flow($cols, $margin)
+
+@for $cols from 2 through 5
     @each $margin in (5, 10, 15, 20, 25)
-        .flow#{$col}-#{$margin}
-            @include flow($col, $margin)
+        @include flow-class($cols, $margin)
