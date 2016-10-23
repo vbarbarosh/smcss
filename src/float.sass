@@ -5,9 +5,8 @@
 .fr
     float: right
 
-// Taken by text-transform: none
-// .xc
-//    clear: none
+.xc
+    clear: none
 .cb
     clear: both
 .cl
@@ -26,3 +25,8 @@
         clear: both
         overflow: hidden
         visibility: hidden
+
+.floats
+    @extend .clearfix
+    > *
+        @extend .fl

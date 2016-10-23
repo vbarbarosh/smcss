@@ -1,6 +1,8 @@
+// NOTE This is just a method of sizing elements. It shold be used
+// alongs side such classes as .floats, or .flex-rows.
+
 // IE10 required that children be of type *display: block*
 @mixin flow($cols, $margin)
-    @extend .flex-rows
     & > *
         width: calc(100%/#{$cols} - #{$cols - 1}/#{$cols}*#{$margin*1px})
     & > :not(:nth-child(#{$cols}n + 1))
