@@ -879,7 +879,7 @@
 .xpb {
   padding-bottom: 0; }
 
-.flex-wrap, .flex, .flex-rows, .flex-rows-center, .hsplit, .flow2-5, .flow2-10, .flow2-15, .flow2-20, .flow2-25, .flow3-5, .flow3-10, .flow3-15, .flow3-20, .flow3-25, .flow4-5, .flow4-10, .flow4-15, .flow4-20, .flow4-25, .flow5-5, .flow5-10, .flow5-15, .flow5-20, .flow5-25, .flex-cols, .flex-cols-center, .vsplit {
+.flex-wrap, .flex, .flex-rows, .flex-rows-center, .hsplit, .flex-cols, .flex-cols-center, .vsplit {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -915,7 +915,7 @@
       -ms-flex-line-pack: start;
           align-content: flex-start; }
 
-.flex-rows, .flex-rows-center, .hsplit, .flow2-5, .flow2-10, .flow2-15, .flow2-20, .flow2-25, .flow3-5, .flow3-10, .flow3-15, .flow3-20, .flow3-25, .flow4-5, .flow4-10, .flow4-15, .flow4-20, .flow4-25, .flow5-5, .flow5-10, .flow5-15, .flow5-20, .flow5-25 {
+.flex-rows, .flex-rows-center, .hsplit {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -1039,11 +1039,14 @@
 .xf {
   float: none; }
 
-.fl {
+.fl, .floats > * {
   float: left; }
 
 .fr {
   float: right; }
+
+.xc {
+  clear: none; }
 
 .cb {
   clear: both; }
@@ -1055,10 +1058,12 @@
   clear: right; }
 
 .cf,
-.clearfix {
+.clearfix,
+.floats {
   *zoom: 1; }
   .cf:after,
-  .clearfix:after {
+  .clearfix:after,
+  .floats:after {
     content: " ";
     display: block;
     height: 0;
@@ -2156,7 +2161,7 @@
 .cc, .h-cc:hover {
   text-transform: capitalize; }
 
-.xc, .h-xc:hover {
+.nc, .h-nc:hover {
   text-transform: none; }
 
 .ls0 {
