@@ -23,6 +23,27 @@
         border-radius: 100%;
         display: inline-flex;
     }
+
+    .btn {
+        background: #ff8888;
+        color: black;
+        outline: none;
+        cursor: pointer;
+    }
+    .btn:focus:not(.disabled),
+    .btn:hover:not(.disabled) {
+        background: #8888ff;
+        color: white;
+    }
+    .btn:active:not(.disabled) {
+        background: #88ff88;
+        color: black;
+    }
+    .btn.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
     </style>
 </head>
 <body>
@@ -31,8 +52,9 @@
 <br>
 
 <div class="w800 ma">
-    <button class="btn1">hello</button>
-    <button class="btn2 flex-rows-center">circ</button>
+    <button class="btn btn1">hello</button>
+    <button class="btn btn1 disabled">hello</button>
+    <button class="btn btn2 flex-rows-center">circ</button>
 </div>
 
 </body>
