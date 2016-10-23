@@ -1048,7 +1048,7 @@
 .xc {
   clear: none; }
 
-.cb {
+.cb, .flow2m5.floats > :nth-child(2n + 1), .flow2m10.floats > :nth-child(2n + 1), .flow2m15.floats > :nth-child(2n + 1), .flow2m20.floats > :nth-child(2n + 1), .flow2m25.floats > :nth-child(2n + 1), .flow3m5.floats > :nth-child(3n + 1), .flow3m10.floats > :nth-child(3n + 1), .flow3m15.floats > :nth-child(3n + 1), .flow3m20.floats > :nth-child(3n + 1), .flow3m25.floats > :nth-child(3n + 1), .flow4m5.floats > :nth-child(4n + 1), .flow4m10.floats > :nth-child(4n + 1), .flow4m15.floats > :nth-child(4n + 1), .flow4m20.floats > :nth-child(4n + 1), .flow4m25.floats > :nth-child(4n + 1), .flow5m5.floats > :nth-child(5n + 1), .flow5m10.floats > :nth-child(5n + 1), .flow5m15.floats > :nth-child(5n + 1), .flow5m20.floats > :nth-child(5n + 1), .flow5m25.floats > :nth-child(5n + 1) {
   clear: both; }
 
 .cl {
