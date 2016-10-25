@@ -27,5 +27,5 @@
             @include flow($cols, $margin)
 
 @for $cols from 2 through 5
-    @each $margin in (5, 10, 15, 20, 25)
+    @each $margin in (0, 1, 2, 3, 4, 5, 10, 15, 20, 25)
         @include flow-class($cols, $margin)

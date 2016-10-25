@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title of the Page</title>
+    <link href="../sm.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    .border {
+        margin: 6px;
+        border: 5px solid black;
+        x-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        x-height: calc(100% - 10px);
+    }
+    span {
+        display: block; /* for IE10 */
+        box-sizing: border-box;
+    }
+
+    /* it is forbidden to use *padding*, *border*, :before,
+       and :after on all immediate children. */
+
+    /* this class requires *padding*, *border*, :before,
+       and :after on all immediate children */
+
+    .cage5m15 {
+        position: relative;
+    }
+    .cage5m15 > :nth-child(n+7) {
+        display: none;
+    }
+    .cage5m15 > :nth-child(5n+6) {
+        x-background: #f88;
+    }
+    .cage5m15 > :nth-child(-n+4) {
+        x-background: #88f;
+    }
+    .cage5m15 > :nth-child(5n+6):before {
+        content: '';
+        display: block;
+        position: absolute;
+        x-border-top: 6px solid #f88;
+        border-top: 1px solid #ccc;
+        left: 15px;
+        right: 15px;
+        x-margin-top: calc(-1*(15px + 6px)/2);
+        margin-top: calc(-1*(15px + 1px)/2);
+        x-opacity: 0.5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+    .cage5m15 > :nth-child(n+2):nth-child(-n+5):after {
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        x-border-left: 6px solid blue;
+        border-right: 1px solid #ccc;
+        top: 15px;
+        bottom: 15px;
+        x-margin-left: calc(100%/5 + (15px/5) - (15px + 6px)/2);
+        x-margin-left: calc(100%/5 + (15px/5) - (15px + 1px)/2);
+        margin-left: calc(-1 * (15px + 1px)/2);
+        x-opacity: 0.5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+
+    /* this class requires *margin*, *padding*, *border*,
+       :before, and :after on all immediate children */
+
+    .cage5 {
+        position: relative;
+    }
+    .cage5 > :nth-child(n+7) {
+        display: none;
+    }
+    .cage5 > :nth-child(5n+6) {
+        x-background: #f88;
+    }
+    .cage5 > :nth-child(-n+4) {
+        x-background: #88f;
+    }
+    .cage5 > :nth-child(5n+6):before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-top: 1px solid #ccc;
+        left: 15px;
+        right: 15px;
+        margin-top: calc(-1px/2);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+    .cage5 > :nth-child(n+2):nth-child(-n+5):after {
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        border-right: 1px solid #ccc;
+        top: 15px;
+        bottom: 15px;
+        margin-left: calc(-1px/2);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+    </style>
+</head>
+<body>
+
+<br>
+<br>
+
+<div class="w600 floats flow5 cage5 ma og25">
+    <span><span class="border">Ut</span></span>
+    <span><span class="border">vel</span></span>
+    <span><span class="border">augue</span></span>
+    <span><span class="border">id</span></span>
+    <span><span class="border">risus</span></span>
+    <span><span class="border">accumsan abcdef lll</span></span>
+    <span><span class="border">rhoncus</span></span>
+    <span><span class="border">vitae</span></span>
+    <span><span class="border">auctor</span></span>
+    <span><span class="border">lorem.</span></span>
+    <span><span class="border">Quisque</span></span>
+    <span><span class="border">quis</span></span>
+    <span><span class="border">justo</span></span>
+    <span><span class="border">odio.</span></span>
+    <span><span class="border">Donec</span></span>
+    <span><span class="border">magna</span></span>
+    <span><span class="border">lectus,</span></span>
+    <span><span class="border">aliquam</span></span>
+    <span><span class="border">et</span></span>
+    <span><span class="border">ullamcorper</span></span>
+    <span><span class="border">et,</span></span>
+    <span><span class="border">tincidunt</span></span>
+    <span><span class="border">sit</span></span>
+    <span><span class="border">amet</span></span>
+    <span><span class="border">ante.</span></span>
+    <span><span class="border">Pellentesque</span></span>
+    <span><span class="border">blandit</span></span>
+    <span><span class="border">magna</span></span>
+    <span><span class="border">quam,</span></span>
+    <span><span class="border">et</span></span>
+    <span><span class="border">pellentesque</span></span>
+    <span><span class="border">turpis</span></span>
+    <span><span class="border">pharetra</span></span>
+    <span><span class="border">sed.</span></span>
+    <span><span class="border">Maecenas</span></span>
+    <span><span class="border">laoreet</span></span>
+    <span><span class="border">vulputate</span></span>
+    <span><span class="border">venenatis.</span></span>
+    <span><span class="border">Maecenas</span></span>
+    <span><span class="border">urna</span></span>
+    <span><span class="border">magna,</span></span>
+    <span><span class="border">posuere</span></span>
+    <span><span class="border">a</span></span>
+    <span><span class="border">orci</span></span>
+    <span><span class="border">sodales,</span></span>
+    <span><span class="border">mattis</span></span>
+    <span><span class="border">finibus</span></span>
+    <span><span class="border">turpis.</span></span>
+    <span><span class="border">Donec</span></span>
+    <span><span class="border">nec</span></span>
+    <span><span class="border">urna</span></span>
+    <span><span class="border">id</span></span>
+    <span><span class="border">massa</span></span>
+    <span><span class="border">hendrerit</span></span>
+    <span><span class="border">placerat</span></span>
+    <span><span class="border">eget</span></span>
+    <span><span class="border">non</span></span>
+    <span><span class="border">nisi.</span></span>
+    <span><span class="border">Suspendisse</span></span>
+    <span><span class="border">ac</span></span>
+    <span><span class="border">augue</span></span>
+    <span><span class="border">sit</span></span>
+    <span><span class="border">amet</span></span>
+    <span><span class="border">dolor</span></span>
+    <span><span class="border">molestie</span></span>
+    <span><span class="border">tristique.</span></span>
+    <span><span class="border">Ut</span></span>
+    <span><span class="border">posuere</span></span>
+    <span><span class="border">luctus</span></span>
+    <span><span class="border">sapien</span></span>
+    <span><span class="border">lacinia</span></span>
+    <span><span class="border">laoreet.</span></span>
+    <span><span class="border">Duis</span></span>
+    <span><span class="border">risus</span></span>
+    <span><span class="border">dui,</span></span>
+    <span><span class="border">varius</span></span>
+    <span><span class="border">quis</span></span>
+    <span><span class="border">lacus</span></span>
+    <span><span class="border">in,</span></span>
+    <span><span class="border">sagittis</span></span>
+    <span><span class="border">rutrum</span></span>
+    <span><span class="border">libero.</span></span>
+    <span><span class="border">Ut</span></span>
+    <span><span class="border">in</span></span>
+    <span><span class="border">dictum</span></span>
+    <span><span class="border">arcu.</span></span>
+    <span><span class="border">Etiam</span></span>
+    <span><span class="border">vel</span></span>
+    <span><span class="border">sapien</span></span>
+    <span><span class="border">at</span></span>
+    <span><span class="border">felis</span></span>
+    <span><span class="border">varius</span></span>
+    <span><span class="border">tincidunt</span></span>
+    <span><span class="border">id</span></span>
+    <span><span class="border">at</span></span>
+    <span><span class="border">nisl.</span></span>
+    <span><span class="border">Etiam</span></span>
+    <span><span class="border">pretium</span></span>
+    <span><span class="border">at</span></span>
+    <span><span class="border">mi</span></span>
+    <span><span class="border">non</span></span>
+    <span><span class="border">dapibus.</span></span>
+    <span><span class="border">Vivamus</span></span>
+    <span><span class="border">mollis,</span></span>
+    <span><span class="border">lorem</span></span>
+    <span><span class="border">non</span></span>
+    <span><span class="border">pulvinar</span></span>
+    <span><span class="border">fringilla,</span></span>
+    <span><span class="border">magna</span></span>
+    <span><span class="border">arcu</span></span>
+    <span><span class="border">laoreet</span></span>
+    <span><span class="border">felis,</span></span>
+    <span><span class="border">a</span></span>
+    <span><span class="border">viverra</span></span>
+    <span><span class="border">sem</span></span>
+    <span><span class="border">est</span></span>
+    <span><span class="border">eget</span></span>
+    <span><span class="border">purus.</span></span>
+    <span><span class="border">Sed</span></span>
+    <span><span class="border">tempor</span></span>
+    <span><span class="border">neque</span></span>
+    <span><span class="border">sed</span></span>
+    <span><span class="border">leo</span></span>
+    <span><span class="border">hendrerit,</span></span>
+    <span><span class="border">et</span></span>
+    <span><span class="border">rutrum</span></span>
+    <span><span class="border">est</span></span>
+    <span><span class="border">iaculis.</span></span>
+    <span><span class="border">Suspendisse</span></span>
+    <span><span class="border">vulputate,</span></span>
+    <span><span class="border">tellus</span></span>
+    <span><span class="border">et</span></span>
+    <span><span class="border">leo</span></span>
+</div>
+
+<br>
+<br>
+
+</body>
+</html>

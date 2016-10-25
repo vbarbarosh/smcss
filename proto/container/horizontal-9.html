@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title of the Page</title>
+    <link href="../sm.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    .border {
+        margin: 15px;
+        padding: 10px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        x-height: calc(100% - 10px);
+    }
+    span {
+        display: block; /* for IE10 */
+        box-sizing: border-box;
+    }
+
+    /* it is forbidden to use *padding*, *border*, :before,
+       and :after on all immediate children. */
+
+    /* this class requires *padding*, *border*, :before,
+       and :after on all immediate children */
+
+    .cage5m15 {
+        position: relative;
+    }
+    .cage5m15 > :nth-child(n+7) {
+        display: none;
+    }
+    .cage5m15 > :nth-child(5n+6) {
+        x-background: #f88;
+    }
+    .cage5m15 > :nth-child(-n+4) {
+        x-background: #88f;
+    }
+    .cage5m15 > :nth-child(5n+6):before {
+        content: '';
+        display: block;
+        position: absolute;
+        x-border-top: 6px solid #f88;
+        border-top: 1px solid #ccc;
+        left: 15px;
+        right: 15px;
+        x-margin-top: calc(-1*(15px + 6px)/2);
+        margin-top: calc(-1*(15px + 1px)/2);
+        x-opacity: 0.5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+    .cage5m15 > :nth-child(n+2):nth-child(-n+5):after {
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        x-border-left: 6px solid blue;
+        border-right: 1px solid #ccc;
+        top: 15px;
+        bottom: 15px;
+        x-margin-left: calc(100%/5 + (15px/5) - (15px + 6px)/2);
+        x-margin-left: calc(100%/5 + (15px/5) - (15px + 1px)/2);
+        margin-left: calc(-1 * (15px + 1px)/2);
+        x-opacity: 0.5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+
+    </style>
+</head>
+<body>
+
+<br>
+<br>
+
+<div class="cage5m15 w600 floats flow5m15 ma og25">
+    <span><span class="expand-1-1"><span class="abs box border">Ut</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">vel</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">augue</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">id</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">risus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">accumsan abcdef lll</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">rhoncus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">vitae</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">auctor</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">lorem.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Quisque</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">quis</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">justo</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">odio.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Donec</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">magna</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">lectus,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">aliquam</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">et</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">ullamcorper</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">et,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">tincidunt</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sit</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">amet</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">ante.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Pellentesque</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">blandit</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">magna</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">quam,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">et</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">pellentesque</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">turpis</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">pharetra</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sed.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Maecenas</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">laoreet</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">vulputate</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">venenatis.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Maecenas</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">urna</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">magna,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">posuere</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">a</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">orci</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sodales,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">mattis</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">finibus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">turpis.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Donec</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">nec</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">urna</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">id</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">massa</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">hendrerit</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">placerat</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">eget</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">non</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">nisi.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Suspendisse</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">ac</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">augue</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sit</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">amet</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">dolor</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">molestie</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">tristique.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Ut</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">posuere</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">luctus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sapien</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">lacinia</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">laoreet.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Duis</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">risus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">dui,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">varius</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">quis</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">lacus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">in,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sagittis</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">rutrum</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">libero.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Ut</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">in</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">dictum</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">arcu.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Etiam</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">vel</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sapien</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">at</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">felis</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">varius</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">tincidunt</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">id</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">at</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">nisl.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Etiam</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">pretium</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">at</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">mi</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">non</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">dapibus.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Vivamus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">mollis,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">lorem</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">non</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">pulvinar</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">fringilla,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">magna</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">arcu</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">laoreet</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">felis,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">a</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">viverra</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sem</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">est</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">eget</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">purus.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Sed</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">tempor</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">neque</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">sed</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">leo</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">hendrerit,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">et</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">rutrum</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">est</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">iaculis.</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">Suspendisse</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">vulputate,</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">tellus</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">et</span></span></span>
+    <span><span class="expand-1-1"><span class="abs box border">leo</span></span></span>
+</div>
+
+<br>
+<br>
+
+</body>
+</html>

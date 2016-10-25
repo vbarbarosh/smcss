@@ -1,0 +1,31 @@
+@mixin cage($cols, $margin: 0, $border: 1)
+    @extend .rel
+    @include flow($cols, $margin)
+    & > :nth-child(#{$cols}n+#{$cols + 1}):before
+        @extend .db, .abs
+        content: ''
+        left: 15px
+        right: 15px
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25)
+        border-top: $border*1px solid #ccc
+        margin-top: calc(#{($margin + $border)*-1px}/2)
+    & > :nth-child(n+2):nth-child(-n+#{$cols}):after
+        @extend .db, .abs
+        content: ''
+        top: 15px
+        bottom: 15px
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25)
+        border-left: $border*1px solid #ccc
+        margin-left: calc(#{($margin + $border)*-1px}/2)
+
+@mixin cage-class($cols, $margin: 0, $border: 0)
+    @if ($margin == 0)
+        .cage#{$cols}
+            @include flow($cols)
+    @else
+        .cage#{$cols}m#{$margin}
+            @include cage($cols, $margin)
+
+@for $cols from 2 through 5
+    @each $margin in (0, 1, 2, 3, 4, 5, 10, 15, 20, 25)
+        @include cage-class($cols, $margin)
