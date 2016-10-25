@@ -13,27 +13,21 @@
         box-sizing: border-box;
         padding: 10px;
     }
-    .flow4m20 {
-        position: relative;
-    }
-    .flow4m20 > :nth-child(4n+1) {
-        background: red;
-    }
 
-    .cage5 {
+    .a-cage5 {
         position: relative;
     }
-    .cage5 > :nth-child(n+17) {
+    .a-cage5 > :nth-child(n+17) {
         display: none;
     }
-    .cage5 > :nth-child(5n+6) {
+    .a-cage5 > :nth-child(5n+6) {
         background: #f88;
     }
-    .cage5 > :nth-child(-n+4) {
+    .a-cage5 > :nth-child(-n+4) {
         background: #88f;
     }
     /* vertically we need to know size of borders and padding */
-    .cage5 > :nth-child(5n+6):before {
+    .a-cage5 > :nth-child(5n+6):before {
         content: '';
         display: block;
         position: absolute;
@@ -42,7 +36,7 @@
         right: 0;
         margin-top: calc(-10px - 12px - (25px + 7px)/2);
     }
-    .cage5 > :nth-child(-n+4):after {
+    .a-cage5 > :nth-child(-n+4):after {
         content: '';
         box-sizing: border-box;
         display: block;
@@ -53,16 +47,16 @@
         opacity: 0.5;
     }
     /* only number of columns and margin between them! */
-    .cage5 > :nth-child(1):after {
+    .a-cage5 > :nth-child(1):after {
         left: calc((100%/5 + 25px/5)*1 - (25px + 9px)/2);
     }
-    .cage5 > :nth-child(2):after {
+    .a-cage5 > :nth-child(2):after {
         left: calc((100%/5 + 25px/5)*2 - (25px + 9px)/2);
     }
-    .cage5 > :nth-child(3):after {
+    .a-cage5 > :nth-child(3):after {
         left: calc((100%/5 + 25px/5)*3 - (25px + 9px)/2);
     }
-    .cage5 > :nth-child(4):after {
+    .a-cage5 > :nth-child(4):after {
         left: calc((100%/5 + 25px/5)*4 - (25px + 9px)/2);
     }
     </style>
@@ -72,7 +66,7 @@
 <br>
 <br>
 
-<div class="w600 floats flow5m25 cage5 ma og25">
+<div class="w600 floats flow5m25 a-cage5 ma og25">
     <span>Ut</span>
     <span>vel</span>
     <span>augue</span>

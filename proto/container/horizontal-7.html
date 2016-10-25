@@ -12,26 +12,20 @@
         display: block; /* for IE10 */
         box-sizing: border-box;
     }
-    .flow4m20 {
-        position: relative;
-    }
-    .flow4m20 > :nth-child(4n+1) {
-        background: red;
-    }
 
-    .cage5 {
+    .a-cage5 {
         position: relative;
     }
-    .cage5 > :nth-child(n+17) {
+    .a-cage5 > :nth-child(n+17) {
         display: none;
     }
-    .cage5 > :nth-child(5n+6) {
+    .a-cage5 > :nth-child(5n+6) {
         background: #f88;
     }
-    .cage5 > :nth-child(-n+4) {
+    .a-cage5 > :nth-child(-n+4) {
         background: #88f;
     }
-    .cage5 > :nth-child(5n+6):before {
+    .a-cage5 > :nth-child(5n+6):before {
         content: '';
         display: block;
         position: absolute;
@@ -40,7 +34,7 @@
         left: 0;
         margin-top: calc(-12px - (15px + 6px)/2);
     }
-    .cage5 > :nth-child(-n+4):after {
+    .a-cage5 > :nth-child(-n+4):after {
         content: '';
         box-sizing: border-box;
         display: block;
@@ -58,7 +52,7 @@
 <br>
 <br>
 
-<div class="cage5 w600 floats flow5m15 ma og25">
+<div class="a-cage5 w600 floats flow5m15 ma og25">
     <span>Ut</span>
     <span>vel</span>
     <span>augue</span>
