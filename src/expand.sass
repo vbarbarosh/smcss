@@ -22,17 +22,19 @@
 //     </div>
 // </div>
 
-%expand
-    display: block      // Very often target of this class will be A element
-    position: relative  // Almost always children will be absolutely positioned
+@mixin expand($width, $height)
+    @include db     // Very often target of this class will be A element
+    @include rel    // Almost always children will be absolutely positioned
     &:before
+        @include db
         content: ''
-        display: block
+        padding-top: $height / $width * 100%
+
+@mixin expand-class($width, $height)
+    .expand-#{$width}-#{$height}
+        @include expand($width, $height)
 
 @each $width in (1, 2, 3, 4, 9, 16)
     @each $height in (1, 2, 3, 4, 9, 16)
         @if ($width == 1 and $height == 1 or $width != $height)
-            .expand-#{$width}-#{$height}
-                @extend %expand
-                &:before
-                    padding-top: $height / $width * 100%
+            @include expand-class($width, $height)

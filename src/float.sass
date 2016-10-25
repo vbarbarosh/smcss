@@ -1,22 +1,21 @@
-.xf
+@mixin xf
     float: none
-.fl
+@mixin fl
     float: left
-.fr
+@mixin fr
     float: right
 
-.xc
+@mixin xc
     clear: none
-.cb
+@mixin cb
     clear: both
-.cl
+@mixin cl
     clear: left
-.cr
+@mixin cr
     clear: right
 
 // http://compass-style.org/reference/compass/utilities/general/clearfix/
-.cf,
-.clearfix
+@mixin clearfix
     *zoom: 1
     &:after
         content: "\0020"
@@ -26,7 +25,31 @@
         overflow: hidden
         visibility: hidden
 
-.floats
-    @extend .clearfix
+@mixin floats
+    @include clearfix
     > *
-        @extend .fl
+        @include fl
+
+.xf
+    @include xf
+.fl
+    @include fl
+.fr
+    @include fr
+
+.xc
+    @include xc
+.cb
+    @include cb
+.cl
+    @include cl
+.cr
+    @include cr
+
+.cf
+    @include clearfix
+.clearfix
+    @include clearfix
+
+.floats
+    @include floats

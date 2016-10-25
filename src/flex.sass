@@ -3,85 +3,87 @@
 // https://github.com/philipwalton/flexbugs
 // https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
 
-.flex
-    @extend .flex-wrap
+@mixin flex
+    @include flex-wrap
 
 // wrap
-.flex-wrap
+@mixin flex-wrap
     display: flex
     flex-wrap: wrap
     align-content: flex-start
 
-.flex-nowrap
+@mixin flex-nowrap
     display: flex
     flex-wrap: nowrap
     align-content: flex-start
 
-.flex-wrap-rev
+@mixin flex-wrap-rev
     display: flex
     flex-wrap: wrap-reverse
     align-content: flex-start
 
 // rows
-.flex-rows
-    @extend .flex
+@mixin flex-rows
+    @include flex
     flex-direction: row
 
-.flex-rows-center
-    @extend .flex-rows, .flex-center
+@mixin flex-rows-center
+    @include flex-rows
+    @include flex-center
 
 // columns
-.flex-cols
-    @extend .flex
+@mixin flex-cols
+    @include flex
     flex-direction: column
 
-.flex-cols-center
-    @extend .flex-cols, .flex-center
+@mixin flex-cols-center
+    @include flex-cols
+    @include flex-center
 
-.flex-center
+@mixin flex-center
     align-items: center
     align-content: center
     justify-content: center
 
 // alignment
-.flex-align-start
+@mixin flex-align-start
     // @extend .flex
     align-items: flex-start
 
-.flex-align-end
+@mixin flex-align-end
     // @extend .flex
     align-items: flex-end
 
-.flex-align-center
+@mixin flex-align-center
     // @extend .flex
     align-items: center
 
-.flex-align-baseline
+@mixin flex-align-baseline
     // @extend .flex
     align-items: baseline
 
-.flex-align-stretch
+@mixin flex-align-stretch
     // @extend .flex
     align-items: stretch
 
 // justify
-.flex-justify-start
+@mixin flex-justify-start
     // @extend .flex
     justify-content: flex-start
 
-.flex-justify-end
+@mixin flex-justify-end
     // @extend .flex
     justify-content: flex-end
 
-.flex-justify-center
+@mixin flex-justify-center
     // @extend .flex
     justify-content: center
 
-.flex-justify-between
+@mixin flex-justify-between
     // @extend .flex
     justify-content: space-between
 
-.flex-justify-around
+@mixin flex-justify-around
     // @extend .flex
     justify-content: space-around
 
@@ -92,21 +94,71 @@
 // https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg
 
 // growing
-.flex-grow
+@mixin flex-grow
     flex-grow: 1
 
-.flex-nogrow
+@mixin flex-nogrow
     flex-grow: 0
 
-.flex-shrink
+@mixin flex-shrink
     flex-shrink: 1
     flex-basis: auto
     min-height: 0
 
-.flex-noshrink
+@mixin flex-noshrink
     flex-shrink: 0
 
-.flex-fluid
-    @extend .flex-grow, .flex-shrink
+@mixin flex-fluid
+    @include flex-grow
+    @include flex-shrink
     // Fix for IE10 and IE11; *flex-basis: auto* doesn't work
     -ms-flex-preferred-size: 0
+
+.flex
+    @include flex
+.flex-wrap
+    @include flex-wrap
+.flex-nowrap
+    @include flex-nowrap
+.flex-wrap-rev
+    @include flex-wrap-rev
+.flex-rows
+    @include flex-rows
+.flex-rows-center
+    @include flex-rows-center
+.flex-cols
+    @include flex-cols
+.flex-cols-center
+    @include flex-cols-center
+.flex-center
+    @include flex-center
+.flex-align-start
+    @include flex-align-start
+.flex-align-end
+    @include flex-align-end
+.flex-align-center
+    @include flex-align-center
+.flex-align-baseline
+    @include flex-align-baseline
+.flex-align-stretch
+    @include flex-align-stretch
+.flex-justify-start
+    @include flex-justify-start
+.flex-justify-end
+    @include flex-justify-end
+.flex-justify-center
+    @include flex-justify-center
+.flex-justify-between
+    @include flex-justify-between
+.flex-justify-around
+    @include flex-justify-around
+.flex-grow
+    @include flex-grow
+.flex-nogrow
+    @include flex-nogrow
+.flex-shrink
+    @include flex-shrink
+.flex-noshrink
+    @include flex-noshrink
+.flex-fluid
+    @include flex-fluid

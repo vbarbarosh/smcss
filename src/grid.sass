@@ -11,7 +11,14 @@
 // them could be specified like this: .child-fl, child-dl,
 // .flex-rows, or .flex-cols
 
-@for $grid-size from 1 through 20
-    @for $col-size from 1 through $grid-size
-        .grid#{$grid-size} > .col#{$col-size}
-            width: $col-size / $grid-size * 100%
+@mixin grid($cols)
+    @for $col-size from 1 through $cols
+        & > .col#{$col-size}
+            width: $col-size / $cols * 100%
+
+@mixin grid-class($cols)
+    .grid#{$cols}
+        @include grid($cols)
+
+@for $cols from 1 through 20
+    @include grid-class($cols)

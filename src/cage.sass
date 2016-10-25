@@ -2,10 +2,11 @@
 // :before, and :after on all immediate children
 
 @mixin cage($cols, $margin: 0, $border: 1)
-    @extend .rel
+    @include rel
     @include flow($cols, $margin)
     & > :nth-child(#{$cols}n+#{$cols + 1}):before
-        @extend .db, .abs
+        @include db
+        @include abs
         content: ''
         left: 15px
         right: 15px
@@ -13,7 +14,8 @@
         border-top: $border*1px solid #ccc
         margin-top: calc(#{($margin + $border)*-1px}/2)
     & > :nth-child(n+2):nth-child(-n+#{$cols}):after
-        @extend .db, .abs
+        @include db
+        @include abs
         content: ''
         top: 15px
         bottom: 15px

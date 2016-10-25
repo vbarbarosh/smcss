@@ -79,9 +79,10 @@
     @extend .nc
 
 // Letter spacing
-@each $size in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-    .ls#{$size}
-        letter-spacing: #{$size}px
+@if (false)
+    @each $size in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+        .ls#{$size}
+            letter-spacing: #{$size}px
 
 // Line height
 //
@@ -109,22 +110,26 @@
 // > - Set the height of the button to be 40px tall
 // > - Set vertical-align to middle
 
-@each $size in (8, 9, 10, 11, 12, 13, 14, 15, 16)
-    .lh#{$size}
-        line-height: $size * 1px
+@if (false)
+    @each $size in (8, 9, 10, 11, 12, 13, 14, 15, 16)
+        .lh#{$size}
+            line-height: $size * 1px
 
-@each $size in (5)
-    .lh0#{$size}m
-        line-height: $size * 0.1em
+@if (false)
+    @each $size in (5)
+        .lh0#{$size}m
+            line-height: $size * 0.1em
 
-@each $size in (10, 15, 20)
-    .lh#{$size}m
-        line-height: $size * 0.1em
+@if (false)
+    @each $size in (10, 15, 20)
+        .lh#{$size}m
+            line-height: $size * 0.1em
 
 // Font size
-@for $size from 0 through 32
-    .fs#{$size}
-        font-size: $size * 1px
+@if (false)
+    @for $size from 0 through 32
+        .fs#{$size}
+            font-size: $size * 1px
 
 // Font style
 .n

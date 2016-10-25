@@ -1,11 +1,28 @@
 // Reference
 // http://reference.sitepoint.com/css/display
 
-.xd
+@mixin xd
     display: none
-.db
+@mixin db
     display: block
-.di
+@mixin di
     display: inline
-.dl
+@mixin dl
     display: inline-block
+@mixin dt
+    display: table
+@mixin dc
+    display: table-cell
+
+.xd
+    @include xd
+.db
+    @include db
+.di
+    @include di
+.dl
+    @include dl
+.dt
+    @include dt
+.dc
+    @include dc

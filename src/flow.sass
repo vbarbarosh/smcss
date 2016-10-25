@@ -12,7 +12,7 @@
         // Just a little helper to make use of .floats modifier with
         // different height of cells.
         &.floats > :nth-child(#{$cols}n + 1)
-            @extend .cb
+            @include cb
         & > :not(:nth-child(#{$cols}n + 1))
             margin-left: $margin*1px
         & > :nth-child(n + #{$cols + 1})

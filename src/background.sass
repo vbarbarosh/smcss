@@ -1,8 +1,8 @@
-.xbg
+@mixin xbg
     background: none
 
 // http://css-tricks.com/perfect-full-page-background-image/
-.background-cover
+@mixin background-cover
     background: transparent no-repeat center center
     -webkit-background-size: cover
     -moz-background-size: cover
@@ -10,51 +10,61 @@
     background-size: cover
 
 // Simple backgrounds for debugging
-.black
+@mixin black
     background: #000
-.gray
+@mixin gray
     background: #888
-.silver
+@mixin silver
     background: #ccc
-.white
+@mixin white
     background: #fff
-.red
+@mixin red
     background: #f88
-.green
+@mixin green
     background: #8f8
-.blue
+@mixin blue
     background: #88f
-.yellow
+@mixin yellow
     background: #ff8
-.cyan
+@mixin cyan
     background: #8ff
-.checkerboard
+@mixin checkerboard
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX///+/v7+jQ3Y5AAAAEUlEQVQI12P4z8CAFWEX/Q8Afr8P8erzE9cAAAAASUVORK5CYII=')
-
-.rainbow2,
-.gray-rainbow
-    & > :nth-child(2n+1)
-        @extend .gray
-    & > :nth-child(2n+2)
-        @extend .silver
-
-.rainbow,
-.rainbow3
+@mixin rainbow
     & > :nth-child(3n+1)
-        @extend .red
+        @include red
     & > :nth-child(3n+2)
-        @extend .green
+        @include green
     & > :nth-child(3n+3)
-        @extend .blue
+        @include blue
 
-.rainbow5
-    & > :nth-child(5n+1)
-        @extend .red
-    & > :nth-child(5n+2)
-        @extend .green
-    & > :nth-child(5n+3)
-        @extend .blue
-    & > :nth-child(5n+4)
-        @extend .yellow
-    & > :nth-child(5n+5)
-        @extend .cyan
+.xbg
+    @include xbg
+
+// http://css-tricks.com/perfect-full-page-background-image/
+.background-cover
+    @include background-cover
+
+// Simple backgrounds for debugging
+.black
+    @include black
+.gray
+    @include gray
+.silver
+    @include silver
+.white
+    @include white
+.red
+    @include red
+.green
+    @include green
+.blue
+    @include blue
+.yellow
+    @include yellow
+.cyan
+    @include cyan
+.checkerboard
+    @include checkerboard
+.rainbow
+    @include rainbow

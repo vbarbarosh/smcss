@@ -1,7 +1,15 @@
-@each $scale in (50, 65, 75)
-    .scale#{$scale}
-        transform: scale($scale / 100)
+@mixin scale($factor)
+    transform: scale($factor / 100)
 
-@each $angle in (0, 45, 90, 135, 180, 225, 270, 315)
-    .rotate#{$angle}
-        transform: rotate($angle * 1deg)
+@mixin rotate($angle)
+    transform: rotate($angle * 1deg)
+
+@if (false)
+    @each $factor in (50, 65, 75)
+        .scale#{$scale}
+            @include scale($factor)
+
+@if (false)
+    @each $angle in (0, 45, 90, 135, 180, 225, 270, 315)
+        .rotate#{$angle}
+            @include rotate($angle)

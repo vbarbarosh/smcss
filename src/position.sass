@@ -1,38 +1,65 @@
-.stat
+@mixin stat
     position: static
-.rel
+@mixin rel
     position: relative
-.abs
+@mixin abs
     position: absolute
-.fix
+@mixin fix
     position: fixed
 
-.box
+@mixin box
     top: 0
     left: 0
     right: 0
     bottom: 0
 
-@each $distance in (5, 10, 15, 20, 25)
-    .t#{$distance}
-        top: $distance * 1px
-    .l#{$distance}
-        left: $distance * 1px
-    .r#{$distance}
-        right: $distance * 1px
-    .b#{$distance}
-        bottom: $distance * 1px
-
-// The following classes may be renamed to *ta, la, ra, ba*.
-// This will allow .xb to use for font-weight: normal
-.xt
+@mixin t($distance)
+    top: $distance * 1px
+@mixin l($distance)
+    left: $distance * 1px
+@mixin r($distance)
+    right: $distance * 1px
+@mixin b($distance)
+    bottom: $distance * 1px
+@mixin ta
     top: auto
-.xl
+@mixin la
     left: auto
-.xr
+@mixin ra
     right: auto
-.xb
+@mixin ba
     bottom: auto
+
+.stat
+    @include stat
+.rel
+    @include rel
+.abs
+    @include abs
+.fix
+    @include fix
+
+.box
+    @include box
+
+@each $distance in (0, 1, 2, 3, 4, 5, 10, 15, 20, 25)
+    .t#{$distance}
+        @include t($distance)
+    .l#{$distance}
+        @include l($distance)
+    .r#{$distance}
+        @include r($distance)
+    .b#{$distance}
+        @include b($distance)
+
+.ta
+    @include ta
+.la
+    @include la
+.ra
+    @include ra
+.ba
+    @include ba
 
 // z-index
 @each $z in (1, 2, 3, 4, 5)
