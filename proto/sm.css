@@ -1074,7 +1074,7 @@
 .xd {
   display: none; }
 
-.db, .cage2m1 > :nth-child(2n+3):before, .cage2m1 > :nth-child(n+2):nth-child(-n+2):after, .cage2m2 > :nth-child(2n+3):before, .cage2m2 > :nth-child(n+2):nth-child(-n+2):after, .cage2m3 > :nth-child(2n+3):before, .cage2m3 > :nth-child(n+2):nth-child(-n+2):after, .cage2m4 > :nth-child(2n+3):before, .cage2m4 > :nth-child(n+2):nth-child(-n+2):after, .cage2m5 > :nth-child(2n+3):before, .cage2m5 > :nth-child(n+2):nth-child(-n+2):after, .cage2m10 > :nth-child(2n+3):before, .cage2m10 > :nth-child(n+2):nth-child(-n+2):after, .cage2m15 > :nth-child(2n+3):before, .cage2m15 > :nth-child(n+2):nth-child(-n+2):after, .cage2m20 > :nth-child(2n+3):before, .cage2m20 > :nth-child(n+2):nth-child(-n+2):after, .cage2m25 > :nth-child(2n+3):before, .cage2m25 > :nth-child(n+2):nth-child(-n+2):after, .cage3m1 > :nth-child(3n+4):before, .cage3m1 > :nth-child(n+2):nth-child(-n+3):after, .cage3m2 > :nth-child(3n+4):before, .cage3m2 > :nth-child(n+2):nth-child(-n+3):after, .cage3m3 > :nth-child(3n+4):before, .cage3m3 > :nth-child(n+2):nth-child(-n+3):after, .cage3m4 > :nth-child(3n+4):before, .cage3m4 > :nth-child(n+2):nth-child(-n+3):after, .cage3m5 > :nth-child(3n+4):before, .cage3m5 > :nth-child(n+2):nth-child(-n+3):after, .cage3m10 > :nth-child(3n+4):before, .cage3m10 > :nth-child(n+2):nth-child(-n+3):after, .cage3m15 > :nth-child(3n+4):before, .cage3m15 > :nth-child(n+2):nth-child(-n+3):after, .cage3m20 > :nth-child(3n+4):before, .cage3m20 > :nth-child(n+2):nth-child(-n+3):after, .cage3m25 > :nth-child(3n+4):before, .cage3m25 > :nth-child(n+2):nth-child(-n+3):after, .cage4m1 > :nth-child(4n+5):before, .cage4m1 > :nth-child(n+2):nth-child(-n+4):after, .cage4m2 > :nth-child(4n+5):before, .cage4m2 > :nth-child(n+2):nth-child(-n+4):after, .cage4m3 > :nth-child(4n+5):before, .cage4m3 > :nth-child(n+2):nth-child(-n+4):after, .cage4m4 > :nth-child(4n+5):before, .cage4m4 > :nth-child(n+2):nth-child(-n+4):after, .cage4m5 > :nth-child(4n+5):before, .cage4m5 > :nth-child(n+2):nth-child(-n+4):after, .cage4m10 > :nth-child(4n+5):before, .cage4m10 > :nth-child(n+2):nth-child(-n+4):after, .cage4m15 > :nth-child(4n+5):before, .cage4m15 > :nth-child(n+2):nth-child(-n+4):after, .cage4m20 > :nth-child(4n+5):before, .cage4m20 > :nth-child(n+2):nth-child(-n+4):after, .cage4m25 > :nth-child(4n+5):before, .cage4m25 > :nth-child(n+2):nth-child(-n+4):after, .cage5m1 > :nth-child(5n+6):before, .cage5m1 > :nth-child(n+2):nth-child(-n+5):after, .cage5m2 > :nth-child(5n+6):before, .cage5m2 > :nth-child(n+2):nth-child(-n+5):after, .cage5m3 > :nth-child(5n+6):before, .cage5m3 > :nth-child(n+2):nth-child(-n+5):after, .cage5m4 > :nth-child(5n+6):before, .cage5m4 > :nth-child(n+2):nth-child(-n+5):after, .cage5m5 > :nth-child(5n+6):before, .cage5m5 > :nth-child(n+2):nth-child(-n+5):after, .cage5m10 > :nth-child(5n+6):before, .cage5m10 > :nth-child(n+2):nth-child(-n+5):after, .cage5m15 > :nth-child(5n+6):before, .cage5m15 > :nth-child(n+2):nth-child(-n+5):after, .cage5m20 > :nth-child(5n+6):before, .cage5m20 > :nth-child(n+2):nth-child(-n+5):after, .cage5m25 > :nth-child(5n+6):before, .cage5m25 > :nth-child(n+2):nth-child(-n+5):after {
+.db, .cage2 > :nth-child(2n+3):before, .cage2 > :nth-child(n+2):nth-child(-n+2):after, .cage2m1 > :nth-child(2n+3):before, .cage2m1 > :nth-child(n+2):nth-child(-n+2):after, .cage2m2 > :nth-child(2n+3):before, .cage2m2 > :nth-child(n+2):nth-child(-n+2):after, .cage2m3 > :nth-child(2n+3):before, .cage2m3 > :nth-child(n+2):nth-child(-n+2):after, .cage2m4 > :nth-child(2n+3):before, .cage2m4 > :nth-child(n+2):nth-child(-n+2):after, .cage2m5 > :nth-child(2n+3):before, .cage2m5 > :nth-child(n+2):nth-child(-n+2):after, .cage2m10 > :nth-child(2n+3):before, .cage2m10 > :nth-child(n+2):nth-child(-n+2):after, .cage2m15 > :nth-child(2n+3):before, .cage2m15 > :nth-child(n+2):nth-child(-n+2):after, .cage2m20 > :nth-child(2n+3):before, .cage2m20 > :nth-child(n+2):nth-child(-n+2):after, .cage2m25 > :nth-child(2n+3):before, .cage2m25 > :nth-child(n+2):nth-child(-n+2):after, .cage3 > :nth-child(3n+4):before, .cage3 > :nth-child(n+2):nth-child(-n+3):after, .cage3m1 > :nth-child(3n+4):before, .cage3m1 > :nth-child(n+2):nth-child(-n+3):after, .cage3m2 > :nth-child(3n+4):before, .cage3m2 > :nth-child(n+2):nth-child(-n+3):after, .cage3m3 > :nth-child(3n+4):before, .cage3m3 > :nth-child(n+2):nth-child(-n+3):after, .cage3m4 > :nth-child(3n+4):before, .cage3m4 > :nth-child(n+2):nth-child(-n+3):after, .cage3m5 > :nth-child(3n+4):before, .cage3m5 > :nth-child(n+2):nth-child(-n+3):after, .cage3m10 > :nth-child(3n+4):before, .cage3m10 > :nth-child(n+2):nth-child(-n+3):after, .cage3m15 > :nth-child(3n+4):before, .cage3m15 > :nth-child(n+2):nth-child(-n+3):after, .cage3m20 > :nth-child(3n+4):before, .cage3m20 > :nth-child(n+2):nth-child(-n+3):after, .cage3m25 > :nth-child(3n+4):before, .cage3m25 > :nth-child(n+2):nth-child(-n+3):after, .cage4 > :nth-child(4n+5):before, .cage4 > :nth-child(n+2):nth-child(-n+4):after, .cage4m1 > :nth-child(4n+5):before, .cage4m1 > :nth-child(n+2):nth-child(-n+4):after, .cage4m2 > :nth-child(4n+5):before, .cage4m2 > :nth-child(n+2):nth-child(-n+4):after, .cage4m3 > :nth-child(4n+5):before, .cage4m3 > :nth-child(n+2):nth-child(-n+4):after, .cage4m4 > :nth-child(4n+5):before, .cage4m4 > :nth-child(n+2):nth-child(-n+4):after, .cage4m5 > :nth-child(4n+5):before, .cage4m5 > :nth-child(n+2):nth-child(-n+4):after, .cage4m10 > :nth-child(4n+5):before, .cage4m10 > :nth-child(n+2):nth-child(-n+4):after, .cage4m15 > :nth-child(4n+5):before, .cage4m15 > :nth-child(n+2):nth-child(-n+4):after, .cage4m20 > :nth-child(4n+5):before, .cage4m20 > :nth-child(n+2):nth-child(-n+4):after, .cage4m25 > :nth-child(4n+5):before, .cage4m25 > :nth-child(n+2):nth-child(-n+4):after, .cage5 > :nth-child(5n+6):before, .cage5 > :nth-child(n+2):nth-child(-n+5):after, .cage5m1 > :nth-child(5n+6):before, .cage5m1 > :nth-child(n+2):nth-child(-n+5):after, .cage5m2 > :nth-child(5n+6):before, .cage5m2 > :nth-child(n+2):nth-child(-n+5):after, .cage5m3 > :nth-child(5n+6):before, .cage5m3 > :nth-child(n+2):nth-child(-n+5):after, .cage5m4 > :nth-child(5n+6):before, .cage5m4 > :nth-child(n+2):nth-child(-n+5):after, .cage5m5 > :nth-child(5n+6):before, .cage5m5 > :nth-child(n+2):nth-child(-n+5):after, .cage5m10 > :nth-child(5n+6):before, .cage5m10 > :nth-child(n+2):nth-child(-n+5):after, .cage5m15 > :nth-child(5n+6):before, .cage5m15 > :nth-child(n+2):nth-child(-n+5):after, .cage5m20 > :nth-child(5n+6):before, .cage5m20 > :nth-child(n+2):nth-child(-n+5):after, .cage5m25 > :nth-child(5n+6):before, .cage5m25 > :nth-child(n+2):nth-child(-n+5):after {
   display: block; }
 
 .di {
@@ -1979,6 +1979,20 @@
 
 .cage2 > * {
   width: 50%; }
+.cage2 > :nth-child(2n+3):before {
+  content: "";
+  left: 15px;
+  right: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #ccc;
+  margin-top: calc(-1px/2); }
+.cage2 > :nth-child(n+2):nth-child(-n+2):after {
+  content: "";
+  top: 15px;
+  bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-left: 1px solid #ccc;
+  margin-left: calc(-1px/2); }
 
 .cage2m1 > * {
   width: calc(100%/2 - 1/2*1px); }
@@ -2171,6 +2185,20 @@
 
 .cage3 > * {
   width: 33.33333%; }
+.cage3 > :nth-child(3n+4):before {
+  content: "";
+  left: 15px;
+  right: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #ccc;
+  margin-top: calc(-1px/2); }
+.cage3 > :nth-child(n+2):nth-child(-n+3):after {
+  content: "";
+  top: 15px;
+  bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-left: 1px solid #ccc;
+  margin-left: calc(-1px/2); }
 
 .cage3m1 > * {
   width: calc(100%/3 - 2/3*1px); }
@@ -2363,6 +2391,20 @@
 
 .cage4 > * {
   width: 25%; }
+.cage4 > :nth-child(4n+5):before {
+  content: "";
+  left: 15px;
+  right: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #ccc;
+  margin-top: calc(-1px/2); }
+.cage4 > :nth-child(n+2):nth-child(-n+4):after {
+  content: "";
+  top: 15px;
+  bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-left: 1px solid #ccc;
+  margin-left: calc(-1px/2); }
 
 .cage4m1 > * {
   width: calc(100%/4 - 3/4*1px); }
@@ -2555,6 +2597,20 @@
 
 .cage5 > * {
   width: 20%; }
+.cage5 > :nth-child(5n+6):before {
+  content: "";
+  left: 15px;
+  right: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #ccc;
+  margin-top: calc(-1px/2); }
+.cage5 > :nth-child(n+2):nth-child(-n+5):after {
+  content: "";
+  top: 15px;
+  bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-left: 1px solid #ccc;
+  margin-left: calc(-1px/2); }
 
 .cage5m1 > * {
   width: calc(100%/5 - 4/5*1px); }
@@ -2871,10 +2927,10 @@
 .stat {
   position: static; }
 
-.rel, .cage2m1, .cage2m2, .cage2m3, .cage2m4, .cage2m5, .cage2m10, .cage2m15, .cage2m20, .cage2m25, .cage3m1, .cage3m2, .cage3m3, .cage3m4, .cage3m5, .cage3m10, .cage3m15, .cage3m20, .cage3m25, .cage4m1, .cage4m2, .cage4m3, .cage4m4, .cage4m5, .cage4m10, .cage4m15, .cage4m20, .cage4m25, .cage5m1, .cage5m2, .cage5m3, .cage5m4, .cage5m5, .cage5m10, .cage5m15, .cage5m20, .cage5m25 {
+.rel, .cage2, .cage2m1, .cage2m2, .cage2m3, .cage2m4, .cage2m5, .cage2m10, .cage2m15, .cage2m20, .cage2m25, .cage3, .cage3m1, .cage3m2, .cage3m3, .cage3m4, .cage3m5, .cage3m10, .cage3m15, .cage3m20, .cage3m25, .cage4, .cage4m1, .cage4m2, .cage4m3, .cage4m4, .cage4m5, .cage4m10, .cage4m15, .cage4m20, .cage4m25, .cage5, .cage5m1, .cage5m2, .cage5m3, .cage5m4, .cage5m5, .cage5m10, .cage5m15, .cage5m20, .cage5m25 {
   position: relative; }
 
-.abs, .cage2m1 > :nth-child(2n+3):before, .cage2m1 > :nth-child(n+2):nth-child(-n+2):after, .cage2m2 > :nth-child(2n+3):before, .cage2m2 > :nth-child(n+2):nth-child(-n+2):after, .cage2m3 > :nth-child(2n+3):before, .cage2m3 > :nth-child(n+2):nth-child(-n+2):after, .cage2m4 > :nth-child(2n+3):before, .cage2m4 > :nth-child(n+2):nth-child(-n+2):after, .cage2m5 > :nth-child(2n+3):before, .cage2m5 > :nth-child(n+2):nth-child(-n+2):after, .cage2m10 > :nth-child(2n+3):before, .cage2m10 > :nth-child(n+2):nth-child(-n+2):after, .cage2m15 > :nth-child(2n+3):before, .cage2m15 > :nth-child(n+2):nth-child(-n+2):after, .cage2m20 > :nth-child(2n+3):before, .cage2m20 > :nth-child(n+2):nth-child(-n+2):after, .cage2m25 > :nth-child(2n+3):before, .cage2m25 > :nth-child(n+2):nth-child(-n+2):after, .cage3m1 > :nth-child(3n+4):before, .cage3m1 > :nth-child(n+2):nth-child(-n+3):after, .cage3m2 > :nth-child(3n+4):before, .cage3m2 > :nth-child(n+2):nth-child(-n+3):after, .cage3m3 > :nth-child(3n+4):before, .cage3m3 > :nth-child(n+2):nth-child(-n+3):after, .cage3m4 > :nth-child(3n+4):before, .cage3m4 > :nth-child(n+2):nth-child(-n+3):after, .cage3m5 > :nth-child(3n+4):before, .cage3m5 > :nth-child(n+2):nth-child(-n+3):after, .cage3m10 > :nth-child(3n+4):before, .cage3m10 > :nth-child(n+2):nth-child(-n+3):after, .cage3m15 > :nth-child(3n+4):before, .cage3m15 > :nth-child(n+2):nth-child(-n+3):after, .cage3m20 > :nth-child(3n+4):before, .cage3m20 > :nth-child(n+2):nth-child(-n+3):after, .cage3m25 > :nth-child(3n+4):before, .cage3m25 > :nth-child(n+2):nth-child(-n+3):after, .cage4m1 > :nth-child(4n+5):before, .cage4m1 > :nth-child(n+2):nth-child(-n+4):after, .cage4m2 > :nth-child(4n+5):before, .cage4m2 > :nth-child(n+2):nth-child(-n+4):after, .cage4m3 > :nth-child(4n+5):before, .cage4m3 > :nth-child(n+2):nth-child(-n+4):after, .cage4m4 > :nth-child(4n+5):before, .cage4m4 > :nth-child(n+2):nth-child(-n+4):after, .cage4m5 > :nth-child(4n+5):before, .cage4m5 > :nth-child(n+2):nth-child(-n+4):after, .cage4m10 > :nth-child(4n+5):before, .cage4m10 > :nth-child(n+2):nth-child(-n+4):after, .cage4m15 > :nth-child(4n+5):before, .cage4m15 > :nth-child(n+2):nth-child(-n+4):after, .cage4m20 > :nth-child(4n+5):before, .cage4m20 > :nth-child(n+2):nth-child(-n+4):after, .cage4m25 > :nth-child(4n+5):before, .cage4m25 > :nth-child(n+2):nth-child(-n+4):after, .cage5m1 > :nth-child(5n+6):before, .cage5m1 > :nth-child(n+2):nth-child(-n+5):after, .cage5m2 > :nth-child(5n+6):before, .cage5m2 > :nth-child(n+2):nth-child(-n+5):after, .cage5m3 > :nth-child(5n+6):before, .cage5m3 > :nth-child(n+2):nth-child(-n+5):after, .cage5m4 > :nth-child(5n+6):before, .cage5m4 > :nth-child(n+2):nth-child(-n+5):after, .cage5m5 > :nth-child(5n+6):before, .cage5m5 > :nth-child(n+2):nth-child(-n+5):after, .cage5m10 > :nth-child(5n+6):before, .cage5m10 > :nth-child(n+2):nth-child(-n+5):after, .cage5m15 > :nth-child(5n+6):before, .cage5m15 > :nth-child(n+2):nth-child(-n+5):after, .cage5m20 > :nth-child(5n+6):before, .cage5m20 > :nth-child(n+2):nth-child(-n+5):after, .cage5m25 > :nth-child(5n+6):before, .cage5m25 > :nth-child(n+2):nth-child(-n+5):after {
+.abs, .cage2 > :nth-child(2n+3):before, .cage2 > :nth-child(n+2):nth-child(-n+2):after, .cage2m1 > :nth-child(2n+3):before, .cage2m1 > :nth-child(n+2):nth-child(-n+2):after, .cage2m2 > :nth-child(2n+3):before, .cage2m2 > :nth-child(n+2):nth-child(-n+2):after, .cage2m3 > :nth-child(2n+3):before, .cage2m3 > :nth-child(n+2):nth-child(-n+2):after, .cage2m4 > :nth-child(2n+3):before, .cage2m4 > :nth-child(n+2):nth-child(-n+2):after, .cage2m5 > :nth-child(2n+3):before, .cage2m5 > :nth-child(n+2):nth-child(-n+2):after, .cage2m10 > :nth-child(2n+3):before, .cage2m10 > :nth-child(n+2):nth-child(-n+2):after, .cage2m15 > :nth-child(2n+3):before, .cage2m15 > :nth-child(n+2):nth-child(-n+2):after, .cage2m20 > :nth-child(2n+3):before, .cage2m20 > :nth-child(n+2):nth-child(-n+2):after, .cage2m25 > :nth-child(2n+3):before, .cage2m25 > :nth-child(n+2):nth-child(-n+2):after, .cage3 > :nth-child(3n+4):before, .cage3 > :nth-child(n+2):nth-child(-n+3):after, .cage3m1 > :nth-child(3n+4):before, .cage3m1 > :nth-child(n+2):nth-child(-n+3):after, .cage3m2 > :nth-child(3n+4):before, .cage3m2 > :nth-child(n+2):nth-child(-n+3):after, .cage3m3 > :nth-child(3n+4):before, .cage3m3 > :nth-child(n+2):nth-child(-n+3):after, .cage3m4 > :nth-child(3n+4):before, .cage3m4 > :nth-child(n+2):nth-child(-n+3):after, .cage3m5 > :nth-child(3n+4):before, .cage3m5 > :nth-child(n+2):nth-child(-n+3):after, .cage3m10 > :nth-child(3n+4):before, .cage3m10 > :nth-child(n+2):nth-child(-n+3):after, .cage3m15 > :nth-child(3n+4):before, .cage3m15 > :nth-child(n+2):nth-child(-n+3):after, .cage3m20 > :nth-child(3n+4):before, .cage3m20 > :nth-child(n+2):nth-child(-n+3):after, .cage3m25 > :nth-child(3n+4):before, .cage3m25 > :nth-child(n+2):nth-child(-n+3):after, .cage4 > :nth-child(4n+5):before, .cage4 > :nth-child(n+2):nth-child(-n+4):after, .cage4m1 > :nth-child(4n+5):before, .cage4m1 > :nth-child(n+2):nth-child(-n+4):after, .cage4m2 > :nth-child(4n+5):before, .cage4m2 > :nth-child(n+2):nth-child(-n+4):after, .cage4m3 > :nth-child(4n+5):before, .cage4m3 > :nth-child(n+2):nth-child(-n+4):after, .cage4m4 > :nth-child(4n+5):before, .cage4m4 > :nth-child(n+2):nth-child(-n+4):after, .cage4m5 > :nth-child(4n+5):before, .cage4m5 > :nth-child(n+2):nth-child(-n+4):after, .cage4m10 > :nth-child(4n+5):before, .cage4m10 > :nth-child(n+2):nth-child(-n+4):after, .cage4m15 > :nth-child(4n+5):before, .cage4m15 > :nth-child(n+2):nth-child(-n+4):after, .cage4m20 > :nth-child(4n+5):before, .cage4m20 > :nth-child(n+2):nth-child(-n+4):after, .cage4m25 > :nth-child(4n+5):before, .cage4m25 > :nth-child(n+2):nth-child(-n+4):after, .cage5 > :nth-child(5n+6):before, .cage5 > :nth-child(n+2):nth-child(-n+5):after, .cage5m1 > :nth-child(5n+6):before, .cage5m1 > :nth-child(n+2):nth-child(-n+5):after, .cage5m2 > :nth-child(5n+6):before, .cage5m2 > :nth-child(n+2):nth-child(-n+5):after, .cage5m3 > :nth-child(5n+6):before, .cage5m3 > :nth-child(n+2):nth-child(-n+5):after, .cage5m4 > :nth-child(5n+6):before, .cage5m4 > :nth-child(n+2):nth-child(-n+5):after, .cage5m5 > :nth-child(5n+6):before, .cage5m5 > :nth-child(n+2):nth-child(-n+5):after, .cage5m10 > :nth-child(5n+6):before, .cage5m10 > :nth-child(n+2):nth-child(-n+5):after, .cage5m15 > :nth-child(5n+6):before, .cage5m15 > :nth-child(n+2):nth-child(-n+5):after, .cage5m20 > :nth-child(5n+6):before, .cage5m20 > :nth-child(n+2):nth-child(-n+5):after, .cage5m25 > :nth-child(5n+6):before, .cage5m25 > :nth-child(n+2):nth-child(-n+5):after {
   position: absolute; }
 
 .fix {

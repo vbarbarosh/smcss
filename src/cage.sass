@@ -1,3 +1,6 @@
+// This class requires *margin*, *padding*, *border*,
+// :before, and :after on all immediate children
+
 @mixin cage($cols, $margin: 0, $border: 1)
     @extend .rel
     @include flow($cols, $margin)
@@ -18,10 +21,10 @@
         border-left: $border*1px solid #ccc
         margin-left: calc(#{($margin + $border)*-1px}/2)
 
-@mixin cage-class($cols, $margin: 0, $border: 0)
+@mixin cage-class($cols, $margin: 0, $border: 1)
     @if ($margin == 0)
         .cage#{$cols}
-            @include flow($cols)
+            @include cage($cols, $margin, $border)
     @else
         .cage#{$cols}m#{$margin}
             @include cage($cols, $margin)
