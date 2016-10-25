@@ -3,28 +3,25 @@
 // https://github.com/philipwalton/flexbugs
 // https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
 
-@mixin flex
-    @include flex-wrap
-
-// wrap
-@mixin flex-wrap
+@mixin flex-x
     display: flex
-    flex-wrap: wrap
-    align-content: flex-start
+    flex-direction: row
 
-@mixin flex-nowrap
-    display: flex
-    flex-wrap: nowrap
-    align-content: flex-start
+@mixin flex-x-center
+    @include flex-x
+    @include flex-center
 
-@mixin flex-wrap-rev
+@mixin flex-y
     display: flex
-    flex-wrap: wrap-reverse
-    align-content: flex-start
+    flex-direction: column
+
+@mixin flex-y-center
+    @include flex-y
+    @include flex-center
 
 // rows
 @mixin flex-rows
-    @include flex
+    display: flex
     flex-direction: row
 
 @mixin flex-rows-center
@@ -33,12 +30,25 @@
 
 // columns
 @mixin flex-cols
-    @include flex
+    display: flex
     flex-direction: column
 
 @mixin flex-cols-center
     @include flex-cols
     @include flex-center
+
+// wrap
+@mixin flex-wrap
+    flex-wrap: wrap
+    // align-content: flex-start
+
+@mixin flex-nowrap
+    flex-wrap: nowrap
+    // align-content: flex-start
+
+@mixin flex-wrap-rev
+    flex-wrap: wrap-reverse
+    // align-content: flex-start
 
 @mixin flex-center
     align-items: center
@@ -47,44 +57,34 @@
 
 // alignment
 @mixin flex-align-start
-    // @extend .flex
     align-items: flex-start
 
 @mixin flex-align-end
-    // @extend .flex
     align-items: flex-end
 
 @mixin flex-align-center
-    // @extend .flex
     align-items: center
 
 @mixin flex-align-baseline
-    // @extend .flex
     align-items: baseline
 
 @mixin flex-align-stretch
-    // @extend .flex
     align-items: stretch
 
 // justify
 @mixin flex-justify-start
-    // @extend .flex
     justify-content: flex-start
 
 @mixin flex-justify-end
-    // @extend .flex
     justify-content: flex-end
 
 @mixin flex-justify-center
-    // @extend .flex
     justify-content: center
 
 @mixin flex-justify-between
-    // @extend .flex
     justify-content: space-between
 
 @mixin flex-justify-around
-    // @extend .flex
     justify-content: space-around
 
 // IE 10-11 flex-basis property behaves differently than webkit browsers
@@ -114,8 +114,6 @@
     // Fix for IE10 and IE11; *flex-basis: auto* doesn't work
     -ms-flex-preferred-size: 0
 
-.flex
-    @include flex
 .flex-wrap
     @include flex-wrap
 .flex-nowrap
