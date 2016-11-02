@@ -6,180 +6,251 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title of the Page</title>
     <link href="../sm.css" type="text/css" rel="stylesheet">
+    <!-- {{{ -->
+    <style type="text/css">
+    .thumb {
+        position: absolute;
+        bottom: -45px;
+        right: -45px;
+        width: 50px;
+        height: 50px;
+        background: #f88;
+        cursor: move;
+        border-radius: 999px;
+    }
+    </style>
+    <!-- }}} -->
     <style type="text/css">
     span, .border { border: 1px solid black; }
     span { display: block; }
     .m10n {
         margin: -10px;
     }
+    .mt10n {
+        margin-top: -10px;
+    }
+    .ml10n {
+        margin-left: -10px;
+    }
     .flow4p10 > * {
         width: 25%;
-        padding: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
         box-sizing: border-box;
+    }
+    .floats.flow4p10 > :nth-child(4n + 1) {
+        clear: both;
     }
     .flow7p10 > * {
-        width: calc(100% / 7);
-        padding: 10px;
+        /* IE10,IE11 width: calc(100% / 7);*/
+        /* width: 14.285714286%; */
+        width: calc(100%/7 - 0.01px);
+        padding-top: 10px;
+        padding-left: 10px;
         box-sizing: border-box;
     }
+    .floats.flow7p10 > :nth-child(7n + 1) {
+        clear: both;
+    }
+
+.flow7m10 > * {
+  /* IE10,IE11,FF width: calc(100%/7 - 6/7*10px);*/
+  /* FF width: calc(14.285714286% - 8.57142857px);*/
+  width: calc(100%/7 - 6/7*10px - 0.01px);
+}
+
+.flow7m10.floats > :nth-child(7n + 1) {
+  clear: both;
+}
+
+.flow7m10 > :not(:nth-child(7n + 1)) {
+  margin-left: 10px;
+}
+
+.flow7m10 > :nth-child(n + 8) {
+  margin-top: 10px;
+}
+
+
+.flow5m10 > * {
+  width: calc(100%/5 - 4/5*10px - 0.01px);
+}
+
+.flow5m10.floats > :nth-child(5n + 1) {
+  clear: both;
+}
+
+.flow5m10 > :not(:nth-child(5n + 1)) {
+  margin-left: 10px;
+}
+
+.flow5m10 > :nth-child(n + 6) {
+  margin-top: 10px;
+}
     </style>
 </head>
-<body>
+<body class="checkerboard">
 
-<br>
-<br>
+<app>
+    <div class="ww hh bbox oa" style="border: 5px solid red;">
+    <div class="floats flow7p10 mt10n ml10n">
+        <div><span>Aenean elementum velit vitae nulla commodo, sit amet ornare nisi fermentum.</span></div>
+        <div><span>Quisque vel pellentesque arcu.</span></div>
+        <div><span>Phasellus auctor vulputate massa non fermentum.</span></div>
+        <div><span>In ultricies venenatis odio sit amet iaculis.</span></div>
+        <div><span>Maecenas et euismod lorem.</span></div>
+        <div><span>Sed eleifend facilisis diam.</span></div>
+        <div><span>Aliquam vitae neque malesuada, mollis mi convallis, vehicula enim.</span></div>
+        <div><span>Vivamus cursus interdum elit.</span></div>
+        <div><span>Curabitur vehicula at metus ac ultricies.</span></div>
+        <div><span>Proin non porta magna.</span></div>
+        <div><span>In laoreet venenatis sollicitudin.</span></div>
+        <div><span>Cras eros velit, sodales eget ligula semper, hendrerit placerat mi.</span></div>
+        <div><span>Ut venenatis varius urna, id bibendum risus.</span></div>
+        <div><span>Proin blandit elit sit amet magna consequat sollicitudin.</span></div>
+        <div><span>Nam convallis est sit amet quam venenatis, vitae facilisis magna aliquet.</span></div>
+        <div><span>Aliquam vehicula, est ut blandit tincidunt, eros diam ullamcorper eros, at pellentesque est mi bibendum magna.</span></div>
+        <div><span>Phasellus nec tempor elit, ornare fringilla neque.</span></div>
+        <div><span>Praesent nec metus neque.</span></div>
+        <div><span>Suspendisse potenti.</span></div>
+        <div><span>Donec faucibus blandit nisi ac tincidunt.</span></div>
+        <div><span>In consequat quam nunc, sit amet dapibus massa tincidunt non.</span></div>
+        <div><span>Vestibulum condimentum ipsum tortor, nec fringilla justo lacinia ac.</span></div>
+        <div><span>Duis hendrerit quis dolor a fringilla.</span></div>
+        <div><span>Sed eu odio hendrerit, pretium ipsum vitae, sagittis massa.</span></div>
+        <div><span>Sed sodales mi placerat erat aliquet rhoncus.</span></div>
+        <div><span>Morbi ac pellentesque ex.</span></div>
+        <div><span>Sed feugiat purus ut egestas tempor.</span></div>
+    </div>
+    </div>
+</app>
 
-<div class="w600 ma og25" style="border: 5px solid red;">
-<div class="floats flow7p10 m10n">
-    <div><span>Ut</span></div>
-    <div><span>vel</span></div>
-    <div><span>augue</span></div>
-    <div><span>id</span></div>
-    <div><span>risus</span></div>
-    <div><span>accumsan</span></div>
-    <div><span>rhoncus</span></div>
-    <div><span>vitae</span></div>
-    <div><span>auctor</span></div>
-    <div><span>lorem.</span></div>
-    <div><span>Quisque</span></div>
-    <div><span>quis</span></div>
-    <div><span>justo</span></div>
-    <div><span>odio.</span></div>
-    <div><span>Donec</span></div>
-    <div><span>magna</span></div>
-    <div><span>lectus,</span></div>
-    <div><span>aliquam</span></div>
-    <div><span>et</span></div>
-    <div><span>ullamcorper</span></div>
-    <div><span>et,</span></div>
-    <div><span>tincidunt</span></div>
-    <div><span>sit</span></div>
-    <div><span>amet</span></div>
-    <div><span>ante.</span></div>
-    <div><span>Pellentesque</span></div>
-    <div><span>blandit</span></div>
-    <div><span>magna</span></div>
-    <div><span>quam,</span></div>
-    <div><span>et</span></div>
-    <div><span>pellentesque</span></div>
-    <div><span>turpis</span></div>
-    <div><span>pharetra</span></div>
-    <div><span>sed.</span></div>
-    <div><span>Maecenas</span></div>
-    <div><span>laoreet</span></div>
-    <div><span>vulputate</span></div>
-    <div><span>venenatis.</span></div>
-    <div><span>Maecenas</span></div>
-    <div><span>urna</span></div>
-    <div><span>magna,</span></div>
-    <div><span>posuere</span></div>
-    <div><span>a</span></div>
-    <div><span>orci</span></div>
-    <div><span>sodales,</span></div>
-    <div><span>mattis</span></div>
-    <div><span>finibus</span></div>
-    <div><span>turpis.</span></div>
-    <div><span>Donec</span></div>
-    <div><span>nec</span></div>
-    <div><span>urna</span></div>
-    <div><span>id</span></div>
-    <div><span>massa</span></div>
-    <div><span>hendrerit</span></div>
-    <div><span>placerat</span></div>
-    <div><span>eget</span></div>
-    <div><span>non</span></div>
-    <div><span>nisi.</span></div>
-    <div><span>Suspendisse</span></div>
-    <div><span>ac</span></div>
-    <div><span>augue</span></div>
-    <div><span>sit</span></div>
-    <div><span>amet</span></div>
-    <div><span>dolor</span></div>
-    <div><span>molestie</span></div>
-    <div><span>tristique.</span></div>
-    <div><span>Ut</span></div>
-    <div><span>posuere</span></div>
-    <div><span>luctus</span></div>
-    <div><span>sapien</span></div>
-    <div><span>lacinia</span></div>
-    <div><span>laoreet.</span></div>
-    <div><span>Duis</span></div>
-    <div><span>risus</span></div>
-    <div><span>dui,</span></div>
-    <div><span>varius</span></div>
-    <div><span>quis</span></div>
-    <div><span>lacus</span></div>
-    <div><span>in,</span></div>
-    <div><span>sagittis</span></div>
-    <div><span>rutrum</span></div>
-    <div><span>libero.</span></div>
-    <div><span>Ut</span></div>
-    <div><span>in</span></div>
-    <div><span>dictum</span></div>
-    <div><span>arcu.</span></div>
-    <div><span>Etiam</span></div>
-    <div><span>vel</span></div>
-    <div><span>sapien</span></div>
-    <div><span>at</span></div>
-    <div><span>felis</span></div>
-    <div><span>varius</span></div>
-    <div><span>tincidunt</span></div>
-    <div><span>id</span></div>
-    <div><span>at</span></div>
-    <div><span>nisl.</span></div>
-    <div><span>Etiam</span></div>
-    <div><span>pretium</span></div>
-    <div><span>at</span></div>
-    <div><span>mi</span></div>
-    <div><span>non</span></div>
-    <div><span>dapibus.</span></div>
-    <div><span>Vivamus</span></div>
-    <div><span>mollis,</span></div>
-    <div><span>lorem</span></div>
-    <div><span>non</span></div>
-    <div><span>pulvinar</span></div>
-    <div><span>fringilla,</span></div>
-    <div><span>magna</span></div>
-    <div><span>arcu</span></div>
-    <div><span>laoreet</span></div>
-    <div><span>felis,</span></div>
-    <div><span>a</span></div>
-    <div><span>viverra</span></div>
-    <div><span>sem</span></div>
-    <div><span>est</span></div>
-    <div><span>eget</span></div>
-    <div><span>purus.</span></div>
-    <div><span>Sed</span></div>
-    <div><span>tempor</span></div>
-    <div><span>neque</span></div>
-    <div><span>sed</span></div>
-    <div><span>leo</span></div>
-    <div><span>hendrerit,</span></div>
-    <div><span>et</span></div>
-    <div><span>rutrum</span></div>
-    <div><span>est</span></div>
-    <div><span>iaculis.</span></div>
-    <div><span>Suspendisse</span></div>
-    <div><span>vulputate,</span></div>
-    <div><span>tellus</span></div>
-    <div><span>et</span></div>
-    <div><span>tincidunt</span></div>
-    <div><span>vehicula,</span></div>
-    <div><span>arcu</span></div>
-    <div><span>leo</span></div>
-    <div><span>porta</span></div>
-    <div><span>sapien,</span></div>
-    <div><span>nec</span></div>
-    <div><span>gravida</span></div>
-    <div><span>arcu</span></div>
-    <div><span>quam</span></div>
-    <div><span>vel</span></div>
-    <div><span>ligula.</span></div>
-</div>
-</div>
+<!-- {{{ -->
+<script src="../jquery.min.js" type="text/javascript"></script>
+<script src="../vue.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+/**
+ * dd(event, {
+ *     translate: function (clientX, clientY) {...},
+ *     updateContext: function (context) {...},
+ *     begin: function ({x1, y1, x2, y2}) {...},
+ *     end: function ({x1, y1, x2, y2}) {...},
+ *     move: function ({x1, y1, x2, y2, dx, dy}) {...}
+ * })
+ */
+function dd(inputEvent, options)
+{
+    var initiator = inputEvent.which,
+        context = {},
+        translate = options.translate || translateClient,
+        listeners = {mousemove: move, mouseup: end};
 
-<br>
-<br>
+    begin(inputEvent);
+
+    function translateClient(clientX, clientY)
+    {
+        return {x: clientX, y: clientY};
+    }
+
+    function updateContext(event)
+    {
+        var m = translate(event.clientX, event.clientY);
+        if (typeof context.x1 === 'undefined') {
+            context.x1 = m.x;
+            context.y1 = m.y;
+        }
+        context.x2 = m.x;
+        context.y2 = m.y;
+        context.dx = context.x2 - context.x1;
+        context.dy = context.y2 - context.y1;
+        context.event = event;
+        if (typeof options.updateContext === 'function') {
+            options.updateContext(context);
+        }
+    }
+
+    function begin(event)
+    {
+        jQuery(document).on(listeners);
+        updateContext(event || {});
+        if (typeof options.begin === 'function') {
+            options.begin(context);
+        }
+    }
+
+    function end(event)
+    {
+        jQuery(document).off(listeners);
+        if (typeof options.end === 'function') {
+            updateContext(event);
+            options.end(context);
+        }
+    }
+
+    function move(event)
+    {
+        var update = false;
+        if (typeof options.move === 'function') {
+            updateContext(event);
+            update = true;
+            options.move(context);
+        }
+        // doesn't work in Safari
+        // if (event.buttons != 1) { end(event); return; }
+        if ((event.buttons !== undefined && (event.buttons & initiator) != initiator) || (event.which !== initiator)) {
+            if (!update) {
+                updateContext(event);
+            }
+            end(event);
+        }
+    }
+}
+</script>
+<script id="templ-container" type="text/templ">
+    <div class="fix box w600 white ma mv25 og25" v-bind:style="style">
+        <div v-on:mousedown="dd" class="thumb"></div>
+        <slot>
+            <div class="ww hh oa">
+                <p>Aenean ut urna id arcu ultricies ultrices. Cras nec lacinia ex. Nunc dignissim id nisi id sollicitudin. Morbi velit libero, dapibus at ligula eget, efficitur facilisis tellus. Duis feugiat non dui sed tincidunt. Integer aliquet pretium ex. Morbi elementum, nisl quis molestie faucibus, purus nibh bibendum nibh, quis vehicula est arcu at arcu. Nulla nec porta leo. Pellentesque sed augue orci. Nam eget tempor diam, bibendum suscipit ex. Nam in massa urna. Sed porttitor velit at hendrerit sagittis. Fusce vitae mollis nulla. Maecenas viverra nec velit et auctor. In hac habitasse platea dictumst.</p>
+                <p>Etiam eu accumsan lacus. Praesent a consectetur magna, nec porta nisi. Vivamus non nibh magna. Mauris et orci auctor, ultricies nunc a, semper nibh. Nam convallis mi non elit molestie, a commodo nibh pulvinar. Nam mollis magna vitae accumsan condimentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi mattis consequat fringilla. Donec eu nulla cursus, eleifend ante id, ullamcorper eros. Sed congue consequat quam, eget pretium arcu interdum sed. Nulla in nisl magna. Sed eu sem pretium, vulputate ligula at, pulvinar libero. Donec ultricies quam nec vulputate vestibulum.</p>
+                <p>Fusce ut consequat nisl, vel varius orci. Vivamus posuere mi sit amet nulla ultricies aliquet. Curabitur fermentum scelerisque tellus. Ut blandit lectus gravida, varius magna id, congue nisi. Etiam egestas erat varius diam sodales sollicitudin vel consequat augue. Nunc iaculis sagittis turpis. Morbi ante lacus, interdum sed nibh at, dapibus commodo risus. Mauris vestibulum nec elit eget lacinia. Cras vel dui hendrerit, imperdiet velit id, ultrices dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla orci felis, vehicula in nibh sit amet, ultricies fringilla mi.</p>
+                <p>Nunc aliquam nunc ex, in bibendum orci tempus et. Donec quis porta nulla. Nulla vulputate blandit pretium. Cras congue felis est, a mollis odio sagittis commodo. Sed accumsan augue eu risus pulvinar ultrices. Integer rhoncus dignissim dui in consequat. Suspendisse in tellus mattis, vehicula turpis sed, bibendum massa. Donec eget neque a ligula sagittis rhoncus nec non turpis. Aliquam eu sem lacus. In vel faucibus massa, a suscipit lacus. Praesent pellentesque pellentesque sollicitudin. Nulla sollicitudin massa consequat, commodo eros ut, hendrerit ante. Vivamus varius accumsan viverra. Maecenas neque magna, convallis sit amet turpis sit amet, finibus aliquet quam. Quisque congue dapibus eros, sit amet euismod turpis sagittis dapibus.</p>
+                <p>Duis semper faucibus nisl, in iaculis nisl. Integer volutpat posuere augue, sed luctus tellus imperdiet at. Duis nisi lorem, consectetur sed erat eu, tincidunt cursus eros. Nullam augue neque, gravida et sapien finibus, placerat lacinia mi. Maecenas eu turpis a velit laoreet euismod ut lobortis velit. Duis non lacus faucibus, ultricies massa imperdiet, pellentesque dolor. Duis ornare tincidunt urna sit amet placerat. Praesent eu erat tempus, dignissim lorem ut, sodales ante. In venenatis porttitor faucibus. Suspendisse vitae euismod est. Integer ac consectetur ante. Praesent tincidunt vitae enim nec interdum. In placerat odio at justo dictum, mattis ornare ipsum dapibus. Suspendisse vel est orci. Suspendisse vestibulum arcu at tempus efficitur. Curabitur sit amet tellus vitae urna vulputate faucibus in in risus.</p>
+            </div>
+        </slot>
+    </div>
+</script>
+<script type="text/javascript">
+    new Vue({
+        el: 'app',
+        template: '#templ-container',
+        data: {
+            w: 600,
+            h: 300
+        },
+        computed: {
+            style: function () {
+                return {width: this.w + 'px', height: this.h + 'px'};
+            }
+        },
+        methods: {
+            dd: function (event) {
+                var w = this.w,
+                    h = this.h,
+                    _this = this;
+                event.preventDefault();
+                dd(event, {
+                    move: function (context) {
+                        _this.w = w + context.dx*2;
+                        _this.h = h + context.dy;
+                    }
+                });
+            }
+        }
+    });
+</script>
+<!-- }}} -->
 
 </body>
 </html>
+<!-- vim: set foldmethod=marker : -->
