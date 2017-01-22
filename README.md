@@ -22,6 +22,7 @@ should be specified in just one place.)
 ### Layout
 * [Responsive Design’s Dirty Little Secret](https://www.palantir.net/blog/responsive-design-s-dirty-little-secret)
 * [Faux Absolute Positioning](http://alistapart.com/article/fauxabsolutepositioning)
+* [A css layout that does not rely on div, float, clear nor structural hack!](http://www.cssmojo.com/float-less_css_layouts/)
 
 ### other
 * [TACHYONS - Css Toolkit](http://tachyons.io/)
