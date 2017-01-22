@@ -19,6 +19,10 @@ should be specified in just one place.)
 * [:kids—an nth-child tester](https://codepen.io/sacha/full/cAJEo)
 * [Targeting first and last rows in CSS grid layouts](http://keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts/)
 
+### Layout
+* [Responsive Design’s Dirty Little Secret](https://www.palantir.net/blog/responsive-design-s-dirty-little-secret)
+* [Faux Absolute Positioning](http://alistapart.com/article/fauxabsolutepositioning)
+
 ### other
 * [TACHYONS - Css Toolkit](http://tachyons.io/)
 * [SitePoint CSS Reference](http://reference.sitepoint.com/css/)
