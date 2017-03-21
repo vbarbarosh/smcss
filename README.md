@@ -25,6 +25,7 @@ should be specified in just one place.)
 * [A css layout that does not rely on div, float, clear nor structural hack!](http://www.cssmojo.com/float-less_css_layouts/)
 
 ### other
+* [SMACSS](https://smacss.com/)
 * [TACHYONS - Css Toolkit](http://tachyons.io/)
 * [SitePoint CSS Reference](http://reference.sitepoint.com/css/)
 * [Object-Oriented CSS](http://oocss.org/)
