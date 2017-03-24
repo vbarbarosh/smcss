@@ -3,36 +3,67 @@
 // https://github.com/philipwalton/flexbugs
 // https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
 
+// deprecated
 @mixin flex-x
     display: flex
     flex-direction: row
 
+// deprecated
 @mixin flex-x-center
     @include flex-x
     @include flex-center
 
+// deprecated
 @mixin flex-y
     display: flex
     flex-direction: column
 
+// deprecated
 @mixin flex-y-center
     @include flex-y
     @include flex-center
 
-// rows
-@mixin flex-rows
+// row
+@mixin flex-row
     display: flex
     flex-direction: row
 
+@mixin flex-row-center
+    @include flex-row
+    @include flex-center
+
+@mixin flex-row-fluid
+    @include flex-rows
+    & > *
+        @include flex-fluid
+
+// deprecated
+@mixin flex-rows
+    @include flex-row
+
+// deprecated
 @mixin flex-rows-center
     @include flex-rows
     @include flex-center
 
-// columns
-@mixin flex-cols
+@mixin flex-col
     display: flex
     flex-direction: column
 
+@mixin flex-col-center
+    @include flex-col
+    @include flex-center
+
+@mixin flex-col-fluid
+    @include flex-col
+    & > *
+        @include flex-fluid
+
+// deprecated
+@mixin flex-cols
+    @include flex-col
+
+// deprecated
 @mixin flex-cols-center
     @include flex-cols
     @include flex-center
@@ -114,12 +145,7 @@
     // Fix for IE10 and IE11; *flex-basis: auto* doesn't work
     -ms-flex-preferred-size: 0
 
-.flex-wrap
-    @include flex-wrap
-.flex-nowrap
-    @include flex-nowrap
-.flex-wrap-rev
-    @include flex-wrap-rev
+// deprecated
 .flex-rows
     @include flex-rows
 .flex-rows-center
@@ -128,6 +154,26 @@
     @include flex-cols
 .flex-cols-center
     @include flex-cols-center
+
+// container properties
+.flex-row
+    @include flex-row
+.flex-row-center
+    @include flex-col-center
+.flex-row-fluid
+    @include flex-row-fluid
+.flex-col
+    @include flex-col
+.flex-col-center
+    @include flex-col-center
+.flex-col-fluid
+    @include flex-col-fluid
+.flex-wrap
+    @include flex-wrap
+.flex-nowrap
+    @include flex-nowrap
+.flex-wrap-rev
+    @include flex-wrap-rev
 .flex-center
     @include flex-center
 .flex-align-start
@@ -150,6 +196,8 @@
     @include flex-justify-between
 .flex-justify-around
     @include flex-justify-around
+
+// item properties
 .flex-grow
     @include flex-grow
 .flex-nogrow
