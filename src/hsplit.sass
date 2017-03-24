@@ -19,7 +19,7 @@
 //     @extend .flex-noshrink
 
 @mixin hsplit
-    @include flex-rows
+    @include flex-row
     @include flex-nowrap
     & > :not(.shrink)
         @include flex-noshrink
@@ -31,7 +31,7 @@
         @include flex-fluid
 
 @mixin vsplit
-    @include flex-cols
+    @include flex-col
     @include flex-nowrap
     & > :not(.shrink)
         @include flex-noshrink
