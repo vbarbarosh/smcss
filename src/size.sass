@@ -1,3 +1,10 @@
+@mixin w($size)
+    @include eval-size(width, $size)
+
+@mixin h($size)
+    @include eval-size(height, $size)
+
+
 .wa
     width: auto
 .ha

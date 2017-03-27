@@ -1,6 +1,52 @@
 @mixin xbg
     background: none
 
+@mixin fs($size)
+    font-size: #{$size}px
+
+@mixin eval-size($prop, $size)
+    @if $size == a // wa
+        #{$prop}: auto
+    @else if $size == w // ww
+        #{$prop}: 100%
+    @else if $size == h // hh
+        #{$prop}: 100%
+    @else if str-slice($size, -1) == p // w50p
+        #{$prop}: str-insert(str-slice($size, 1, -2), "%", -1)
+    @else
+        #{$prop}: #{$size}px
+
+@mixin smcss($mixins...)
+    @each $expr in $mixins
+        @if str-slice($expr, 1, 2) == mv
+            @include mv(str-slice($expr, 3))
+        @else if str-slice($expr, 1, 2) == mh
+            @include mh(str-slice($expr, 3))
+        @else if str-slice($expr, 1, 1) == m
+            @include m(str-slice($expr, 2))
+        @else if str-slice($expr, 1, 2) == pv
+            @include pv(str-slice($expr, 3))
+        @else if str-slice($expr, 1, 2) == ph
+            @include ph(str-slice($expr, 3))
+        @else if str-slice($expr, 1, 1) == p
+            @include p(str-slice($expr, 2))
+        @else if str-slice($expr, 1, 1) == w
+            @include w(str-slice($expr, 2))
+        @else if str-slice($expr, 1, 1) == h
+            @include h(str-slice($expr, 2))
+        @else if str-slice($expr, 0, 2) == fs
+            @include fs(str-slice($expr, 3))
+        @else
+            @error $expr
+
+@mixin smcss-export($mixins...)
+    @each $expr in $mixins
+        .#{$expr}
+            @include smcss($expr)
+
+.foobar
+    @include smcss-export(fs1, w50p, h25p, m15, p20, pv5)
+
 // http://css-tricks.com/perfect-full-page-background-image/
 @mixin background-cover
     background: transparent no-repeat center center

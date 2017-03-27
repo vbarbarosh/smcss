@@ -5,23 +5,19 @@
     box-sizing: content-box
 
 // border
-.border-none
+.xborder
     border: none
+
+.border
+    border: 1px solid currentColor
+
+.dashed
+    border: 1px dashed currentColor
 
 // border-radius
 @each $size in (0, 5, 10, 15, 20, 25, 30)
     .br#{$size}
         border-radius: #{$size}px
-
-// .xm.mt5 should yield margin: 5px 0 0 0
-.xm
-    margin: 0
-.xp
-    padding: 0
-
-// .ma.mv5 should yield margin: 5px auto 5px auto
-.ma
-    margin: auto
 
 // .m5 should yield margin: 5px
 @each $size in (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50)
@@ -64,20 +60,3 @@
     .pb#{$size}
         padding-bottom: #{$size}px
 
-// .m5.xmt should yield margin: 0 5px 5px 5px
-.xml
-    margin-left: 0
-.xmr
-    margin-right: 0
-.xmt
-    margin-top: 0
-.xmb
-    margin-bottom: 0
-.xpl
-    padding-left: 0
-.xpr
-    padding-right: 0
-.xpt
-    padding-top: 0
-.xpb
-    padding-bottom: 0

@@ -1,0 +1,28 @@
+@mixin p($size)
+    @include eval-size(padding, $size)
+
+@mixin pv($size)
+    @include eval-size(padding-top, $size)
+    @include eval-size(padding-bottom, $size)
+
+@mixin ph($size)
+    @include eval-size(padding-left, $size)
+    @include eval-size(padding-right, $size)
+
+// .xp.pt5 should yield padding: 5px 0 0 0
+.xp
+    padding: 0
+
+// .pa.pv5 should yield padding: 5px auto 5px auto
+.pa
+    padding: auto
+
+// .p5.xpt should yield padding: 0 5px 5px 5px
+.xpl
+    padding-left: 0
+.xpr
+    padding-right: 0
+.xpt
+    padding-top: 0
+.xpb
+    padding-bottom: 0
