@@ -1,0 +1,413 @@
+@mixin smcss($mixins...)
+  @each $expr in $mixins
+    $a1: str-slice($expr, 1, 1)
+    $a2: str-slice($expr, 1, 2)
+    $a3: str-slice($expr, 1, 3)
+    $a4: str-slice($expr, 1, 4)
+    $a5: str-slice($expr, 1, 5)
+    $a6: str-slice($expr, 1, 6)
+    $a7: str-slice($expr, 1, 7)
+    $b1: str-slice($expr, 2)
+    $b2: str-slice($expr, 3)
+    $b3: str-slice($expr, 4)
+    $b4: str-slice($expr, 5)
+    $b5: str-slice($expr, 6)
+    $b6: str-slice($expr, 7)
+    $b7: str-slice($expr, 8)
+    // align
+    @if $expr == l // l
+      @include l
+    @else if $expr == r // r
+      @include r
+    @else if $expr == c // c
+      @include c
+    @else if $expr == j // j
+      @include j
+    @else if $expr == vm // vm
+      @include vm
+    @else if $expr == vt // vt
+      @include vt
+    @else if $expr == vb // vb
+      @include vb
+    // background
+    @else if $expr == xbg // xbg
+      @include xbg
+    @else if $expr == bg-cover // bg-cover
+      @include bg-cover
+    @else if $expr == black // black
+      @include black
+    @else if $expr == gray // gray
+      @include gray
+    @else if $expr == silver // silver
+      @include silver
+    @else if $expr == white // white
+      @include white
+    @else if $expr == red // red
+      @include red
+    @else if $expr == green // green
+      @include green
+    @else if $expr == blue // blue
+      @include blue
+    @else if $expr == yellow // yellow
+      @include yellow
+    @else if $expr == cyan // cyan
+      @include cyan
+    @else if $expr == checkerboard // checkerboard
+      @include checkerboard
+    @else if $expr == rainbow // rainbow
+      @include rainbow
+    // border
+    @else if $expr == xborder // xborder
+      @include xborder
+    @else if $expr == border // border
+      @include border
+    @else if $expr == dashed // dashed
+      @include dashed
+    @else if $expr == xbr // xbr
+      @include xbr
+    @else if $a2 == br // br5
+      @include br($b2)
+    // box
+    @else if $expr == bbox // bbox
+      @include bbox
+    @else if $expr == cbox // cbox
+      @include cbox
+    // button
+    @else if $expr == xbutton // xbutton
+      @include xbutton
+    // cursor
+    @else if $expr == cursor-alias // cursor-alias
+      @include cursor-alias
+    @else if $expr == cursor-all-scroll // cursor-all-scroll
+      @include cursor-all-scroll
+    @else if $expr == cursor-auto // cursor-auto
+      @include cursor-auto
+    @else if $expr == cursor-cell // cursor-cell
+      @include cursor-cell
+    @else if $expr == cursor-col-resize // cursor-col-resize
+      @include cursor-col-resize
+    @else if $expr == cursor-context-menu // cursor-context-menu
+      @include cursor-context-menu
+    @else if $expr == cursor-copy // cursor-copy
+      @include cursor-copy
+    @else if $expr == cursor-crosshair // cursor-crosshair
+      @include cursor-crosshair
+    @else if $expr == cursor-default // cursor-default
+      @include cursor-default
+    @else if $expr == cursor-e-resize // cursor-e-resize
+      @include cursor-e-resize
+    @else if $expr == cursor-ew-resize // cursor-ew-resize
+      @include cursor-ew-resize
+    @else if $expr == cursor-help // cursor-help
+      @include cursor-help
+    @else if $expr == cursor-inherit // cursor-inherit
+      @include cursor-inherit
+    @else if $expr == cursor-initial // cursor-initial
+      @include cursor-initial
+    @else if $expr == cursor-move // cursor-move
+      @include cursor-move
+    @else if $expr == cursor-n-resize // cursor-n-resize
+      @include cursor-n-resize
+    @else if $expr == cursor-ne-resize // cursor-ne-resize
+      @include cursor-ne-resize
+    @else if $expr == cursor-nesw-resize // cursor-nesw-resize
+      @include cursor-nesw-resize
+    @else if $expr == cursor-no-drop // cursor-no-drop
+      @include cursor-no-drop
+    @else if $expr == cursor-none // cursor-none
+      @include cursor-none
+    @else if $expr == cursor-not-allowed // cursor-not-allowed
+      @include cursor-not-allowed
+    @else if $expr == cursor-ns-resize // cursor-ns-resize
+      @include cursor-ns-resize
+    @else if $expr == cursor-nw-resize // cursor-nw-resize
+      @include cursor-nw-resize
+    @else if $expr == cursor-nwse-resize // cursor-nwse-resize
+      @include cursor-nwse-resize
+    @else if $expr == cursor-pointer // cursor-pointer
+      @include cursor-pointer
+    @else if $expr == cursor-progress // cursor-progress
+      @include cursor-progress
+    @else if $expr == cursor-row-resize // cursor-row-resize
+      @include cursor-row-resize
+    @else if $expr == cursor-s-resize // cursor-s-resize
+      @include cursor-s-resize
+    @else if $expr == cursor-se-resize // cursor-se-resize
+      @include cursor-se-resize
+    @else if $expr == cursor-sw-resize // cursor-sw-resize
+      @include cursor-sw-resize
+    @else if $expr == cursor-text // cursor-text
+      @include cursor-text
+    @else if $expr == cursor-vertical-text // cursor-vertical-text
+      @include cursor-vertical-text
+    @else if $expr == cursor-w-resize // cursor-w-resize
+      @include cursor-w-resize
+    @else if $expr == cursor-wait // cursor-wait
+      @include cursor-wait
+    // display
+    @else if $expr == xd // xd
+      @include xd
+    @else if $expr == db // db
+      @include db
+    @else if $expr == di // di
+      @include di
+    @else if $expr == dl // dl
+      @include dl
+    @else if $expr == dt // dt
+      @include dt
+    @else if $expr == dc // dc
+      @include dc
+    // expand
+    @else if $a7 == expand- // expand-1-2
+      $index: str-index($b7, '-')
+      $width: str-slice($b7, 1, $index - 1)
+      $height: str-slice($b7, $index + 1)
+      @include expand($width, $height)
+    // flex
+    @else if $expr == flex-row // flex-row
+      @include flex-row
+    @else if $expr == flex-row-center // flex-row-center
+      @include flex-row-center
+    @else if $expr == flex-row-fluid // flex-row-fluid
+      @include flex-row-fluid
+    @else if $expr == flex-col // flex-col
+      @include flex-col
+    @else if $expr == flex-col-center // flex-col-center
+      @include flex-col-center
+    @else if $expr == flex-col-fluid // flex-col-fluid
+      @include flex-col-fluid
+    @else if $expr == flex-wrap // flex-wrap
+      @include flex-wrap
+    @else if $expr == flex-nowrap // flex-nowrap
+      @include flex-nowrap
+    @else if $expr == flex-wrap-r // flex-wrap-r
+      @include flex-wrap-r
+    @else if $expr == flex-center // flex-center
+      @include flex-center
+    @else if $expr == flex-align-start // flex-align-start
+      @include flex-align-start
+    @else if $expr == flex-align-end // flex-align-end
+      @include flex-align-end
+    @else if $expr == flex-align-center // flex-align-center
+      @include flex-align-center
+    @else if $expr == flex-align-baseline // flex-align-baseline
+      @include flex-align-baseline
+    @else if $expr == flex-align-stretch // flex-align-stretch
+      @include flex-align-stretch
+    @else if $expr == flex-justify-start // flex-justify-start
+      @include flex-justify-start
+    @else if $expr == flex-justify-end // flex-justify-end
+      @include flex-justify-end
+    @else if $expr == flex-justify-center // flex-justify-center
+      @include flex-justify-center
+    @else if $expr == flex-justify-between // flex-justify-between
+      @include flex-justify-between
+    @else if $expr == flex-justify-around // flex-justify-around
+      @include flex-justify-around
+    @else if $expr == flex-grow // flex-grow
+      @include flex-grow
+    @else if $expr == flex-nogrow // flex-nogrow
+      @include flex-nogrow
+    @else if $expr == flex-shrink // flex-shrink
+      @include flex-shrink
+    @else if $expr == flex-noshrink // flex-noshrink
+      @include flex-noshrink
+    @else if $expr == flex-fluid // flex-fluid
+      @include flex-fluid
+    // float
+    @else if $expr == xf // xf
+      @include xf
+    @else if $expr == fl // fl
+      @include fl
+    @else if $expr == fr // fr
+      @include fr
+    @else if $expr == xc // xc
+      @include xc
+    @else if $expr == cb // cb
+      @include cb
+    @else if $expr == cl // cl
+      @include cl
+    @else if $expr == cr // cr
+      @include cr
+    @else if $expr == clearfix // clearfix
+      @include clearfix
+    @else if $expr == floats // floats
+      @include floats
+    // font
+    @else if $expr == xfs // xfs
+      @include xfs
+    @else if $a2 == fs // fs25
+      @include fs($b2)
+    @else if $a2 == ls // ls5
+      @include ls($b2)
+    @else if $a2 == lh // lh15m
+      @include lh($b2)
+    @else if $expr == n // n
+      @include n
+    @else if $expr == i // i
+      @include i
+    @else if $expr == q // q
+      @include q
+    @else if $expr == ii // ii
+      @include ii
+    @else if $expr == b // b
+      @include b
+    @else if $expr == xfw // xfw
+      @include xfw
+    @else if $a2 == fw // fw8
+      @include fw($b2)
+    // hsplit
+    @else if $expr == hsplit // hsplit
+      @include hsplit
+    @else if $expr == vsplit // vsplit
+      @include vsplit
+    // list
+    @else if $expr == xls // xls
+      @include xls
+    // margin
+    @else if $expr == xm // xm
+      @include xm
+    @else if $expr == xml // xml
+      @include xml
+    @else if $expr == xmr // xmr
+      @include xmr
+    @else if $expr == xmt // xmt
+      @include xmt
+    @else if $expr == xmb // xmb
+      @include xmb
+    @else if $a2 == mv // mv5
+      @include mv($b2)
+    @else if $a2 == mh // mh5
+      @include mh($b2)
+    @else if $a2 == mg // mg5
+      @include mg($b2)
+    @else if $a2 == mi // mi5
+      @include mi($b2)
+    @else if $a1 == m // m5
+      @include m($b1)
+    // opacity
+    @else if $expr == xo // xo
+      @include xo
+    @else if $a1 == o // o25p
+      @include o($b1)
+    // outline
+    @else if $expr == xoutline // xoutline
+      @include xoutline
+    @else if $expr == outline // outline
+      @include outline
+    // overflow
+    @else if $expr == oa // oa
+      @include oa
+    @else if $expr == oh // oh
+      @include oh
+    @else if $expr == os // os
+      @include os
+    // padding
+    @else if $expr == xp // xp
+      @include xp
+    @else if $expr == xpl // xpl
+      @include xpl
+    @else if $expr == xpr // xpr
+      @include xpr
+    @else if $expr == xpt // xpt
+      @include xpt
+    @else if $expr == xpb // xpb
+      @include xpb
+    @else if $a2 == pv // pv5
+      @include pv($b2)
+    @else if $a2 == ph // ph5
+      @include ph($b2)
+    @else if $a2 == pg // pg5
+      @include pg($b2)
+    @else if $a2 == pi // pi5
+      @include pi($b2)
+    @else if $a2 == p // p5
+      @include p($b1)
+    // position
+    @else if $expr == stat // stat
+      @include stat
+    @else if $expr == rel // rel
+      @include rel
+    @else if $expr == abs // abs
+      @include abs
+    @else if $expr == fix // fix
+      @include fix
+    @else if $a4 == tlbr // tlbr
+      @include tlbr($b4)
+    @else if $a1 == t // t5
+      @include t($b1)
+    @else if $a1 == l // l5
+      @include l($b1)
+    @else if $a1 == r // r5
+      @include r($b1)
+    @else if $a1 == b // b5
+      @include b($b1)
+    // scrollbar
+    @else if $expr == xscrollbar // xscrollbar
+      @include xscrollbar
+    // shadow
+    @else if $expr == xbs // xbs
+      @include xbs
+    @else if $a2 == bs // bs5
+      @include bs($b2)
+    @else if $a2 == is // is5
+      @include is($b2)
+    // size
+    @else if $a1 == w // w200
+      @include w($b1)
+    @else if $a1 == h // h200
+      @include h($b1)
+    @else if $a3 == min and str-index($b3, x) != null // min200x300
+      $index: str-index($b3, x)
+      $width: str-slice($b3, 1, $index - 1)
+      $height: str-slice($b3, $index + 1)
+      @include min($width, $height)
+    @else if $a3 == min // min200
+      @include min($b3)
+    @else if $a3 == max and str-index($b3, x) != null // max200x300
+      $index: str-index($b3, x)
+      $width: str-slice($b3, 1, $index - 1)
+      $height: str-slice($b3, $index + 1)
+      @include max($width, $height)
+    @else if $a3 == max // max200
+      @include max($b3)
+    @else if $a5 == min-w // min-w200
+      @include min-w($b5)
+    @else if $a5 == min-h // min-h200
+      @include min-h($b5)
+    @else if $a5 == max-w // max-w200
+      @include max-w($b5)
+    @else if $a5 == max-h // max-h200
+      @include max-h($b5)
+    // text
+    @else if $expr == nowrap // nowrap
+      @include nowrap
+    @else if $expr == x // x
+      @include x
+    @else if $expr == u // u
+      @include u
+    @else if $expr == o // o
+      @include o
+    @else if $expr == s // s
+      @include s
+    @else if $expr == xx // xx
+      @include xx
+    @else if $expr == uc // uc
+      @include uc
+    @else if $expr == lc // lc
+      @include lc
+    @else if $expr == cc // cc
+      @include cc
+    // transform
+    @else if $a5 == scale // scale25
+      @include scale($b5)
+    @else if $a6 == rotate // rotate45
+      @include rotate($b6)
+    // user-select
+    @else if $expr == xuserselect
+      @include xuserselect
+    // zindex
+    @else if $a1 == z // z1
+      @include z($b1)
+    @else
+      @error 'Invalid expression [#{$expr}]'

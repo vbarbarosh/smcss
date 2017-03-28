@@ -7,6 +7,28 @@
     <style type="text/css">
     .dashed { border: 1px dashed currentColor; }
     .min-h200 { min-height: 200px; }
+
+.xbutton {
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+    border: none;
+}
+
+button.xbutton:hover {
+}
+button.xbutton:active {
+}
+button.xbutton:focus {
+}
+button.xbutton:hover:active {
+    padding: 0;
+}
+button.xbutton::-moz-focus-inner {
+    border: none;
+}
+
     </style>
 </head>
 <body class="mg20">
@@ -56,6 +78,49 @@
     <div>19</div>
     <div>20</div>
 </div>
+
+<div class="w200 min-h200 ma flex-col-center dashed rainbow">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</div>
+
+<p class="flex-row-center mi10 dashed">
+    <button class="flex-col-center w200 min-h200 dashed rainbow">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </button>
+    <button class="w200 min-h200">
+        <span class="flex-col-center ma dashed rainbow">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </span>
+    </button>
+    <button class="w200 min-h200 xbutton">
+        <span class="flex-col-center ma dashed rainbow">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </span>
+    </button>
+</p>
+
+<p>
+    <button class="w600 min-h200 ma flex-col-center dashed rainbow">
+        <svg></svg>
+    </button>
+</p>
+
 
 </body>
 </html>

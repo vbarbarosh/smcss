@@ -1,27 +1,5 @@
-// References
-//
 // https://github.com/philipwalton/flexbugs
 // https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
-
-// deprecated
-@mixin flex-x
-    display: flex
-    flex-direction: row
-
-// deprecated
-@mixin flex-x-center
-    @include flex-x
-    @include flex-center
-
-// deprecated
-@mixin flex-y
-    display: flex
-    flex-direction: column
-
-// deprecated
-@mixin flex-y-center
-    @include flex-y
-    @include flex-center
 
 // row
 @mixin flex-row
@@ -37,15 +15,7 @@
     & > *
         @include flex-fluid
 
-// deprecated
-@mixin flex-rows
-    @include flex-row
-
-// deprecated
-@mixin flex-rows-center
-    @include flex-rows
-    @include flex-center
-
+// col
 @mixin flex-col
     display: flex
     flex-direction: column
@@ -59,15 +29,6 @@
     & > *
         @include flex-fluid
 
-// deprecated
-@mixin flex-cols
-    @include flex-col
-
-// deprecated
-@mixin flex-cols-center
-    @include flex-cols
-    @include flex-center
-
 // wrap
 @mixin flex-wrap
     flex-wrap: wrap
@@ -77,7 +38,7 @@
     flex-wrap: nowrap
     // align-content: flex-start
 
-@mixin flex-wrap-rev
+@mixin flex-wrap-r
     flex-wrap: wrap-reverse
     // align-content: flex-start
 
@@ -144,67 +105,3 @@
     @include flex-shrink
     // Fix for IE10 and IE11; *flex-basis: auto* doesn't work
     -ms-flex-preferred-size: 0
-
-// deprecated
-.flex-rows
-    @include flex-rows
-.flex-rows-center
-    @include flex-rows-center
-.flex-cols
-    @include flex-cols
-.flex-cols-center
-    @include flex-cols-center
-
-// container properties
-.flex-row
-    @include flex-row
-.flex-row-center
-    @include flex-row-center
-.flex-row-fluid
-    @include flex-row-fluid
-.flex-col
-    @include flex-col
-.flex-col-center
-    @include flex-col-center
-.flex-col-fluid
-    @include flex-col-fluid
-.flex-wrap
-    @include flex-wrap
-.flex-nowrap
-    @include flex-nowrap
-.flex-wrap-rev
-    @include flex-wrap-rev
-.flex-center
-    @include flex-center
-.flex-align-start
-    @include flex-align-start
-.flex-align-end
-    @include flex-align-end
-.flex-align-center
-    @include flex-align-center
-.flex-align-baseline
-    @include flex-align-baseline
-.flex-align-stretch
-    @include flex-align-stretch
-.flex-justify-start
-    @include flex-justify-start
-.flex-justify-end
-    @include flex-justify-end
-.flex-justify-center
-    @include flex-justify-center
-.flex-justify-between
-    @include flex-justify-between
-.flex-justify-around
-    @include flex-justify-around
-
-// item properties
-.flex-grow
-    @include flex-grow
-.flex-nogrow
-    @include flex-nogrow
-.flex-shrink
-    @include flex-shrink
-.flex-noshrink
-    @include flex-noshrink
-.flex-fluid
-    @include flex-fluid

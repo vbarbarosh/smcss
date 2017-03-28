@@ -1,69 +1,41 @@
 @mixin stat
     position: static
+
 @mixin rel
     position: relative
+
 @mixin abs
     position: absolute
+
 @mixin fix
     position: fixed
 
-@mixin box
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
+@mixin tlbr($size: 0)
+    @include eval-size(top, $size)
+    @include eval-size(left, $size)
+    @include eval-size(right, $size)
+    @include eval-size(bottom, $size)
 
-@mixin t($distance)
-    top: $distance * 1px
-@mixin l($distance)
-    left: $distance * 1px
-@mixin r($distance)
-    right: $distance * 1px
-@mixin b($distance)
-    bottom: $distance * 1px
-@mixin ta
-    top: auto
-@mixin la
-    left: auto
-@mixin ra
-    right: auto
-@mixin ba
-    bottom: auto
+@mixin t($size)
+    @include eval-size(top, $size)
 
-.stat
-    @include stat
-.rel
-    @include rel
-.abs
-    @include abs
-.fix
-    @include fix
+@mixin l($size)
+    @include eval-size(left, $size)
 
-.box
-    @include box
+@mixin r($size)
+    @include eval-size(right, $size)
 
-@each $distance in (0, 1, 2, 3, 4, 5, 10, 15, 20, 25)
-    .t#{$distance}
-        @include t($distance)
-    .l#{$distance}
-        @include l($distance)
-    .r#{$distance}
-        @include r($distance)
-    .b#{$distance}
-        @include b($distance)
+@mixin b($size)
+    @include eval-size(bottom, $size)
 
-.ta
-    @include ta
-.la
-    @include la
-.ra
-    @include ra
-.ba
-    @include ba
-
-// z-index
-@each $z in (1, 2, 3, 4, 5)
-    .z#{$z}
-        z-index: $z
-    .z#{$z}n
-        z-index: $z * -1
+//@mixin ta
+//    top: auto
+//
+//@mixin la
+//    left: auto
+//
+//@mixin ra
+//    right: auto
+//
+//@mixin ba
+//    bottom: auto

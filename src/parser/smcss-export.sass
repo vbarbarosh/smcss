@@ -1,0 +1,4 @@
+@mixin smcss-export($mixins...)
+  @each $expr in $mixins
+    .#{$expr}
+      @include smcss($expr)

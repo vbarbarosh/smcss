@@ -1,199 +1,40 @@
 // white space (follows .flex-nowrap)
-.xws,
-.nowrap
+// xws
+@mixin nowrap
     white-space: nowrap
 
-// horizontal alignment
-.l
-    text-align: left
-.r
-    text-align: right
-.c
-    text-align: center
-.j
-    text-align: justify
-
-// vertical alignment
-.vm
-    vertical-align: middle
-.vt
-    vertical-align: top
-.vb
-    vertical-align: bottom
-
-// decoration
-.u
-    text-decoration: underline
-.o
-    text-decoration: overline
-.s
-    text-decoration: line-through // strike over
-.u.o
-    text-decoration: underline overline
-.u.s
-    text-decoration: underline line-through
-.o.s
-    text-decoration: overline line-through
-.u.o.s
-    text-decoration: underline overline line-through
-.x
+// text decoration
+@mixin x
     text-decoration: none
 
-// decoration under hover
-.h-u:hover
-    @extend .u
-.h-o:hover
-    @extend .o
-.h-s:hover
-    @extend .s
-.h-u.h-o:hover
-    @extend .u.o
-.h-u.h-s:hover
-    @extend .u.s
-.h-o.h-s:hover
-    @extend .o.s
-.h-u.h-o.h-s:hover
-    @extend .u.o.s
-.h-x:hover
-    @extend .x
+@mixin u
+    text-decoration: underline
 
-// text transformations
-.uc
-    text-transform: uppercase
-.lc
-    text-transform: lowercase
-.cc
-    text-transform: capitalize
-// .xc take by clear: none
-.nc
+@mixin o
+    text-decoration: overline
+
+@mixin s
+    text-decoration: line-through // strike over
+
+//.u.o
+//    text-decoration: underline overline
+//.u.s
+//    text-decoration: underline line-through
+//.o.s
+//    text-decoration: overline line-through
+//.u.o.s
+//    text-decoration: underline overline line-through
+
+// .xc was taken by clear: none
+@mixin xx
     text-transform: none
 
-// text transformations under hover
-.h-uc:hover
-    @extend .uc
-.h-lc:hover
-    @extend .lc
-.h-cc:hover
-    @extend .cc
-.h-nc:hover
-    @extend .nc
+// text transformations
+@mixin uc
+    text-transform: uppercase
 
-// Letter spacing
-@if (false)
-    @each $size in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-        .ls#{$size}
-            letter-spacing: #{$size}px
+@mixin lc
+    text-transform: lowercase
 
-// Line height
-//
-// FireFox UA Stylesheet
-// resource://gre-resources/forms.css
-// > input {
-// >	[...]
-// >	line-height: normal !important;
-// >	[...]
-// > }
-//
-// http://www.456bereastreet.com/archive/201108/line-height_in_input_fields/
-// > The problem is !important, which makes it impossible to override
-// > this rule from an author stylesheet, not even if you use
-// > !important. This has been discussed for years in the
-// >
-// >	CSS Property line-height has no effects on input text fields bug
-// >	https://bugzilla.mozilla.org/show_bug.cgi?id=349259
-// >
-// > It currently doesn't look like a fix is coming any time soon.
-//
-// Blog: Bulletproof CSS input button heights
-// http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights
-// > - Disabled top and bottom padding
-// > - Set the height of the button to be 40px tall
-// > - Set vertical-align to middle
-
-@if (false)
-    @each $size in (8, 9, 10, 11, 12, 13, 14, 15, 16)
-        .lh#{$size}
-            line-height: $size * 1px
-
-@if (false)
-    @each $size in (5)
-        .lh0#{$size}m
-            line-height: $size * 0.1em
-
-@if (false)
-    @each $size in (10, 15, 20)
-        .lh#{$size}m
-            line-height: $size * 0.1em
-
-// Font size
-@if (false)
-    @for $size from 0 through 32
-        .fs#{$size}
-            font-size: $size * 1px
-
-// Font style
-.n
-    font-style: normal
-.i
-    font-style: italic
-.q
-    font-style: oblique
-.ii
-    font-style: inherit
-
-// Font weight
-//
-// http://www.google.com/webfonts/specimen/Open+Sans
-// http://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
-// Book 300
-// Normal 400
-// Semi-Bold 600
-// Bold 700
-// Extra-Bold 800
-// .b* conflicts with .b* for *bottom*
-.b,
-.fw
-    font-weight: bold
-//.bb
-//    font-weight: 800
-//.b3
-.fw3
-    font-weight: 300
-//.b4
-.fw4
-    font-weight: 400
-//.b5
-.fw5
-    font-weight: 500
-//.b6
-.fw6
-    font-weight: 600
-//.b7
-.fw7
-    font-weight: 700
-//.b8
-.fw8
-    font-weight: 800
-//.xb
-.xfw
-    font-weight: normal
-
-// Font weight under hover
-//.h-b:hover
-//    @extend .b
-//.h-bb:hover
-//    @extend .bb
-//.h-b3:hover
-//    @extend .b3
-//.h-b4:hover
-//    @extend .b4
-//.h-b5:hover
-//    @extend .b5
-//.h-b6:hover
-//    @extend .b6
-//.h-b7:hover
-//    @extend .b7
-//.h-b8:hover
-//    @extend .b7
-//.h-xb:hover
-//    @extend .xb
+@mixin cc
+    text-transform: capitalize

@@ -1,0 +1,112 @@
+@import "../src"
+
+// Legend
+//
+// N - positive or negative pixels, 10s of ems, or percents
+// p - percent (e.g. scale25p for scale: 0.25)
+// D - degrees (e.g. rotateD for rotate: 45deg)
+//
+// lh5
+// lh05m 0.5em
+// lh10m 1.0em
+// mt10neg -10px
+// h-p5 hover
+// child-p5 immediate children
+//
+// Take care about specificity
+//
+// .xborder.pt5 should yield padding: 5px 0 0 0
+
+// background
+@include smcss-export(xbg, black, silver, white, red, green, blue, yellow, cyan, checkerboard, rainbow)
+
+// border
+@include smcss-export(xborder, xbr, br5, br100p, br999)
+
+// box
+@include smcss-export(cbox, bbox)
+
+// button
+@include smcss-export(xbutton)
+
+// cursor
+@include smcss-export(cursor-alias, cursor-all-scroll, cursor-auto, cursor-cell, cursor-col-resize, cursor-context-menu, cursor-copy, cursor-crosshair, cursor-default, cursor-e-resize, cursor-ew-resize, cursor-help, cursor-inherit, cursor-initial, cursor-move, cursor-n-resize, cursor-ne-resize, cursor-nesw-resize, cursor-no-drop, cursor-none, cursor-not-allowed, cursor-ns-resize, cursor-nw-resize, cursor-nwse-resize, cursor-pointer, cursor-progress, cursor-row-resize, cursor-s-resize, cursor-se-resize, cursor-sw-resize, cursor-text, cursor-vertical-text, cursor-w-resize, cursor-wait)
+
+// display
+@include smcss-export(xd, db, di, dl, dt, dc)
+
+// expand
+@include smcss-export(expand-1-2, expand-1-3, expand-1-4, expand-2-1, expand-2-3, expand-2-4)
+
+// flex
+@include smcss-export(flex-row, flex-row-center, flex-row-fluid, flex-col, flex-col-center, flex-col-fluid, flex-wrap, flex-nowrap, flex-wrap-r, flex-center, flex-align-start, flex-align-end, flex-align-center, flex-align-baseline, flex-align-stretch, flex-justify-start, flex-justify-end, flex-justify-center, flex-justify-between, flex-justify-around, flex-grow, flex-nogrow, flex-shrink, flex-noshrink, flex-fluid)
+
+// float
+@include smcss-export(xf, fl, fr, xc, cb, cl, cr, clearfix, floats)
+
+// font
+@include smcss-export(xfs, fs12, fs13, fs14, fs15)
+
+// hsplit
+@include smcss-export(hsplit, vsplit)
+
+// list
+@include smcss-export(xls)
+
+// margin and margin groups
+@include smcss-export(ma)
+@include smcss-export(xm, xml, xmr, xmt, xmb)
+@include smcss-export(mg5, mg10)
+@include smcss-export(mi5, mi10)
+
+// opacity
+@include smcss-export(xo, o25, o50, o75, o100)
+
+// outline
+@include smcss-export(xoutline, outline)
+
+// overflow
+@include smcss-export(oa, oh, os)
+
+// padding and padding groups
+@include smcss-export(pa)
+@include smcss-export(xp, xpl, xpr, xpt, xpb)
+@include smcss-export(pg5, pg10)
+@include smcss-export(pi5, pi10)
+
+// position
+@include smcss-export(stat, rel, abs, fix, tlbr, tlbr5, tlbr10, t5, l5, b5, r5, ra, la, ba, ra)
+
+// scrollbar
+@include smcss-export(xscrollbar)
+
+// shadow
+@include smcss-export(xbs)
+@include smcss-export(bs5, bs10, bs15)
+@include smcss-export(is5, is10, is15)
+
+// size
+@include smcss-export(wa, ww, w10, w25, w50, w100, w200, w50p, h75p)
+@include smcss-export(ha, hh, h10, h25, h50, h100, h200, h50p, w75p)
+@include smcss-export(min100, min200)
+@include smcss-export(max100, max200)
+@include smcss-export(min800x600)
+@include smcss-export(max800x600)
+@include smcss-export(min-w200)
+@include smcss-export(min-h200)
+
+// text (wrapping, decorations, and transformations)
+@include smcss-export(nowrap)
+@include smcss-export(x, u, o, s)
+@include smcss-export(xx, uc, lc, cc)
+
+// transform (rotation and scale)
+@include smcss-export(scale20p)
+@include smcss-export(rotate45, rotate90, rotate180, rotate270)
+
+// user-select
+@include smcss-export(xuserselect)
+
+// zindex
+@include smcss-export(z1, z2, z1000)
+@include smcss-export(z1neg, z2neg, z1000neg)

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../../build/sm.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    .dashed { border: 1px dashed currentColor; }
+    .min-h200 { min-height: 200px; }
+    .w50 { width: 50px; }
+    .h50 { height: 50px; }
+
+.xbutton {
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    padding: 0;
+}
+
+.xbutton:hover {
+}
+.xbutton:active {
+}
+.xbutton:focus {
+    outline: none; /* chrome */
+}
+.xbutton:hover:active {
+}
+.xbutton::-moz-focus-inner {
+    border: none;
+}
+
+    </style>
+</head>
+<body>
+
+<p class="flex-row-center p5 mi10 dashed">
+    <button class="flex-col-center w200 min-h200 dashed rainbow">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </button>
+    <button class="w200 min-h200">
+        <span class="flex-col-center ma dashed rainbow">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </span>
+    </button>
+    <button class="w200 min-h200 xbutton">
+        <span class="flex-col-center ma dashed rainbow">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </span>
+    </button>
+</p>
+
+<p class="flex-row-center p5 mi10 dashed">
+    <button class="w500 min-h200 flex-col-center dashed rainbow">
+        <svg class="w50 h50"></svg>
+    </button>
+    <button class="w500 min-h200 c dashed rainbow">
+        <svg class="w50 h50"></svg>
+    </button>
+    <button class="w500 min-h200 xbutton">
+        <span class="flex-col-center dashed rainbow">
+            <svg class="w50 h50"></svg>
+        </span>
+    </button>
+</p>
+
+</body>
+</html>

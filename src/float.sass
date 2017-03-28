@@ -18,7 +18,7 @@
 @mixin clearfix
     *zoom: 1
     &:after
-        content: "\0020"
+        content: '\0020'
         display: block
         height: 0
         clear: both
@@ -29,27 +29,3 @@
     @include clearfix
     > *
         @include fl
-
-.xf
-    @include xf
-.fl
-    @include fl
-.fr
-    @include fr
-
-.xc
-    @include xc
-.cb
-    @include cb
-.cl
-    @include cl
-.cr
-    @include cr
-
-.cf
-    @include clearfix
-.clearfix
-    @include clearfix
-
-.floats
-    @include floats

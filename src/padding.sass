@@ -1,3 +1,24 @@
+// .xp.pt5 should yield padding: 5px 0 0 0
+// .pa.pv5 should yield padding: 5px auto 5px auto
+// .p5.xpt should yield padding: 0 5px 5px 5px
+// .p5.pv10 should yield padding: 10px 5px 10px 5px
+// .p5.pt10 should yield padding: 10px 5px 5px 5px
+
+@mixin xp
+    padding: 0
+
+@mixin xpl
+    padding-left: 0
+
+@mixin xpr
+    padding-right: 0
+
+@mixin xpt
+    padding-top: 0
+
+@mixin xpb
+    padding-bottom: 0
+
 @mixin p($size)
     @include eval-size(padding, $size)
 
@@ -9,20 +30,12 @@
     @include eval-size(padding-left, $size)
     @include eval-size(padding-right, $size)
 
-// .xp.pt5 should yield padding: 5px 0 0 0
-.xp
-    padding: 0
+// Take a look at GROUPS.md
+@mixin pg($size)
+    & > :nth-child(n+2) // * + *
+        @include eval-size(padding-top, $size)
 
-// .pa.pv5 should yield padding: 5px auto 5px auto
-.pa
-    padding: auto
-
-// .p5.xpt should yield padding: 0 5px 5px 5px
-.xpl
-    padding-left: 0
-.xpr
-    padding-right: 0
-.xpt
-    padding-top: 0
-.xpb
-    padding-bottom: 0
+// Take a look at GROUPS.md
+@mixin pi($size)
+    & > :nth-child(n+2) // * + *
+        @include eval-size(padding-left, $size)

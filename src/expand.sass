@@ -1,5 +1,3 @@
-// References
-//
 // http://www.mademyday.de/css-height-equals-width-with-pure-css.html
 // http://zzzzbov.com/blag/scalable-videos-with-aspect-ratio
 // http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
@@ -29,12 +27,3 @@
         @include db
         content: ''
         padding-top: $height / $width * 100%
-
-@mixin expand-class($width, $height)
-    .expand-#{$width}-#{$height}
-        @include expand($width, $height)
-
-@each $width in (1, 2, 3, 4, 9, 16)
-    @each $height in (1, 2, 3, 4, 9, 16)
-        @if ($width == 1 and $height == 1 or $width != $height)
-            @include expand-class($width, $height)

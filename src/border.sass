@@ -1,0 +1,14 @@
+@mixin xborder
+  border: none
+
+@mixin border
+  border: 1px solid currentColor
+
+@mixin dashed
+  border: 1px dashed currentColor
+
+@mixin xbr
+  border-radius: 0
+
+@mixin br($size)
+  @include eval-size(border-radius, $size)

@@ -1,0 +1,83 @@
+@mixin xfs
+  font-size: inherit
+
+@mixin fs($size)
+  @include eval-size(font-size, $size)
+
+@mixin ls($size)
+  @include eval-size(letter-spacing, $size)
+
+// Line height
+//
+// FireFox UA Stylesheet
+// resource://gre-resources/forms.css
+// > input {
+// >	[...]
+// >	line-height: normal !important;
+// >	[...]
+// > }
+//
+// http://www.456bereastreet.com/archive/201108/line-height_in_input_fields/
+// > The problem is !important, which makes it impossible to override
+// > this rule from an author stylesheet, not even if you use
+// > !important. This has been discussed for years in the
+// >
+// >	CSS Property line-height has no effects on input text fields bug
+// >	https://bugzilla.mozilla.org/show_bug.cgi?id=349259
+// >
+// > It currently doesn't look like a fix is coming any time soon.
+//
+// Blog: Bulletproof CSS input button heights
+// http://cbjdigital.com/blog/2010/08/bulletproof_css_input_button_heights
+// > - Disabled top and bottom padding
+// > - Set the height of the button to be 40px tall
+// > - Set vertical-align to middle
+@mixin lh($size)
+  @include eval-size(line-height, $size)
+
+// Font style
+@mixin n
+  font-style: normal
+
+@mixin i
+  font-style: italic
+
+@mixin q
+  font-style: oblique
+
+@mixin ii
+  font-style: inherit
+
+// Font weight
+//
+// http://www.google.com/webfonts/specimen/Open+Sans
+// http://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
+// Book 300
+// Normal 400
+// Semi-Bold 600
+// Bold 700
+// Extra-Bold 800
+//
+// *bN* was taken by *bottom*
+
+@mixin b
+  font-weight: bold
+
+@mixin xfw
+  font-weight: normal
+
+@mixin fw($weight)
+  @if $weight == 3
+    font-weight: 300
+  @else if $weight == 4
+    font-weight: 400
+  @else if $weight == 5
+    font-weight: 500
+  @else if $weight == 6
+    font-weight: 600
+  @else if $weight == 7
+    font-weight: 700
+  @else if $weight == 8
+    font-weight: 800
+  @else
+    @error 'Invalid font weight [#{$weight}]'

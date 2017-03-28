@@ -1,0 +1,11 @@
+@mixin eval-size($prop, $size)
+  @if $size == a // wa
+    #{$prop}: auto
+  @else if $size == w // ww
+    #{$prop}: 100%
+  @else if $size == h // hh
+    #{$prop}: 100%
+  @else if str-slice($size, -1) == p // w50p
+    #{$prop}: str-insert(str-slice($size, 1, -2), '%', -1)
+  @else
+    #{$prop}: #{$size}px
