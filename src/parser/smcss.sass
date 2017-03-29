@@ -378,46 +378,44 @@
     @else if $expr == no-scrollbars // no-scrollbars
       @include no-scrollbars
       // size
-    @else if $a1 == w // w200
+    @else if $a1 == w // wa, ww, w200
       @include w($b1)
-    @else if $a1 == h // h200
+    @else if $a1 == h // ha, hh, h200
       @include h($b1)
-    @else if $a3 == min and str-index($b3, x) != null // min200x300
-      $index: str-index($b3, x)
-      $width: str-slice($b3, 1, $index - 1)
-      $height: str-slice($b3, $index + 1)
-      @include min($width, $height)
-    @else if $expr == min // min
-      @include min
+    @else if $expr == max-w // max-w
+      @include max-w
     @else if $expr == min-w // min-w
       @include min-w
+    @else if $expr == max-h // max-h
+      @include max-h
     @else if $expr == min-h // min-h
       @include min-h
-    @else if $a3 == min // min200
-      @include min($b3)
+    @else if $a5 == max-w // max-w200
+      @include max-w($b5)
+    @else if $a5 == max-h // max-h200
+      @include max-h($b5)
+    @else if $a5 == min-w // min-w200
+      @include min-w($b5)
+    @else if $a5 == min-h // min-h200
+      @include min-h($b5)
     @else if $expr == max // max
       @include max
+    @else if $expr == min // min
+      @include min
     @else if $a3 == max and str-index($b3, x) != null // max200x300
       $index: str-index($b3, x)
       $width: str-slice($b3, 1, $index - 1)
       $height: str-slice($b3, $index + 1)
       @include max($width, $height)
-    @else if $a3 == max and $a4 != max- // max200
+    @else if $a3 == min and str-index($b3, x) != null // min200x300
+      $index: str-index($b3, x)
+      $width: str-slice($b3, 1, $index - 1)
+      $height: str-slice($b3, $index + 1)
+      @include min($width, $height)
+    @else if $a3 == max // max
       @include max($b3)
-    @else if $expr == min-w // min-w
-      @include min-w
-    @else if $a5 == min-w // min-w200
-      @include min-w($b5)
-    @else if $a5 == min-h // min-h200
-      @include min-h($b5)
-    @else if $expr == max-w // max-w
-      @include max-w
-    @else if $a5 == max-w // max-w200
-      @include max-w($b5)
-    @else if $expr == max-h // max-h
-      @include max-h
-    @else if $a5 == max-h // max-h200
-      @include max-h($b5)
+    @else if $a3 == min // min
+      @include min($b3)
       // text
     @else if $expr == nowrap // nowrap
       @include nowrap

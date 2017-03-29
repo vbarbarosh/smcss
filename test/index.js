@@ -251,21 +251,25 @@ const table = {
 
     // size
     'wa': '.foo { width: auto; }',
-    'ww': '.foo { width: 100%; }',
-    'w200': '.foo { width: 200px; }',
     'ha': '.foo { height: auto; }',
+    'ww': '.foo { width: 100%; }',
     'hh': '.foo { height: 100%; }',
+    'w200': '.foo { width: 200px; }',
     'h200': '.foo { height: 200px; }',
     'max': '.foo { max-width: 100%; max-height: 100%; }',
-    'max100': '.foo { max-width: 100px; max-height: 100px; }',
-    'max200x300': '.foo { max-width: 200px; max-height: 300px; }',
     'min': '.foo { min-width: 100%; min-height: 100%; }',
+    'max100': '.foo { max-width: 100px; max-height: 100px; }',
     'min100': '.foo { min-width: 100px; min-height: 100px; }',
+    'max200x300': '.foo { max-width: 200px; max-height: 300px; }',
     'min200x300': '.foo { min-width: 200px; min-height: 300px; }',
     'max-w': '.foo { max-width: 100%; }',
-    'max-w200': '.foo { max-width: 200px; }',
     'max-h': '.foo { max-height: 100%; }',
+    'min-w': '.foo { min-width: 100%; }',
+    'min-h': '.foo { min-height: 100%; }',
+    'max-w200': '.foo { max-width: 200px; }',
     'max-h200': '.foo { max-height: 200px; }',
+    'min-w200': '.foo { min-width: 200px; }',
+    'min-h200': '.foo { min-height: 200px; }',
 
     // text
     'nowrap': '.foo { white-space: nowrap; }',
@@ -309,4 +313,3 @@ describe('smcss', function () {
     });
 
 });
-

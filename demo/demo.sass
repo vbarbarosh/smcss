@@ -27,7 +27,8 @@
 @include smcss-export(xbg, black, silver, white, red, green, blue, yellow, cyan, checkerboard, rainbow)
 
 // border
-@include smcss-export(xborder, xbr, br5, br100p, br999)
+@include smcss-export(xborder, border, dashed)
+@include smcss-export(xbr, br5, br100p, br999)
 
 // box
 @include smcss-export(cbox, bbox)
@@ -62,8 +63,8 @@
 // margin and margin groups
 @include smcss-export(ma)
 @include smcss-export(xm, xml, xmr, xmt, xmb)
-@include smcss-export(mg5, mg10)
-@include smcss-export(mi5, mi10)
+@include smcss-export(mg5, mg10, mg20)
+@include smcss-export(mi5, mi10, mi20)
 
 // opacity
 @include smcss-export(xo, o25, o50, o75, o100)
@@ -77,8 +78,9 @@
 // padding and padding groups
 @include smcss-export(pa)
 @include smcss-export(xp, xpl, xpr, xpt, xpb)
-@include smcss-export(pg5, pg10)
-@include smcss-export(pi5, pi10)
+@include smcss-export(p5)
+@include smcss-export(pg5, pg10, pg20)
+@include smcss-export(pi5, pi10, pi20)
 
 // position
 @include smcss-export(stat, rel, abs, fix, tlbr, tlbr5, tlbr10, t5, l5, b5, r5, ra, la, ba, ra)
@@ -92,8 +94,12 @@
 @include smcss-export(is5, is10, is15)
 
 // size
-@include smcss-export(wa, ww, w10, w25, w50, w100, w200, w50p, h75p)
-@include smcss-export(ha, hh, h10, h25, h50, h100, h200, h50p, w75p)
+@include smcss-export(wa, ww)
+@include smcss-export(ha, hh)
+@include smcss-export(w10, w25, w50, w100, w200, w500)
+@include smcss-export(h10, h25, h50, h100, h200)
+@include smcss-export(w50p, h75p)
+@include smcss-export(h50p, w75p)
 @include smcss-export(min100, min200)
 @include smcss-export(max100, max200)
 @include smcss-export(min800x600)
