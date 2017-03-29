@@ -26,4 +26,4 @@
     &:before
         @include db
         content: ''
-        padding-top: $height / $width * 100%
+        padding-top: to-number($height) / to-number($width) * 100%

@@ -1,21 +1,27 @@
-@import "../src"
+@import "../src/index"
 
 // Legend
 //
 // N - positive or negative pixels, 10s of ems, or percents
-// p - percent (e.g. scale25p for scale: 0.25)
 // D - degrees (e.g. rotateD for rotate: 45deg)
+// p - percent (e.g. scale25 for scale: 0.25)
+// m - 10ths of em
+// neg - negative number
+//
+// h-p5 hover:p5 (under hover)
+// child-p5 * > p5 (immediate children)
 //
 // lh5
 // lh05m 0.5em
 // lh10m 1.0em
 // mt10neg -10px
-// h-p5 hover
-// child-p5 immediate children
 //
 // Take care about specificity
 //
 // .xborder.pt5 should yield padding: 5px 0 0 0
+
+.foo
+  @include smcss(black, fs25, flex-row)
 
 // background
 @include smcss-export(xbg, black, silver, white, red, green, blue, yellow, cyan, checkerboard, rainbow)
@@ -78,7 +84,7 @@
 @include smcss-export(stat, rel, abs, fix, tlbr, tlbr5, tlbr10, t5, l5, b5, r5, ra, la, ba, ra)
 
 // scrollbar
-@include smcss-export(xscrollbar)
+@include smcss-export(no-scrollbars)
 
 // shadow
 @include smcss-export(xbs)
@@ -101,11 +107,11 @@
 @include smcss-export(xx, uc, lc, cc)
 
 // transform (rotation and scale)
-@include smcss-export(scale20p)
+@include smcss-export(scale20)
 @include smcss-export(rotate45, rotate90, rotate180, rotate270)
 
 // user-select
-@include smcss-export(xuserselect)
+@include smcss-export(no-user-select)
 
 // zindex
 @include smcss-export(z1, z2, z1000)

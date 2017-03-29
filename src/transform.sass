@@ -1,5 +1,5 @@
 @mixin scale($percent)
-    transform: scale($percent / 100)
+    transform: scale(to-number($percent) / 100)
 
 @mixin rotate($angle)
-    transform: rotate($angle * 1deg)
+    transform: rotate(to-number($angle) * 1deg)

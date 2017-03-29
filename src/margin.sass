@@ -30,6 +30,18 @@
     @include eval-size(margin-left, $size)
     @include eval-size(margin-right, $size)
 
+@mixin mt($size)
+    @include eval-size(margin-top, $size)
+
+@mixin ml($size)
+    @include eval-size(margin-left, $size)
+
+@mixin mb($size)
+    @include eval-size(margin-bottom, $size)
+
+@mixin mr($size)
+    @include eval-size(margin-right, $size)
+
 // Take a look at GROUPS.md
 @mixin mg($size)
     & > :nth-child(n+2) // * + *

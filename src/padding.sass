@@ -30,6 +30,18 @@
     @include eval-size(padding-left, $size)
     @include eval-size(padding-right, $size)
 
+@mixin pt($size)
+    @include eval-size(padding-top, $size)
+
+@mixin pl($size)
+    @include eval-size(padding-left, $size)
+
+@mixin pb($size)
+    @include eval-size(padding-bottom, $size)
+
+@mixin pr($size)
+    @include eval-size(padding-right, $size)
+
 // Take a look at GROUPS.md
 @mixin pg($size)
     & > :nth-child(n+2) // * + *

@@ -1,3 +1,6 @@
 // z1, z2, z1neg, z2neg, z3neg
 @mixin z($index)
-  z-index: $index
+  @if str-length($index) > 3 and str-slice($index, -3) == neg
+    z-index: to-number(str-slice($index, 1, -4)) * -1
+  @else
+    z-index: to-number($index)

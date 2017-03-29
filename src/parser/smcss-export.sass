@@ -1,4 +1,5 @@
 @mixin smcss-export($mixins...)
   @each $expr in $mixins
+    $expr: '#{$expr}' // You probably don't mean to use the color value `black' in interpolation here.
     .#{$expr}
       @include smcss($expr)

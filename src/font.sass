@@ -60,13 +60,14 @@
 //
 // *bN* was taken by *bottom*
 
-@mixin b
-  font-weight: bold
+//@mixin b --- implemented in position.sass
+//  font-weight: bold
 
 @mixin xfw
   font-weight: normal
 
 @mixin fw($weight)
+  $weight: to-number($weight)
   @if $weight == 3
     font-weight: 300
   @else if $weight == 4

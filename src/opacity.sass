@@ -1,6 +1,8 @@
 @mixin xo
     opacity: 1
 
-// FIXME o25p
-@mixin o($percent)
-    opacity: 0#{$percent}
+@mixin o($percent: '')
+    @if $percent == '' // special case (see text.sass)
+        text-decoration: overline
+    @else
+        opacity: to-number($percent) / 100

@@ -19,14 +19,23 @@
 @mixin t($size)
     @include eval-size(top, $size)
 
-@mixin l($size)
-    @include eval-size(left, $size)
+@mixin l($size: '')
+    @if $size == '' // special case (see align.sass)
+        text-align: left
+    @else
+        @include eval-size(left, $size)
 
-@mixin r($size)
-    @include eval-size(right, $size)
+@mixin r($size: '')
+    @if $size == '' // special case (see align.sass)
+        text-align: right
+    @else
+        @include eval-size(right, $size)
 
-@mixin b($size)
-    @include eval-size(bottom, $size)
+@mixin b($size: '')
+    @if $size == '' // special case (see font.sass)
+        font-weight: bold
+    @else
+        @include eval-size(bottom, $size)
 
 //@mixin ta
 //    top: auto
