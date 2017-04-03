@@ -65,6 +65,9 @@ button {
 .xbr {
   border-radius: 0; }
 
+.br3 {
+  border-radius: 3px; }
+
 .br5 {
   border-radius: 5px; }
 
