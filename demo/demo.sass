@@ -6,7 +6,7 @@
 // D - degrees (e.g. rotateD for rotate: 45deg)
 // p - percent (e.g. scale25 for scale: 0.25)
 // m - 10ths of em
-// neg - negative number
+// n - negative number
 //
 // h-p5 hover:p5 (under hover)
 // child-p5 * > p5 (immediate children)
@@ -14,14 +14,30 @@
 // lh5
 // lh05m 0.5em
 // lh10m 1.0em
-// mt10neg -10px
+// mt10n -10px
 //
 // Take care about specificity
 //
 // .xborder.pt5 should yield padding: 5px 0 0 0
 
-.foo
-  @include smcss(black, fs25, flex-row)
+// reset
+svg
+  fill: currentColor
+button
+  cursor: pointer
+
+// color themes
+.theme-white
+  color: #7f8893
+  background: white
+  font-family: 'Open Sans', serif
+  font-size: 15px
+  button:hover
+    color: #36beff
+  button:active
+    color: #2f72ff
+  .active
+    background: yellow
 
 // background
 @include smcss-export(xbg, black, silver, white, red, green, blue, yellow, cyan, checkerboard, rainbow)
@@ -43,7 +59,7 @@
 @include smcss-export(xd, db, di, dl, dt, dc)
 
 // expand
-@include smcss-export(expand-1-2, expand-1-3, expand-1-4, expand-2-1, expand-2-3, expand-2-4)
+@include smcss-export(expand-1-1, expand-1-2, expand-1-3, expand-1-4, expand-2-1, expand-2-3, expand-2-4)
 
 // flex
 @include smcss-export(flex-row, flex-row-center, flex-row-fluid, flex-col, flex-col-center, flex-col-fluid, flex-wrap, flex-nowrap, flex-wrap-r, flex-center, flex-align-start, flex-align-end, flex-align-center, flex-align-baseline, flex-align-stretch, flex-justify-start, flex-justify-end, flex-justify-center, flex-justify-between, flex-justify-around, flex-grow, flex-nogrow, flex-shrink, flex-noshrink, flex-fluid)
@@ -53,6 +69,7 @@
 
 // font
 @include smcss-export(xfs, fs12, fs13, fs14, fs15)
+@include smcss-export(lh0)
 
 // hsplit
 @include smcss-export(hsplit, vsplit)
@@ -63,6 +80,7 @@
 // margin and margin groups
 @include smcss-export(ma)
 @include smcss-export(xm, xml, xmr, xmt, xmb)
+@include smcss-export(mt50, mt10n, ml10n)
 @include smcss-export(mg5, mg10, mg20)
 @include smcss-export(mi5, mi10, mi20)
 
@@ -79,11 +97,15 @@
 @include smcss-export(pa)
 @include smcss-export(xp, xpl, xpr, xpt, xpb)
 @include smcss-export(p5)
+@include smcss-export(pt10, pl10)
+@include smcss-export(ph15)
 @include smcss-export(pg5, pg10, pg20)
 @include smcss-export(pi5, pi10, pi20)
 
 // position
-@include smcss-export(stat, rel, abs, fix, tlbr, tlbr5, tlbr10, t5, l5, b5, r5, ra, la, ba, ra)
+@include smcss-export(stat, rel, abs, fix)
+@include smcss-export(tlbr, tlbr5, tlbr10)
+@include smcss-export(t5, l5, b5, r5, ra, la, ba, ra)
 
 // scrollbar
 @include smcss-export(no-scrollbars)
@@ -121,4 +143,7 @@
 
 // zindex
 @include smcss-export(z1, z2, z1000)
-@include smcss-export(z1neg, z2neg, z1000neg)
+@include smcss-export(z1n, z2n, z1000n)
+
+// container/grid
+@include smcss-export(grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9, grid10)

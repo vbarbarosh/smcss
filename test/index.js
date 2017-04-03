@@ -186,9 +186,13 @@ const table = {
     'mv5': '.foo { margin-top: 5px; margin-bottom: 5px; }',
     'mh5': '.foo { margin-left: 5px; margin-right: 5px; }',
     'mt5': '.foo { margin-top: 5px; }',
+    'mt5n': '.foo { margin-top: -5px; }',
     'ml5': '.foo { margin-left: 5px; }',
+    'ml5n': '.foo { margin-left: -5px; }',
     'mb5': '.foo { margin-bottom: 5px; }',
+    'mb5n': '.foo { margin-bottom: -5px; }',
     'mr5': '.foo { margin-right: 5px; }',
+    'mr5n': '.foo { margin-right: -5px; }',
     'mg5': '.foo > :nth-child(n+2) { margin-top: 5px; }',
     'mi5': '.foo > :nth-child(n+2) { margin-left: 5px; }',
 
@@ -291,7 +295,11 @@ const table = {
 
     // zindex
     'z1': '.foo { z-index: 1; }',
-    'z1neg': '.foo { z-index: -1; }',
+    'z1n': '.foo { z-index: -1; }',
+
+    // container/grid
+    'grid3': '.foo > .col1 { width: 33.33333%; }\n\n.foo > .col2 { width: 66.66667%; }\n\n.foo > .col3 { width: 100%; }',
+    'grid4': '.foo > .col1 { width: 25%; }\n\n.foo > .col2 { width: 50%; }\n\n.foo > .col3 { width: 75%; }\n\n.foo > .col4 { width: 100%; }'
 
 };
 

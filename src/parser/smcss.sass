@@ -446,5 +446,8 @@
       // zindex
     @else if $a1 == z // z1
       @include z($b1)
+      // grid
+    @else if $a4 == 'grid' // grid5
+      @include grid($b4)
     @else
       @error 'Invalid expression [#{$expr}]'

@@ -1,6 +1,6 @@
-// z1, z2, z1neg, z2neg, z3neg
+// z1, z2, z1n, z2n, z3n
 @mixin z($index)
-  @if str-length($index) > 3 and str-slice($index, -3) == neg
-    z-index: to-number(str-slice($index, 1, -4)) * -1
+  @if str-length($index) > 1 and str-slice($index, -1) == n
+    z-index: to-number(str-slice($index, 1, -2)) * -1
   @else
     z-index: to-number($index)

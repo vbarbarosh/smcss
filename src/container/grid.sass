@@ -12,13 +12,7 @@
 // .flex-row, or .flex-col
 
 @mixin grid($cols)
+    $cols: to-number($cols)
     @for $col-size from 1 through $cols
         & > .col#{$col-size}
             width: $col-size / $cols * 100%
-
-@mixin grid-class($cols)
-    .grid#{$cols}
-        @include grid($cols)
-
-@for $cols from 1 through 20
-    @include grid-class($cols)
