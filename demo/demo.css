@@ -16,6 +16,27 @@ button {
   .theme-white .active {
     background: yellow; }
 
+.l {
+  text-align: left; }
+
+.r {
+  text-align: right; }
+
+.c {
+  text-align: center; }
+
+.j {
+  text-align: justify; }
+
+.vm {
+  vertical-align: middle; }
+
+.vt {
+  vertical-align: top; }
+
+.vb {
+  vertical-align: bottom; }
+
 .xbg {
   background: none; }
 
@@ -681,6 +702,54 @@ button {
 .xmb {
   margin-bottom: 0; }
 
+.mv5 {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.mv10 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.mv15 {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.mv20 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.mv25 {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+.mv50 {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.mh5 {
+  margin-left: 5px;
+  margin-right: 5px; }
+
+.mh10 {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.mh15 {
+  margin-left: 15px;
+  margin-right: 15px; }
+
+.mh20 {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.mh25 {
+  margin-left: 25px;
+  margin-right: 25px; }
+
+.mh50 {
+  margin-left: 50px;
+  margin-right: 50px; }
+
 .mt10 {
   margin-top: 10px; }
 
@@ -866,6 +935,12 @@ button {
 .bs15 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.75); }
 
+.bs20 {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.75); }
+
+.bs25 {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.75); }
+
 .is5 {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.75); }
 
@@ -874,6 +949,12 @@ button {
 
 .is15 {
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75); }
+
+.is20 {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.75); }
+
+.is25 {
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.75); }
 
 .wa {
   width: auto; }
