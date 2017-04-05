@@ -4,6 +4,9 @@ svg {
 button {
   cursor: pointer; }
 
+h2 {
+  margin: 0; }
+
 .theme-white {
   color: #7f8893;
   background: white;
@@ -701,6 +704,24 @@ button {
 
 .xmb {
   margin-bottom: 0; }
+
+.m5 {
+  margin: 5px; }
+
+.m10 {
+  margin: 10px; }
+
+.m15 {
+  margin: 15px; }
+
+.m20 {
+  margin: 20px; }
+
+.m25 {
+  margin: 25px; }
+
+.m50 {
+  margin: 50px; }
 
 .mv5 {
   margin-top: 5px;
