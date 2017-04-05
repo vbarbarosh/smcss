@@ -681,11 +681,17 @@ button {
 .xmb {
   margin-bottom: 0; }
 
-.mt50 {
-  margin-top: 50px; }
+.mt10 {
+  margin-top: 10px; }
 
 .mt10n {
   margin-top: -10px; }
+
+.mt50 {
+  margin-top: 50px; }
+
+.ml10 {
+  margin-left: 10px; }
 
 .ml10n {
   margin-left: -10px; }

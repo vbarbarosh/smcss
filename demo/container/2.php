@@ -3,12 +3,6 @@
 <head>
     <meta charset="utf-8">
     <link href="../demo.css?<?php echo uniqid() ?>" type="text/css" rel="stylesheet">
-    <style type="text/css">
-    .mt10 { margin-top: 10px; }
-    .ml10 { margin-left: 10px; }
-    .m5 { margin: 5px; }
-    .m10 { margin: 10px; }
-    </style>
 </head>
 <body>
 
