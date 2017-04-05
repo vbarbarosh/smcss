@@ -12,8 +12,8 @@
     </div>
     <div class="ma dashed bs10 red" v-bind:style="{width: width + 'px'}">
         <div class="grid5 floats mt10n ml10n">
-            <div v-for="clipart in cliparts" class="col1 pt10 pl10 bbox">
-                <div class="expand-1-1 br3 theme-white">
+            <div v-for="clipart in cliparts" v-bind:class="[clipart.col]" class="pt10 pl10 bbox">
+                <div v-bind:class="[clipart.expand]" class="br3 theme-white">
                     <!-- .ww.hh is necessary for FireFox only -->
                     <button class="abs tlbr ww hh p5 xbutton">
                         <svg class="db ww hh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -31,7 +31,23 @@
     new Vue({
         el: '#app',
         data: {
-            cliparts: new Array(13),
+            cliparts: [
+                {col: 'col1', expand: 'expand-1-1'},
+                // This will not work!
+                // {col: 'col2', expand: 'expand-2-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+                {col: 'col1', expand: 'expand-1-1'},
+            ],
             width: 500
         }
     });
