@@ -348,6 +348,7 @@ h2 {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    min-width: 0;
     min-height: 0;
     -ms-flex-preferred-size: 0; }
 
@@ -405,6 +406,7 @@ h2 {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    min-width: 0;
     min-height: 0;
     -ms-flex-preferred-size: 0; }
 
@@ -514,6 +516,7 @@ h2 {
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto;
+  min-width: 0;
   min-height: 0; }
 
 .flex-noshrink {
@@ -532,6 +535,7 @@ h2 {
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto;
+  min-width: 0;
   min-height: 0;
   -ms-flex-preferred-size: 0; }
 
@@ -620,6 +624,7 @@ h2 {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    min-width: 0;
     min-height: 0; }
   .hsplit > .grow {
     -webkit-box-flex: 1;
@@ -637,6 +642,7 @@ h2 {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    min-width: 0;
     min-height: 0;
     -ms-flex-preferred-size: 0; }
 
@@ -664,6 +670,7 @@ h2 {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    min-width: 0;
     min-height: 0; }
   .vsplit > .grow {
     -webkit-box-flex: 1;
@@ -681,6 +688,7 @@ h2 {
     -webkit-flex-basis: auto;
         -ms-flex-preferred-size: auto;
             flex-basis: auto;
+    min-width: 0;
     min-height: 0;
     -ms-flex-preferred-size: 0; }
 
