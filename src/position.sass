@@ -7,8 +7,20 @@
 @mixin abs
     position: absolute
 
+@mixin abs-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
 @mixin fix
     position: fixed
+
+@mixin fix-center
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
 
 @mixin tlbr($size: 0)
     @include eval-size(top, $size)

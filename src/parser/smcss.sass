@@ -360,8 +360,12 @@
       @include rel
     @else if $expr == abs // abs
       @include abs
+    @else if $expr == abs-center // abs-center
+      @include abs-center
     @else if $expr == fix // fix
       @include fix
+    @else if $expr == fix-center // fix-center
+      @include fix-center
     @else if $expr == tlbr // tlbr
       @include tlbr
     @else if $a4 == tlbr // tlbr5

@@ -115,10 +115,10 @@ const table = {
     // flex
     'flex-row': '.foo { display: flex; flex-direction: row; }',
     'flex-row-center': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
-    'flex-row-fluid': '.foo { display: flex; flex-direction: row; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'flex-row-fluid': '.foo { display: flex; flex-direction: row; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
     'flex-col': '.foo { display: flex; flex-direction: column; }',
     'flex-col-center': '.foo { display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
-    'flex-col-fluid': '.foo { display: flex; flex-direction: column; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'flex-col-fluid': '.foo { display: flex; flex-direction: column; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
     'flex-wrap': '.foo { flex-wrap: wrap; }',
     'flex-nowrap': '.foo { flex-wrap: nowrap; }',
     'flex-wrap-r': '.foo { flex-wrap: wrap-reverse; }',
@@ -135,9 +135,9 @@ const table = {
     'flex-justify-around': '.foo { justify-content: space-around; }',
     'flex-grow': '.foo { flex-grow: 1; }',
     'flex-nogrow': '.foo { flex-grow: 0; }',
-    'flex-shrink': '.foo { flex-shrink: 1; flex-basis: auto; min-height: 0; }',
+    'flex-shrink': '.foo { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }',
     'flex-noshrink': '.foo { flex-shrink: 0; }',
-    'flex-fluid': '.foo { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'flex-fluid': '.foo { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
 
     // float
     'xf': '.foo { float: none; }',
@@ -169,8 +169,8 @@ const table = {
     'fw8': '.foo { font-weight: 800; }',
 
     // hsplit
-    'hsplit': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > :not(.shrink) { flex-shrink: 0; }\n\n.foo > .shrink { flex-shrink: 1; flex-basis: auto; min-height: 0; }\n\n.foo > .grow { flex-grow: 1; }\n\n.foo > .fluid { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-height: 0; -ms-flex-preferred-size: 0; }',
-    'vsplit': '.foo { display: flex; flex-direction: column; flex-wrap: nowrap; }\n\n.foo > :not(.shrink) { flex-shrink: 0; }\n\n.foo > .shrink { flex-shrink: 1; flex-basis: auto; min-height: 0; }\n\n.foo > .grow { flex-grow: 1; }\n\n.foo > .fluid { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'hsplit': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > :not(.shrink) { flex-shrink: 0; }\n\n.foo > .shrink { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }\n\n.foo > .grow { flex-grow: 1; }\n\n.foo > .fluid { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'vsplit': '.foo { display: flex; flex-direction: column; flex-wrap: nowrap; }\n\n.foo > :not(.shrink) { flex-shrink: 0; }\n\n.foo > .shrink { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }\n\n.foo > .grow { flex-grow: 1; }\n\n.foo > .fluid { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
 
     // list
     'xls': '.foo { list-style: none; }',
@@ -233,7 +233,9 @@ const table = {
     'stat': '.foo { position: static; }',
     'rel': '.foo { position: relative; }',
     'abs': '.foo { position: absolute; }',
+    'abs-center': '.foo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }',
     'fix': '.foo { position: fixed; }',
+    'fix-center': '.foo { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }',
     'tlbr': '.foo { top: 0; left: 0; right: 0; bottom: 0; }',
     'tlbr5': '.foo { top: 5px; left: 5px; right: 5px; bottom: 5px; }',
     't5': '.foo { top: 5px; }',
@@ -316,7 +318,8 @@ describe('smcss', function () {
         for (let a = Object.keys(table); a.length; ) {
             const expr = a.shift();
             const s = yield smcss(expr);
-            assert(s == table[expr]);
+            const s2 = table[expr];
+            assert(expr && s == s2);
         }
     });
 
