@@ -1,3 +1,9 @@
+@mixin hflip
+    transform: scale(-1, 1)
+
+@mixin vflip
+    transform: scale(1, -1)
+
 @mixin scale($percent)
     transform: scale(to-number($percent) / 100)
 

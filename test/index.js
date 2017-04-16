@@ -289,6 +289,8 @@ const table = {
     'cc': '.foo { text-transform: capitalize; }',
 
     // transform
+    'hflip': '.foo { transform: scale(-1, 1); }',
+    'vflip': '.foo { transform: scale(1, -1); }',
     'scale25': '.foo { transform: scale(0.25); }',
     'rotate45': '.foo { transform: rotate(45deg); }',
 

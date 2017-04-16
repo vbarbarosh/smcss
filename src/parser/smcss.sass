@@ -384,7 +384,7 @@
       // size
     @else if $a1 == w // wa, ww, w200
       @include w($b1)
-    @else if $a1 == h // ha, hh, h200
+    @else if $a1 == h and $expr != hflip // ha, hh, h200
       @include h($b1)
     @else if $expr == max-w // max-w
       @include max-w
@@ -440,6 +440,10 @@
     @else if $expr == cc // cc
       @include cc
       // transform
+    @else if $expr == hflip // hflip
+      @include hflip
+    @else if $expr == vflip // vflip
+      @include vflip
     @else if $a5 == scale // scale25
       @include scale($b5)
     @else if $a6 == rotate // rotate45
