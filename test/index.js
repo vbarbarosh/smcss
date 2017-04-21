@@ -288,6 +288,24 @@ const table = {
     'lc': '.foo { text-transform: lowercase; }',
     'cc': '.foo { text-transform: capitalize; }',
 
+    // theme
+    'theme-navy': '.foo { color: #80bfff; background: #001f3f; }',
+    'theme-blue': '.foo { color: #b3dbff; background: #0074d9; }',
+    'theme-aqua': '.foo { color: #004966; background: #7fdbff; }',
+    'theme-teal': '.foo { color: #000; background: #39cccc; }',
+    'theme-olive': '.foo { color: #163728; background: #3d9970; }',
+    'theme-green': '.foo { color: #0e3e14; background: #2ecc40; }',
+    'theme-lime': '.foo { color: #00662c; background: #01ff70; }',
+    'theme-yellow': '.foo { color: #665800; background: #ffdc00; }',
+    'theme-orange': '.foo { color: #663000; background: #ff851b; }',
+    'theme-red': '.foo { color: #800600; background: #ff4136; }',
+    'theme-maroon': '.foo { color: #eb7ab1; background: #85144b; }',
+    'theme-fuchsia': '.foo { color: #65064f; background: #f012be; }',
+    'theme-purple': '.foo { color: #efa9f9; background: #b10dc9; }',
+    'theme-black': '.foo { color: #ddd; background: #111; }',
+    'theme-gray': '.foo { color: #000; background: #aaa; }',
+    'theme-silver': '.foo { color: #000; background: #ddd; }',
+
     // transform
     'hflip': '.foo { transform: scale(-1, 1); }',
     'vflip': '.foo { transform: scale(1, -1); }',

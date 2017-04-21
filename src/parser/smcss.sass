@@ -370,7 +370,7 @@
       @include tlbr
     @else if $a4 == tlbr // tlbr5
       @include tlbr($b4)
-    @else if $a1 == t // t5
+    @else if $a1 == t and $a5 != theme // t5
       @include t($b1)
     @else if $a1 == l and $expr != lc // l5
       @include l($b1)
@@ -439,6 +439,39 @@
       @include lc
     @else if $expr == cc // cc
       @include cc
+      // theme
+    @else if $expr == theme-navy // theme-navy
+      @include theme-navy
+    @else if $expr == theme-blue // theme-blue
+      @include theme-blue
+    @else if $expr == theme-aqua // theme-aqua
+      @include theme-aqua
+    @else if $expr == theme-teal // theme-teal
+      @include theme-teal
+    @else if $expr == theme-olive // theme-olive
+      @include theme-olive
+    @else if $expr == theme-green // theme-green
+      @include theme-green
+    @else if $expr == theme-lime // theme-lime
+      @include theme-lime
+    @else if $expr == theme-yellow // theme-yellow
+      @include theme-yellow
+    @else if $expr == theme-orange // theme-orange
+      @include theme-orange
+    @else if $expr == theme-red // theme-red
+      @include theme-red
+    @else if $expr == theme-maroon // theme-maroon
+      @include theme-maroon
+    @else if $expr == theme-fuchsia // theme-fuchsia
+      @include theme-fuchsia
+    @else if $expr == theme-purple // theme-purple
+      @include theme-purple
+    @else if $expr == theme-black // theme-black
+      @include theme-black
+    @else if $expr == theme-gray // theme-gray
+      @include theme-gray
+    @else if $expr == theme-silver // theme-silver
+      @include theme-silver
       // transform
     @else if $expr == hflip // hflip
       @include hflip

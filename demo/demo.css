@@ -1099,6 +1099,70 @@ h2 {
 .cc {
   text-transform: capitalize; }
 
+.theme-navy {
+  color: #80bfff;
+  background: #001f3f; }
+
+.theme-blue {
+  color: #b3dbff;
+  background: #0074d9; }
+
+.theme-aqua {
+  color: #004966;
+  background: #7fdbff; }
+
+.theme-teal {
+  color: #000;
+  background: #39cccc; }
+
+.theme-olive {
+  color: #163728;
+  background: #3d9970; }
+
+.theme-green {
+  color: #0e3e14;
+  background: #2ecc40; }
+
+.theme-lime {
+  color: #00662c;
+  background: #01ff70; }
+
+.theme-yellow {
+  color: #665800;
+  background: #ffdc00; }
+
+.theme-orange {
+  color: #663000;
+  background: #ff851b; }
+
+.theme-red {
+  color: #800600;
+  background: #ff4136; }
+
+.theme-maroon {
+  color: #eb7ab1;
+  background: #85144b; }
+
+.theme-fuchsia {
+  color: #65064f;
+  background: #f012be; }
+
+.theme-purple {
+  color: #efa9f9;
+  background: #b10dc9; }
+
+.theme-black {
+  color: #ddd;
+  background: #111; }
+
+.theme-gray {
+  color: #000;
+  background: #aaa; }
+
+.theme-silver {
+  color: #000;
+  background: #ddd; }
+
 .scale20 {
   -webkit-transform: scale(0.2);
       -ms-transform: scale(0.2);
