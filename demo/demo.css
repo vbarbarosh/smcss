@@ -779,6 +779,9 @@ h2 {
   margin-left: 50px;
   margin-right: 50px; }
 
+.mta {
+  margin-top: auto; }
+
 .mt10 {
   margin-top: 10px; }
 
@@ -1056,6 +1059,9 @@ h2 {
 
 .max200 {
   max-width: 200px;
+  max-height: 200px; }
+
+.max-h200 {
   max-height: 200px; }
 
 .min800x600 {
