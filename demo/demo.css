@@ -1000,6 +1000,12 @@ h2 {
 .hh {
   height: 100%; }
 
+.w0 {
+  width: 0; }
+
+.w5 {
+  width: 5px; }
+
 .w10 {
   width: 10px; }
 
@@ -1017,6 +1023,12 @@ h2 {
 
 .w500 {
   width: 500px; }
+
+.h0 {
+  height: 0; }
+
+.h5 {
+  height: 5px; }
 
 .h10 {
   height: 10px; }
@@ -1060,6 +1072,9 @@ h2 {
 .max200 {
   max-width: 200px;
   max-height: 200px; }
+
+.max-w200 {
+  max-width: 200px; }
 
 .max-h200 {
   max-height: 200px; }
