@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Title of the Page</title>
+    <link href="../demo.css?t=<?php echo time() ?>" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    /* https://www.eventbrite.com/engineering/mobile-safari-why/ */
+        -webkit-overflow-scrolling: touch;
+    }
+    .fixport {
+        position: fixed;
+        border: 5px solid red;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .oa { overflow: auto; }
+    .fix { position: fixed; }
+    .tlbr { top: 0; left: 0; bottom: 0; right: 0; }
+    </style>
+    <script type="text/javascript">
+        window.addEventListener('error', e => alert(e));
+    </script>
+</head>
+<body>
+
+<div id="app" class="fixport" v-bind:style="{width: w+'px', height: h+'px'}">
+    {{log}}
+    <div class="w200 h200 dashed oa">
+        Mauris bibendum aliquet sodales. Aliquam tincidunt, odio et ullamcorper egestas, orci orci varius nunc, et iaculis massa est a leo. Sed varius facilisis lectus. Phasellus ac mauris et ante auctor dapibus. Nulla volutpat sed metus in egestas. Vestibulum nec hendrerit urna. Ut commodo nec sem ut posuere. Cras mollis, metus id laoreet tincidunt, tellus justo laoreet enim, at aliquam lacus urna nec tellus. Curabitur consequat viverra enim. Pellentesque neque tortor, fringilla at tellus ornare, tincidunt cursus purus. Vivamus imperdiet viverra facilisis.
+        Sed a felis quis tortor laoreet feugiat id nec nulla. Sed maximus diam vel libero elementum congue. Mauris molestie venenatis justo, mattis sagittis sapien auctor sit amet. Nunc sagittis venenatis vestibulum. Sed id lorem nec odio vehicula suscipit. Mauris in dui libero. Praesent gravida blandit condimentum. Duis id tellus volutpat, volutpat est at, rutrum orci. Mauris vulputate tristique lacus, id laoreet magna fringilla ut.
+        Sed nisl dolor, tempus ac ligula at, lacinia sollicitudin tortor. Mauris ac tortor odio. Quisque neque sapien, porta sed nisl sit amet, sodales efficitur nisi. Phasellus ut lorem gravida lectus euismod convallis vitae a magna. Pellentesque id odio nec lacus sodales ultrices ac et justo. Integer ultricies quis tellus facilisis varius. Pellentesque ultricies lectus tortor, ut tempor massa hendrerit iaculis. Integer tincidunt lectus libero, vitae lacinia magna commodo ac. Aenean dapibus vestibulum neque nec ullamcorper. Morbi laoreet erat pharetra, porta nisi ac, malesuada mauris. Donec nec velit lacinia, ullamcorper leo vitae, rhoncus dui. Nullam imperdiet, tellus et accumsan fermentum, eros arcu dictum libero, nec consectetur nulla libero quis odio. Praesent quis velit pellentesque, fringilla justo dapibus, luctus ex.
+        Curabitur nibh tellus, pretium sit amet diam vitae, interdum bibendum tellus. Aliquam vitae ultricies orci. Integer semper condimentum tincidunt. Proin tempus tempor dolor non egestas. Donec aliquam metus eu euismod fringilla. Mauris placerat magna lectus, in iaculis velit pharetra molestie. Nunc et odio eget turpis posuere porta. Maecenas sed finibus arcu. Vestibulum ultrices lectus sit amet consequat feugiat. Ut nec sodales magna. Vestibulum dolor nunc, ullamcorper quis nisl id, volutpat fermentum massa. Maecenas vitae erat condimentum mi pellentesque sodales. Nunc in luctus quam, sit amet ultricies est. Quisque viverra diam eget pharetra aliquet. Phasellus volutpat id leo eget lobortis.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi in nisi cursus, efficitur sapien ac, lobortis risus. Mauris eu magna vitae magna mollis commodo bibendum ut sem. Maecenas posuere ut sem sit amet egestas. Donec ultricies, tellus nec pellentesque malesuada, risus eros imperdiet urna, sed vehicula diam massa at leo. Maecenas et porta arcu. Curabitur placerat diam ante, nec semper nisl euismod eu. Nullam non justo eros. Etiam dolor diam, rhoncus in leo nec, scelerisque sodales tortor. Suspendisse a neque sed mi rutrum egestas. Vestibulum tincidunt nisl orci. Mauris mollis mi id orci laoreet posuere.
+    </div>
+    {{tick}}
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bluebird/3.4.6/bluebird.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.4/vue.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function () {
+
+    window.app = new Vue({
+        el: '#app',
+        data: {
+            log: '',
+            tick: 0,
+            w: 0,
+            h: 0
+        },
+        created: function () {
+            var _this = this;
+            window.addEventListener('resize', read_wh);
+            read_wh();
+            function read_wh() {
+                _this.w = window.innerWidth;
+                _this.h = window.innerHeight;
+            };
+            setInterval(function () {
+                _this.log = [window.scrollX, window.scrollY, window.innerWidth,window.innerHeight,window.outerWidth,window.outerHeight].join();
+            }, 100);
+        }
+    });
+
+})();
+</script>
+
+    <script type="text/javascript">
+        // Hacks for iPhone 5
+        // ==================
+
+        // Disable any scrolling initiated by touch event. It is not
+        // desirable because our container aleray fill whole viewport.
+        document.addEventListener('touchmove', function (event) {
+            if (event.target === document.getElementById('app')) {
+                event.preventDefault();
+            }
+        });
+        // After orientation change our container can be under address
+        // bar. scrollTo(0, 0) will move it where it should be.
+        window.addEventListener('scroll', function (event) {
+            window.app.tick++;
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+            }, 0);
+        });
+        // Disable zooming. (There is no way to scroll zoomed
+        // container because scrolling was disabled -- container
+        // should always fill whole view port).
+        // http://stackoverflow.com/a/39711930/1478566
+        document.addEventListener('gesturestart', function (event) {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+</html>
