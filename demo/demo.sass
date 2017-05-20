@@ -1,5 +1,34 @@
 @import "../src/index"
 
+// About specificity
+//
+// https://specificity.keegan.st/
+//
+// It seems that all of .p5, .m5, .c, .flex-row, et. al. classes
+// should be declared as
+//
+//     html [class].p5
+//     html [class].m5
+//     html [class].c
+//     html [class].flex-row
+//
+//  That way they will have higher enough specificity to override
+//  something like this:
+//
+//      .slider .slider-thumb
+//
+//  Double [class] can be used to make specificity even higher
+//
+//      html [class][class].p5
+//
+//  or just
+//
+//      [class][class].p5
+//
+//  in order to override the following
+//
+//      .slider .slider-thumb button svg
+
 // Legend
 //
 // N - positive or negative pixels, 10s of ems, or percents
