@@ -23,6 +23,7 @@
 
     .abs-bl-ct { position: absolute; bottom: 0; left: 0; transform: translate(-50%, 100%); }
     .abs-br-ct { position: absolute; bottom: 0; right: 0; transform: translate(50%, 100%); }
+    .abs-br-tr { position: absolute; bottom: 100%; right: 0; }
     </style>
 </head>
 <body>
@@ -31,6 +32,8 @@
     <div class="fix tlbr ba z1 ph15 bs10 white">
         <input v-model="width" class="ww" type="range" min="100" max="1200">
     </div>
+    <br>
+    <br>
     <div class="ma dashed bs10 red" v-bind:style="{width: width + 'px'}">
         <div class="rel h200 fs13">
             <div class="green w50 h50 flex-row-center abs-tl">abs-tl</div>
@@ -49,6 +52,7 @@
             <div class="yellow o50 w50 h50 flex-row-center abs-cb-ct">abs-cb-ct</div>
             <div class="yellow o50 w50 h50 flex-row-center abs-bl-ct">abs-bl-ct</div>
             <div class="yellow o50 w50 h50 flex-row-center abs-br-ct">abs-br-ct</div>
+            <div class="yellow o50 w50 h50 flex-row-center abs-br-tr">abs-br-tr</div>
         </div>
     </div>
 </div>
