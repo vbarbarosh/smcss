@@ -13,7 +13,4 @@ scriptname=`basename $script`
 d=`cd $scriptdir; git rev-parse --show-toplevel`
 
 cd $d
-rm -rf build
-mkdir build
-PATH=$d/node_modules:$PATH
-sass -r sass-css-importer demo/demo.sass | postcss -o demo/demo.css
+npm run build
