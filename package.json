@@ -4,7 +4,7 @@
   "description": "A CSS Framework for Prototyping",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --bail --require intelli-espower-loader"
   },
   "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (http://github.com/vbarbarosh)",
   "license": "ISC",
@@ -25,8 +25,5 @@
   "dependencies": {
     "postcss-import": "^7.0.0",
     "postcss-sm": " git://github.com/vbarbarosh/postcss-sm"
-  },
-  "scripts": {
-    "test": "mocha --bail --require intelli-espower-loader"
   }
 }
