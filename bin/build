@@ -12,17 +12,8 @@ scriptname=`basename $script`
 
 d=`cd $scriptdir; git rev-parse --show-toplevel`
 
-function run_sass()
-{
-    sass -r sass-css-importer "$@"
-}
-
-function run_postcss()
-{
-    postcss --use autoprefixer --autoprefixer.browsers '> 5%, last 5 versions' "$@" 
-}
-
 cd $d
 rm -rf build
 mkdir build
-run_sass demo/demo.sass | run_postcss -o demo/demo.css
+PATH=$d/node_modules:$PATH
+sass -r sass-css-importer demo/demo.sass | postcss -o demo/demo.css
