@@ -20,6 +20,7 @@ should be specified in just one place.)
 * [Targeting first and last rows in CSS grid layouts](http://keithclark.co.uk/articles/targeting-first-and-last-rows-in-css-grid-layouts/)
 
 ### Layout
+* [https://github.com/mojotech/jeet](https://github.com/mojotech/jeet)
 * [Responsive Design’s Dirty Little Secret](https://www.palantir.net/blog/responsive-design-s-dirty-little-secret)
 * [Faux Absolute Positioning](http://alistapart.com/article/fauxabsolutepositioning)
 * [A css layout that does not rely on div, float, clear nor structural hack!](http://www.cssmojo.com/float-less_css_layouts/)
