@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>smcss</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/themes/prism.css" rel="stylesheet" />
+    <link href="../demo/demo.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    [v-cloak] {
+        display: none;
+    }
+    .language-html {
+        white-space: normal !important;
+    }
+    </style>
+</head>
+<body>
+
+<div id="app" v-cloak>
+<div>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">smcss</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">Docs</a>
+                    </li>
+                    <li>
+                        <a href="#">Cheatsheet</a>
+                    </li>
+                    <li>
+                        <a href="#">Try it out</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://github.com/vbarbarosh/smcss">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <input v-model="sections_search" class="form-control">
+                <br>
+                <ul class="nav nav-pills nav-stacked">
+                    <li v-for="section in sections_match">
+                        <a href="#">
+                            {{ section.title }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <h2>align</h2>
+                <table class="table table-bordered table-striped table-condensed" style="width: auto;">
+                <thead></thead>
+                <tbody>
+                    <tr><th>l</th><td><code>text-align: left</code></td></tr>
+                    <tr><th>r</th><td><code>text-align: right</code></td></tr>
+                    <tr><th>c</th><td><code>text-align: center</code></td></tr>
+                    <tr><th>j</th><td><code>text-align: justify</code></td></tr>
+                    <tr><th>vm</th><td><code>vertical-align: middle</code></td></tr>
+                    <tr><th>vt</th><td><code>vertical-align: top</code></td></tr>
+                    <tr><th>vb</th><td><code>vertical-align: bottom</code></td></tr>
+                </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-md-6">
+                        <pre><code class="language-html">&lt;p class="l"&gt;Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="l">Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <pre><code class="language-html">&lt;p class="r"&gt;Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="r">Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <pre><code class="language-html">&lt;p class="c"&gt;Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="c">Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <pre><code class="language-html">&lt;p class="j"&gt;Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="j">Suspendisse lobortis ante nec risus pretium semper. Phasellus quis nisi libero. Phasellus sollicitudin sagittis justo in egestas. Integer posuere nulla eget leo lacinia, non efficitur nunc placerat. Mauris vulputate commodo lobortis. Pellentesque dictum cursus felis, in placerat libero condimentum vel. Integer erat massa, accumsan non neque nec, lobortis varius augue. Praesent auctor ornare facilisis. Phasellus eu malesuada libero, rutrum posuere risus.</p>
+                    </div>
+                </div>
+
+                <h2>display</h2>
+                <table class="table table-bordered table-striped table-condensed" style="width: auto;">
+                <thead></thead>
+                <tbody>
+                    <tr><th>xd</th><td><code>display: none</code></td></tr>
+                    <tr><th>db</th><td><code>display: block</code></td></tr>
+                    <tr><th>di</th><td><code>display: inline</code></td></tr>
+                    <tr><th>dl</th><td><code>display: inline-block</code></td></tr>
+                    <tr><th>dt</th><td><code>display: table</code></td></tr>
+                    <tr><th>dc</th><td><code>display: table-cell</code></td></tr>
+                </tbody>
+                </table>
+
+                <h2>flex</h2>
+                <table class="table table-bordered table-striped table-condensed" style="width: auto;">
+                <thead></thead>
+                <tbody>
+                    <tr><th>flex-row</th><td><code>display: flex<br>flex-direction: row</code></td></tr>
+                    <tr><th>flex-col</th><td><code>display: flex<br>flex-direction: column</code></td></tr>
+                    <tr><th>flex-row-center</th><td><code>display: flex<br>flex-direction: row<br>align-items: center<br>align-content: center<br>justify-content: center</code></td></tr>
+                    <tr><th>flex-col-center</th><td><code>display: flex<br>flex-direction: column<br>align-items: center<br>align-content: center<br>justify-content: center</code></td></tr>
+                    <tr><th>flex-grow</th><td><code>flex-grow: 1</code></td></tr>
+                    <tr><th>flex-nogrow</th><td><code>flex-grow: 0</code></td></tr>
+                    <tr><th>flex-shrink</th><td><code>flex-shrink: 1<br>flex-basis: auto<br>min-width: 0<br>min-height: 0</code></td></tr>
+                    <tr><th>flex-noshrink</th><td><code>flex-shrink: 0</code></td></tr>
+                    <tr><th>flex-fluid</th><td><code>flex-grow: 1<br>flex-shrink: 1<br>flex-basis: auto<br>min-width: 0<br>min-height: 0</code></td></tr>
+                </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="fs18">group</h2>
+                        <ul class="xls xm xp og25 cols4">
+                            <li><code>.mg<span class="number">N</span></code></li>
+                            <li><code>.mi<span class="number">N</span></code></li>
+                            <li><code>.pg<span class="number">N</span></code></li>
+                            <li><code>.pi<span class="number">N</span></code></li>
+                        </ul>
+                        <h2 class="fs18">grid</h2>
+                        <ul class="xls xm xp og25 cols2">
+                            <li><code>.grid<span class="digit">D</span></code></li>
+                            <li><code>.col<span class="digit">D</span></code></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="fs18">prefixes and suffixes</h2>
+                        <ul class="xls xm xp og25 cols3">
+                            <li><code>.child-*</code></li>
+                            <li><code>.h-*</code></li>
+                            <li><code>.*-force</code></li>
+                        </ul>
+                        <h2 class="fs18">user-select</h2>
+                        <ul class="xls xm xp og25">
+                            <li><code>.user-select-none</code></li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 class="fs18">text</h2>
+                <ul class="xls xm xp og25 cols5">
+                    <li><code>.l</code></li>
+                    <li><code>.r</code></li>
+                    <li><code>.c</code></li>
+                    <li><code>.j</code></li>
+                    <li><code>.vm</code></li>
+                    <li><code>.vt</code></li>
+                    <li><code>.vb</code></li>
+                    <li><code>.u</code></li>
+                    <li><code>.o</code></li>
+                    <li><code>.s</code></li>
+                <!--
+                    <li><code>.u.o</code></li>
+                    <li><code>.u.s</code></li>
+                    <li><code>.o.s</code></li>
+                    <li><code>.u.o.s</code></li>
+                -->
+                    <li><code>.x</code></li>
+                <!--
+                    <li><code>.h-u:hover</code></li>
+                    <li><code>.h-o:hover</code></li>
+                    <li><code>.h-s:hover</code></li>
+                    <li><code>.h-u.h-o:hover</code></li>
+                    <li><code>.h-u.h-s:hover</code></li>
+                    <li><code>.h-o.h-s:hover</code></li>
+                    <li><code>.h-u.h-o.h-s:hover</code></li>
+                    <li><code>.h-x:hover</code></li>
+                -->
+                    <li><code>.uc</code></li>
+                    <li><code>.lc</code></li>
+                    <li><code>.cc</code></li>
+                    <li><code>.xc</code></li>
+                <!--
+                    <li><code>.h-uc:hover</code></li>
+                    <li><code>.h-lc:hover</code></li>
+                    <li><code>.h-cc:hover</code></li>
+                    <li><code>.h-xc:hover</code></li>
+                -->
+                    <li><code>.ls<span class="number">N</span></code></li>
+                    <li><code>.lh<span class="number">N</span></code></li>
+                    <li><code>.fs<span class="digit">D</span></code></li>
+                    <li><code>.n</code></li>
+                    <li><code>.i</code></li>
+                    <li><code>.q</code></li>
+                    <li><code>.ii</code></li>
+                    <li><code>.b</code></li>
+                    <li><code>.fw</code></li>
+                    <li><code>.xfw</code></li>
+                    <li><code>.fw3</code></li>
+                    <li><code>.fw4</code></li>
+                    <li><code>.fw5</code></li>
+                    <li><code>.fw6</code></li>
+                    <li><code>.fw7</code></li>
+                    <li><code>.fw8</code></li>
+                </ul>
+                <h2 class="fs18">flex</h2>
+                <ul class="xls xm xp og25 cols3">
+                    <li><code>.flex</code></li>
+                    <li><code>.flex-wrap</code></li>
+                    <li><code>.flex-nowrap</code></li>
+                    <li><code>.flex-wrap-rev</code></li>
+                    <li><code>.flex-rows</code></li>
+                    <li><code>.flex-rows-center</code></li>
+                    <li><code>.flex-cols</code></li>
+                    <li><code>.flex-cols-center</code></li>
+                    <li><code>.flex-align-start</code></li>
+                    <li><code>.flex-align-end</code></li>
+                    <li><code>.flex-align-center</code></li>
+                    <li><code>.flex-align-baseline</code></li>
+                    <li><code>.flex-align-stretch</code></li>
+                    <li><code>.flex-justify-start</code></li>
+                    <li><code>.flex-justify-end</code></li>
+                    <li><code>.flex-justify-center</code></li>
+                    <li><code>.flex-justify-between</code></li>
+                    <li><code>.flex-justify-around</code></li>
+                    <li><code>.flex-grow</code></li>
+                </ul>
+                <h2 class="fs18">transition</h2>
+                <ul class="xls xm xp og25 cols2">
+                    <li><code>.transition-250ms</code></li>
+                    <li><code>.transition-500ms</code></li>
+                    <li><code>.transition-1000ms</code></li>
+                    <li><code>.transition-opaticy-250ms</code></li>
+                    <li><code>.transition-opacity-500ms</code></li>
+                    <li><code>.transition-opacity-1000ms</code></li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="fs18">transform</h2>
+                        <ul class="xls xm xp og25 cols2">
+                            <li><code>.scale<span class="digit">D</span></code></li>
+                            <li><code>.rotate<span class="angle">A</span></code></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="fs18">scrollbar</h2>
+                        <ul class="xls xm xp og25">
+                            <li><code>.scrollbar-none</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fs18">display</h2>
+                <ul class="xls xm xp og25 cols4">
+                    <li><code>.xd</code></li>
+                    <li><code>.db</code></li>
+                    <li><code>.di</code></li>
+                    <li><code>.dl</code></li>
+                </ul>
+                <h2 class="fs18">position</h2>
+                <ul class="xls xm xp og25 cols4">
+                    <li><code>.stat</code></li>
+                    <li><code>.rel</code></li>
+                    <li><code>.abs</code></li>
+                    <li><code>.fix</code></li>
+                    <li><code>.box</code></li>
+                <!--
+                    <li><code>.box-b</code></li>
+                    <li><code>.box-br</code></li>
+                    <li><code>.box-tl</code></li>
+                -->
+                    <li><code>.t<span class="number">N</span></code></li>
+                    <li><code>.l<span class="number">N</span></code></li>
+                    <li><code>.r<span class="number">N</span></code></li>
+                    <li><code>.b<span class="number">N</span></code></li>
+                    <li><code>.xt</code></li>
+                    <li><code>.xl</code></li>
+                    <li><code>.xr</code></li>
+                    <li><code>.xb</code></li>
+                    <li><code>.z<span class="digit">D</span></code></li>
+                </ul>
+                <h2 class="fs18">list</h2>
+                <ul class="xls xm xp og25">
+                    <li><code>.xls</code></li>
+                </ul>
+                <h2 class="fs18">float</h2>
+                <ul class="xls xm xp og25 cols4">
+                    <li><code>.xf</code></li>
+                    <li><code>.fl</code></li>
+                    <li><code>.fr</code></li>
+                    <li><code>.cb</code></li>
+                    <li><code>.cl</code></li>
+                    <li><code>.cr</code></li>
+                <!--
+                    <li><code>.clearfix</code></li>
+                -->
+                    <li><code>.cf</code></li>
+                </ul>
+                <h2 class="fs18">overflow</h2>
+                <ul class="xls xm xp og25 cols4">
+                    <li><code>.oa</code></li>
+                    <li><code>.oh</code></li>
+                    <li><code>.os</code></li>
+                </ul>
+                <h2 class="fs18">opacity</h2>
+                <ul class="xls xm xp og25 cols2">
+                    <li><code>.o<span class="percent">P</span></code></li>
+                    <li><code>.xoutline</code></li>
+                    <li><code>.outline-red</code></li>
+                    <li><code>.og<span class="number">N</span></code></li>
+                    <li><code>.ig<span class="number">N</span></code></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fs18">size</h2>
+                <ul class="xls xm xp og25 cols3">
+                    <li><code>.bbox</code></li>
+                    <li><code>.cbox</code></li>
+                    <li><code>.w<span class="number">N</span></code></li>
+                    <li><code>.h<span class="number">N</span></code></li>
+                <!--
+                    .fit is a convinient method to write .w100p .h100p
+                    .fitN is a convinient method to write .wN .pN
+                -->
+                    <li><code>.fit</code></li>
+                    <li><code>.fit<span class="number">N</span></code></li>
+                    <li><code>.ex</code></li>
+                    <li><code>.ex<span class="digit">D</span></code></li>
+                    <li><code>.ex<span class="digit">D</span>x<span class="digit">D</span></code></li>
+                <!--
+                    <li><code>.fit25</code></li>
+                    <li><code>.fit50</code></li>
+                    <li><code>.fit25p</code></li>
+                    <li><code>.fit50p</code></li>
+                    <li><code>.fit75p</code></li>
+                -->
+                    <li><code>.min</code></li>
+                    <li><code>.max</code></li>
+                    <li><code>.min-w</code></li>
+                    <li><code>.min-h</code></li>
+                    <li><code>.max-w</code></li>
+                    <li><code>.max-h</code></li>
+                <!--
+                    <li><code>.min200</code></li>
+                    <li><code>.max800</code></li>
+                    <li><code>.max800x600</code></li>
+                    <li><code>.max50p</code></li>
+                    <li><code>.max50px75p</code></li>
+                    <li><code>.max100px50p</code></li>
+                -->
+                </ul>
+                <h2 class="fs18">margin</h2>
+                <ul class="xls xm xp og25 cols3">
+                    <li><code>.xm</code></li>
+                    <li><code>.ma</code></li>
+                    <li><code>.m<span class="number">N</span></code></li>
+                    <li><code>.mv<span class="number">N</span></code></li>
+                    <li><code>.mh<span class="number">N</span></code></li>
+                    <li><code>.ml<span class="number">N</span></code></li>
+                    <li><code>.mr<span class="number">N</span></code></li>
+                    <li><code>.mt<span class="number">N</span></code></li>
+                    <li><code>.mb<span class="number">N</span></code></li>
+                </ul>
+                <h2 class="fs18">padding</h2>
+                <ul class="xls xm xp og25 cols4">
+                    <li><code>.xp</code></li>
+                    <li><code>.p<span class="number">N</span></code></li>
+                    <li><code>.pv<span class="number">N</span></code></li>
+                    <li><code>.ph<span class="number">N</span></code></li>
+                    <li><code>.pl<span class="number">N</span></code></li>
+                    <li><code>.pr<span class="number">N</span></code></li>
+                    <li><code>.pt<span class="number">N</span></code></li>
+                    <li><code>.pb<span class="number">N</span></code></li>
+                </ul>
+                <h2 class="fs18">border</h2>
+                <ul class="xls xm xp og25 cols2">
+                    <li><code>.border-none</code></li>
+                    <li><code>.xbr</code></li>
+                    <li><code>.brN</code></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2 class="fs18">table</h2>
+                <ul class="xls xm xp og25 cols2">
+                    <li><code>.tbody-p5</code></li>
+                    <li><code>.tbody-pg6</code></li>
+                    <li><code>.tbody-ph5</code></li>
+                    <li><code>.td-mig5</code></li>
+                    <li><code>.tr-ph5</code></li>
+                    <li><code>.tr-pig5</code></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2 class="fs18">background</h2>
+                <ul class="xls xm xp og25 cols3">
+                    <li><code>.xbg</code></li>
+                    <li><code>.background-cover</code></li>
+                    <li><code>.black</code></li>
+                    <li><code>.gray</code></li>
+                    <li><code>.silver</code></li>
+                    <li><code>.white</code></li>
+                    <li><code>.red</code></li>
+                    <li><code>.green</code></li>
+                    <li><code>.blue</code></li>
+                    <li><code>.yellow</code></li>
+                    <li><code>.cyan</code></li>
+                    <li><code>.rainbow</code></li>
+                    <li><code>.gray-rainbow</code></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!--
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"></script>
+-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.js"></script>
+
+<script>
+(function () {
+    new Vue({
+        el: '#app',
+        data: {
+            sections: [
+                {title: 'align'},
+                {title: 'background'},
+                {title: 'border'},
+                {title: 'box'},
+                {title: 'button'},
+                {title: 'cursor'},
+                {title: 'display'},
+                {title: 'expand'},
+                {title: 'flex'},
+                {title: 'float'},
+                {title: 'font'},
+                {title: 'hsplit'},
+                {title: 'list'},
+                {title: 'margin'},
+                {title: 'opacity'},
+                {title: 'outline'},
+                {title: 'overflow'},
+                {title: 'padding'},
+                {title: 'pointer-events'},
+                {title: 'position'},
+                {title: 'scrollbar'},
+                {title: 'size'},
+                {title: 'text'},
+                {title: 'theme'},
+                {title: 'transform'},
+                {title: 'user-select'},
+                {title: 'zindex'},
+            ],
+            sections_search: ''
+        },
+        computed: {
+            sections_match: function () {
+                const s = this.sections_search.toLowerCase();
+                return this.sections.filter(v => v.title.toLowerCase().includes(s));
+            }
+        }
+    });
+})();
+</script>
+
+</body>
+</html>
