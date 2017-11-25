@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title of the page</title>
-    <link href="../demo.css?<?php echo uniqid() ?>" type="text/css" rel="stylesheet">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
 </head>
 <body class="no-scrollbars">
 
