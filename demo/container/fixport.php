@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Title of the Page</title>
-    <link href="../demo.css?t=<?php echo time() ?>" type="text/css" rel="stylesheet">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
     <style type="text/css">
     body {
         width: 100%;
