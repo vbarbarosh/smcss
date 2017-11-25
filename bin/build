@@ -10,7 +10,6 @@ script=`realpath $0`
 scriptdir=`dirname $script`
 scriptname=`basename $script`
 
-d=`cd $scriptdir; git rev-parse --show-toplevel`
+cd $scriptdir/..
 
-cd $d
 npm run build
