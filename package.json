@@ -23,8 +23,5 @@
     "postcss-cli": "^4.1.0",
     "power-assert": "^1.4.2",
     "run-sequence": "^1.1.2"
-  },
-  "dependencies": {
-    "postcss-import": "^7.0.0"
   }
 }
