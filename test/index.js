@@ -1,5 +1,3 @@
-require('mocha-generators').install();
-
 var Promise = require('bluebird'),
     assert = require('power-assert'),
     node_sass = require('node-sass');
@@ -351,15 +349,15 @@ describe('smcss', function () {
 
     this.timeout(10000);
 
-    it('basic', function* () {
-        const s = yield scss('.foo { color: red; }');
+    it('basic', async function () {
+        const s = await scss('.foo { color: red; }');
         assert(s == '.foo { color: red; }\n');
     });
 
-    it('table', function* () {
+    it('table', async function() {
         for (let a = Object.keys(table); a.length; ) {
             const expr = a.shift();
-            const s = yield smcss(expr);
+            const s = await smcss(expr);
             const s2 = table[expr];
             assert(expr && s == s2);
         }
