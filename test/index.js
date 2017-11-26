@@ -257,7 +257,7 @@ const table = {
     'abs-br-ct': '.foo { position: absolute; bottom: 0; right: 0; transform: translate(50%, 100%); }',
     'abs-br-tr': '.foo { position: absolute; bottom: 100%; right: 0; }',
     'fix': '.foo { position: fixed; }',
-    'fix-center': '.foo { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }',
+    'fix-c': '.foo { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }',
     'tlbr': '.foo { top: 0; left: 0; right: 0; bottom: 0; }',
     'tlbr5': '.foo { top: 5px; left: 5px; right: 5px; bottom: 5px; }',
     't5': '.foo { top: 5px; }',
