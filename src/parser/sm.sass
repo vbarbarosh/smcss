@@ -1,3 +1,18 @@
 @mixin sm($str)
   @each $expr in str-split($str, ' ')
     @include smcss($expr)
+
+@mixin smx($str)
+  @each $expr in str-split($str, ' ')
+    .#{$expr}
+      @include sm($expr)
+
+@mixin smx-direct($str)
+  @each $expr in str-split($str, ' ')
+    > .#{$expr}
+      @include sm($expr)
+
+@mixin smx-amp($str)
+  @each $expr in str-split($str, ' ')
+    &.#{$expr}
+      @include sm($expr)
