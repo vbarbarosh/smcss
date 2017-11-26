@@ -347,20 +347,18 @@ const table = {
 
 describe('smcss', function () {
 
-    this.timeout(10000);
-
     it('basic', async function () {
         const s = await scss('.foo { color: red; }');
         assert(s == '.foo { color: red; }\n');
     });
 
-    it('table', async function() {
-        for (let a = Object.keys(table); a.length; ) {
-            const expr = a.shift();
+    for (let a = Object.keys(table); a.length; ) {
+        const expr = a.shift();
+        it(expr, async function () {
             const s = await smcss(expr);
             const s2 = table[expr];
             assert(expr && s == s2);
-        }
-    });
+        });
+    }
 
 });
