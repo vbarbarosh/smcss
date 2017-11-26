@@ -71,124 +71,124 @@ h2
     background: yellow
 
 // align
-@include smcss-export(l, r, c, j, vm, vt, vb)
+@include sm-export('l r c j vm vt vb')
 
 // background
-@include smcss-export(xbg, black, silver, white, red, green, blue, yellow, cyan, checkerboard, rainbow)
+@include sm-export('xbg black silver white red green blue yellow cyan checkerboard rainbow')
 
 // border
-@include smcss-export(xborder, border, dashed)
-@include smcss-export(xbr, br3, br5, br100p, br999)
+@include sm-export('xborder border dashed')
+@include sm-export('xbr br3 br5 br100p br999')
 
 // box
-@include smcss-export(cbox, bbox)
+@include sm-export('cbox bbox')
 
 // button
-@include smcss-export(xbutton)
+@include sm-export('xbutton')
 
 // cursor
-@include smcss-export(cursor-alias, cursor-all-scroll, cursor-auto, cursor-cell, cursor-col-resize, cursor-context-menu, cursor-copy, cursor-crosshair, cursor-default, cursor-e-resize, cursor-ew-resize, cursor-help, cursor-inherit, cursor-initial, cursor-move, cursor-n-resize, cursor-ne-resize, cursor-nesw-resize, cursor-no-drop, cursor-none, cursor-not-allowed, cursor-ns-resize, cursor-nw-resize, cursor-nwse-resize, cursor-pointer, cursor-progress, cursor-row-resize, cursor-s-resize, cursor-se-resize, cursor-sw-resize, cursor-text, cursor-vertical-text, cursor-w-resize, cursor-wait)
+@include sm-export('cursor-alias cursor-all-scroll cursor-auto cursor-cell cursor-col-resize cursor-context-menu cursor-copy cursor-crosshair cursor-default cursor-e-resize cursor-ew-resize cursor-help cursor-inherit cursor-initial cursor-move cursor-n-resize cursor-ne-resize cursor-nesw-resize cursor-no-drop cursor-none cursor-not-allowed cursor-ns-resize cursor-nw-resize cursor-nwse-resize cursor-pointer cursor-progress cursor-row-resize cursor-s-resize cursor-se-resize cursor-sw-resize cursor-text cursor-vertical-text cursor-w-resize cursor-wait')
 
 // display
-@include smcss-export(xd, db, di, dl, dt, dc)
+@include sm-export('xd db di dl dt dc')
 
 // expand
-@include smcss-export(expand-1-1, expand-1-2, expand-1-3, expand-1-4, expand-2-1, expand-2-3, expand-2-4)
+@include sm-export('expand-1-1 expand-1-2 expand-1-3 expand-1-4 expand-2-1 expand-2-3 expand-2-4')
 
 // flex
-@include smcss-export(flex-row, flex-row-center, flex-row-fluid, flex-col, flex-col-center, flex-col-fluid, flex-wrap, flex-nowrap, flex-wrap-r, flex-center, flex-align-start, flex-align-end, flex-align-center, flex-align-baseline, flex-align-stretch, flex-justify-start, flex-justify-end, flex-justify-center, flex-justify-between, flex-justify-around, flex-grow, flex-nogrow, flex-shrink, flex-noshrink, flex-fluid)
+@include sm-export('flex-row flex-row-center flex-row-fluid flex-col flex-col-center flex-col-fluid flex-wrap flex-nowrap flex-wrap-r flex-center flex-align-start flex-align-end flex-align-center flex-align-baseline flex-align-stretch flex-justify-start flex-justify-end flex-justify-center flex-justify-between flex-justify-around flex-grow flex-nogrow flex-shrink flex-noshrink flex-fluid')
 
 // float
-@include smcss-export(xf, fl, fr, xc, cb, cl, cr, clearfix, floats)
+@include sm-export('xf fl fr xc cb cl cr clearfix floats')
 
 // font
-@include smcss-export(xfs, fs12, fs13, fs14, fs15)
-@include smcss-export(lh0)
+@include sm-export('xfs fs12 fs13 fs14 fs15')
+@include sm-export('lh0')
 
 // hsplit
-@include smcss-export(hsplit, vsplit)
+@include sm-export('hsplit vsplit')
 
 // list
-@include smcss-export(xls)
+@include sm-export('xls')
 
 // margin and margin groups
-@include smcss-export(ma)
-@include smcss-export(xm, xml, xmr, xmt, xmb)
+@include sm-export('ma')
+@include sm-export('xm xml xmr xmt xmb')
 
-@include smcss-export(m5, m10, m15, m20, m25, m50)
-@include smcss-export(mv5, mv10, mv15, mv20, mv25, mv50)
-@include smcss-export(mh5, mh10, mh15, mh20, mh25, mh50)
-@include smcss-export(mta, mt10, mt10n, mt50)
-@include smcss-export(ml10, ml10n)
-@include smcss-export(mg5, mg10, mg20)
-@include smcss-export(mi5, mi10, mi20)
+@include sm-export('m5 m10 m15 m20 m25 m50')
+@include sm-export('mv5 mv10 mv15 mv20 mv25 mv50')
+@include sm-export('mh5 mh10 mh15 mh20 mh25 mh50')
+@include sm-export('mta mt10 mt10n mt50')
+@include sm-export('ml10 ml10n')
+@include sm-export('mg5 mg10 mg20')
+@include sm-export('mi5 mi10 mi20')
 
 // opacity
-@include smcss-export(xo, o25, o50, o75, o100)
+@include sm-export('xo o25 o50 o75 o100')
 
 // outline
-@include smcss-export(xoutline, outline)
+@include sm-export('xoutline outline')
 
 // overflow
-@include smcss-export(oa, oh, os)
+@include sm-export('oa oh os')
 
 // padding and padding groups
-@include smcss-export(pa)
-@include smcss-export(xp, xpl, xpr, xpt, xpb)
-@include smcss-export(p5)
-@include smcss-export(pt10, pl10)
-@include smcss-export(ph15)
-@include smcss-export(pg5, pg10, pg20)
-@include smcss-export(pi5, pi10, pi20)
+@include sm-export('pa')
+@include sm-export('xp xpl xpr xpt xpb')
+@include sm-export('p5')
+@include sm-export('pt10 pl10')
+@include sm-export('ph15')
+@include sm-export('pg5 pg10 pg20')
+@include sm-export('pi5 pi10 pi20')
 
 // position
-@include smcss-export(stat, rel, fix)
-@include smcss-export(abs, abs-c, abs-cr, abs-cr-cl, abs-cl, abs-cl-cr, abs-ct, abs-cb, abs-cb-ct, abs-tl, abs-tl-br, abs-tl-tr, abs-tr, abs-bl, abs-bl-ct, abs-br, abs-br-ct, abs-br-tr)
-@include smcss-export(tlbr, tlbr5, tlbr10)
-@include smcss-export(t5, l5, b5, r5, ra, la, ba, ra)
+@include sm-export('stat rel fix')
+@include sm-export('abs abs-c abs-cr abs-cr-cl abs-cl abs-cl-cr abs-ct abs-cb abs-cb-ct abs-tl abs-tl-br abs-tl-tr abs-tr abs-bl abs-bl-ct abs-br abs-br-ct abs-br-tr')
+@include sm-export('tlbr tlbr5 tlbr10')
+@include sm-export('t5 l5 b5 r5 ra la ba ra')
 
 // scrollbar
-@include smcss-export(no-scrollbars)
+@include sm-export('no-scrollbars')
 
 // shadow
-@include smcss-export(xbs)
-@include smcss-export(bs5, bs10, bs15, bs20, bs25)
-@include smcss-export(is5, is10, is15, is20, is25)
+@include sm-export('xbs')
+@include sm-export('bs5 bs10 bs15 bs20 bs25')
+@include sm-export('is5 is10 is15 is20 is25')
 
 // size
-@include smcss-export(wa, ww)
-@include smcss-export(ha, hh)
-@include smcss-export(w0, w5, w10, w25, w50, w100, w200, w500)
-@include smcss-export(h0, h5, h10, h25, h50, h100, h200)
-@include smcss-export(w50p, h75p)
-@include smcss-export(h50p, w75p)
-@include smcss-export(min100, min200)
-@include smcss-export(max100, max200)
-@include smcss-export(max-w200)
-@include smcss-export(max-h200)
-@include smcss-export(min800x600)
-@include smcss-export(max800x600)
-@include smcss-export(min-w200)
-@include smcss-export(min-h200)
+@include sm-export('wa ww')
+@include sm-export('ha hh')
+@include sm-export('w0 w5 w10 w25 w50 w100 w200 w500')
+@include sm-export('h0 h5 h10 h25 h50 h100 h200')
+@include sm-export('w50p h75p')
+@include sm-export('h50p w75p')
+@include sm-export('min100 min200')
+@include sm-export('max100 max200')
+@include sm-export('max-w200')
+@include sm-export('max-h200')
+@include sm-export('min800x600')
+@include sm-export('max800x600')
+@include sm-export('min-w200')
+@include sm-export('min-h200')
 
 // text (wrapping, decorations, and transformations)
-@include smcss-export(nowrap)
-@include smcss-export(x, u, o, s)
-@include smcss-export(xx, uc, lc, cc)
+@include sm-export('nowrap')
+@include sm-export('x u o s')
+@include sm-export('xx uc lc cc')
 
 // theme
-@include smcss-export(theme-navy, theme-blue, theme-aqua, theme-teal, theme-olive, theme-green, theme-lime, theme-yellow, theme-orange, theme-red, theme-maroon, theme-fuchsia, theme-purple, theme-black, theme-gray, theme-silver)
+@include sm-export('theme-navy theme-blue theme-aqua theme-teal theme-olive theme-green theme-lime theme-yellow theme-orange theme-red theme-maroon theme-fuchsia theme-purple theme-black theme-gray theme-silver')
 
-// transform (rotation and scale)
-@include smcss-export(scale20)
-@include smcss-export(rotate45, rotate90, rotate180, rotate270)
+// transform ('rotation and scale')
+@include sm-export('scale20')
+@include sm-export('rotate45 rotate90 rotate180 rotate270')
 
 // user-select
-@include smcss-export(no-user-select)
+@include sm-export('no-user-select')
 
 // zindex
-@include smcss-export(z1, z2, z1000)
-@include smcss-export(z1n, z2n, z1000n)
+@include sm-export('z1 z2 z1000')
+@include sm-export('z1n z2n z1000n')
 
 // container/grid
-@include smcss-export(grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9, grid10)
+@include sm-export('grid2 grid3 grid4 grid5 grid6 grid7 grid8 grid9 grid10')
