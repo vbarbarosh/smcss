@@ -1,6 +1,6 @@
-var Promise = require('bluebird'),
-    assert = require('power-assert'),
-    node_sass = require('node-sass');
+const Promise = require('bluebird');
+const assert = require('power-assert');
+const node_sass = require('node-sass');
 
 function scss(s)
 {
