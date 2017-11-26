@@ -1,4 +1,4 @@
-/build
-/node_modules
-/src/static/bower_components/
 .sass-cache
+build
+node_modules
+src/template/package-lock.json

@@ -2,7 +2,7 @@
   "name": "smcss",
   "version": "0.0.0",
   "description": "A CSS Framework for Prototyping",
-  "main": "src/index.sass",
+  "main": "src/smcss.sass",
   "scripts": {
     "build": "rm -rf build && sass -r sass-css-importer demo/demo.sass | postcss -o demo/demo.css",
     "test": "mocha --bail --require intelli-espower-loader"
