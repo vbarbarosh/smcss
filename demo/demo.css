@@ -19,21 +19,6 @@ h2 {
   .theme-white .active {
     background: yellow; }
 
-.foo .l {
-  text-align: left; }
-.foo .r {
-  text-align: right; }
-.foo .c {
-  text-align: center; }
-.foo .j {
-  text-align: justify; }
-.foo .vm {
-  vertical-align: middle; }
-.foo .vt {
-  vertical-align: top; }
-.foo .vb {
-  vertical-align: bottom; }
-
 .l {
   text-align: left; }
 
