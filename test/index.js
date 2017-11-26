@@ -9,12 +9,7 @@ function scss(s)
     return new Promise(function (resolve, reject) {
         const options = {data: s, outputStyle: 'compact', includePaths: [__dirname]};
         node_sass.render(options, function (error, result) {
-            if (error) {
-                reject(error);
-            }
-            else {
-                resolve(result.css.toString());
-            }
+            error ? reject(error) : resolve(result.css.toString());
         });
     });
 }
