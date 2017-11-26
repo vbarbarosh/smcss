@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title of the Page</title>
+    <link href="demo.css" type="text/css" rel="stylesheet">
+    <!-- {{{ -->
+    <style type="text/css">
+    .og25 {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+    }
+    .thumb {
+        position: absolute;
+        bottom: -45px;
+        right: -45px;
+        width: 50px;
+        height: 50px;
+        background: #f88;
+        cursor: move;
+        border-radius: 999px;
+    }
+    </style>
+    <!-- }}} -->
+    <style type="text/css">
+    </style>
+</head>
+<body class="xcheckerboard">
+
+<app>
+    <p class="ww hh xm flex-row-center"><span class="red">Put your content here</span></p>
+</app>
+
+<!-- {{{ -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+/**
+ * dd(event, {
+ *     translate: function (clientX, clientY) {...},
+ *     updateContext: function (context) {...},
+ *     begin: function ({x1, y1, x2, y2}) {...},
+ *     end: function ({x1, y1, x2, y2}) {...},
+ *     move: function ({x1, y1, x2, y2, dx, dy}) {...}
+ * })
+ */
+function dd(inputEvent, options)
+{
+    var initiator = inputEvent.which,
+        context = {},
+        translate = options.translate || translateClient,
+        listeners = {mousemove: move, mouseup: end};
+
+    begin(inputEvent);
+
+    function translateClient(clientX, clientY)
+    {
+        return {x: clientX, y: clientY};
+    }
+
+    function updateContext(event)
+    {
+        var m = translate(event.clientX, event.clientY);
+        if (typeof context.x1 === 'undefined') {
+            context.x1 = m.x;
+            context.y1 = m.y;
+        }
+        context.x2 = m.x;
+        context.y2 = m.y;
+        context.dx = context.x2 - context.x1;
+        context.dy = context.y2 - context.y1;
+        context.event = event;
+        if (typeof options.updateContext === 'function') {
+            options.updateContext(context);
+        }
+    }
+
+    function begin(event)
+    {
+        jQuery(document).on(listeners);
+        updateContext(event || {});
+        if (typeof options.begin === 'function') {
+            options.begin(context);
+        }
+    }
+
+    function end(event)
+    {
+        jQuery(document).off(listeners);
+        if (typeof options.end === 'function') {
+            updateContext(event);
+            options.end(context);
+        }
+    }
+
+    function move(event)
+    {
+        var update = false;
+        if (typeof options.move === 'function') {
+            updateContext(event);
+            update = true;
+            options.move(context);
+        }
+        // doesn't work in Safari
+        // if (event.buttons != 1) { end(event); return; }
+        if ((event.buttons !== undefined && (event.buttons & initiator) != initiator) || (event.which !== initiator)) {
+            if (!update) {
+                updateContext(event);
+            }
+            end(event);
+        }
+    }
+}
+</script>
+<script id="templ-app" type="text/templ">
+    <div v-bind:style="style" class="fix tlbr w500 white ma mv25 og25">
+        <div v-on:mousedown="dd" class="thumb"></div>
+        <slot>
+            <p class="ww hh xm flex-row-center">Put your content here</p>
+        </slot>
+    </div>
+</script>
+<script type="text/javascript">
+    Vue.component('app', {
+        template: '#templ-app',
+        data: function () {
+            return {
+                w: 500,
+                h: 300
+            };
+        },
+        computed: {
+            style: function () {
+                return {width: this.w + 'px', height: this.h + 'px'};
+            }
+        },
+        methods: {
+            dd: function (event) {
+                var w = this.w,
+                    h = this.h,
+                    _this = this;
+                event.preventDefault();
+                dd(event, {
+                    move: function (context) {
+                        _this.w = w + context.dx*2;
+                        _this.h = h + context.dy;
+                    }
+                });
+            }
+        }
+    });
+    new Vue({el: 'app'});
+</script>
+<!-- }}} -->
+
+</body>
+</html>
+<!-- vim: set foldmethod=marker : -->
