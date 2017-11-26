@@ -2,6 +2,7 @@
   @each $expr in str-split($str, ' ')
     @include smcss($expr)
 
+// export (what about smc for classes?)
 @mixin smx($str)
   @each $expr in str-split($str, ' ')
     .#{$expr}
