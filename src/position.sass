@@ -7,11 +7,102 @@
 @mixin abs
     position: absolute
 
-@mixin abs-center
+@mixin abs-c
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+
+@mixin abs-cr
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(0, -50%)
+
+@mixin abs-cr-cl
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(100%, -50%)
+
+@mixin abs-cl
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(0, -50%)
+
+@mixin abs-cl-cr
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(-100%, -50%)
+
+@mixin abs-ct
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0)
+
+@mixin abs-cb
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 0)
+
+@mixin abs-cb-ct
+    position: absolute
+    top: 100%
+    left: 50%
+    transform: translate(-50%, 0%)
+
+@mixin abs-tl
+    position: absolute
+    top: 0
+    left: 0
+
+@mixin abs-tl-br
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(-100%, -100%)
+
+@mixin abs-tl-tr
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(-100%, 0)
+
+@mixin abs-tr
+    position: absolute
+    top: 0
+    right: 0
+
+@mixin abs-bl
+    position: absolute
+    bottom: 0
+    left: 0
+
+@mixin abs-bl-ct
+    position: absolute
+    bottom: 0
+    left: 0
+    transform: translate(-50%, 100%)
+
+@mixin abs-br
+    position: absolute
+    bottom: 0
+    right: 0
+
+@mixin abs-br-ct
+    position: absolute
+    bottom: 0
+    right: 0
+    transform: translate(50%, 100%)
+
+@mixin abs-br-tr
+    position: absolute
+    bottom: 100%
+    right: 0
 
 @mixin fix
     position: fixed
