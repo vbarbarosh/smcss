@@ -1,0 +1,3 @@
+@mixin sm($str)
+  @each $expr in str-split($str, ' ')
+    @include smcss($expr)

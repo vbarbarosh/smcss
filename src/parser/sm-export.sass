@@ -1,0 +1,4 @@
+@mixin sm-export($str)
+  @each $expr in str-split($str, ' ')
+    .#{$expr}
+      @include sm($expr)
