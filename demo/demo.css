@@ -855,6 +855,44 @@ h2 {
 .fix {
   position: fixed; }
 
+.fix-f {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.fix-t {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.fix-b {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.fix-l {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+.fix-r {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+.fix-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
 .abs {
   position: absolute; }
 
