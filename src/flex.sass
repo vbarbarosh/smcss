@@ -1,17 +1,46 @@
 // https://github.com/philipwalton/flexbugs
 // https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
 
+// iflex-row
+//     For consistency all `flex-` classes should have `iflex-` version (e.g.
+//     flex-center should have iflex-center, but they would be identical.)
+//     Verdict: too much unnecessary names.
+//
+// flex-irow
+//     For consistency only `flex-row` and `flex-col` should have `i` version:
+//     flex-irow|flex-irow-center|flex-irow-fluid
+//     flex-icol|flex-icol-center|flex-icol-fluid
+//
+// flex-rowi
+//     I prefer `flex-irow`
+//
+// flex-i-row and flex-row-i
+//     Unnecessary dash in names.
+
 // row
 @mixin flex-row
     display: flex
+    flex-direction: row
+
+@mixin flex-irow
+    display: inline-flex
     flex-direction: row
 
 @mixin flex-row-center
     @include flex-row
     @include flex-center
 
+@mixin flex-irow-center
+    @include flex-irow
+    @include flex-center
+
 @mixin flex-row-fluid
     @include flex-row
+    & > *
+        @include flex-fluid
+
+@mixin flex-irow-fluid
+    @include flex-irow
     & > *
         @include flex-fluid
 
@@ -20,12 +49,25 @@
     display: flex
     flex-direction: column
 
+@mixin flex-icol
+    display: inline-flex
+    flex-direction: column
+
 @mixin flex-col-center
     @include flex-col
     @include flex-center
 
+@mixin flex-icol-center
+    @include flex-icol
+    @include flex-center
+
 @mixin flex-col-fluid
     @include flex-col
+    & > *
+        @include flex-fluid
+
+@mixin flex-icol-fluid
+    @include flex-icol
     & > *
         @include flex-fluid
 

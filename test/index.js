@@ -114,11 +114,17 @@ const table = {
 
     // flex
     'flex-row': '.foo { display: flex; flex-direction: row; }',
+    'flex-irow': '.foo { display: inline-flex; flex-direction: row; }',
     'flex-row-center': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
+    'flex-irow-center': '.foo { display: inline-flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
     'flex-row-fluid': '.foo { display: flex; flex-direction: row; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'flex-irow-fluid': '.foo { display: inline-flex; flex-direction: row; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
     'flex-col': '.foo { display: flex; flex-direction: column; }',
+    'flex-icol': '.foo { display: inline-flex; flex-direction: column; }',
     'flex-col-center': '.foo { display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
+    'flex-icol-center': '.foo { display: inline-flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
     'flex-col-fluid': '.foo { display: flex; flex-direction: column; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'flex-icol-fluid': '.foo { display: inline-flex; flex-direction: column; }\n\n.foo > * { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
     'flex-wrap': '.foo { flex-wrap: wrap; }',
     'flex-nowrap': '.foo { flex-wrap: nowrap; }',
     'flex-wrap-r': '.foo { flex-wrap: wrap-reverse; }',

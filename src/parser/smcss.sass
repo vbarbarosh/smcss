@@ -170,16 +170,28 @@
       // flex
     @else if $expr == flex-row // flex-row
       @include flex-row
+    @else if $expr == flex-irow // flex-irow
+      @include flex-irow
     @else if $expr == flex-row-center // flex-row-center
       @include flex-row-center
+    @else if $expr == flex-irow-center // flex-irow-center
+      @include flex-irow-center
     @else if $expr == flex-row-fluid // flex-row-fluid
       @include flex-row-fluid
+    @else if $expr == flex-irow-fluid // flex-irow-fluid
+      @include flex-irow-fluid
     @else if $expr == flex-col // flex-col
       @include flex-col
+    @else if $expr == flex-icol // flex-icol
+      @include flex-icol
     @else if $expr == flex-col-center // flex-col-center
       @include flex-col-center
+    @else if $expr == flex-icol-center // flex-icol-center
+      @include flex-icol-center
     @else if $expr == flex-col-fluid // flex-col-fluid
       @include flex-col-fluid
+    @else if $expr == flex-icol-fluid // flex-icol-fluid
+      @include flex-icol-fluid
     @else if $expr == flex-wrap // flex-wrap
       @include flex-wrap
     @else if $expr == flex-nowrap // flex-nowrap
