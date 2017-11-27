@@ -32,6 +32,7 @@ xxxxxxxxxxxxxxxxxxxxxx
 
 ## Inline Groups
 
+```
 xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
 xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
 xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
@@ -39,3 +40,4 @@ xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
           |          |          |
           margin     margin     margin
           padding    padding    padding
+```
