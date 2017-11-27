@@ -14,7 +14,7 @@ function scss(s)
 
 function smcss(expr)
 {
-    return scss('@import "../src/index";\n.foo{@include smcss(' + expr + ');}')
+    return scss('@import "../index";\n.foo{@include smcss(' + expr + ');}')
         .then(v => v.trim());
 }
 
