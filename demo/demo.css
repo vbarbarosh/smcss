@@ -846,6 +846,9 @@ h2 {
 .pi20 > :nth-child(n+2) {
   padding-left: 20px; }
 
+.no-pointer-events {
+  pointer-events: none; }
+
 .stat {
   position: static; }
 
