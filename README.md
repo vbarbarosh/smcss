@@ -1,8 +1,9 @@
-# CSS for Prototyping — smcss
+A way to write CSS in one line
 
-CSS for Prototyping. The goal of this project is to eliminate css
-context (aka cascading) as much as possible. (Style for some element
-should be specified in just one place.)
+## Goals
+
+1. Eliminate CSS context (aka cascading) as much as possible.
+2. Make CSS terse
 
 ## Configuration
 
