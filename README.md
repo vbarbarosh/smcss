@@ -5,13 +5,11 @@ A way to write CSS in one line
 1. Eliminate CSS context (aka cascading) as much as possible.
 2. Make CSS terse
 
-## Configuration
+## Before Begin
 
     $ bin/configure
-
-## Building
-
     $ bin/build
+    $ bin/test
 
 ## Reference
 
