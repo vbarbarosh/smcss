@@ -257,6 +257,7 @@ const table = {
     'fix-l': '.foo { position: fixed; top: 0; left: 0; bottom: 0; }',
     'fix-r': '.foo { position: fixed; top: 0; right: 0; bottom: 0; }',
     'fix-c': '.foo { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }',
+    'fix-ct': '.foo { position: fixed; top: 0; left: 50%; transform: translate(-50%, 0); }',
     'tlbr': '.foo { top: 0; left: 0; right: 0; bottom: 0; }',
     'tlbr5': '.foo { top: 5px; left: 5px; right: 5px; bottom: 5px; }',
     't5': '.foo { top: 5px; }',

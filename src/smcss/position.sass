@@ -151,6 +151,12 @@
     left: 50%
     transform: translate(-50%, -50%)
 
+@mixin fix-ct
+    position: fixed
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0)
+
 @mixin tlbr($size: 0)
     @include eval-size(top, $size)
     @include eval-size(left, $size)
