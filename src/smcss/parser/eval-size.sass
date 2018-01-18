@@ -7,7 +7,7 @@
   @else if $size == h // hh
     #{$prop}: 100%
   @else if str-slice($size, -1) == p // w50p
-    #{$prop}: str-insert(str-slice($size, 1, -2), '%', -1)
+    #{$prop}: to-number(str-slice($size, 1, -2)) * 1%
   @else if str-slice($size, -1) == n // mt10n
     #{$prop}: to-number(str-insert(str-slice($size, 1, -2), '', -1)) * -1px
   @else if $size == '0'

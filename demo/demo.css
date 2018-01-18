@@ -96,7 +96,7 @@ h2 {
   border-radius: 5px; }
 
 .br100p {
-  border-radius: "100%"; }
+  border-radius: 100%; }
 
 .br999 {
   border-radius: 999px; }
@@ -1148,16 +1148,16 @@ h2 {
   height: 200px; }
 
 .w50p {
-  width: "50%"; }
+  width: 50%; }
 
 .h75p {
-  height: "75%"; }
+  height: 75%; }
 
 .h50p {
-  height: "50%"; }
+  height: 50%; }
 
 .w75p {
-  width: "75%"; }
+  width: 75%; }
 
 .min100 {
   min-width: 100px;
