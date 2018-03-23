@@ -544,6 +544,13 @@ h2 {
   .floats > * {
     float: left; }
 
+.floats .xf {
+  float: none; }
+.floats .fl {
+  float: left; }
+.floats .fr {
+  float: right; }
+
 .xfs {
   font-size: inherit; }
 
@@ -749,6 +756,24 @@ h2 {
 .ml10n {
   margin-left: -10px; }
 
+.ml50 {
+  margin-left: 50px; }
+
+.ml50n {
+  margin-left: -50px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.mr10n {
+  margin-right: -10px; }
+
+.mr50 {
+  margin-right: 50px; }
+
+.mr50n {
+  margin-right: -50px; }
+
 .mg5 > :nth-child(n+2) {
   margin-top: 5px; }
 
@@ -817,6 +842,9 @@ h2 {
 
 .p5 {
   padding: 5px; }
+
+.pl50 {
+  padding-left: 50px; }
 
 .pt10 {
   padding-top: 10px; }

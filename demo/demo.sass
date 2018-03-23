@@ -100,6 +100,9 @@ h2
 
 // float
 @include smx('xf fl fr xc cb cl cr clearfix floats')
+// XXX Should it be in *floats* mixin?
+.floats
+  @include smx('xf fl fr')
 
 // font
 @include smx('xfs fs12 fs13 fs14 fs15')
@@ -119,7 +122,8 @@ h2
 @include smx('mv5 mv10 mv15 mv20 mv25 mv50')
 @include smx('mh5 mh10 mh15 mh20 mh25 mh50')
 @include smx('mta mt10 mt10n mt50')
-@include smx('ml10 ml10n')
+@include smx('ml10 ml10n ml50 ml50n')
+@include smx('mr10 mr10n mr50 mr50n')
 @include smx('mg5 mg10 mg20')
 @include smx('mi5 mi10 mi20')
 
@@ -136,6 +140,7 @@ h2
 @include smx('pa')
 @include smx('xp xpl xpr xpt xpb')
 @include smx('p5')
+@include smx('pl50')
 @include smx('pt10 pl10')
 @include smx('ph15')
 @include smx('pg5 pg10 pg20')
