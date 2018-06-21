@@ -2,6 +2,10 @@
 
 A way to write CSS in one line
 
+## Installation
+
+    $ npm install --save vbarbarosh/smcss
+
 ## Before Begin
 
     $ bin/configure
