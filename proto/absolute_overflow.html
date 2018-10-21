@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title of the Page</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+    .container {
+        width: 500px;
+        height: 500px;
+        border: 5px solid red;
+        overflow: auto;
+    }
+    .item {
+        position: absolute;
+        left: 400px;
+        width: 200px;
+        height: 200px;
+        border: 5px solid green;
+    }
+    </style>
+</head>
+<body>
+
+<div id="container" class="container">
+    <div style="position: relative;">
+        <div id="item" class="item"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+setInterval(function () {
+    const elem = document.getElementById('container');
+    console.log(elem.scrollWidth, elem.scrollHeight, elem.offsetWidth, elem.offsetHeight);
+}, 250);
+</script>
+
+</body>
+</html>
