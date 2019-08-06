@@ -238,6 +238,7 @@ const table = {
     'abs-cl': '.foo { position: absolute; top: 50%; left: 0; transform: translate(0, -50%); }',
     'abs-cl-cr': '.foo { position: absolute; top: 50%; left: 0; transform: translate(-100%, -50%); }',
     'abs-ct': '.foo { position: absolute; top: 0; left: 50%; transform: translate(-50%, 0); }',
+    'abs-ct-cb': '.foo { position: absolute; top: 0; left: 50%; transform: translate(-50%, -100%); }',
     'abs-cb': '.foo { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0); }',
     'abs-cb-ct': '.foo { position: absolute; top: 100%; left: 50%; transform: translate(-50%, 0%); }',
     'abs-t': '.foo { position: absolute; top: 0; left: 0; right: 0; }',
