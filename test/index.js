@@ -45,6 +45,16 @@ const table = {
 
     // border
     'xborder': '.foo { border: none; }',
+    'xborder-t': '.foo { border-top: none; }',
+    'xborder-l': '.foo { border-left: none; }',
+    'xborder-r': '.foo { border-right: none; }',
+    'xborder-b': '.foo { border-bottom: none; }',
+    'xborder-v': '.foo { border-top: none; border-bottom: none; }',
+    'xborder-h': '.foo { border-left: none; border-right: none; }',
+    'xborder-vl': '.foo { border-top: none; border-left: none; border-bottom: none; }',
+    'xborder-vr': '.foo { border-top: none; border-right: none; border-bottom: none; }',
+    'xborder-ht': '.foo { border-top: none; border-left: none; border-right: none; }',
+    'xborder-hb': '.foo { border-left: none; border-right: none; border-bottom: none; }',
     'border': '.foo { border: 1px solid currentColor; }',
     'dashed': '.foo { border: 1px dashed currentColor; }',
     'xbr': '.foo { border-radius: 0; }',

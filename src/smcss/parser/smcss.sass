@@ -63,6 +63,26 @@
       // border
     @else if $expr == xborder // xborder
       @include xborder
+    @else if $expr == xborder-t // xborder-t
+      @include xborder-t
+    @else if $expr == xborder-l // xborder-l
+      @include xborder-l
+    @else if $expr == xborder-r // xborder-r
+      @include xborder-r
+    @else if $expr == xborder-b // xborder-b
+      @include xborder-b
+    @else if $expr == xborder-v // xborder-v
+      @include xborder-v
+    @else if $expr == xborder-h // xborder-h
+      @include xborder-h
+    @else if $expr == xborder-vl // xborder-vl
+      @include xborder-vl
+    @else if $expr == xborder-vr // xborder-vr
+      @include xborder-vr
+    @else if $expr == xborder-ht // xborder-ht
+      @include xborder-ht
+    @else if $expr == xborder-hb // xborder-hb
+      @include xborder-hb
     @else if $expr == border // border
       @include border
     @else if $expr == dashed // dashed
