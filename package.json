@@ -4,7 +4,7 @@
   "description": "A CSS Framework for Prototyping",
   "main": "index.sass",
   "scripts": {
-    "build": "rm -rf build && sass demos/demo.sass | postcss -o demo/demo.css",
+    "build": "rm -rf build && sass demos/demo.sass | postcss -o demos/demo.css",
     "test": "mocha --bail --require intelli-espower-loader"
   },
   "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (http://github.com/vbarbarosh)",
