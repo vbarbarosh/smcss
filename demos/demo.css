@@ -108,6 +108,14 @@ h2 {
   border: none;
 }
 
+.border {
+  border: 1px solid currentColor;
+}
+
+.dashed {
+  border: 1px dashed currentColor;
+}
+
 .xborder-t {
   border-top: none;
 }
@@ -156,14 +164,6 @@ h2 {
   border-top: none;
   border-right: none;
   border-bottom: none;
-}
-
-.border {
-  border: 1px solid currentColor;
-}
-
-.dashed {
-  border: 1px dashed currentColor;
 }
 
 .xbr {
