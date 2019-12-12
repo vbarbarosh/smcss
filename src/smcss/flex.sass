@@ -44,6 +44,18 @@
     & > *
         @include flex-fluid
 
+//.flex-row-wrap
+//    @include sm('flex-row flex-wrap')
+//.flex-row-nowrap
+//    @include sm('flex-row flex-wrap')
+//
+//.flex-row-center-left
+//    @include sm('flex-row-center')
+//    justify-content: flex-start
+//.flex-row-center-right
+//    @include sm('flex-row-center')
+//    justify-content: flex-end
+
 // col
 @mixin flex-col
     display: flex
@@ -70,6 +82,19 @@
     @include flex-icol
     & > *
         @include flex-fluid
+
+//.flex-col-wrap
+//    @include sm('flex-col-center')
+//    align-items: flex-start
+//.flex-col-nowrap
+//    @include sm('flex-col-center')
+//    align-items: flex-start
+//.flex-col-center-left
+//    @include sm('flex-col-center')
+//    align-items: flex-start
+//.flex-col-center-right
+//    @include sm('flex-col-center')
+//    align-items: flex-end
 
 // wrap
 @mixin flex-wrap
