@@ -1,4 +1,4 @@
 /.sass-cache
 /build
 /node_modules
-/src/template/package-lock.json
+/src/templates/app/package-lock.json
