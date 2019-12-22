@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demos/demo.css" type="text/css" rel="stylesheet">
+    <style>
+    .sta-default {
+        color: #000;
+    }
+    .sta-default:any-link { /* any A, AREA, or LINK elements with href attribute */
+    }
+    .sta-default:link { /* non-visited A, AREA, or LINK elements */
+        text-decoration: none;
+    }
+    .sta-default:visited { /* visited A, AREA or LINK elements */
+        color: rgba(0, 255, 0);
+        text-decoration: dashed underline;
+    }
+    .sta-default:hover {
+        text-decoration: underline;
+    }
+    .sta-default:active {
+        border: 1px dashed;
+    }
+    .sta-default:focus {
+        box-shadow: 0 0 10px 0 #00f;
+    }
+    .sta-default:disabled {
+        opacity: 0.5;
+    }
+    table, tr, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    td {
+        padding: 5px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="w500 ma">
+        <h2>Links</h2>
+        <table>
+        <thead>
+        <tr>
+            <th>normal</th>
+            <th>hover</th>
+            <th>visited</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="20191223_003600-states.html" class="sta-default">normal</a></td>
+            <td><a href="20191223_003600-states.html" class="sta-default" disabled>normal</a></td>
+            <td><a href="xxx.html" class="sta-default">normal</a></td>
+        </tr>
+        <tr>
+            <td><button class="sta-default">button1</button></td>
+            <td><button class="sta-default" disabled>button1</button></td>
+            <td><button class="sta-default">button1</button></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
