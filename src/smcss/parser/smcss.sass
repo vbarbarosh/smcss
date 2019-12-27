@@ -392,60 +392,358 @@
       @include rel
     @else if $expr == abs // abs
       @include abs
-    @else if $expr == abs-c // abs-c
-      @include abs-c
-    @else if $expr == abs-cr // abs-cr
-      @include abs-cr
-    @else if $expr == abs-cr-cl // abs-cr-cl
-      @include abs-cr-cl
-    @else if $expr == abs-cl // abs-cl
-      @include abs-cl
-    @else if $expr == abs-cl-cr // abs-cl-cr
-      @include abs-cl-cr
-    @else if $expr == abs-ct // abs-ct
-      @include abs-ct
-    @else if $expr == abs-cb // abs-cb
-      @include abs-cb
-    @else if $expr == abs-cb-ct // abs-cb-ct
-      @include abs-cb-ct
-    @else if $expr == abs-t // abs-t
-      @include abs-t
-    @else if $expr == abs-ct-cb // abs-ct-cb
-      @include abs-ct-cb
-    @else if $expr == abs-tl // abs-tl
-      @include abs-tl
-    @else if $expr == abs-tl-br // abs-tl-br
-      @include abs-tl-br
-    @else if $expr == abs-tl-tr // abs-tl-tr
-      @include abs-tl-tr
-    @else if $expr == abs-tr // abs-tr
-      @include abs-tr
-    @else if $expr == abs-bl // abs-bl
-      @include abs-bl
-    @else if $expr == abs-bl-ct // abs-bl-ct
-      @include abs-bl-ct
-    @else if $expr == abs-br // abs-br
-      @include abs-br
-    @else if $expr == abs-br-ct // abs-br-ct
-      @include abs-br-ct
-    @else if $expr == abs-br-tr // abs-br-tr
-      @include abs-br-tr
     @else if $expr == fix // fix
       @include fix
+    @else if $expr == sticky // sticky
+      @include sticky
+    @else if $expr == abs-f // abs-f
+        @include abs-f
+    @else if $expr == abs-t // abs-t
+        @include abs-t
+    @else if $expr == abs-b // abs-b
+        @include abs-b
+    @else if $expr == abs-l // abs-l
+        @include abs-l
+    @else if $expr == abs-r // abs-r
+        @include abs-r
+    @else if $expr == abs-c // abs-c
+        @include abs-c
+    @else if $expr == abs-tl // abs-tl
+        @include abs-tl
+    @else if $expr == abs-tl-c // abs-tl-c
+        @include abs-tl-c
+    @else if $expr == abs-tl-ct // abs-tl-ct
+        @include abs-tl-ct
+    @else if $expr == abs-tl-cb // abs-tl-cb
+        @include abs-tl-cb
+    @else if $expr == abs-tl-cl // abs-tl-cl
+        @include abs-tl-cl
+    @else if $expr == abs-tl-cr // abs-tl-cr
+        @include abs-tl-cr
+    @else if $expr == abs-tl-tr // abs-tl-tr
+        @include abs-tl-tr
+    @else if $expr == abs-tl-bl // abs-tl-bl
+        @include abs-tl-bl
+    @else if $expr == abs-tl-br // abs-tl-br
+        @include abs-tl-br
+    @else if $expr == abs-tr // abs-tr
+        @include abs-tr
+    @else if $expr == abs-tr-c // abs-tr-c
+        @include abs-tr-c
+    @else if $expr == abs-tr-ct // abs-tr-ct
+        @include abs-tr-ct
+    @else if $expr == abs-tr-cb // abs-tr-cb
+        @include abs-tr-cb
+    @else if $expr == abs-tr-cl // abs-tr-cl
+        @include abs-tr-cl
+    @else if $expr == abs-tr-cr // abs-tr-cr
+        @include abs-tr-cr
+    @else if $expr == abs-tr-tl // abs-tr-tl
+        @include abs-tr-tl
+    @else if $expr == abs-tr-bl // abs-tr-bl
+        @include abs-tr-bl
+    @else if $expr == abs-tr-br // abs-tr-br
+        @include abs-tr-br
+    @else if $expr == abs-bl // abs-bl
+        @include abs-bl
+    @else if $expr == abs-bl-c // abs-bl-c
+        @include abs-bl-c
+    @else if $expr == abs-bl-ct // abs-bl-ct
+        @include abs-bl-ct
+    @else if $expr == abs-bl-cb // abs-bl-cb
+        @include abs-bl-cb
+    @else if $expr == abs-bl-cl // abs-bl-cl
+        @include abs-bl-cl
+    @else if $expr == abs-bl-cr // abs-bl-cr
+        @include abs-bl-cr
+    @else if $expr == abs-bl-tl // abs-bl-tl
+        @include abs-bl-tl
+    @else if $expr == abs-bl-tr // abs-bl-tr
+        @include abs-bl-tr
+    @else if $expr == abs-bl-br // abs-bl-br
+        @include abs-bl-br
+    @else if $expr == abs-br // abs-br
+        @include abs-br
+    @else if $expr == abs-br-c // abs-br-c
+        @include abs-br-c
+    @else if $expr == abs-br-ct // abs-br-ct
+        @include abs-br-ct
+    @else if $expr == abs-br-cb // abs-br-cb
+        @include abs-br-cb
+    @else if $expr == abs-br-cl // abs-br-cl
+        @include abs-br-cl
+    @else if $expr == abs-br-cr // abs-br-cr
+        @include abs-br-cr
+    @else if $expr == abs-br-tl // abs-br-tl
+        @include abs-br-tl
+    @else if $expr == abs-br-tr // abs-br-tr
+        @include abs-br-tr
+    @else if $expr == abs-br-bl // abs-br-bl
+        @include abs-br-bl
+    @else if $expr == abs-c-ct // abs-c-ct
+        @include abs-c-ct
+    @else if $expr == abs-c-cb // abs-c-cb
+        @include abs-c-cb
+    @else if $expr == abs-c-cl // abs-c-cl
+        @include abs-c-cl
+    @else if $expr == abs-c-cr // abs-c-cr
+        @include abs-c-cr
+    @else if $expr == abs-c-tl // abs-c-tl
+        @include abs-c-tl
+    @else if $expr == abs-c-tr // abs-c-tr
+        @include abs-c-tr
+    @else if $expr == abs-c-bl // abs-c-bl
+        @include abs-c-bl
+    @else if $expr == abs-c-br // abs-c-br
+        @include abs-c-br
+    @else if $expr == abs-ct // abs-ct
+        @include abs-ct
+    @else if $expr == abs-ct-c // abs-ct-c
+        @include abs-ct-c
+    @else if $expr == abs-ct-cb // abs-ct-cb
+        @include abs-ct-cb
+    @else if $expr == abs-ct-cl // abs-ct-cl
+        @include abs-ct-cl
+    @else if $expr == abs-ct-cr // abs-ct-cr
+        @include abs-ct-cr
+    @else if $expr == abs-ct-tl // abs-ct-tl
+        @include abs-ct-tl
+    @else if $expr == abs-ct-tr // abs-ct-tr
+        @include abs-ct-tr
+    @else if $expr == abs-ct-bl // abs-ct-bl
+        @include abs-ct-bl
+    @else if $expr == abs-ct-br // abs-ct-br
+        @include abs-ct-br
+    @else if $expr == abs-cb // abs-cb
+        @include abs-cb
+    @else if $expr == abs-cb-c // abs-cb-c
+        @include abs-cb-c
+    @else if $expr == abs-cb-ct // abs-cb-ct
+        @include abs-cb-ct
+    @else if $expr == abs-cb-cb // abs-cb-cb
+        @include abs-cb-cb
+    @else if $expr == abs-cb-cl // abs-cb-cl
+        @include abs-cb-cl
+    @else if $expr == abs-cb-cr // abs-cb-cr
+        @include abs-cb-cr
+    @else if $expr == abs-cb-tl // abs-cb-tl
+        @include abs-cb-tl
+    @else if $expr == abs-cb-tr // abs-cb-tr
+        @include abs-cb-tr
+    @else if $expr == abs-cb-bl // abs-cb-bl
+        @include abs-cb-bl
+    @else if $expr == abs-cb-br // abs-cb-br
+        @include abs-cb-br
+    @else if $expr == abs-cl // abs-cl
+        @include abs-cl
+    @else if $expr == abs-cl-c // abs-cl-c
+        @include abs-cl-c
+    @else if $expr == abs-cl-ct // abs-cl-ct
+        @include abs-cl-ct
+    @else if $expr == abs-cl-cb // abs-cl-cb
+        @include abs-cl-cb
+    @else if $expr == abs-cl-cr // abs-cl-cr
+        @include abs-cl-cr
+    @else if $expr == abs-cl-tl // abs-cl-tl
+        @include abs-cl-tl
+    @else if $expr == abs-cl-tr // abs-cl-tr
+        @include abs-cl-tr
+    @else if $expr == abs-cl-bl // abs-cl-bl
+        @include abs-cl-bl
+    @else if $expr == abs-cl-br // abs-cl-br
+        @include abs-cl-br
+    @else if $expr == abs-cr // abs-cr
+        @include abs-cr
+    @else if $expr == abs-cr-c // abs-cr-c
+        @include abs-cr-c
+    @else if $expr == abs-cr-ct // abs-cr-ct
+        @include abs-cr-ct
+    @else if $expr == abs-cr-cb // abs-cr-cb
+        @include abs-cr-cb
+    @else if $expr == abs-cr-cl // abs-cr-cl
+        @include abs-cr-cl
+    @else if $expr == abs-cr-tl // abs-cr-tl
+        @include abs-cr-tl
+    @else if $expr == abs-cr-tr // abs-cr-tr
+        @include abs-cr-tr
+    @else if $expr == abs-cr-bl // abs-cr-bl
+        @include abs-cr-bl
+    @else if $expr == abs-cr-br // abs-cr-br
+        @include abs-cr-br
     @else if $expr == fix-f // fix-f
-      @include fix-f
+        @include fix-f
     @else if $expr == fix-t // fix-t
-      @include fix-t
+        @include fix-t
     @else if $expr == fix-b // fix-b
-      @include fix-b
+        @include fix-b
     @else if $expr == fix-l // fix-l
-      @include fix-l
+        @include fix-l
     @else if $expr == fix-r // fix-r
-      @include fix-r
+        @include fix-r
     @else if $expr == fix-c // fix-c
-      @include fix-c
+        @include fix-c
+    @else if $expr == fix-tl // fix-tl
+        @include fix-tl
+    @else if $expr == fix-tl-c // fix-tl-c
+        @include fix-tl-c
+    @else if $expr == fix-tl-ct // fix-tl-ct
+        @include fix-tl-ct
+    @else if $expr == fix-tl-cb // fix-tl-cb
+        @include fix-tl-cb
+    @else if $expr == fix-tl-cl // fix-tl-cl
+        @include fix-tl-cl
+    @else if $expr == fix-tl-cr // fix-tl-cr
+        @include fix-tl-cr
+    @else if $expr == fix-tl-tr // fix-tl-tr
+        @include fix-tl-tr
+    @else if $expr == fix-tl-bl // fix-tl-bl
+        @include fix-tl-bl
+    @else if $expr == fix-tl-br // fix-tl-br
+        @include fix-tl-br
+    @else if $expr == fix-tr // fix-tr
+        @include fix-tr
+    @else if $expr == fix-tr-c // fix-tr-c
+        @include fix-tr-c
+    @else if $expr == fix-tr-ct // fix-tr-ct
+        @include fix-tr-ct
+    @else if $expr == fix-tr-cb // fix-tr-cb
+        @include fix-tr-cb
+    @else if $expr == fix-tr-cl // fix-tr-cl
+        @include fix-tr-cl
+    @else if $expr == fix-tr-cr // fix-tr-cr
+        @include fix-tr-cr
+    @else if $expr == fix-tr-tl // fix-tr-tl
+        @include fix-tr-tl
+    @else if $expr == fix-tr-bl // fix-tr-bl
+        @include fix-tr-bl
+    @else if $expr == fix-tr-br // fix-tr-br
+        @include fix-tr-br
+    @else if $expr == fix-bl // fix-bl
+        @include fix-bl
+    @else if $expr == fix-bl-c // fix-bl-c
+        @include fix-bl-c
+    @else if $expr == fix-bl-ct // fix-bl-ct
+        @include fix-bl-ct
+    @else if $expr == fix-bl-cb // fix-bl-cb
+        @include fix-bl-cb
+    @else if $expr == fix-bl-cl // fix-bl-cl
+        @include fix-bl-cl
+    @else if $expr == fix-bl-cr // fix-bl-cr
+        @include fix-bl-cr
+    @else if $expr == fix-bl-tl // fix-bl-tl
+        @include fix-bl-tl
+    @else if $expr == fix-bl-tr // fix-bl-tr
+        @include fix-bl-tr
+    @else if $expr == fix-bl-br // fix-bl-br
+        @include fix-bl-br
+    @else if $expr == fix-br // fix-br
+        @include fix-br
+    @else if $expr == fix-br-c // fix-br-c
+        @include fix-br-c
+    @else if $expr == fix-br-ct // fix-br-ct
+        @include fix-br-ct
+    @else if $expr == fix-br-cb // fix-br-cb
+        @include fix-br-cb
+    @else if $expr == fix-br-cl // fix-br-cl
+        @include fix-br-cl
+    @else if $expr == fix-br-cr // fix-br-cr
+        @include fix-br-cr
+    @else if $expr == fix-br-tl // fix-br-tl
+        @include fix-br-tl
+    @else if $expr == fix-br-tr // fix-br-tr
+        @include fix-br-tr
+    @else if $expr == fix-br-bl // fix-br-bl
+        @include fix-br-bl
+    @else if $expr == fix-c-ct // fix-c-ct
+        @include fix-c-ct
+    @else if $expr == fix-c-cb // fix-c-cb
+        @include fix-c-cb
+    @else if $expr == fix-c-cl // fix-c-cl
+        @include fix-c-cl
+    @else if $expr == fix-c-cr // fix-c-cr
+        @include fix-c-cr
+    @else if $expr == fix-c-tl // fix-c-tl
+        @include fix-c-tl
+    @else if $expr == fix-c-tr // fix-c-tr
+        @include fix-c-tr
+    @else if $expr == fix-c-bl // fix-c-bl
+        @include fix-c-bl
+    @else if $expr == fix-c-br // fix-c-br
+        @include fix-c-br
     @else if $expr == fix-ct // fix-ct
-      @include fix-ct
+        @include fix-ct
+    @else if $expr == fix-ct-c // fix-ct-c
+        @include fix-ct-c
+    @else if $expr == fix-ct-cb // fix-ct-cb
+        @include fix-ct-cb
+    @else if $expr == fix-ct-cl // fix-ct-cl
+        @include fix-ct-cl
+    @else if $expr == fix-ct-cr // fix-ct-cr
+        @include fix-ct-cr
+    @else if $expr == fix-ct-tl // fix-ct-tl
+        @include fix-ct-tl
+    @else if $expr == fix-ct-tr // fix-ct-tr
+        @include fix-ct-tr
+    @else if $expr == fix-ct-bl // fix-ct-bl
+        @include fix-ct-bl
+    @else if $expr == fix-ct-br // fix-ct-br
+        @include fix-ct-br
+    @else if $expr == fix-cb // fix-cb
+        @include fix-cb
+    @else if $expr == fix-cb-c // fix-cb-c
+        @include fix-cb-c
+    @else if $expr == fix-cb-ct // fix-cb-ct
+        @include fix-cb-ct
+    @else if $expr == fix-cb-cb // fix-cb-cb
+        @include fix-cb-cb
+    @else if $expr == fix-cb-cl // fix-cb-cl
+        @include fix-cb-cl
+    @else if $expr == fix-cb-cr // fix-cb-cr
+        @include fix-cb-cr
+    @else if $expr == fix-cb-tl // fix-cb-tl
+        @include fix-cb-tl
+    @else if $expr == fix-cb-tr // fix-cb-tr
+        @include fix-cb-tr
+    @else if $expr == fix-cb-bl // fix-cb-bl
+        @include fix-cb-bl
+    @else if $expr == fix-cb-br // fix-cb-br
+        @include fix-cb-br
+    @else if $expr == fix-cl // fix-cl
+        @include fix-cl
+    @else if $expr == fix-cl-c // fix-cl-c
+        @include fix-cl-c
+    @else if $expr == fix-cl-ct // fix-cl-ct
+        @include fix-cl-ct
+    @else if $expr == fix-cl-cb // fix-cl-cb
+        @include fix-cl-cb
+    @else if $expr == fix-cl-cr // fix-cl-cr
+        @include fix-cl-cr
+    @else if $expr == fix-cl-tl // fix-cl-tl
+        @include fix-cl-tl
+    @else if $expr == fix-cl-tr // fix-cl-tr
+        @include fix-cl-tr
+    @else if $expr == fix-cl-bl // fix-cl-bl
+        @include fix-cl-bl
+    @else if $expr == fix-cl-br // fix-cl-br
+        @include fix-cl-br
+    @else if $expr == fix-cr // fix-cr
+        @include fix-cr
+    @else if $expr == fix-cr-c // fix-cr-c
+        @include fix-cr-c
+    @else if $expr == fix-cr-ct // fix-cr-ct
+        @include fix-cr-ct
+    @else if $expr == fix-cr-cb // fix-cr-cb
+        @include fix-cr-cb
+    @else if $expr == fix-cr-cl // fix-cr-cl
+        @include fix-cr-cl
+    @else if $expr == fix-cr-tl // fix-cr-tl
+        @include fix-cr-tl
+    @else if $expr == fix-cr-tr // fix-cr-tr
+        @include fix-cr-tr
+    @else if $expr == fix-cr-bl // fix-cr-bl
+        @include fix-cr-bl
+    @else if $expr == fix-cr-br // fix-cr-br
+        @include fix-cr-br
     @else if $expr == tlbr // tlbr
       @include tlbr
     @else if $a4 == tlbr // tlbr5
