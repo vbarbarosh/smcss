@@ -1,9 +1,14 @@
+// The following two snippets should look the same:
+//
+// * <button class="xbutton w100 h100 border red"></button>
+// * <div class="w100 h100 border red"></div>
 @mixin xbutton
-  background: none
-  color: inherit
-  font-size: inherit
+  box-sizing: content-box // `chrome: box-sizing: border-box;`
+  font-size: inherit // chrome: `padding: 1px 6px;`
+  color: inherit // chrome: `color: buttontext;`
   border: none
   padding: 0
+  background: none
   // &:hover
   // &:active
   // &:hover:active
