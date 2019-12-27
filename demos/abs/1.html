@@ -3,46 +3,219 @@
 <head>
     <meta charset="utf-8">
     <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+        .p5 { padding: 5px; }
+        .p10 { padding: 10px; }
+        .p15 { padding: 15px; }
+        .p20 { padding: 20px; }
+        .p30 { padding: 30px; }
+        .p50 { padding: 50px; }
+        .m30 { margin: 30px; }
+        .mg30 > :not(:first-child) { margin-top: 30px; }
+
+        .abs-c { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+        .abs-c-ct { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); }
+        .abs-c-cb { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+        .abs-c-cl { position: absolute; top: 50%; left: 0; transform: translate(-50%, -50%); }
+        .abs-c-cr { position: absolute; top: 50%; right: 0; transform: translate(-50%, -50%); }
+        .abs-c-cr { position: absolute; top: 50%; right: 0; transform: translate(50%, -50%); }
+        .abs-c-tl { position: absolute; top: 0; left: 0; transform: translate(-50%, -50%); }
+        .abs-c-tr { position: absolute; top: 0; right: 0; transform: translate(50%, -50%); }
+        .abs-c-bl { position: absolute; bottom: 0; left: 0; transform: translate(-50%, 50%); }
+        .abs-c-br { position: absolute; bottom: 0; right: 0; transform: translate(50%, 50%); }
+
+        .abs-ct { position: absolute; top: 0; left: 50%; transform: translate(-50%, 0); }
+        .abs-ct-c { position: absolute; top: 50%; left: 50%; transform: translate(-50%, 0); }
+        .abs-ct-cl { position: absolute; top: 50%; left: 0; transform: translate(-50%, 0); }
+        .abs-ct-cr { position: absolute; top: 50%; right: 0; transform: translate(50%, 0); }
+        .abs-ct-cb { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 100%); }
+        .abs-ct-tl { position: absolute; top: 0; left: 0; transform: translate(-50%, 0); }
+        .abs-ct-tr { position: absolute; top: 0; right: 0; transform: translate(50%, 0); }
+        .abs-ct-bl { position: absolute; bottom: 0; left: 0; transform: translate(-50%, 100%); }
+        .abs-ct-br { position: absolute; bottom: 0; right: 0; transform: translate(50%, 100%); }
+
+        .abs-tl { position: absolute; top: 0; left: 0; }
+        .abs-tl-c { position: absolute; top: 50%; left: 50%; }
+        .abs-tl-ct { position: absolute; top: 0; left: 50%; }
+        .abs-tl-cb { position: absolute; top: 100%; left: 50%; }
+        .abs-tl-cl { position: absolute; top: 50%; left: 0; }
+        .abs-tl-cr { position: absolute; top: 50%; right: 0; transform: translate(100%, 0); }
+        .abs-tl-tr { position: absolute; top: 0; right: 0; transform: translate(100%, 0); }
+        .abs-tl-br { position: absolute; top: 100%; right: 0; transform: translate(100%, 0); }
+        .abs-tl-bl { position: absolute; top: 100%; left: 0; }
+
+        .abs-tr { position: absolute; top: 0; right: 0; }
+        .abs-tr-c { position: absolute; top: 50%; left: 50%; transform: translate(-100%, 0); }
+        .abs-tr-ct { position: absolute; top: 0; left: 50%; transform: translate(-100%, 0); }
+        .abs-tr-cl { position: absolute; top: 50%; left: 0; transform: translate(-100%, 0); }
+        .abs-tr-cr { position: absolute; top: 50%; right: 0; }
+        .abs-tr-tl { position: absolute; top: 0; left: 0; transform: translate(-100%, 0); }
+        .abs-tr-bl { position: absolute; bottom: 0; left: 0; transform: translate(-100%, 100%); }
+        .abs-tr-cb { position: absolute; bottom: 0; left: 50%; transform: translate(-100%, 100%); }
+        .abs-tr-br { position: absolute; bottom: 0; right: 0; transform: translate(0, 100%); }
+
+        .abs-cl { position: absolute; top: 50%; left: 0; transform: translate(0, -50%); }
+        .abs-cl-c { position: absolute; top: 50%; left: 50%; transform: translate(0, -50%); }
+        .abs-cl-cr { position: absolute; top: 50%; right: 0; transform: translate(100%, -50%); }
+        .abs-cl-tl { position: absolute; top: 0; left: 0; transform: translate(0, -50%); }
+        .abs-cl-ct { position: absolute; top: 0; left: 50%; transform: translate(0, -50%); }
+        .abs-cl-tr { position: absolute; top: 0; right: 0; transform: translate(100%, -50%); }
+        .abs-cl-bl { position: absolute; bottom: 0; left: 0; transform: translate(0, 50%); }
+        .abs-cl-br { position: absolute; bottom: 0; right: 0; transform: translate(100%, 50%); }
+        .abs-cl-cb { position: absolute; bottom: 0; left: 50%; transform: translate(0, 50%); }
+
+        .abs-cr { position: absolute; top: 50%; right: 0; transform: translate(0, -50%); }
+        .abs-cr-c { position: absolute; top: 50%; left: 50%; transform: translate(-100%, -50%); }
+        .abs-cr-ct { position: absolute; top: 0; left: 50%; transform: translate(-100%, -50%); }
+        .abs-cr-cb { position: absolute; bottom: 0; left: 50%; transform: translate(-100%, 50%); }
+        .abs-cr-cl { position: absolute; top: 50%; left:  0; transform: translate(-100%, -50%); }
+        .abs-cr-tl { position: absolute; top: 0; left:  0; transform: translate(-100%, -50%); }
+        .abs-cr-tr { position: absolute; top: 0; right:  0; transform: translate(0, -50%); }
+        .abs-cr-bl { position: absolute; bottom: 0; left:  0; transform: translate(-100%, 50%); }
+        .abs-cr-br { position: absolute; bottom: 0; right:  0; transform: translate(0, 50%); }
+
+        .abs-bl { position: absolute; bottom: 0; left: 0; }
+        .abs-bl-c { position: absolute; top: 50%; left: 50%; transform: translate(0, -100%); }
+        .abs-bl-ct { position: absolute; top: 0; left: 50%; transform: translate(0, -100%); }
+        .abs-bl-cb { position: absolute; bottom: 0; left: 50%; }
+        .abs-bl-cl { position: absolute; top: 50%; left: 0; transform: translate(0, -100%); }
+        .abs-bl-cr { position: absolute; top: 50%; right: 0; transform: translate(100%, -100%); }
+        .abs-bl-tl { position: absolute; top: 0; left: 0; transform: translate(0, -100%); }
+        .abs-bl-tr { position: absolute; top: 0; right: 0; transform: translate(100%, -100%); }
+        .abs-bl-br { position: absolute; bottom: 0; right: 0; transform: translate(100%, 0); }
+
+        .abs-cb { position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); }
+        .abs-cb-c { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -100%); }
+        .abs-cb-ct { position: absolute; top: 0; left: 50%; transform: translate(-50%, -100%); }
+        .abs-cb-cb { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, -100%); }
+        .abs-cb-cl { position: absolute; top: 50%; left: 0; transform: translate(-50%, -100%); }
+        .abs-cb-cr { position: absolute; top: 50%; right: 0; transform: translate(50%, -100%); }
+        .abs-cb-tl { position: absolute; top: 0; left: 0; transform: translate(-50%, -100%); }
+        .abs-cb-tr { position: absolute; top: 0; right: 0; transform: translate(50%, -100%); }
+        .abs-cb-bl { position: absolute; bottom: 0; left: 0; transform: translate(-50%, 0); }
+        .abs-cb-br { position: absolute; bottom: 0; right: 0; transform: translate(50%, 0); }
+
+        .abs-br { position: absolute; bottom: 0; right: 0; }
+        .abs-br-c { position: absolute; top: 50%; left: 50%; transform: translate(-100%, -100%); }
+        .abs-br-ct { position: absolute; top: 0; left: 50%; transform: translate(-100%, -100%); }
+        .abs-br-cb { position: absolute; bottom: 0; left: 50%; transform: translate(-100%, 0); }
+        .abs-br-cl { position: absolute; top: 50%; left: 0; transform: translate(-100%, -100%); }
+        .abs-br-cr { position: absolute; top: 50%; right: 0; transform: translate(0, -100%); }
+        .abs-br-tl { position: absolute; top: 0; left: 0; transform: translate(-100%, -100%); }
+        .abs-br-tr { position: absolute; top: 0; right: 0; transform: translate(0, -100%); }
+        .abs-br-bl { position: absolute; bottom: 0; left: 0; transform: translate(-100%, 0); }
+        .abs-br-br { position: absolute; bottom: 0; right: 0; transform: translate(0, -100%); }
+
+        .transition { transition: all .5s; }
+    </style>
 </head>
 <body>
 
 <div id="app" class="mt50">
+
     <div class="fix-t z1 ph15 bs10 white">
-        <input v-model="width" class="ww" type="range" min="100" max="1200">
+        <input v-model="width" class="ww" type="range" min="10" max="1200">
     </div>
+
     <br>
     <br>
-    <div class="ma dashed bs10 red" v-bind:style="{width: width + 'px'}">
-        <div class="rel h200 fs13">
-            <div class="green w50 h50 flex-row-center abs-tl">abs-tl</div>
-            <div class="green w50 h50 flex-row-center abs-tr">abs-tr</div>
-            <div class="green w50 h50 flex-row-center abs-bl">abs-bl</div>
-            <div class="green w50 h50 flex-row-center abs-br">abs-br</div>
-            <div class="green w50 h50 flex-row-center abs-c">abs-c</div>
-            <div class="green w50 h50 flex-row-center abs-cl">abs-cl</div>
-            <div class="green w50 h50 flex-row-center abs-cr">abs-cr</div>
-            <div class="green w50 h50 flex-row-center abs-ct">abs-ct</div>
-            <div class="green w50 h50 flex-row-center abs-cb">abs-cb</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-tl-br">abs-tl-br</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-tl-tr">abs-tl-bl</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-cl-cr">abs-cl-cr</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-cr-cl">abs-cr-cl</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-cb-ct">abs-cb-ct</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-bl-ct">abs-bl-ct</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-br-ct">abs-br-ct</div>
-            <div class="yellow o50 w50 h50 flex-row-center abs-br-tr">abs-br-tr</div>
+
+    <div class="abs-cr">
+        <div class="flex-col-center p30 m30 mg30 dashed" style="background: rgba(0,0,0,0.1)">
+            <div class="w100 h100 green rel">
+                <button v-for="v in inner.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
+                    <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
+                </button>
+            </div>
+            <div class="w100 h100 blue rel">
+                <button v-for="v in outer.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
+                    <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
+                </button>
+            </div>
+            <p>{{ resulted_class }}</p>
+        </div>
+    </div>
+
+    <div class="ma mg20 bs10" v-bind:style="{width: px(width)}">
+        <div class="rel h200 fs13 blue dashed">
+            <div v-bind:class="resulted_class" class="green p10 flex-row-center transition">
+                {{ resulted_class }}
+                <div v-bind:class="inner.active.orig.preview" class="w5 h5 br999 black transition"></div>
+            </div>
+            <div v-bind:class="outer.active.orig.preview" class="w10 h10 br999 border transition"></div>
         </div>
     </div>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.5/vue.min.js" type="text/javascript"></script>
-<script type="text/javascript">
+<script>
+(function () {
+
+    function px(v) {
+        return v ? `${v}px` : 0;
+    }
+
+    class Checked
+    {
+        constructor(items) {
+            const _this = this;
+            this.items = items.map(function (orig) {
+                const tmp = {
+                    orig,
+                    check() {
+                        _this.active = tmp;
+                    },
+                    get is_checked() {
+                        return _this.active === tmp;
+                    }
+                };
+                return tmp;
+            });
+            this.active = this.items[0];
+        }
+    }
+
     new Vue({
         el: '#app',
         data: {
-            width: 500
-        }
+            width: 500,
+            inner: new Checked([
+                {preview: 'abs-c', name: 'c'},
+                {preview: 'abs-c-tl', name: 'tl'},
+                {preview: 'abs-c-tr', name: 'tr'},
+                {preview: 'abs-c-bl', name: 'bl'},
+                {preview: 'abs-c-br', name: 'br'},
+                {preview: 'abs-c-ct', name: 'ct'},
+                {preview: 'abs-c-cb', name: 'cb'},
+                {preview: 'abs-c-cl', name: 'cl'},
+                {preview: 'abs-c-cr', name: 'cr'},
+            ]),
+            outer: new Checked([
+                {preview: 'abs-c', name: 'c'},
+                {preview: 'abs-c-tl', name: 'tl'},
+                {preview: 'abs-c-tr', name: 'tr'},
+                {preview: 'abs-c-bl', name: 'bl'},
+                {preview: 'abs-c-br', name: 'br'},
+                {preview: 'abs-c-ct', name: 'ct'},
+                {preview: 'abs-c-cb', name: 'cb'},
+                {preview: 'abs-c-cl', name: 'cl'},
+                {preview: 'abs-c-cr', name: 'cr'},
+            ]),
+            active: null,
+        },
+        computed: {
+            resulted_class: function () {
+                const a = this.inner.active.orig.name;
+                const b = this.outer.active.orig.name;
+                return (a == b) ? `abs-${a}` : `abs-${a}-${b}`;
+            },
+        },
+        methods: {
+            px,
+        },
     });
+
+})();
 </script>
 
 </body>
