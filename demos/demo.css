@@ -26,6 +26,21 @@ h2 {
   background: yellow;
 }
 
+.xbutton {
+  box-sizing: content-box;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  background: none;
+}
+.xbutton:focus {
+  outline: none;
+}
+.xbutton::-moz-focus-inner {
+  border: none;
+}
+
 .l {
   text-align: left;
 }
@@ -224,20 +239,6 @@ h2 {
 
 .bbox {
   box-sizing: border-box;
-}
-
-.xbutton {
-  background: none;
-  color: inherit;
-  font-size: inherit;
-  border: none;
-  padding: 0;
-}
-.xbutton:focus {
-  outline: none;
-}
-.xbutton::-moz-focus-inner {
-  border: none;
 }
 
 .cursor-alias {
@@ -1190,8 +1191,687 @@ h2 {
   position: relative;
 }
 
+.abs {
+  position: absolute;
+}
+
 .fix {
   position: fixed;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.abs-f {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.abs-t {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.abs-b {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.abs-l {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.abs-r {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.abs-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.abs-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.abs-tl-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.abs-tl-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.abs-tl-cb {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+.abs-tl-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.abs-tl-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.abs-tl-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.abs-tl-bl {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.abs-tl-br {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.abs-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.abs-tr-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.abs-tr-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.abs-tr-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 100%);
+          transform: translate(-100%, 100%);
+}
+
+.abs-tr-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.abs-tr-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.abs-tr-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.abs-tr-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 100%);
+          transform: translate(-100%, 100%);
+}
+
+.abs-tr-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+.abs-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.abs-bl-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.abs-bl-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.abs-bl-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.abs-bl-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.abs-bl-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, -100%);
+          transform: translate(100%, -100%);
+}
+
+.abs-bl-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.abs-bl-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, -100%);
+          transform: translate(100%, -100%);
+}
+
+.abs-bl-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.abs-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.abs-br-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.abs-br-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.abs-br-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.abs-br-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.abs-br-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.abs-br-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.abs-br-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.abs-br-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.abs-c-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.abs-c-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.abs-c-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.abs-c-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.abs-c-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.abs-c-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.abs-c-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.abs-c-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.abs-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.abs-ct-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.abs-ct-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+}
+
+.abs-ct-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.abs-ct-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.abs-ct-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.abs-ct-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.abs-ct-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+}
+
+.abs-ct-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 100%);
+          transform: translate(50%, 100%);
+}
+
+.abs-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.abs-cb-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.abs-cb-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.abs-cb-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.abs-cb-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.abs-cb-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(50%, -100%);
+          transform: translate(50%, -100%);
+}
+
+.abs-cb-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.abs-cb-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -100%);
+          transform: translate(50%, -100%);
+}
+
+.abs-cb-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.abs-cb-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.abs-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.abs-cl-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.abs-cl-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.abs-cl-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.abs-cl-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+}
+
+.abs-cl-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.abs-cl-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+}
+
+.abs-cl-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.abs-cl-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
+}
+
+.abs-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.abs-cr-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.abs-cr-ct {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.abs-cr-cb {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 50%);
+          transform: translate(-100%, 50%);
+}
+
+.abs-cr-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.abs-cr-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.abs-cr-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.abs-cr-bl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 50%);
+          transform: translate(-100%, 50%);
+}
+
+.abs-cr-br {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
 }
 
 .fix-f {
@@ -1238,134 +1918,630 @@ h2 {
           transform: translate(-50%, -50%);
 }
 
-.abs {
-  position: absolute;
+.fix-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.abs-c {
-  position: absolute;
+.fix-tl-c {
+  position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
-.abs-cr {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-.abs-cr-cl {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
-}
-
-.abs-cl {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-.abs-cl-cr {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
-}
-
-.abs-ct {
-  position: absolute;
+.fix-tl-ct {
+  position: fixed;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
 }
 
-.abs-cb {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-
-.abs-cb-ct {
-  position: absolute;
+.fix-tl-cb {
+  position: fixed;
   top: 100%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
 }
 
-.abs-tl {
-  position: absolute;
-  top: 0;
+.fix-tl-cl {
+  position: fixed;
+  top: 50%;
   left: 0;
 }
 
-.abs-tl-br {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate(-100%, -100%);
-          transform: translate(-100%, -100%);
+.fix-tl-cr {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
 }
 
-.abs-tl-tr {
-  position: absolute;
+.fix-tl-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.fix-tl-bl {
+  position: fixed;
+  top: 100%;
+  left: 0;
+}
+
+.fix-tl-br {
+  position: fixed;
+  top: 100%;
+  right: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.fix-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.fix-tr-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.fix-tr-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.fix-tr-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 100%);
+          transform: translate(-100%, 100%);
+}
+
+.fix-tr-cl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.fix-tr-cr {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
+
+.fix-tr-tl {
+  position: fixed;
   top: 0;
   left: 0;
   -webkit-transform: translate(-100%, 0);
           transform: translate(-100%, 0);
 }
 
-.abs-tr {
-  position: absolute;
+.fix-tr-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 100%);
+          transform: translate(-100%, 100%);
+}
+
+.fix-tr-br {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+}
+
+.fix-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.fix-bl-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.fix-bl-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.fix-bl-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+}
+
+.fix-bl-cl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.fix-bl-cr {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, -100%);
+          transform: translate(100%, -100%);
+}
+
+.fix-bl-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.fix-bl-tr {
+  position: fixed;
   top: 0;
   right: 0;
+  -webkit-transform: translate(100%, -100%);
+          transform: translate(100%, -100%);
 }
 
-.abs-bl {
-  position: absolute;
+.fix-bl-br {
+  position: fixed;
+  right: 0;
   bottom: 0;
-  left: 0;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
 }
 
-.abs-bl-ct {
-  position: absolute;
+.fix-br {
+  position: fixed;
+  right: 0;
   bottom: 0;
+}
+
+.fix-br-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.fix-br-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.fix-br-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.fix-br-cl {
+  position: fixed;
+  top: 50%;
   left: 0;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.fix-br-cr {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.fix-br-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-100%, -100%);
+          transform: translate(-100%, -100%);
+}
+
+.fix-br-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.fix-br-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.fix-c-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.fix-c-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.fix-c-cl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.fix-c-cr {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.fix-c-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.fix-c-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.fix-c-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.fix-c-br {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.fix-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.fix-ct-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.fix-ct-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
   -webkit-transform: translate(-50%, 100%);
           transform: translate(-50%, 100%);
 }
 
-.abs-br {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.fix-ct-cl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
-.abs-br-ct {
-  position: absolute;
-  bottom: 0;
+.fix-ct-cr {
+  position: fixed;
+  top: 50%;
   right: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.fix-ct-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.fix-ct-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.fix-ct-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+}
+
+.fix-ct-br {
+  position: fixed;
+  right: 0;
+  bottom: 0;
   -webkit-transform: translate(50%, 100%);
           transform: translate(50%, 100%);
 }
 
-.abs-br-tr {
-  position: absolute;
-  bottom: 100%;
+.fix-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.fix-cb-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.fix-cb-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.fix-cb-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.fix-cb-cl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.fix-cb-cr {
+  position: fixed;
+  top: 50%;
   right: 0;
+  -webkit-transform: translate(50%, -100%);
+          transform: translate(50%, -100%);
+}
+
+.fix-cb-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.fix-cb-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -100%);
+          transform: translate(50%, -100%);
+}
+
+.fix-cb-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.fix-cb-br {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+.fix-cl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.fix-cl-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.fix-cl-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.fix-cl-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.fix-cl-cr {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+}
+
+.fix-cl-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.fix-cl-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+}
+
+.fix-cl-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.fix-cl-br {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
+}
+
+.fix-cr {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.fix-cr-c {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.fix-cr-ct {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.fix-cr-cb {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 50%);
+          transform: translate(-100%, 50%);
+}
+
+.fix-cr-cl {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.fix-cr-tl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.fix-cr-tr {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.fix-cr-bl {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-100%, 50%);
+          transform: translate(-100%, 50%);
+}
+
+.fix-cr-br {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
 }
 
 .tlbr {
@@ -1389,6 +2565,22 @@ h2 {
   bottom: 10px;
 }
 
+.ta {
+  top: auto;
+}
+
+.ba {
+  bottom: auto;
+}
+
+.la {
+  left: auto;
+}
+
+.ra {
+  right: auto;
+}
+
 .t5 {
   top: 5px;
 }
@@ -1403,22 +2595,6 @@ h2 {
 
 .r5 {
   right: 5px;
-}
-
-.ta {
-  top: auto;
-}
-
-.la {
-  left: auto;
-}
-
-.ba {
-  bottom: auto;
-}
-
-.ra {
-  right: auto;
 }
 
 .no-scrollbars {
