@@ -4,9 +4,9 @@ A way to write CSS in one line
 
 ## Installation
 
-    $ npm install --save vbarbarosh/smcss
+    $ npm i vbarbarosh/smcss
 
-## Before Begin
+## Before begin
 
     $ bin/configure
     $ bin/build
