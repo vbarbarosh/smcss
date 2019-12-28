@@ -181,6 +181,11 @@
       @include dt
     @else if $expr == dc // dc
       @include dc
+      // ellipsis
+    @else if $expr == ellipsis // ellipsis
+      @include ellipsis()
+    @else if $expr == ellipsis2 // ellipsis2
+      @include ellipsis(2)
       // expand
     @else if $a7 == expand- // expand-1-2
       $index: str-index($b7, '-')

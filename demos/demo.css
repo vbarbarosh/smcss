@@ -401,6 +401,25 @@ h2 {
   display: table-cell;
 }
 
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ellipsis2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.25em;
+  max-height: 2.5em;
+  box-sizing: content-box;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
 .expand-1-1 {
   display: block;
   position: relative;
