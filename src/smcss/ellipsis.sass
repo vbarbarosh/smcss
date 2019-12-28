@@ -1,0 +1,18 @@
+@mixin ellipsis($lines: 1)
+    @if ($lines == 1)
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+    @elseif ($lines == 2)
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2 // number of lines to show
+        line-height: 1.25em // fallback
+        max-height: 2.5em // fallback
+        box-sizing: content-box // fallback
+        word-break: break-all // break loooooooooooong words
+        overflow-wrap: break-word // break loooooooooooong words
+    @else
+        @error 'Unsupported number of lines'
