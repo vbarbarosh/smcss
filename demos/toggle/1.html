@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+        .hover-red:hover { color: red; }
+        .active-red.active { color: red; }
+        .hover-rot90:hover { transform: rotate(90deg); }
+        .active-rot90.active { transform: rotate(90deg); }
+
+        .toggle:hover .if-off { display: none; }
+        .toggle:not(:hover).active .if-off { display: none; }
+        .toggle:not(:hover):not(.active) .if-on { display: none; }
+
+        .toggle2.active:hover .if-on { display: none; }
+        .toggle2.active:not(:hover) .if-off { display: none; }
+        .toggle2:not(.active):hover .if-off { display: none; }
+        .toggle2:not(.active):not(:hover) .if-on { display: none; }
+
+        .behavior-hov1 { transition: color 0.3s; }
+        .behavior-hov1:hover,
+        .behavior-hov1.active { color: red; }
+        .behavior-rot90 { transition: transform 0.3s; }
+        .behavior-rot90:hover,
+        .behavior-rot90.active { transform: rotate(90deg); }
+
+        .toggle-opacity .if-on,
+        .toggle-opacity .if-off { transition: opacity 0.25s; }
+        .toggle-opacity:hover .if-off { opacity: 0; }
+        .toggle-opacity:not(:hover).active .if-off { opacity: 0; }
+        .toggle-opacity:not(:hover):not(.active) .if-on { opacity: 0; }
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <br>
+    <br>
+
+    <div class="w500 ma p5 mg5 bs5 dashed">
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-hov1">
+                toggle
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-hov1">
+                toggle
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-rot90">
+                toggle
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-rot90">
+                toggle
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle2 mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle2 mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-opacity mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <span class="if-on abs-c">toggle [on]</span>
+                <span class="if-off abs-c">toggle [off]</span>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-opacity mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <span class="if-on abs-c">toggle [on]</span>
+                <span class="if-off abs-c">toggle [off]</span>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.5/vue.min.js" type="text/javascript"></script>
+<script>
+(function () {
+
+    function px(v) {
+        return v ? `${v}px` : 0;
+    }
+
+    Vue.component('svg-icon-success', {
+        template: '#templ-svg-icon-success',
+    });
+
+    Vue.component('svg-icon-error', {
+        template: '#templ-svg-icon-error',
+    });
+
+    new Vue({
+        el: '#app',
+        data: {
+            width: 500,
+            is_active: false,
+        },
+        methods: {
+            px,
+            toggle: function () {
+                this.is_active = !this.is_active;
+            },
+        },
+    });
+
+})();
+</script>
+
+</body>
+</html>
