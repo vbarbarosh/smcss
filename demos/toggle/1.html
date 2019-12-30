@@ -30,6 +30,10 @@
         .toggle-opacity:hover .if-off { opacity: 0; }
         .toggle-opacity:not(:hover).active .if-off { opacity: 0; }
         .toggle-opacity:not(:hover):not(.active) .if-on { opacity: 0; }
+
+        .toggle-rot90 .if-on { transition: transform 0.25s; }
+        .toggle-rot90:hover .if-on { transform: rotate(90deg); }
+        .toggle-rot90:not(:hover).active .if-on { transform: rotate(90deg); }
     </style>
 </head>
 <body>
@@ -90,6 +94,16 @@
                 <span>common</span>
                 <span class="if-on abs-c">toggle [on]</span>
                 <span class="if-off abs-c">toggle [off]</span>
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-rot90 mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <div class="abs-c"><div class="if-on">toggle rot90</div></div>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-rot90 mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <div class="abs-c"><div class="if-on">toggle rot90</div></div>
             </button>
         </div>
     </div>
