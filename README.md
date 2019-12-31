@@ -1,6 +1,6 @@
 # smcss
 
-A way to write CSS in one line
+A way to organize and write CSS
 
 ## Installation
 
