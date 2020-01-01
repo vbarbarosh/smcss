@@ -30,7 +30,6 @@ const table = {
 
     // background
     'xbg': '.foo { background: none; }',
-    'bg-cover': '.foo { background: transparent no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }',
     'black': '.foo { background: #000; }',
     'gray': '.foo { background: #888; }',
     'silver': '.foo { background: #ccc; }',
