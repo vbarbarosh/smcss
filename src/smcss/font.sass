@@ -1,12 +1,12 @@
 // fsi seems more natural
 @mixin xfs
-  font-size: inherit
+    font-size: inherit
 
 @mixin fs($size)
-  @include eval-size(font-size, $size)
+    @include eval-size(font-size, $size)
 
 @mixin ls($size)
-  @include eval-size(letter-spacing, $size)
+    @include eval-size(letter-spacing, $size)
 
 // Line height
 //
@@ -34,20 +34,20 @@
 // > - Set the height of the button to be 40px tall
 // > - Set vertical-align to middle
 @mixin lh($size)
-  @include eval-size(line-height, $size)
+    @include eval-size(line-height, $size)
 
 // Font style
 @mixin n
-  font-style: normal
+    font-style: normal
 
 @mixin i
-  font-style: italic
+    font-style: italic
 
 @mixin q
-  font-style: oblique
+    font-style: oblique
 
 @mixin ii
-  font-style: inherit
+    font-style: inherit
 
 // Font weight
 //
@@ -62,24 +62,24 @@
 // *bN* was taken by *bottom*
 
 //@mixin b --- implemented in position.sass
-//  font-weight: bold
+//    font-weight: bold
 
 @mixin xfw
-  font-weight: normal
+    font-weight: normal
 
 @mixin fw($weight)
-  $weight: to-number($weight)
-  @if $weight == 3
-    font-weight: 300
-  @else if $weight == 4
-    font-weight: 400
-  @else if $weight == 5
-    font-weight: 500
-  @else if $weight == 6
-    font-weight: 600
-  @else if $weight == 7
-    font-weight: 700
-  @else if $weight == 8
-    font-weight: 800
-  @else
-    @error 'Invalid font weight [#{$weight}]'
+    $weight: to-number($weight)
+    @if $weight == 3
+        font-weight: 300
+    @else if $weight == 4
+        font-weight: 400
+    @else if $weight == 5
+        font-weight: 500
+    @else if $weight == 6
+        font-weight: 600
+    @else if $weight == 7
+        font-weight: 700
+    @else if $weight == 8
+        font-weight: 800
+    @else
+        @error 'Invalid font weight [#{$weight}]'
