@@ -767,6 +767,34 @@ h2 {
   line-height: 0;
 }
 
+.xfw {
+  font-weight: normal;
+}
+
+.fw3 {
+  font-weight: 300;
+}
+
+.fw4 {
+  font-weight: 400;
+}
+
+.fw5 {
+  font-weight: 500;
+}
+
+.fw6 {
+  font-weight: 600;
+}
+
+.fw7 {
+  font-weight: 700;
+}
+
+.fw8 {
+  font-weight: 800;
+}
+
 .hsplit {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2914,6 +2942,10 @@ h2 {
   width: 50px;
 }
 
+.w75 {
+  width: 75px;
+}
+
 .w100 {
   width: 100px;
 }
@@ -2968,6 +3000,10 @@ h2 {
 
 .h50 {
   height: 50px;
+}
+
+.h75 {
+  height: 75px;
 }
 
 .h100 {
