@@ -1,6 +1,8 @@
 @mixin eval-size($prop, $size)
   $size: '#{$size}'
-  @if $size == a // wa
+  @if $size == i // fsi
+    #{$prop}: inherit
+  @elseif $size == a // wa
     #{$prop}: auto
   @else if $size == w // ww
     #{$prop}: 100%
