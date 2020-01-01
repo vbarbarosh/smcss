@@ -16,6 +16,9 @@
 //
 // flex-i-row and flex-row-i
 //     Unnecessary dash in names.
+//
+// iflex-row, iflex-col, iflex-row-center, iflex-col-center
+//     This naming looks more natural even though it requires more names.
 
 // row
 @mixin flex-row
@@ -34,15 +37,20 @@
     @include flex-irow
     @include flex-center
 
-@mixin flex-row-fluid
-    @include flex-row
-    & > *
-        @include flex-fluid
-
-@mixin flex-irow-fluid
-    @include flex-irow
-    & > *
-        @include flex-fluid
+// flex-row-fluid and flex-irow-fluid should be removed.
+//
+// I read it the following way -- container flex,
+// direction row, should take all available space.
+//
+// @mixin flex-row-fluid
+//     @include flex-row
+//     & > *
+//         @include flex-fluid
+//
+// @mixin flex-irow-fluid
+//     @include flex-irow
+//     & > *
+//         @include flex-fluid
 
 //.flex-row-wrap
 //    @include sm('flex-row flex-wrap')
@@ -73,15 +81,17 @@
     @include flex-icol
     @include flex-center
 
-@mixin flex-col-fluid
-    @include flex-col
-    & > *
-        @include flex-fluid
-
-@mixin flex-icol-fluid
-    @include flex-icol
-    & > *
-        @include flex-fluid
+// The same as with flex-row-fluid and flex-irow-fluid (see above).
+//
+// @mixin flex-col-fluid
+//     @include flex-col
+//     & > *
+//         @include flex-fluid
+//
+// @mixin flex-icol-fluid
+//     @include flex-icol
+//     & > *
+//         @include flex-fluid
 
 //.flex-col-wrap
 //    @include sm('flex-col-center')
