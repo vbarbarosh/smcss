@@ -108,7 +108,7 @@ const table = {
     'di': '.foo { display: inline; }',
     'dib': '.foo { display: inline-block; }',
     'dt': '.foo { display: table; }',
-    'dc': '.foo { display: table-cell; }',
+    'dtc': '.foo { display: table-cell; }',
 
     // ellipsis
     'ellipsis': '.foo { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }',
