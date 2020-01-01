@@ -1,0 +1,18 @@
+// There is several ways to implement margin groups.
+//
+// 1. `.mi5 > * + * { margin-left: 5px; }`
+//
+// 2. `.mi5 > :nth-child(n+2) { margin-left: 5px; }`
+//
+// 3. `.mi5 > :not(:last-child) { margin-right: 5px; }`
+//    This method allows wrapping elements.
+
+// Take a look at GROUPS.md
+@mixin mg($size)
+    & > :nth-child(n+2) // * + *
+        @include eval-size(margin-top, $size)
+
+// Take a look at GROUPS.md
+@mixin mi($size)
+    & > :nth-child(n+2) // * + *
+        @include eval-size(margin-left, $size)

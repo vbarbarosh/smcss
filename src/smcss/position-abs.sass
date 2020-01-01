@@ -1,0 +1,511 @@
+@mixin abs-f($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+@mixin abs-t($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    right: 0
+
+@mixin abs-b($position: absolute)
+    position: $position
+    left: 0
+    right: 0
+    bottom: 0
+
+@mixin abs-l($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    bottom: 0
+
+@mixin abs-r($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    bottom: 0
+
+@mixin abs-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin abs-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+
+@mixin abs-tl-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+
+@mixin abs-tl-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+
+@mixin abs-tl-cb($position: absolute)
+    position: $position
+    top: 100%
+    left: 50%
+
+@mixin abs-tl-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+
+@mixin abs-tl-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(100%, 0)
+
+@mixin abs-tl-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(100%, 0)
+
+@mixin abs-tl-bl($position: absolute)
+    position: $position
+    top: 100%
+    left: 0
+
+@mixin abs-tl-br($position: absolute)
+    position: $position
+    top: 100%
+    right: 0
+    transform: translate(100%, 0)
+
+@mixin abs-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+
+@mixin abs-tr-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(-100%, 0)
+
+@mixin abs-tr-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(-100%, 0)
+
+@mixin abs-tr-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(-100%, 100%)
+
+@mixin abs-tr-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(-100%, 0)
+
+@mixin abs-tr-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+
+@mixin abs-tr-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(-100%, 0)
+
+@mixin abs-tr-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+    transform: translate(-100%, 100%)
+
+@mixin abs-tr-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+    transform: translate(0, 100%)
+
+@mixin abs-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+
+@mixin abs-bl-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(0, -100%)
+
+@mixin abs-bl-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(0, -100%)
+
+@mixin abs-bl-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+
+@mixin abs-bl-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(0, -100%)
+
+@mixin abs-bl-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(100%, -100%)
+
+@mixin abs-bl-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(0, -100%)
+
+@mixin abs-bl-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(100%, -100%)
+
+@mixin abs-bl-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+    transform: translate(100%, 0)
+
+@mixin abs-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+
+@mixin abs-br-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(-100%, -100%)
+
+@mixin abs-br-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(-100%, -100%)
+
+@mixin abs-br-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(-100%, 0)
+
+@mixin abs-br-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(-100%, -100%)
+
+@mixin abs-br-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(0, -100%)
+
+@mixin abs-br-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(-100%, -100%)
+
+@mixin abs-br-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(0, -100%)
+
+@mixin abs-br-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+    transform: translate(-100%, 0)
+
+@mixin abs-c-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin abs-c-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 50%)
+
+@mixin abs-c-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(-50%, -50%)
+
+@mixin abs-c-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(50%, -50%)
+
+@mixin abs-c-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(-50%, -50%)
+
+@mixin abs-c-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(50%, -50%)
+
+@mixin abs-c-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+    transform: translate(-50%, 50%)
+
+@mixin abs-c-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+    transform: translate(50%, 50%)
+
+@mixin abs-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0)
+
+@mixin abs-ct-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(-50%, 0)
+
+@mixin abs-ct-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 100%)
+
+@mixin abs-ct-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(-50%, 0)
+
+@mixin abs-ct-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(50%, 0)
+
+@mixin abs-ct-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(-50%, 0)
+
+@mixin abs-ct-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(50%, 0)
+
+@mixin abs-ct-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+    transform: translate(-50%, 100%)
+
+@mixin abs-ct-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+    transform: translate(50%, 100%)
+
+@mixin abs-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 0)
+
+@mixin abs-cb-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -100%)
+
+@mixin abs-cb-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(-50%, -100%)
+
+@mixin abs-cb-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, -100%)
+
+@mixin abs-cb-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(-50%, -100%)
+
+@mixin abs-cb-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(50%, -100%)
+
+@mixin abs-cb-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(-50%, -100%)
+
+@mixin abs-cb-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(50%, -100%)
+
+@mixin abs-cb-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+    transform: translate(-50%, 0)
+
+@mixin abs-cb-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+    transform: translate(50%, 0)
+
+@mixin abs-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(0, -50%)
+
+@mixin abs-cl-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(0, -50%)
+
+@mixin abs-cl-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(0, -50%)
+
+@mixin abs-cl-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(0, 50%)
+
+@mixin abs-cl-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(100%, -50%)
+
+@mixin abs-cl-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(0, -50%)
+
+@mixin abs-cl-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(100%, -50%)
+
+@mixin abs-cl-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+    transform: translate(0, 50%)
+
+@mixin abs-cl-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+    transform: translate(100%, 50%)
+
+@mixin abs-cr($position: absolute)
+    position: $position
+    top: 50%
+    right: 0
+    transform: translate(0, -50%)
+
+@mixin abs-cr-c($position: absolute)
+    position: $position
+    top: 50%
+    left: 50%
+    transform: translate(-100%, -50%)
+
+@mixin abs-cr-ct($position: absolute)
+    position: $position
+    top: 0
+    left: 50%
+    transform: translate(-100%, -50%)
+
+@mixin abs-cr-cb($position: absolute)
+    position: $position
+    left: 50%
+    bottom: 0
+    transform: translate(-100%, 50%)
+
+@mixin abs-cr-cl($position: absolute)
+    position: $position
+    top: 50%
+    left: 0
+    transform: translate(-100%, -50%)
+
+@mixin abs-cr-tl($position: absolute)
+    position: $position
+    top: 0
+    left: 0
+    transform: translate(-100%, -50%)
+
+@mixin abs-cr-tr($position: absolute)
+    position: $position
+    top: 0
+    right: 0
+    transform: translate(0, -50%)
+
+@mixin abs-cr-bl($position: absolute)
+    position: $position
+    left: 0
+    bottom: 0
+    transform: translate(-100%, 50%)
+
+@mixin abs-cr-br($position: absolute)
+    position: $position
+    right: 0
+    bottom: 0
+    transform: translate(0, 50%)

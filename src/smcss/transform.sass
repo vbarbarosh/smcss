@@ -4,8 +4,11 @@
 @mixin vflip
     transform: scale(1, -1)
 
+// scale50 -> `transform: scale(0.5)`
+// scale125 -> `transform: scale(1.25)`
 @mixin scale($percent)
     transform: scale(to-number($percent) / 100)
 
+// rotate45
 @mixin rotate($angle)
     transform: rotate(to-number($angle) * 1deg)
