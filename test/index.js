@@ -106,7 +106,7 @@ const table = {
     'xd': '.foo { display: none; }',
     'db': '.foo { display: block; }',
     'di': '.foo { display: inline; }',
-    'dl': '.foo { display: inline-block; }',
+    'dib': '.foo { display: inline-block; }',
     'dt': '.foo { display: table; }',
     'dc': '.foo { display: table-cell; }',
 
