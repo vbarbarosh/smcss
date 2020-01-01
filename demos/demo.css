@@ -1303,84 +1303,84 @@ h2 {
   padding-bottom: 50px;
 }
 
-.pg5 > :nth-child(n+2) {
-  padding-top: 5px;
+.pg5 > :not(:last-child) {
+  padding-bottom: 5px;
 }
 
-.pg10 > :nth-child(n+2) {
-  padding-top: 10px;
+.pg10 > :not(:last-child) {
+  padding-bottom: 10px;
 }
 
-.pg15 > :nth-child(n+2) {
-  padding-top: 15px;
+.pg15 > :not(:last-child) {
+  padding-bottom: 15px;
 }
 
-.pg20 > :nth-child(n+2) {
-  padding-top: 20px;
+.pg20 > :not(:last-child) {
+  padding-bottom: 20px;
 }
 
-.pg25 > :nth-child(n+2) {
-  padding-top: 25px;
+.pg25 > :not(:last-child) {
+  padding-bottom: 25px;
 }
 
-.pg30 > :nth-child(n+2) {
-  padding-top: 30px;
+.pg30 > :not(:last-child) {
+  padding-bottom: 30px;
 }
 
-.pg35 > :nth-child(n+2) {
-  padding-top: 35px;
+.pg35 > :not(:last-child) {
+  padding-bottom: 35px;
 }
 
-.pg40 > :nth-child(n+2) {
-  padding-top: 40px;
+.pg40 > :not(:last-child) {
+  padding-bottom: 40px;
 }
 
-.pg45 > :nth-child(n+2) {
-  padding-top: 45px;
+.pg45 > :not(:last-child) {
+  padding-bottom: 45px;
 }
 
-.pg50 > :nth-child(n+2) {
-  padding-top: 50px;
+.pg50 > :not(:last-child) {
+  padding-bottom: 50px;
 }
 
-.pi5 > :nth-child(n+2) {
-  padding-left: 5px;
+.pi5 > :not(:last-child) {
+  padding-right: 5px;
 }
 
-.pi10 > :nth-child(n+2) {
-  padding-left: 10px;
+.pi10 > :not(:last-child) {
+  padding-right: 10px;
 }
 
-.pi15 > :nth-child(n+2) {
-  padding-left: 15px;
+.pi15 > :not(:last-child) {
+  padding-right: 15px;
 }
 
-.pi20 > :nth-child(n+2) {
-  padding-left: 20px;
+.pi20 > :not(:last-child) {
+  padding-right: 20px;
 }
 
-.pi25 > :nth-child(n+2) {
-  padding-left: 25px;
+.pi25 > :not(:last-child) {
+  padding-right: 25px;
 }
 
-.pi30 > :nth-child(n+2) {
-  padding-left: 30px;
+.pi30 > :not(:last-child) {
+  padding-right: 30px;
 }
 
-.pi35 > :nth-child(n+2) {
-  padding-left: 35px;
+.pi35 > :not(:last-child) {
+  padding-right: 35px;
 }
 
-.pi40 > :nth-child(n+2) {
-  padding-left: 40px;
+.pi40 > :not(:last-child) {
+  padding-right: 40px;
 }
 
-.pi45 > :nth-child(n+2) {
-  padding-left: 45px;
+.pi45 > :not(:last-child) {
+  padding-right: 45px;
 }
 
-.pi50 > :nth-child(n+2) {
-  padding-left: 50px;
+.pi50 > :not(:last-child) {
+  padding-right: 50px;
 }
 
 .no-pointer-events {
