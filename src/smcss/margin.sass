@@ -7,14 +7,14 @@
 @mixin xm
     margin: 0
 
+@mixin xmt
+    margin-top: 0
+
 @mixin xml
     margin-left: 0
 
 @mixin xmr
     margin-right: 0
-
-@mixin xmt
-    margin-top: 0
 
 @mixin xmb
     margin-bottom: 0
@@ -36,8 +36,8 @@
 @mixin ml($size)
     @include eval-size(margin-left, $size)
 
-@mixin mb($size)
-    @include eval-size(margin-bottom, $size)
-
 @mixin mr($size)
     @include eval-size(margin-right, $size)
+
+@mixin mb($size)
+    @include eval-size(margin-bottom, $size)

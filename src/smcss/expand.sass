@@ -20,6 +20,10 @@
 //     </div>
 // </div>
 
+// expand1x1 --> expand(1, 1) height=width
+// expand1x2 --> expand(1, 2) height=width*0.5
+// expand3x4 --> expand(3, 4) height=width*3/4
+
 @mixin expand($width, $height)
     @include db     // Very often target of this class will be A element
     @include rel    // Almost always children will be absolutely positioned

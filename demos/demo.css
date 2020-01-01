@@ -1019,84 +1019,84 @@ h2 {
   margin-right: -50px;
 }
 
-.mg5 > :nth-child(n+2) {
-  margin-top: 5px;
+.mg5 > :not(:last-child) {
+  margin-bottom: 5px;
 }
 
-.mg10 > :nth-child(n+2) {
-  margin-top: 10px;
+.mg10 > :not(:last-child) {
+  margin-bottom: 10px;
 }
 
-.mg15 > :nth-child(n+2) {
-  margin-top: 15px;
+.mg15 > :not(:last-child) {
+  margin-bottom: 15px;
 }
 
-.mg20 > :nth-child(n+2) {
-  margin-top: 20px;
+.mg20 > :not(:last-child) {
+  margin-bottom: 20px;
 }
 
-.mg25 > :nth-child(n+2) {
-  margin-top: 25px;
+.mg25 > :not(:last-child) {
+  margin-bottom: 25px;
 }
 
-.mg30 > :nth-child(n+2) {
-  margin-top: 30px;
+.mg30 > :not(:last-child) {
+  margin-bottom: 30px;
 }
 
-.mg35 > :nth-child(n+2) {
-  margin-top: 35px;
+.mg35 > :not(:last-child) {
+  margin-bottom: 35px;
 }
 
-.mg40 > :nth-child(n+2) {
-  margin-top: 40px;
+.mg40 > :not(:last-child) {
+  margin-bottom: 40px;
 }
 
-.mg45 > :nth-child(n+2) {
-  margin-top: 45px;
+.mg45 > :not(:last-child) {
+  margin-bottom: 45px;
 }
 
-.mg50 > :nth-child(n+2) {
-  margin-top: 50px;
+.mg50 > :not(:last-child) {
+  margin-bottom: 50px;
 }
 
-.mi5 > :nth-child(n+2) {
-  margin-left: 5px;
+.mi5 > :not(:last-child) {
+  margin-right: 5px;
 }
 
-.mi10 > :nth-child(n+2) {
-  margin-left: 10px;
+.mi10 > :not(:last-child) {
+  margin-right: 10px;
 }
 
-.mi15 > :nth-child(n+2) {
-  margin-left: 15px;
+.mi15 > :not(:last-child) {
+  margin-right: 15px;
 }
 
-.mi20 > :nth-child(n+2) {
-  margin-left: 20px;
+.mi20 > :not(:last-child) {
+  margin-right: 20px;
 }
 
-.mi25 > :nth-child(n+2) {
-  margin-left: 25px;
+.mi25 > :not(:last-child) {
+  margin-right: 25px;
 }
 
-.mi30 > :nth-child(n+2) {
-  margin-left: 30px;
+.mi30 > :not(:last-child) {
+  margin-right: 30px;
 }
 
-.mi35 > :nth-child(n+2) {
-  margin-left: 35px;
+.mi35 > :not(:last-child) {
+  margin-right: 35px;
 }
 
-.mi40 > :nth-child(n+2) {
-  margin-left: 40px;
+.mi40 > :not(:last-child) {
+  margin-right: 40px;
 }
 
-.mi45 > :nth-child(n+2) {
-  margin-left: 45px;
+.mi45 > :not(:last-child) {
+  margin-right: 45px;
 }
 
-.mi50 > :nth-child(n+2) {
-  margin-left: 50px;
+.mi50 > :not(:last-child) {
+  margin-right: 50px;
 }
 
 .xo {

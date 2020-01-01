@@ -1,9 +1,9 @@
 // Take a look at GROUPS.md
 @mixin pg($size)
-    & > :nth-child(n+2) // * + *
-        @include eval-size(padding-top, $size)
+    & > :not(:last-child) // :nth-child(n+2) // * + *
+        @include eval-size(padding-bottom, $size)
 
 // Take a look at GROUPS.md
 @mixin pi($size)
-    & > :nth-child(n+2) // * + *
-        @include eval-size(padding-left, $size)
+    & > :not(:last-child) // :nth-child(n+2) // * + *
+        @include eval-size(padding-right, $size)

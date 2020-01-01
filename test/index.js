@@ -201,8 +201,8 @@ const table = {
     'mb5n': '.foo { margin-bottom: -5px; }',
     'mr5': '.foo { margin-right: 5px; }',
     'mr5n': '.foo { margin-right: -5px; }',
-    'mg5': '.foo > :nth-child(n+2) { margin-top: 5px; }',
-    'mi5': '.foo > :nth-child(n+2) { margin-left: 5px; }',
+    'mg5': '.foo > :not(:last-child) { margin-bottom: 5px; }',
+    'mi5': '.foo > :not(:last-child) { margin-right: 5px; }',
 
     // opacity
     'xo': '.foo { opacity: 1; }',
@@ -231,8 +231,8 @@ const table = {
     'pl5': '.foo { padding-left: 5px; }',
     'pb5': '.foo { padding-bottom: 5px; }',
     'pr5': '.foo { padding-right: 5px; }',
-    'pg5': '.foo > :nth-child(n+2) { padding-top: 5px; }',
-    'pi5': '.foo > :nth-child(n+2) { padding-left: 5px; }',
+    'pg5': '.foo > :not(:last-child) { padding-bottom: 5px; }',
+    'pi5': '.foo > :not(:last-child) { padding-right: 5px; }',
 
     // pointer-events
     'no-pointer-events': '.foo { pointer-events: none; }',
