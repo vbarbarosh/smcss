@@ -1,19 +1,19 @@
 @mixin sm($str)
-  @each $expr in str-split($str, ' ')
-    @include smcss($expr)
+    @each $expr in str-split($str, ' ')
+        @include smcss($expr)
 
 // export (what about smc for classes?)
 @mixin smx($str)
-  @each $expr in str-split($str, ' ')
-    .#{$expr}
-      @include sm($expr)
+    @each $expr in str-split($str, ' ')
+        .#{$expr}
+            @include sm($expr)
 
 @mixin smx-direct($str)
-  @each $expr in str-split($str, ' ')
-    > .#{$expr}
-      @include sm($expr)
+    @each $expr in str-split($str, ' ')
+        > .#{$expr}
+            @include sm($expr)
 
 @mixin smx-amp($str)
-  @each $expr in str-split($str, ' ')
-    &.#{$expr}
-      @include sm($expr)
+    @each $expr in str-split($str, ' ')
+        &.#{$expr}
+            @include sm($expr)

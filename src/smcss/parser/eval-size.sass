@@ -1,20 +1,20 @@
 @mixin eval-size($prop, $size)
-  $size: '#{$size}'
-  @if $size == i // fsi
-    #{$prop}: inherit
-  @else if $size == a // wa
-    #{$prop}: auto
-  @else if $size == w // ww
-    #{$prop}: 100%
-  @else if $size == h // hh
-    #{$prop}: 100%
-  @else if str-slice($size, -1) == p // w50p
-    #{$prop}: to-number(str-slice($size, 1, -2)) * 1%
-  @else if str-slice($size, -1) == n // mt10n
-    #{$prop}: to-number(str-insert(str-slice($size, 1, -2), '', -1)) * -1px
-  @else if $size == '0'
-    #{$prop}: 0
-  @else if str-slice($size, -1) == '%'
-    #{$prop}: to-number(str-slice($size, 1, -2)) * 1%
-  @else
-    #{$prop}: #{$size}px
+    $size: '#{$size}'
+    @if $size == i // fsi
+        #{$prop}: inherit
+    @else if $size == a // wa
+        #{$prop}: auto
+    @else if $size == w // ww
+        #{$prop}: 100%
+    @else if $size == h // hh
+        #{$prop}: 100%
+    @else if str-slice($size, -1) == p // w50p
+        #{$prop}: to-number(str-slice($size, 1, -2)) * 1%
+    @else if str-slice($size, -1) == n // mt10n
+        #{$prop}: to-number(str-insert(str-slice($size, 1, -2), '', -1)) * -1px
+    @else if $size == '0'
+        #{$prop}: 0
+    @else if str-slice($size, -1) == '%'
+        #{$prop}: to-number(str-slice($size, 1, -2)) * 1%
+    @else
+        #{$prop}: #{$size}px
