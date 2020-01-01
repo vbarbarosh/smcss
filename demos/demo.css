@@ -241,139 +241,139 @@ h2 {
   box-sizing: border-box;
 }
 
-.cursor-alias {
+.cur-alias {
   cursor: alias;
 }
 
-.cursor-all-scroll {
+.cur-all-scroll {
   cursor: all-scroll;
 }
 
-.cursor-auto {
+.cur-auto {
   cursor: auto;
 }
 
-.cursor-cell {
+.cur-cell {
   cursor: cell;
 }
 
-.cursor-col-resize {
+.cur-col-resize {
   cursor: col-resize;
 }
 
-.cursor-context-menu {
+.cur-context-menu {
   cursor: context-menu;
 }
 
-.cursor-copy {
+.cur-copy {
   cursor: copy;
 }
 
-.cursor-crosshair {
+.cur-crosshair {
   cursor: crosshair;
 }
 
-.cursor-default {
+.cur-default {
   cursor: default;
 }
 
-.cursor-e-resize {
+.cur-e-resize {
   cursor: e-resize;
 }
 
-.cursor-ew-resize {
+.cur-ew-resize {
   cursor: ew-resize;
 }
 
-.cursor-help {
+.cur-help {
   cursor: help;
 }
 
-.cursor-inherit {
+.cur-inherit {
   cursor: inherit;
 }
 
-.cursor-initial {
+.cur-initial {
   cursor: initial;
 }
 
-.cursor-move {
+.cur-move {
   cursor: move;
 }
 
-.cursor-n-resize {
+.cur-n-resize {
   cursor: n-resize;
 }
 
-.cursor-ne-resize {
+.cur-ne-resize {
   cursor: ne-resize;
 }
 
-.cursor-nesw-resize {
+.cur-nesw-resize {
   cursor: nesw-resize;
 }
 
-.cursor-no-drop {
+.cur-no-drop {
   cursor: no-drop;
 }
 
-.cursor-none {
+.cur-none {
   cursor: none;
 }
 
-.cursor-not-allowed {
+.cur-not-allowed {
   cursor: not-allowed;
 }
 
-.cursor-ns-resize {
+.cur-ns-resize {
   cursor: ns-resize;
 }
 
-.cursor-nw-resize {
+.cur-nw-resize {
   cursor: nw-resize;
 }
 
-.cursor-nwse-resize {
+.cur-nwse-resize {
   cursor: nwse-resize;
 }
 
-.cursor-pointer {
+.cur-pointer {
   cursor: pointer;
 }
 
-.cursor-progress {
+.cur-progress {
   cursor: progress;
 }
 
-.cursor-row-resize {
+.cur-row-resize {
   cursor: row-resize;
 }
 
-.cursor-s-resize {
+.cur-s-resize {
   cursor: s-resize;
 }
 
-.cursor-se-resize {
+.cur-se-resize {
   cursor: se-resize;
 }
 
-.cursor-sw-resize {
+.cur-sw-resize {
   cursor: sw-resize;
 }
 
-.cursor-text {
+.cur-text {
   cursor: text;
 }
 
-.cursor-vertical-text {
+.cur-vertical-text {
   cursor: vertical-text;
 }
 
-.cursor-w-resize {
+.cur-w-resize {
   cursor: w-resize;
 }
 
-.cursor-wait {
+.cur-wait {
   cursor: wait;
 }
 
