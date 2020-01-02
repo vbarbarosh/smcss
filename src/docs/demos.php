@@ -166,10 +166,16 @@
 <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
 
 <script id="templ-vue-resize" type="text/html">
-    <div>
-        <input v-model="width" type="range" min="0" max="100" step="0.1" style="margin:0;padding:0;display:block;width:100%;">
-        <input v-model="height" type="range" min="0" max="100" step="0.1" style="margin:0;padding:0;display:block;width:100%;">
-        <div v-bind:style="{width: perc(width), height: perc(height)}" class="hh rel checkerboard">
+    <div v-bind:style="{width: px(width), height: px(height)}" class="rel ma p15">
+        <div v-on:mousedown="dd_top" class="abs-t h15 red cur-row-resize"></div>
+        <div v-on:mousedown="dd_left" class="abs-l w15 red cur-col-resize"></div>
+        <div v-on:mousedown="dd_right" class="abs-r w15 red cur-col-resize"></div>
+        <div v-on:mousedown="dd_bottom" class="abs-b h15 red cur-row-resize"></div>
+        <div v-on:mousedown="dd_top_left" class="abs-tl w15 h15 green cur-nwse-resize"></div>
+        <div v-on:mousedown="dd_top_right" class="abs-tr w15 h15 green cur-nesw-resize"></div>
+        <div v-on:mousedown="dd_bottom_left" class="abs-bl w15 h15 green cur-nesw-resize"></div>
+        <div v-on:mousedown="dd_bottom_right" class="abs-br w15 h15 green cur-nwse-resize"></div>
+        <div class="rel ww hh checkerboard">
             <slot />
         </div>
     </div>
@@ -180,6 +186,58 @@
 
     function px(v) {
         return v ? `${v}px` : 0;
+    }
+
+    function dd(context)
+    {
+        const listeners = {mousemove, mouseup};
+
+        begin();
+
+        function begin() {
+            jQuery(document).on(listeners);
+            context.event.preventDefault();
+            translate();
+            context.x0 = context.x;
+            context.y0 = context.y;
+            context.dx = 0;
+            context.dy = 0;
+            if (typeof context.begin == 'function') {
+                context.begin(context);
+            }
+        }
+
+        function end() {
+            jQuery(document).off(listeners);
+            if (typeof context.end == 'function') {
+                context.end(context);
+            }
+        }
+
+        function translate() {
+            if (typeof context.translate == 'function') {
+                context.translate(context);
+            }
+            else {
+                context.x = context.event.clientX;
+                context.y = context.event.clientY;
+            }
+        }
+
+        function mousemove(event) {
+            context.event = event;
+            translate();
+            context.dx = context.x - context.x0;
+            context.dy = context.y - context.y0;
+            if (typeof context.move == 'function') {
+                context.move(context);
+            }
+        }
+
+        function mouseup(event) {
+            context.event = event;
+            end();
+        }
     }
 
     function perc(v) {
@@ -210,13 +268,56 @@
         template: '#templ-vue-resize',
         data: function () {
             return {
-                width: 75,
-                height: 50,
+                width: 640,
+                height: 480,
             };
         },
         methods: {
             px,
-            perc,
+            dd_top: function (event) {
+                const {height} = this;
+                dd({event, move: ctx => this.height = height - ctx.dy});
+            },
+            dd_left: function (event) {
+                const {width} = this;
+                dd({event, move: ctx => this.width = width - ctx.dx*2});
+            },
+            dd_right: function (event) {
+                const {width} = this;
+                dd({event, move: ctx => this.width = width + ctx.dx*2});
+            },
+            dd_bottom: function (event) {
+                const {height} = this;
+                dd({event, move: ctx => this.height = height + ctx.dy});
+            },
+            dd_top_left: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width - ctx.dx*2;
+                    this.height = height - ctx.dy;
+                }});
+            },
+            dd_top_right: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width + ctx.dx*2;
+                    this.height = height - ctx.dy;
+                }});
+            },
+            dd_bottom_left: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width - ctx.dx*2;
+                    this.height = height + ctx.dy;
+                }});
+            },
+            dd_bottom_right: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width + ctx.dx*2;
+                    this.height = height + ctx.dy;
+                }});
+            },
         },
     });
 
