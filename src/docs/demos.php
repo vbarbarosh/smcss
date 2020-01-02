@@ -181,6 +181,16 @@
     </div>
 </script>
 
+<script id="templ-modal-iframe" type="text/html">
+    <div v-on:click="click_shadow" class="fix-f oa flex-row" style="background: rgba(0, 0, 0, 0.25)">
+        <div class="ma">
+            <vue-resize>
+                <iframe v-bind:src="value" class="db ww hh xborder"></iframe>
+            </vue-resize>
+        </div>
+    </div>
+</script>
+
 <script>
 (function () {
 
@@ -191,7 +201,9 @@
     function dd(context)
     {
         const listeners = {mousemove, mouseup};
+        const iframes = jQuery('iframe');
 
+        iframes.css('pointer-events', 'none');
         begin();
 
         function begin() {
@@ -208,6 +220,7 @@
         }
 
         function end() {
+            iframes.css('pointer-events', '');
             jQuery(document).off(listeners);
             if (typeof context.end == 'function') {
                 context.end(context);
@@ -263,6 +276,18 @@
             this.active = this.items[0];
         }
     }
+
+    Vue.component('modal-iframe', {
+        template: '#templ-modal-iframe',
+        props: ['value'],
+        methods: {
+            click_shadow: function (event) {
+                if (event.currentTarget === event.target) {
+                    this.$emit('end');
+                }
+            }
+        }
+    });
 
     Vue.component('vue-resize', {
         template: '#templ-vue-resize',
@@ -362,6 +387,9 @@
             toggle: function () {
                 this.is_active = !this.is_active;
             },
+            modal_iframe: function (value) {
+                modal({template: '<modal-iframe v-on:end="end" v-model="value" />', data: {value}});
+            },
         },
     });
 
@@ -373,6 +401,32 @@
                 return modal_error(error).promise();
             });
         };
+    }
+
+    function modal(props)
+    {
+        return new Vue({
+            el: document.body.appendChild(document.createElement('DIV')),
+            mixins: [props],
+            data: {
+                retval: null,
+            },
+            methods: {
+                end: function (retval) {
+                    this.retval = retval;
+                    jQuery(this.$el).fadeOut('fast', () => this.$destroy());
+                },
+                promise: function () {
+                    return new Promise(resolve => {
+                        this.$once('hook:beforeDestroy', () => resolve(this.retval));
+                    });
+                },
+            },
+            mounted: function () {
+                jQuery(this.$el).hide().fadeIn('fast');
+                this.$once('hook:beforeDestroy', () => jQuery(this.$el).remove());
+            },
+        });
     }
 
 })();

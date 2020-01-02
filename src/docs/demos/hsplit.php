@@ -4,7 +4,9 @@
 
     <h4>hsplit/1.html</h4>
 
-    <button>Preview</button>
+    <p>Header, footer, and fluid middle.</p>
+
+    <button v-on:click="modal_iframe('../../demos/hsplit/1.html')">Preview</button>
 
 <pre class="dashed oa">
 &lt;div class=&quot;abs-f vsplit w500 mv10 ma bs15 rainbow&quot;&gt;
@@ -55,6 +57,7 @@
     </vue-resize>
 
     <h4>hsplit/2.html</h4>
+    <button v-on:click="modal_iframe('../../demos/hsplit/2.html')">Preview</button>
 
     <vue-resize class="h500">
         <div class="abs-f vsplit w500 mv10 ma bs15 rainbow">
@@ -83,6 +86,7 @@
     </vue-resize>
 
     <h4>hsplit/3.html</h4>
+    <button v-on:click="modal_iframe('../../demos/hsplit/3.html')">Preview</button>
 
     <vue-resize class="h500">
         <div class="abs-f vsplit w500 mv10 ma bs15 rainbow">
@@ -111,6 +115,7 @@
     </vue-resize>
 
     <h4>hsplit/4.html</h4>
+    <button v-on:click="modal_iframe('../../demos/hsplit/4.html')">Preview</button>
 
     <vue-resize class="h500">
         <div class="abs-f vsplit rainbow">
@@ -147,6 +152,7 @@
     </vue-resize>
 
     <h4>hsplit/5.html</h4>
+    <button v-on:click="modal_iframe('../../demos/hsplit/5.html')">Preview</button>
 
     <vue-resize class="h500">
         <div class="abs-f vsplit rainbow">
@@ -191,6 +197,7 @@
     </vue-resize>
 
     <h4>hsplit/6.html</h4>
+    <button v-on:click="modal_iframe('../../demos/hsplit/6.html')">Preview</button>
 
     <vue-resize class="h500">
         <div class="abs-f vsplit rainbow">
@@ -241,6 +248,7 @@
     </vue-resize>
 
     <h4>hsplit/7.html</h4>
+    <button v-on:click="modal_iframe('../../demos/hsplit/7.html')">Preview</button>
 
     <vue-resize class="h500">
         <div class="abs-f vsplit oa">
