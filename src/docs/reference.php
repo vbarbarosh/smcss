@@ -114,7 +114,7 @@
                     <a href="concepts.php" class="db lh20 p15">Concepts</a
                 </li>
                 <li class="app-pal-active">
-                    <a href="references.php" class="db lh20 p15">Reference</a>
+                    <a href="reference.php" class="db lh20 p15">Reference</a>
                 </li>
                 <li>
                     <a href="templates.php" class="db lh20 p15">Templates</a>
@@ -171,40 +171,40 @@
 
             <h1 class="xm">smcss &mdash; a css for prototyping</h1>
 
-            <?php include 'references/background.php' ?>
-            <?php include 'references/border.php' ?>
-            <?php include 'references/box-shadow.php' ?>
-            <?php include 'references/box-sizing.php' ?>
-            <?php include 'references/button.php' ?>
-            <?php include 'references/cursor.php' ?>
-            <?php include 'references/display.php' ?>
-            <?php include 'references/display-flex.php' ?>
-            <?php include 'references/display-flex-hsplit.php' ?>
-            <?php include 'references/expand.php' ?>
-            <?php include 'references/float.php' ?>
-            <?php include 'references/font.php' ?>
-            <?php include 'references/list.php' ?>
-            <?php include 'references/margin.php' ?>
-            <?php include 'references/margin-group.php' ?>
-            <?php include 'references/opacity.php' ?>
-            <?php include 'references/outline.php' ?>
-            <?php include 'references/overflow.php' ?>
-            <?php include 'references/padding.php' ?>
-            <?php include 'references/padding-group.php' ?>
-            <?php include 'references/pointer-events.php' ?>
-            <?php include 'references/position.php' ?>
-            <?php include 'references/position-abs.php' ?>
-            <?php include 'references/position-fix.php' ?>
-            <?php include 'references/position-sticky.php' ?>
-            <?php include 'references/scrollbar.php' ?>
-            <?php include 'references/size.php' ?>
-            <?php include 'references/text.php' ?>
-            <?php include 'references/text-ellipsis.php' ?>
-            <?php include 'references/theme.php' ?>
-            <?php include 'references/toggle.php' ?>
-            <?php include 'references/transform.php' ?>
-            <?php include 'references/user-select.php' ?>
-            <?php include 'references/zindex.php' ?>
+            <?php include 'reference/background.php' ?>
+            <?php include 'reference/border.php' ?>
+            <?php include 'reference/box-shadow.php' ?>
+            <?php include 'reference/box-sizing.php' ?>
+            <?php include 'reference/button.php' ?>
+            <?php include 'reference/cursor.php' ?>
+            <?php include 'reference/display.php' ?>
+            <?php include 'reference/display-flex.php' ?>
+            <?php include 'reference/display-flex-hsplit.php' ?>
+            <?php include 'reference/expand.php' ?>
+            <?php include 'reference/float.php' ?>
+            <?php include 'reference/font.php' ?>
+            <?php include 'reference/list.php' ?>
+            <?php include 'reference/margin.php' ?>
+            <?php include 'reference/margin-group.php' ?>
+            <?php include 'reference/opacity.php' ?>
+            <?php include 'reference/outline.php' ?>
+            <?php include 'reference/overflow.php' ?>
+            <?php include 'reference/padding.php' ?>
+            <?php include 'reference/padding-group.php' ?>
+            <?php include 'reference/pointer-events.php' ?>
+            <?php include 'reference/position.php' ?>
+            <?php include 'reference/position-abs.php' ?>
+            <?php include 'reference/position-fix.php' ?>
+            <?php include 'reference/position-sticky.php' ?>
+            <?php include 'reference/scrollbar.php' ?>
+            <?php include 'reference/size.php' ?>
+            <?php include 'reference/text.php' ?>
+            <?php include 'reference/text-ellipsis.php' ?>
+            <?php include 'reference/theme.php' ?>
+            <?php include 'reference/toggle.php' ?>
+            <?php include 'reference/transform.php' ?>
+            <?php include 'reference/user-select.php' ?>
+            <?php include 'reference/zindex.php' ?>
 
         </div>
     </div>

@@ -114,7 +114,7 @@
                     <a href="concepts.php" class="db lh20 p15">Concepts</a
                 </li>
                 <li>
-                    <a href="references.php" class="db lh20 p15">Reference</a>
+                    <a href="reference.php" class="db lh20 p15">Reference</a>
                 </li>
                 <li class="app-pal-active">
                     <a href="templates.php" class="db lh20 p15">Templates</a>
