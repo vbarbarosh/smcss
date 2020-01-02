@@ -140,8 +140,8 @@
 
             <h1 class="xm">smcss &mdash; a css for prototyping</h1>
 
-            <?php include 'templates/hsplit.php' ?>
-            <?php include 'templates/modal.php' ?>
+            <?php include 'demos/hsplit.php' ?>
+            <?php include 'demos/modal.php' ?>
 
             <br>
             <br>
