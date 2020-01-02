@@ -117,7 +117,7 @@
                     <a href="reference.php" class="db lh20 p15">Reference</a>
                 </li>
                 <li>
-                    <a href="templates.php" class="db lh20 p15">Templates</a>
+                    <a href="demos.php" class="db lh20 p15">Demos</a>
                 </li>
                 <li>
                     <a href="try.php" class="db lh20 p15">Try it out</a>
