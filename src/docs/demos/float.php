@@ -2,16 +2,14 @@
 
     <h3 id="float">float</h3>
 
-    <h4>float/1.html</h4>
-    <button v-on:click="modal_iframe('../../demos/float/1.html')">Preview</button>
-    <vue-codemirror value="<?php e(snippet('../../demos/float/1.html')) ?>"></vue-codemirror>
-
-    <h4>float/header1.html</h4>
-    <button v-on:click="modal_iframe('../../demos/float/header1.html')">Preview</button>
-    <vue-codemirror value="<?php e(snippet('../../demos/float/header1.html')) ?>"></vue-codemirror>
-
-    <h4>float/header2.html</h4>
-    <button v-on:click="modal_iframe('../../demos/float/header2.html')">Preview</button>
-    <vue-codemirror value="<?php e(snippet('../../demos/float/header2.html')) ?>"></vue-codemirror>
+    <?php foreach (glob('../../demos/float/*.html') as $file): ?>
+        <h4><?php e(substr($file, 12)) ?></h4>
+        <button v-on:click="modal_iframe(<?php e(json_encode($file)) ?>)">Preview</button>
+        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+            <input type="hidden" name="data" value="<?php e(json_encode(['title' => substr($file, 12), 'html' => snippet($file), 'css_pre_processor' => 'sass'])) ?>">
+            <input type="submit" value="CodePen">
+        </form>
+        <vue-codemirror value="<?php e(snippet($file)) ?>"></vue-codemirror>
+    <?php endforeach ?>
 
 </div>
