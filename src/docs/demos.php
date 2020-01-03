@@ -1,102 +1,15 @@
+<?php require 'php/app.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>docs &mdash; smcss</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono:400,400i,500,500i|Roboto+Slab:400,500|Roboto:400,500,500i&display=swap&subset=cyrillic" rel="stylesheet">
-
-    <style>
-        body { margin: 0; padding: 0; }
-
-        .app-background { background: #f8f8f8; }
-        .app-border { border: 1px solid #e7e7e7; }
-        .app-border-red { border: 1px solid #f00; }
-
-        .app-ff-roboto { font-family: 'Roboto', sans-serif; }
-        .app-ff-roboto-con { font-family: 'Roboto Condensed', sans-serif; }
-        .app-ff-roboto-mono { font-family: 'Roboto Mono', monospace; }
-        .app-ff-roboto-slab { font-family: 'Roboto Slab', serif; }
-
-        .app-pal-header { background: #f8f8f8; color: #333; }
-        .app-pal-active { background: #e7e7e7; color: #555; }
-
-        table, tr, td, th { border: 1px solid #ddd; }
-        td, th { text-align: left; padding: 2px 5px; }
-        th { vertical-align: top; font-weight: 500; }
-        table { border-collapse: collapse; }
-
-        pre, code { margin: 0; padding: 0; font-family: 'Roboto Mono', monospace; font-size: 14px; }
-        h1, h2, h3, h4, strong { font-weight: 500; }
-
-        table { font-family: 'Roboto Mono', monospace; font-size: 14px; }
-
-        ul, ol { list-style: none; }
-        ul, ol, p { margin: 0; padding: 0; }
-
-        .n { color: red; }
-
-        h3 {
-            position: sticky;
-            top: 0;
-            display: inline-block;
-            margin: 0;
-            padding: 5px 10px 5px 0;
-            background: white;
-            z-index: 1;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #555;
-            background: #e7e7e7;
-        }
-
-        .max-w1140 { max-width: 1140px; }
-        .lh20 { line-height: 20px; }
-        .mla { margin-left: auto; }
-        .w250 { width: 250px; }
-        .sticky-t { position: sticky; top: 0; }
-        .sticky-t50 { position: sticky; top: 50px; }
-
-        /* --------------- */
-        .hover-red:hover { color: red; }
-        .active-red.active { color: red; }
-        .hover-rot90:hover { transform: rotate(90deg); }
-        .active-rot90.active { transform: rotate(90deg); }
-
-        .toggle.active .if-off { display: none; }
-        .toggle:not(.active) .if-on { display: none; }
-
-        .toggle2.active:hover .if-on { display: none; }
-        .toggle2.active:not(:hover) .if-off { display: none; }
-        .toggle2:not(.active):hover .if-off { display: none; }
-        .toggle2:not(.active):not(:hover) .if-on { display: none; }
-
-        .behavior-hov1 { transition: color 0.3s; }
-        .behavior-hov1:hover,
-        .behavior-hov1.active { color: red; }
-        .behavior-rot90 { transition: transform 0.3s; }
-        .behavior-rot90:hover,
-        .behavior-rot90.active { transform: rotate(90deg); }
-
-        .toggle-opacity .if-on,
-        .toggle-opacity .if-off { transition: opacity 0.25s; }
-        .toggle-opacity:hover .if-off { opacity: 0; }
-        .toggle-opacity:not(:hover).active .if-off { opacity: 0; }
-        .toggle-opacity:not(:hover):not(.active) .if-on { opacity: 0; }
-
-        .toggle-rot90 .if-on { transition: transform 0.25s; }
-        .toggle-rot90:hover .if-on { transform: rotate(90deg); }
-        .toggle-rot90:not(:hover).active .if-on { transform: rotate(90deg); }
-        /* --------------- */
-    </style>
-    <link href="../../demos/demo.css" rel="stylesheet" />
-
+    <title>docs • smcss (a css for prototyping)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
+    <link href="app.css?t=<?php echo filemtime('app.css') ?>" rel="stylesheet" />
+    <link href="../../demos/demo.css?t=<?php echo filemtime('../../demos/demo.css') ?>" rel="stylesheet" />
 </head>
 <body>
 
@@ -133,13 +46,18 @@
         <div class="bbox w200 ph10 vsplit">
             <ul class="fluid pv15 oa">
                 <li><a href="#hsplit">hsplit</a></li>
+                <li><a href="#hsplit-1"><span class="o25">hsplit •</span> 1.html</a></li>
+                <li><a href="#hsplit-2"><span class="o25">hsplit •</span> 2.html</a></li>
+                <li><a href="#hsplit-3"><span class="o25">hsplit •</span> 3.html</a></li>
+                <li><a href="#hsplit-4"><span class="o25">hsplit •</span> 4.html</a></li>
                 <li><a href="#modal">modal</a></li>
             </ul>
         </div>
-        <div class="fluid oa pv15 mg25">
+        <div class="fluid p20 mg25 oa">
 
-            <h1 class="xm">smcss &mdash; a css for prototyping</h1>
+            <h1 class="xm">demos • smcss (a css for prototyping)</h1>
 
+            <?php include 'demos/float.php' ?>
             <?php include 'demos/hsplit.php' ?>
             <?php include 'demos/modal.php' ?>
 
@@ -165,6 +83,14 @@
 <script src="https://unpkg.com/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
 <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/php/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/clike/clike.min.js"></script>
+
 <script id="templ-vue-resize" type="text/html">
     <div v-bind:style="{width: px(width), height: px(height)}" class="rel ma p15">
         <div v-on:mousedown="dd_top" class="abs-t h15 red cur-row-resize"></div>
@@ -184,8 +110,8 @@
 <script id="templ-modal-iframe" type="text/html">
     <div v-on:click="click_shadow" class="fix-f oa flex-row" style="background: rgba(0, 0, 0, 0.25)">
         <div class="ma">
-            <vue-resize>
-                <iframe v-bind:src="value" class="db ww hh xborder"></iframe>
+            <vue-resize v-model="value">
+                <iframe v-bind:src="value.url" class="db ww hh xborder"></iframe>
             </vue-resize>
         </div>
     </div>
@@ -289,19 +215,94 @@
         }
     });
 
+    Vue.component('vue-codemirror', {
+        template: '<div v-once></div>',
+        props: ['value', 'mode', 'placeholder', 'autofocus'],
+        data: function () {
+            return {
+                orig: this.value
+            };
+        },
+        watch: {
+            value: function () {
+                if (this.editor && this.value !== this.orig) {
+                    this.editor.setValue(this.value);
+                }
+            }
+        },
+        methods: {
+            api_replaceSelection: function (text) {
+                this.editor.replaceSelection(text);
+            },
+            become_visible: function () {
+                this.editor ? this.editor.refresh() : this.ready();
+            },
+            ready: function () {
+                const mode = (!this.mode || this.mode == 'html') ? {mode: 'xml', htmlMode: true} : {mode: this.mode};
+                const autofocus = typeof this.autofocus == 'string' ? true : !!this.autofocus;
+                this.editor = CodeMirror(this.$el, {
+                    theme: 'monokai',
+                    mode: 'htmlmixed',
+                    indentUnit: 4,
+                    tabSize: 4,
+                    indentWithTabs: false,
+                    lineNumbers: false,
+                    autofocus,
+                    viewportMargin: Infinity,
+                    readOnly: false,
+                    extraKeys: {
+                        'Tab': 'indentMore',
+                        'Shift-Tab': 'indentLess',
+                        'Ctrl-Enter': function () {
+                            document.querySelector('form').submit();
+                        }
+                    },
+                    value: this.value || '',
+                    placeholder: this.placeholder || '',
+                    ...mode,
+                });
+                this.editor.on('change', this.change);
+                this.$once('hook:beforeDestroy', this.clean);
+            },
+            clean: function () {
+                this.editor.off('change', this.change);
+                this.editor = null;
+            },
+            change: function () {
+                this.orig = this.editor.getValue();
+                this.$emit('input', this.orig);
+            },
+        },
+        mounted: function () {
+            const _this = this;
+            const observer = new IntersectionObserver(function (entries) {
+                if (entries[0].intersectionRatio == 0) {
+                    // _this.is_visible = false;
+                }
+                else if (entries[0].intersectionRatio > 0) {
+                    // _this.is_visible = true;
+                    _this.become_visible();
+                }
+            }, {threshold: [0, 1]});
+            observer.observe(this.$el);
+            this.$once('hook:beforeDestroy', observer.disconnect.bind(observer));
+        },
+    });
+
     Vue.component('vue-resize', {
+        props: ['value'],
         template: '#templ-vue-resize',
         data: function () {
             return {
-                width: 640,
-                height: 480,
+                width: window.innerWidth*0.85,
+                height: window.innerHeight*0.8,
             };
         },
         methods: {
             px,
             dd_top: function (event) {
                 const {height} = this;
-                dd({event, move: ctx => this.height = height - ctx.dy});
+                dd({event, move: ctx => this.height = height - ctx.dy*2});
             },
             dd_left: function (event) {
                 const {width} = this;
@@ -313,34 +314,34 @@
             },
             dd_bottom: function (event) {
                 const {height} = this;
-                dd({event, move: ctx => this.height = height + ctx.dy});
+                dd({event, move: ctx => this.height = height + ctx.dy*2});
             },
             dd_top_left: function (event) {
                 const {width, height} = this;
                 dd({event, move: ctx => {
                     this.width = width - ctx.dx*2;
-                    this.height = height - ctx.dy;
+                    this.height = height - ctx.dy*2;
                 }});
             },
             dd_top_right: function (event) {
                 const {width, height} = this;
                 dd({event, move: ctx => {
                     this.width = width + ctx.dx*2;
-                    this.height = height - ctx.dy;
+                    this.height = height - ctx.dy*2;
                 }});
             },
             dd_bottom_left: function (event) {
                 const {width, height} = this;
                 dd({event, move: ctx => {
                     this.width = width - ctx.dx*2;
-                    this.height = height + ctx.dy;
+                    this.height = height + ctx.dy*2;
                 }});
             },
             dd_bottom_right: function (event) {
                 const {width, height} = this;
                 dd({event, move: ctx => {
                     this.width = width + ctx.dx*2;
-                    this.height = height + ctx.dy;
+                    this.height = height + ctx.dy*2;
                 }});
             },
         },
@@ -387,8 +388,8 @@
             toggle: function () {
                 this.is_active = !this.is_active;
             },
-            modal_iframe: function (value) {
-                modal({template: '<modal-iframe v-on:end="end" v-model="value" />', data: {value}});
+            modal_iframe: function (url, width) {
+                modal({template: '<modal-iframe v-on:end="end" v-model="value" />', data: {value: {url, width}}});
             },
         },
     });

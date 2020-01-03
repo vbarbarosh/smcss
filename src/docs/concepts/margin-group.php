@@ -10,7 +10,7 @@
     <p>By the method of grouping they may be: margin groups and padding groups.</p>
 -->
 
-    <h3>Block-level group <small>(margin group)</small></h3>
+    <h4>Block-level group <small>(margin group)</small></h4>
 
 <pre>
 xxxxxxxxxxxxxxxxxxxxxx
@@ -34,7 +34,7 @@ xxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxx
 </pre>
 
-<h3>Inline-level group <small>(inline group)</small></h3>
+<h4>Inline-level group <small>(inline group)</small></h4>
 
 <pre>
 xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx

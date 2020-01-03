@@ -95,7 +95,7 @@
         </tbody>
         </table>
         <div class="flex-fluid">
-            <div class="flex-row flex-align-start sticky-t">
+            <div class="flex-row flex-align-start sticky-t z1n">
                 <div class="ma mg20 bs10" v-bind:style="{width: px(width)}">
                     <div class="rel h200 fs13 blue dashed">
                         <div v-bind:class="resulted_class" class="green p10 flex-row-center transition">

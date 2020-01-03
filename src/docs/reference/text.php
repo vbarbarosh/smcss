@@ -3,7 +3,7 @@
     <h3 id="text">text</h3>
 
     <div class="flex-row mi15">
-        <table class="sticky-t50">
+        <table class="sticky-t50 z1n">
             <tbody>
             <tr><th>l</th><td><code>text-align: left</code></td></tr>
             <tr><th>r</th><td><code>text-align: right</code></td></tr>
