@@ -125,7 +125,7 @@ pre, code {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     line-height: 1.25em;
-    z-index: -1;
+    z-index: 0;
 }
 
 .CodeMirror-scroll {

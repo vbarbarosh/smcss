@@ -57,6 +57,7 @@
 
             <h1 class="xm">demos • smcss (a css for prototyping)</h1>
 
+            <?php include 'demos/abs.php' ?>
             <?php include 'demos/float.php' ?>
             <?php include 'demos/hsplit.php' ?>
             <?php include 'demos/modal.php' ?>
@@ -238,7 +239,8 @@
                 this.editor ? this.editor.refresh() : this.ready();
             },
             ready: function () {
-                const mode = (!this.mode || this.mode == 'html') ? {mode: 'xml', htmlMode: true} : {mode: this.mode};
+                // https://codemirror.net/1/mixedtest.html
+                // const mode = (!this.mode || this.mode == 'html') ? {mode: 'htmlmixed', htmlMode: true} : {mode: this.mode};
                 const autofocus = typeof this.autofocus == 'string' ? true : !!this.autofocus;
                 this.editor = CodeMirror(this.$el, {
                     theme: 'monokai',
@@ -259,7 +261,7 @@
                     },
                     value: this.value || '',
                     placeholder: this.placeholder || '',
-                    ...mode,
+                    // ...mode,
                 });
                 this.editor.on('change', this.change);
                 this.$once('hook:beforeDestroy', this.clean);
