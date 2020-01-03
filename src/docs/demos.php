@@ -45,12 +45,22 @@
     <div class="fluid hsplit">
         <div class="bbox w200 ph10 vsplit">
             <ul class="fluid pv15 oa">
+                <li><a href="#abs">abs</a></li>
+                <li><a href="#basic">basic</a></li>
+                <li><a href="#border">border</a></li>
+                <li><a href="#box-shadow">box-shadow</a></li>
+                <li><a href="#button">button</a></li>
+                <li><a href="#center-text">center-text</a></li>
+                <li><a href="#container">container</a></li>
+                <li><a href="#cursor">cursor</a></li>
+                <li><a href="#float">float</a></li>
                 <li><a href="#hsplit">hsplit</a></li>
-                <li><a href="#hsplit-1"><span class="o25">hsplit •</span> 1.html</a></li>
-                <li><a href="#hsplit-2"><span class="o25">hsplit •</span> 2.html</a></li>
-                <li><a href="#hsplit-3"><span class="o25">hsplit •</span> 3.html</a></li>
-                <li><a href="#hsplit-4"><span class="o25">hsplit •</span> 4.html</a></li>
+                <li><a href="#media-query">media-query</a></li>
                 <li><a href="#modal">modal</a></li>
+                <li><a href="#object-fit">object-fit</a></li>
+                <li><a href="#specificity">specificity</a></li>
+                <li><a href="#text">text</a></li>
+                <li><a href="#toggle">toggle</a></li>
             </ul>
         </div>
         <div class="fluid p20 mg25 oa">
@@ -58,9 +68,21 @@
             <h1 class="xm">demos • smcss (a css for prototyping)</h1>
 
             <?php include 'demos/abs.php' ?>
+            <?php include 'demos/basic.php' ?>
+            <?php include 'demos/border.php' ?>
+            <?php include 'demos/box-shadow.php' ?>
+            <?php include 'demos/button.php' ?>
+            <?php include 'demos/center-text.php' ?>
+            <?php include 'demos/container.php' ?>
+            <?php include 'demos/cursor.php' ?>
             <?php include 'demos/float.php' ?>
             <?php include 'demos/hsplit.php' ?>
+            <?php include 'demos/media-query.php' ?>
             <?php include 'demos/modal.php' ?>
+            <?php include 'demos/object-fit.php' ?>
+            <?php include 'demos/specificity.php' ?>
+            <?php include 'demos/text.php' ?>
+            <?php include 'demos/toggle.php' ?>
 
             <br>
             <br>
