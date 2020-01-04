@@ -67,6 +67,8 @@
 
             <h1 class="xm">demos • smcss (a css for prototyping)</h1>
 
+            <!-- Syntax highilighting https://portal-vue.linusb.org/ -->
+
             <?php include 'demos/abs.php' ?>
             <?php include 'demos/basic.php' ?>
             <?php include 'demos/border.php' ?>
