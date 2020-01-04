@@ -24,7 +24,7 @@
         <div class="fluid h50">
             <ul class="xls xm xp ww hh flex-row">
                 <li>
-                    <a href="concepts.php" class="db lh20 p15">Concepts</a
+                    <a href="concepts.php" class="db lh20 p15">Concepts</a>
                 </li>
                 <li>
                     <a href="reference.php" class="db lh20 p15">Reference</a>
