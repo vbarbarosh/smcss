@@ -80,6 +80,17 @@
 
             <h1 class="xm">smcss &mdash; a css for prototyping</h1>
 
+            <h2>Installation</h2>
+<pre class="dashed p5 app-ff-roboto-mono">
+npm i vbarbarosh/smcss
+</pre>
+
+            <h2>First try</h2>
+<pre class="dashed p5 app-ff-roboto-mono">
+echo -e "@import 'smcss'\n.foo\n\t@include sm('w100 h100 red')" > a.sass
+sass -I node_modules a.sass > a.css
+</pre>
+
             <?php include 'reference/background.php' ?>
             <?php include 'reference/border.php' ?>
             <?php include 'reference/box-shadow.php' ?>
