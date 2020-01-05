@@ -3500,26 +3500,32 @@ h2 {
   max-height: 200px;
 }
 
+.max-ww {
+  max-width: 100%;
+}
+
 .max-w200 {
   max-width: 200px;
+}
+
+.max-hh {
+  max-height: 100%;
 }
 
 .max-h200 {
   max-height: 200px;
 }
 
-.min800x600 {
-  min-width: 800px;
-  min-height: 600px;
-}
-
-.max800x600 {
-  max-width: 800px;
-  max-height: 600px;
+.min-ww {
+  min-width: 100%;
 }
 
 .min-w200 {
   min-width: 200px;
+}
+
+.min-hh {
+  min-height: 100%;
 }
 
 .min-h200 {
