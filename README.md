@@ -34,3 +34,9 @@ A way to organize and write CSS
         @include sm('flex-fluid')
     .container-right
         @include sm('flex-noshrink w200')
+
+## Interesting Projects
+
+* [Easy Toggle State](https://twikito.github.io/easy-toggle-state)
+* [Responsive Font Sizes](https://github.com/MartijnCuppens/rfs)
+* [Tailwind CSS](https://github.com/tailwindcss/tailwindcss)
