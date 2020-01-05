@@ -31,10 +31,12 @@
 
 // Legend
 //
+// x - anything prefixed with `x` means removal or reset to initial
+//     state (xm - remove any margins, xmt - remove top margin)
 // N - positive or negative pixels, 10s of ems, or percents
-// D - degrees (e.g. rotateD for rotate: 45deg)
-// p - percent (e.g. scale25 for scale: 0.25)
-// m - 10ths of em
+// D - degrees (e.g. rotateD for rotate:45deg)
+// p - percent (e.g. w50p for width:50%)
+// m - 10ths of em (eg lh50m for line-height:5.0em)
 // n - negative number
 //
 // h-p5 hover:p5 (under hover)
@@ -51,36 +53,49 @@
 
 // reset
 svg
-  fill: currentColor
+    fill: currentColor
 button
-  cursor: pointer
+    cursor: pointer
 h2
-  margin: 0
+    margin: 0
 
 // color themes
 .theme-white
-  color: #7f8893
-  background: white
-  font-family: 'Open Sans', serif
-  font-size: 15px
-  button:hover
-    color: #36beff
-  button:active
-    color: #2f72ff
-  .active
-    background: yellow
+    color: #7f8893
+    background: white
+    font-family: 'Open Sans', serif
+    font-size: 15px
+    button:hover
+        color: #36beff
+    button:active
+        color: #2f72ff
+    .active
+        background: yellow
 
 // button
-// * xbutton.border
+// * xbutton.border -- reset button and add borders
 @include smx('xbutton')
 
-// align
+// Text alignment
 @include smx('l r c j vm vt vb')
 
-// background
-@include smx('xbg black silver white red green blue yellow cyan checkerboard rainbow')
+// Text overflow
+@include smx('ellipsis ellipsis2')
+
+// Text wrapping, decorations, and transformations
+@include smx('nowrap')
+@include smx('x u o s')
+@include smx('xx uc lc cc')
+
+// Fonts
+@include smx('lh0')
+@include smx('xfs fs12 fs13 fs14 fs15')
+@include smx('xfw fw3 fw4 fw5 fw6 fw7 fw8')
 
 // Borders
+// * xborder -- no borders
+// * border.xborder-h -- render only horizontal borders
+// * border.xborder-b -- render all but bottom borders
 @include smx('xborder')
 @include smx('border dashed')
 @include smx('xborder-t xborder-l xborder-r xborder-b')
@@ -92,43 +107,68 @@ h2
 @include smx('br1 br2 br3 br4 br5 br6 br7 br8 br9 br10 br999')
 @include smx('br100p')
 
-// box
-@include smx('cbox bbox')
+// Box Sizing
+@include smx('bbox cbox')
 
-// cursor
+// Box Sizes
+@include smx('wa ww')
+@include smx('ha hh')
+@include smx('w0 w5 w10 w15 w20 w25 w30 w35 w40 w45 w50 w75 w100 w200 w300 w325 w400 w500 w600 w700 w800')
+@include smx('h0 h5 h10 h15 h20 h25 h30 h35 h40 h45 h50 h75 h100 h200 h300 h325 h400 h500 h600 h700 h800')
+@include smx('w50p h75p')
+@include smx('h50p w75p')
+@include smx('max-ww max-w200')
+@include smx('max-hh max-h200')
+@include smx('min-ww min-w200')
+@include smx('min-hh min-h200')
+
+// Box Shadows
+@include smx('xbs')
+@include smx('bs5 bs10 bs15 bs20 bs25')
+@include smx('is5 is10 is15 is20 is25')
+
+// Cursors
 @include smx('cur-alias cur-all-scroll cur-auto cur-cell cur-col-resize cur-context-menu cur-copy cur-crosshair cur-default cur-e-resize cur-ew-resize cur-help cur-inherit cur-initial cur-move cur-n-resize cur-ne-resize cur-nesw-resize cur-no-drop cur-none cur-not-allowed cur-ns-resize cur-nw-resize cur-nwse-resize cur-pointer cur-progress cur-row-resize cur-s-resize cur-se-resize cur-sw-resize cur-text cur-vertical-text cur-w-resize cur-wait')
 
-// display
+// Display
 @include smx('xd db di dib dt dtc')
 
-// ellipsis
-@include smx('ellipsis ellipsis2')
+// flex
+@include smx('flex-row flex-row-center')
+@include smx('flex-col flex-col-center')
+@include smx('flex-wrap flex-nowrap flex-wrap-r')
+@include smx('flex-center')
+@include smx('flex-align-start flex-align-end flex-align-center flex-align-baseline flex-align-stretch')
+@include smx('flex-justify-start flex-justify-end flex-justify-center flex-justify-between flex-justify-around')
+@include smx('flex-grow flex-nogrow flex-shrink flex-noshrink flex-fluid')
+
+// hsplit
+@include smx('hsplit vsplit')
 
 // expand
 @include smx('expand-1-1 expand-1-2 expand-1-3 expand-1-4 expand-2-1 expand-2-3 expand-2-4')
-
-// flex
-@include smx('flex-row flex-row-center flex-col flex-col-center flex-wrap flex-nowrap flex-wrap-r flex-center flex-align-start flex-align-end flex-align-center flex-align-baseline flex-align-stretch flex-justify-start flex-justify-end flex-justify-center flex-justify-between flex-justify-around flex-grow flex-nogrow flex-shrink flex-noshrink flex-fluid')
 
 // float
 @include smx('xf fl fr xc cb cl cr clearfix floats')
 // XXX Should it be in *floats* mixin?
 .floats
-  @include smx('xf fl fr')
-
-// font
-@include smx('xfs fs12 fs13 fs14 fs15')
-@include smx('lh0')
-@include smx('xfw fw3 fw4 fw5 fw6 fw7 fw8')
-
-// hsplit
-@include smx('hsplit vsplit')
+    @include smx('xf fl fr')
 
 // list
 @include smx('xls')
 
-// margin and margin groups
+// opacity
+@include smx('xo o0 o25 o50 o75 o100')
 
+// outline
+@include smx('xoutline outline')
+
+// overflow
+@include smx('oa oh os')
+
+// Margins and margin groups
+// * xm -- remove all margins
+// * xm.ma -- all margins are auto
 @include smx('xm')
 @include smx('ma')
 @include smx('m5 m10 m15 m20 m25 m30 m35 m40 m45 m50')
@@ -165,16 +205,7 @@ h2
 @include smx('mg5 mg10 mg15 mg20 mg25 mg30 mg35 mg40 mg45 mg50')
 @include smx('mi5 mi10 mi15 mi20 mi25 mi30 mi35 mi40 mi45 mi50')
 
-// opacity
-@include smx('xo o0 o25 o50 o75 o100')
-
-// outline
-@include smx('xoutline outline')
-
-// overflow
-@include smx('oa oh os')
-
-// padding and padding groups
+// Paddings and padding groups
 @include smx('pa')
 @include smx('xp xpl xpr xpt xpb')
 @include smx('p5 p10 p15 p20 p25 p30 p35')
@@ -185,11 +216,18 @@ h2
 @include smx('pg5 pg10 pg15 pg20 pg25 pg30 pg35 pg40 pg45 pg50')
 @include smx('pi5 pi10 pi15 pi20 pi25 pi30 pi35 pi40 pi45 pi50')
 
-// pointer events
+// Pointer events
 @include smx('no-pointer-events')
 
-// position
-// .rel.abs -> position: absolute
+// Scrollbars
+@include smx('no-scrollbars')
+
+// User-select
+@include smx('no-user-select')
+
+// Position
+//
+// .rel.abs -> position:absolute
 //     <div class="rel">...</div>
 //     1) generic container which requires position:relative
 //     2) <some-element class="abs-c" /> --> <div class="rel abs-c"></div>
@@ -198,34 +236,17 @@ h2
 @include smx('fix-f fix-t fix-b fix-l fix-r fix-c fix-tl fix-tl-c fix-tl-ct fix-tl-cb fix-tl-cl fix-tl-cr fix-tl-tr fix-tl-bl fix-tl-br fix-tr fix-tr-c fix-tr-ct fix-tr-cb fix-tr-cl fix-tr-cr fix-tr-tl fix-tr-bl fix-tr-br fix-bl fix-bl-c fix-bl-ct fix-bl-cb fix-bl-cl fix-bl-cr fix-bl-tl fix-bl-tr fix-bl-br fix-br fix-br-c fix-br-ct fix-br-cb fix-br-cl fix-br-cr fix-br-tl fix-br-tr fix-br-bl fix-c-ct fix-c-cb fix-c-cl fix-c-cr fix-c-tl fix-c-tr fix-c-bl fix-c-br fix-ct fix-ct-c fix-ct-cb fix-ct-cl fix-ct-cr fix-ct-tl fix-ct-tr fix-ct-bl fix-ct-br fix-cb fix-cb-c fix-cb-ct fix-cb-cb fix-cb-cl fix-cb-cr fix-cb-tl fix-cb-tr fix-cb-bl fix-cb-br fix-cl fix-cl-c fix-cl-ct fix-cl-cb fix-cl-cr fix-cl-tl fix-cl-tr fix-cl-bl fix-cl-br fix-cr fix-cr-c fix-cr-ct fix-cr-cb fix-cr-cl fix-cr-tl fix-cr-tr fix-cr-bl fix-cr-br')
 @include smx('tlbr tlbr5 tlbr10')
 @include smx('ta ba la ra')
-@include smx('t5 l5 b5 r5')
+@include smx('t5 t10 t15 t20 t25 t30 t35 t40 t45 t50')
+@include smx('l5 l10 l15 l20 l25 l30 l35 l40 l45 l50')
+@include smx('r5 r10 r15 r20 r25 r30 r35 r40 r45 r50')
+@include smx('b5 b10 b15 b20 b25 b30 b35 b40 b45 b50')
 
-// scrollbar
-@include smx('no-scrollbars')
+// zindex
+@include smx('z1 z2 z1000')
+@include smx('z1n z2n z1000n')
 
-// shadow
-@include smx('xbs')
-@include smx('bs5 bs10 bs15 bs20 bs25')
-@include smx('is5 is10 is15 is20 is25')
-
-// size
-@include smx('wa ww')
-@include smx('ha hh')
-@include smx('w0 w5 w10 w15 w20 w25 w30 w35 w40 w45 w50 w75 w100 w200 w300 w325 w400 w500 w600 w700 w800')
-@include smx('h0 h5 h10 h15 h20 h25 h30 h35 h40 h45 h50 h75 h100 h200 h300 h325 h400 h500 h600 h700 h800')
-@include smx('w50p h75p')
-@include smx('h50p w75p')
-@include smx('min100 min200')
-@include smx('max100 max200')
-@include smx('max-ww max-w200')
-@include smx('max-hh max-h200')
-@include smx('min-ww min-w200')
-@include smx('min-hh min-h200')
-
-// text (wrapping, decorations, and transformations)
-@include smx('nowrap')
-@include smx('x u o s')
-@include smx('xx uc lc cc')
+// Backgrounds
+@include smx('xbg black silver white red green blue yellow cyan checkerboard rainbow')
 
 // theme
 @include smx('theme-navy theme-blue theme-aqua theme-teal theme-olive theme-green theme-lime theme-yellow theme-orange theme-red theme-maroon theme-fuchsia theme-purple theme-black theme-gray theme-silver')
@@ -233,13 +254,6 @@ h2
 // transform ('rotation and scale')
 @include smx('scale20')
 @include smx('rotate45 rotate90 rotate180 rotate270')
-
-// user-select
-@include smx('no-user-select')
-
-// zindex
-@include smx('z1 z2 z1000')
-@include smx('z1n z2n z1000n')
 
 // container/grid
 @include smx('grid2 grid3 grid4 grid5 grid6 grid7 grid8 grid9 grid10')
