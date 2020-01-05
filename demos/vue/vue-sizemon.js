@@ -26,12 +26,12 @@ Vue.component('vue-sizemon', {
             // Screen scale: 125%
             // Container size: 300x150
             try {
-                const bc = this.$el.offsetParent.getBoundingClientRect();
-                this.size = {width: bc.right - bc.left, height: bc.bottom - bc.top};
+                const bcr = this.$el.offsetParent.getBoundingClientRect();
+                this.size = {width: bcr.right - bcr.left, height: bcr.bottom - bcr.top};
             }
             catch (error) {
-                const bc = this.$el.getBoundingClientRect();
-                this.size = {width: bc.right - bc.left, height: bc.bottom - bc.top};
+                const bcr = this.$el.getBoundingClientRect();
+                this.size = {width: bcr.right - bcr.left, height: bcr.bottom - bcr.top};
             }
         },
     },
