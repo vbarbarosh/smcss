@@ -7,7 +7,7 @@
         .transition { transition: all .5s; }
     </style>
 </head>
-<body>
+<body class="checkerboard">
 
 <div id="app" class="mt50">
 
@@ -19,7 +19,7 @@
     <br>
 
     <div class="abs-cr">
-        <div class="flex-col-center p30 m30 mg30 dashed" style="background: rgba(0,0,0,0.1)">
+        <div class="flex-col-center p30 m30 mg30 dashed silver">
             <div class="w100 h100 green rel">
                 <button v-for="v in inner.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
                     <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
@@ -30,7 +30,7 @@
                     <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
                 </button>
             </div>
-            <p>{{ resulted_class }}</p>
+            <p class="white p10 pv5">{{ resulted_class }}</p>
         </div>
     </div>
 

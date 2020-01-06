@@ -2,111 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="../demo.css" type="text/css" rel="stylesheet">
-    <style>
-        .image-abs-c {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            max-width: 100%;
-            max-height: 100%;
-            box-sizing: border-box;
-        }
-        .image-abs-ct {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: 0 auto auto;
-            max-width: 100%;
-            max-height: 100%;
-            box-sizing: border-box;
-        }
-    </style>
 </head>
-<body>
+<body class="checkerboard">
 
-    <div class="flex-row flex-wrap">
+    <!-- Centering elements using position:absolute -->
 
-        <div class="w400 h300 m10 red rel">
-            <img src="../images/thumb100-jan-vernarec-udGLWdHXj80-unsplash.jpg" class="image-abs-c p20">
-        </div>
-
-        <div class="w400 h300 m10 red rel">
-            <img src="../images/thumb200-jan-vernarec-udGLWdHXj80-unsplash.jpg" class="image-abs-c p20">
-        </div>
-
-        <div class="w400 h300 m10 red rel">
-            <img src="../images/thumb300-jan-vernarec-udGLWdHXj80-unsplash.jpg" class="image-abs-c p20">
-        </div>
-
-        <div class="w400 h300 m10 red rel">
-            <img src="../images/thumb400-jan-vernarec-udGLWdHXj80-unsplash.jpg" class="image-abs-c p20">
-        </div>
-
-        <div class="w400 h300 m10 red rel">
-            <img src="../images/thumb500-jan-vernarec-udGLWdHXj80-unsplash.jpg" class="image-abs-c p20">
-        </div>
-
-    </div>
-
-    <div class="flex-row flex-wrap">
-
-        <div class="w400 h300 m10 blue rel">
-            <img src="../images/thumb100-timj-gM6k0JmHIBE-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 blue rel">
-            <img src="../images/thumb200-timj-gM6k0JmHIBE-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 blue rel">
-            <img src="../images/thumb300-timj-gM6k0JmHIBE-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 blue rel">
-            <img src="../images/thumb400-timj-gM6k0JmHIBE-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 blue rel">
-            <img src="../images/thumb500-timj-gM6k0JmHIBE-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 blue rel">
-            <img src="../images/thumb600-timj-gM6k0JmHIBE-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-    </div>
-
-    <div class="flex-row flex-wrap">
-
-        <div class="w400 h300 m10 green rel">
-            <img src="../images/thumb100-victor-8NE1E8LDV24-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 green rel">
-            <img src="../images/thumb200-victor-8NE1E8LDV24-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 green rel">
-            <img src="../images/thumb300-victor-8NE1E8LDV24-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 green rel">
-            <img src="../images/thumb400-victor-8NE1E8LDV24-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-        <div class="w400 h300 m10 green rel">
-            <img src="../images/thumb500-victor-8NE1E8LDV24-unsplash.jpg" class="image-abs-ct p20">
-        </div>
-
-    </div>
-
+    <!-- Knowing width and height of an element it become possible to
+         use margin:auto to center it inside of a container -->
+    <div class="abs-f ma w400 h300 border red bs5">abcdef</div>
 
 </body>
 </html>
