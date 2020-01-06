@@ -292,6 +292,12 @@
             @include hsplit
         @else if $expr == vsplit // vsplit
             @include vsplit
+        @else if $expr == shrink // shrink
+            @include shrink
+        @else if $expr == grow // grow
+            @include grow
+        @else if $expr == fluid // fluid
+            @include fluid
             // list
         @else if $expr == xls // xls
             @include xls

@@ -18,26 +18,47 @@
 // .vsplit > :not(.shrink):not(.fluid):not(.flex-shrink):not(.flex-fluid)
 //     @extend .flex-noshrink
 
+//@mixin hsplit
+//    @include flex-row
+//    @include flex-nowrap
+//    & > :not(.shrink)
+//        @include flex-noshrink
+//    & > .shrink
+//        @include flex-shrink
+//    & > .grow
+//        @include flex-grow
+//    & > .fluid
+//        @include flex-fluid
+//
+//@mixin vsplit
+//    @include flex-col
+//    @include flex-nowrap
+//    & > :not(.shrink)
+//        @include flex-noshrink
+//    & > .shrink
+//        @include flex-shrink
+//    & > .grow
+//        @include flex-grow
+//    & > .fluid
+//        @include flex-fluid
+
 @mixin hsplit
     @include flex-row
     @include flex-nowrap
-    & > :not(.shrink)
-        @include flex-noshrink
-    & > .shrink
-        @include flex-shrink
-    & > .grow
-        @include flex-grow
-    & > .fluid
-        @include flex-fluid
+    & > *
+        flex: none
 
 @mixin vsplit
     @include flex-col
     @include flex-nowrap
-    & > :not(.shrink)
-        @include flex-noshrink
-    & > .shrink
-        @include flex-shrink
-    & > .grow
-        @include flex-grow
-    & > .fluid
-        @include flex-fluid
+    & > *
+        flex: none
+
+@mixin shrink
+    @include flex-shrink
+
+@mixin grow
+    @include flex-grow
+
+@mixin fluid
+    @include flex-fluid

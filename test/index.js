@@ -177,8 +177,11 @@ const table = {
     'fw8': '.foo { font-weight: 800; }',
 
     // hsplit
-    'hsplit': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > :not(.shrink) { flex-shrink: 0; }\n\n.foo > .shrink { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }\n\n.foo > .grow { flex-grow: 1; }\n\n.foo > .fluid { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
-    'vsplit': '.foo { display: flex; flex-direction: column; flex-wrap: nowrap; }\n\n.foo > :not(.shrink) { flex-shrink: 0; }\n\n.foo > .shrink { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }\n\n.foo > .grow { flex-grow: 1; }\n\n.foo > .fluid { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'hsplit': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > * { flex: none; }',
+    'vsplit': '.foo { display: flex; flex-direction: column; flex-wrap: nowrap; }\n\n.foo > * { flex: none; }',
+    'shrink': '.foo { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }',
+    'grow': '.foo { flex-grow: 1; }',
+    'fluid': '.foo { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
 
     // list
     'xls': '.foo { list-style: none; }',
