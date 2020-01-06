@@ -20,104 +20,74 @@
 // iflex-row, iflex-col, iflex-row-center, iflex-col-center
 //     This naming looks more natural even though it requires more names.
 
+@mixin iflex-row
+    display: inline-flex
+    flex-direction: row
+
+@mixin iflex-row-center
+    @include iflex-row
+    @include flex-center
+
+@mixin iflex-col
+    display: inline-flex
+    flex-direction: column
+
+@mixin iflex-col-center
+    @include iflex-col
+    @include flex-center
+
 // row
 @mixin flex-row
     display: flex
-    flex-direction: row
-
-@mixin flex-irow
-    display: inline-flex
     flex-direction: row
 
 @mixin flex-row-center
     @include flex-row
     @include flex-center
 
-@mixin flex-irow-center
-    @include flex-irow
-    @include flex-center
-
-// flex-row-fluid and flex-irow-fluid should be removed.
-//
-// I read it the following way -- container flex,
-// direction row, should take all available space.
+// iflex-row-fluid, iflex-col-fluid, flex-row-fluid,
+// and flex-col-fluid should be removed. I read them
+// in the following way -- container flex, direction
+// row, should take all available space.
 //
 // @mixin flex-row-fluid
 //     @include flex-row
 //     & > *
 //         @include flex-fluid
 //
-// @mixin flex-irow-fluid
-//     @include flex-irow
+// @mixin iflex-row-fluid
+//     @include iflex-row
 //     & > *
 //         @include flex-fluid
-
-//.flex-row-wrap
-//    @include sm('flex-row flex-wrap')
-//.flex-row-nowrap
-//    @include sm('flex-row flex-wrap')
-//
-//.flex-row-center-left
-//    @include sm('flex-row-center')
-//    justify-content: flex-start
-//.flex-row-center-right
-//    @include sm('flex-row-center')
-//    justify-content: flex-end
-
-// col
-@mixin flex-col
-    display: flex
-    flex-direction: column
-
-@mixin flex-icol
-    display: inline-flex
-    flex-direction: column
-
-@mixin flex-col-center
-    @include flex-col
-    @include flex-center
-
-@mixin flex-icol-center
-    @include flex-icol
-    @include flex-center
-
-// The same as with flex-row-fluid and flex-irow-fluid (see above).
 //
 // @mixin flex-col-fluid
 //     @include flex-col
 //     & > *
 //         @include flex-fluid
 //
-// @mixin flex-icol-fluid
-//     @include flex-icol
+// @mixin iflex-col-fluid
+//     @include iflex-col
 //     & > *
 //         @include flex-fluid
 
-//.flex-col-wrap
-//    @include sm('flex-col-center')
-//    align-items: flex-start
-//.flex-col-nowrap
-//    @include sm('flex-col-center')
-//    align-items: flex-start
-//.flex-col-center-left
-//    @include sm('flex-col-center')
-//    align-items: flex-start
-//.flex-col-center-right
-//    @include sm('flex-col-center')
-//    align-items: flex-end
+// col
+@mixin flex-col
+    display: flex
+    flex-direction: column
+
+@mixin flex-col-center
+    @include flex-col
+    @include flex-center
 
 // wrap
 @mixin flex-wrap
     flex-wrap: wrap
-    // align-content: flex-start
 
 @mixin flex-nowrap
     flex-wrap: nowrap
-    // align-content: flex-start
 
 @mixin flex-wrap-r
     flex-wrap: wrap-reverse
-    // align-content: flex-start
 
 @mixin flex-center
     align-items: center
@@ -127,20 +97,26 @@
 // alignment
 @mixin flex-align-start
     align-items: flex-start
+    align-content: flex-start
 
 @mixin flex-align-end
     align-items: flex-end
+    align-content: flex-end
 
 @mixin flex-align-center
     align-items: center
+    align-content: center
 
 @mixin flex-align-baseline
     align-items: baseline
+    align-content: baseline
 
 @mixin flex-align-stretch
     align-items: stretch
+    align-content: stretch
 
-// justify
+// Distributes space between and around content items along
+// the main-axis of a flex container
 @mixin flex-justify-start
     justify-content: flex-start
 
@@ -155,6 +131,9 @@
 
 @mixin flex-justify-around
     justify-content: space-around
+
+@mixin flex-justify-evenly
+    justify-content: space-evenly
 
 // IE 10-11 flex-basis property behaves differently than webkit browsers
 // http://stackoverflow.com/q/28117862/1478566
