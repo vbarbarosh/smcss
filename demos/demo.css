@@ -933,39 +933,10 @@ h2 {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
 }
-.hsplit > :not(.shrink) {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-}
-.hsplit > .shrink {
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto;
-  min-width: 0;
-  min-height: 0;
-}
-.hsplit > .grow {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.hsplit > .fluid {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto;
-  min-width: 0;
-  min-height: 0;
-  -ms-flex-preferred-size: 0;
+.hsplit > * {
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
 }
 
 .vsplit {
@@ -979,12 +950,13 @@ h2 {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
 }
-.vsplit > :not(.shrink) {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+.vsplit > * {
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
 }
-.vsplit > .shrink {
+
+.shrink {
   -webkit-flex-shrink: 1;
       -ms-flex-negative: 1;
           flex-shrink: 1;
@@ -994,12 +966,14 @@ h2 {
   min-width: 0;
   min-height: 0;
 }
-.vsplit > .grow {
+
+.grow {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.vsplit > .fluid {
+
+.fluid {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
