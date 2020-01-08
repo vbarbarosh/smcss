@@ -21,6 +21,7 @@ cp -r demos docs
 rm -f docs/demos/index.php
 
 cp -r src/docs/app.css docs
+echo -n smcss.vbarbarosh.com > docs/CNAME
 
 php src/docs/index.php > docs/index.html
 php src/docs/concepts/index.php > docs/concepts/index.html
