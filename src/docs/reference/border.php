@@ -26,7 +26,7 @@
         </div>
         <div class="mg15">
 
-            <p>Cut unwanted borders</p>
+            <p>Cut unwanted borders approach</p>
 
             <pre class="dashed p5 app-ff-roboto-mono">
 .app-border-style1 {
