@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>docs • smcss (a css for prototyping)</title>
+    <title>concepts | smcss (a css for prototyping)</title>
     <link href="../app.css?t=<?php echo filemtime("$d/../app.css") ?>" rel="stylesheet" />
     <link href="../demos/demo.css?t=<?php echo filemtime("$d/../demos/demo.css") ?>" rel="stylesheet" />
 </head>
