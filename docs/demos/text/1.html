@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>demos • smcss</title>
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<div id="app">
+
+    <div v-bind:style="{width: px(width), height: px(height)}" class="abs-f ma p15">
+        <div v-on:mousedown="dd_top" class="abs-t h15 red cur-row-resize"></div>
+        <div v-on:mousedown="dd_left" class="abs-l w15 red cur-col-resize"></div>
+        <div v-on:mousedown="dd_right" class="abs-r w15 red cur-col-resize"></div>
+        <div v-on:mousedown="dd_bottom" class="abs-b h15 red cur-row-resize"></div>
+        <div v-on:mousedown="dd_top_left" class="abs-tl w15 h15 green cur-nwse-resize"></div>
+        <div v-on:mousedown="dd_top_right" class="abs-tr w15 h15 green cur-nesw-resize"></div>
+        <div v-on:mousedown="dd_bottom_left" class="abs-bl w15 h15 green cur-nesw-resize"></div>
+        <div v-on:mousedown="dd_bottom_right" class="abs-br w15 h15 green cur-nwse-resize"></div>
+        <div class="rel white">
+            <div class="ma dashed bs5">
+                <p class="ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi incidunt, maxime molestias mollitia nemo odit pariatur qui quis quos recusandae unde veniam, voluptatem voluptatibus? Animi culpa ipsa nihil sequi totam.</p>
+                <p class="ellipsis2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eaque eum iste laborum nesciunt. Cum dignissimos earum error, excepturi in, ipsam ipsum itaque, obcaecati omnis optio porro quam reiciendis voluptates.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/bluebird@3.7.0/js/browser/bluebird.min.js"></script>
+<script src="https://unpkg.com/vue@2.6.10/dist/vue.min.js"></script>
+
+<script>
+(function () {
+
+    new Vue({
+        el: '#app',
+        data: {
+            width: 500,
+            height: 200,
+        },
+        methods: {
+            px,
+            dd_top: function (event) {
+                const {height} = this;
+                dd({event, move: ctx => this.height = height - ctx.dy*2});
+            },
+            dd_left: function (event) {
+                const {width} = this;
+                dd({event, move: ctx => this.width = width - ctx.dx*2});
+            },
+            dd_right: function (event) {
+                const {width} = this;
+                dd({event, move: ctx => this.width = width + ctx.dx*2});
+            },
+            dd_bottom: function (event) {
+                const {height} = this;
+                dd({event, move: ctx => this.height = height + ctx.dy*2});
+            },
+            dd_top_left: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width - ctx.dx*2;
+                    this.height = height - ctx.dy*2;
+                }});
+            },
+            dd_top_right: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width + ctx.dx*2;
+                    this.height = height - ctx.dy*2;
+                }});
+            },
+            dd_bottom_left: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width - ctx.dx*2;
+                    this.height = height + ctx.dy*2;
+                }});
+            },
+            dd_bottom_right: function (event) {
+                const {width, height} = this;
+                dd({event, move: ctx => {
+                    this.width = width + ctx.dx*2;
+                    this.height = height + ctx.dy*2;
+                }});
+            },
+        },
+    });
+
+    function px(v) {
+        return v ? `${v}px` : 0;
+    }
+
+    function dd(context)
+    {
+        const listeners = {mousemove, mouseup};
+
+        begin();
+
+        function begin() {
+            jQuery(document).on(listeners);
+            context.event.preventDefault();
+            translate();
+            context.x0 = context.x;
+            context.y0 = context.y;
+            context.dx = 0;
+            context.dy = 0;
+            if (typeof context.begin == 'function') {
+                context.begin(context);
+            }
+        }
+
+        function end() {
+            jQuery(document).off(listeners);
+            if (typeof context.end == 'function') {
+                context.end(context);
+            }
+        }
+
+        function translate() {
+            if (typeof context.translate == 'function') {
+                context.translate(context);
+            }
+            else {
+                context.x = context.event.clientX;
+                context.y = context.event.clientY;
+            }
+        }
+
+        function mousemove(event) {
+            context.event = event;
+            translate();
+            context.dx = context.x - context.x0;
+            context.dy = context.y - context.y0;
+            if (typeof context.move == 'function') {
+                context.move(context);
+            }
+        }
+
+        function mouseup(event) {
+            context.event = event;
+            end();
+        }
+    }
+
+})();
+</script>
+
+</body>
+</html>

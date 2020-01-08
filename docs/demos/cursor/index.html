@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid black; }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <table class="ma">
+    <thead>
+        <tr>
+            <th>preview</th>
+            <th>css</th>
+            <th>image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="name in names">
+            <td class="vm c">
+                <span v-bind:style="{cursor: name}" class="w25 h25 dib dashed"></span>
+                <span v-bind:class="'cur-' + name" class="w25 h25 dib dashed"></span>
+            </td>
+            <td>
+                {{name}}
+            </td>
+            <td class="vm c">
+            <img v-bind:src="'img/' + name + '.png'"></td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.5/vue.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            names: [
+                '-webkit-grab',
+                '-webkit-grabbing',
+                '-webkit-zoom-in',
+                '-webkit-zoom-out',
+                'alias',
+                'all-scroll',
+                'auto',
+                'cell',
+                'col-resize',
+                'context-menu',
+                'copy',
+                'crosshair',
+                'default',
+                'e-resize',
+                'ew-resize',
+                'help',
+                'inherit',
+                'initial',
+                'move',
+                'n-resize',
+                'ne-resize',
+                'nesw-resize',
+                'no-drop',
+                'none',
+                'not-allowed',
+                'ns-resize',
+                'nw-resize',
+                'nwse-resize',
+                'pointer',
+                'progress',
+                'row-resize',
+                's-resize',
+                'se-resize',
+                'sw-resize',
+                'text',
+                'vertical-text',
+                'w-resize',
+                'wait',
+            ]
+        }
+    });
+</script>
+
+</body>
+</html>

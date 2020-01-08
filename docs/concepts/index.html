@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>docs • smcss (a css for prototyping)</title>
+    <link href="../app.css?t=1578512591" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1578512915" rel="stylesheet" />
+</head>
+<body>
+
+<div id="app" class="abs-f vsplit app-ff-roboto">
+
+    <div class="hsplit app-pal-header app-border xborder-ht">
+        <div class="w250 h50 mla">
+            <ul class="xls xm xp ww hh flex-row">
+                <li class="lh20 p15 mla">smcss</li>
+            </ul>
+        </div>
+        <div class="fluid h50">
+            <ul class="xls xm xp ww hh flex-row">
+                <li class="app-pal-active">
+                    <a href="../concepts" class="db lh20 p15">Concepts</a
+                </li>
+                <li>
+                    <a href="../reference" class="db lh20 p15">Reference</a>
+                </li>
+                <li>
+                    <a href="../demos" class="db lh20 p15">Demos</a>
+                </li>
+                <li>
+                    <a href="../try" class="db lh20 p15">Try it out</a>
+                </li>
+                <li class="mla">
+                    <a href="https://github.com/vbarbarosh/smcss" target="_blank" class="db lh20 p15">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fluid hsplit">
+        <div class="bbox w200 ph10 vsplit">
+            <ul class="fluid pv15 oa">
+                <li><a href="#container">container</a></li>
+                <li><a href="#margin-group">margin-group</a></li>
+                <li><a href="#hsplit">hsplit</a></li>
+            </ul>
+        </div>
+        <div class="fluid p20 mg25 oa">
+
+            <h1 class="xm">smcss &mdash; a css for prototyping</h1>
+
+            <div class="mg15">
+
+    <h3 id="container">Container</h3>
+
+    <p>Container &mdash; is a place for elements.</p>
+
+    <p>The only responsibility of containers is to perform layout.
+    They are expected to manage the following properties:</p>
+
+    <ul>
+        <li>position, top, left, right, bottom</li>
+        <li>width, height</li>
+        <li>margin, padding</li>
+    </ul>
+
+    <p>Only containers are responsible for managing this properties.</p>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="margin-group">Margin Group</h3>
+
+    <p>A way to distribute space among immediate children. </p>
+
+<!--
+    <p>Groups separates adjacent siblings by equal amount of space.</p>
+    <p>Can be of two types: group of blocks, and group of inline elements.</p>
+    <p>By the method of grouping they may be: margin groups and padding groups.</p>
+-->
+
+    <h4>Block-level group <small>(margin group)</small></h4>
+
+<pre>
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+...................... - margin/padding
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+...................... - margin/padding
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+...................... - margin/padding
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxx
+</pre>
+
+<h4>Inline-level group <small>(inline group)</small></h4>
+
+<pre>
+xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx.xxxxxxxxxx
+          |          |          |
+          margin     margin     margin
+          padding    padding    padding
+</pre>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="hsplit">hsplit</h3>
+
+    <p>A way to create layouts by <strong>splitting space</strong>
+    horizontally or vertically <small>(but not both)</small>.</p>
+
+</div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

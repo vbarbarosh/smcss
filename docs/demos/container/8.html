@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<div id="app" class="fix-f flex-row">
+
+    <div class="abs-t white flex-col mg5">
+        <input-width v-model="container_width"></input-width>
+        <input-width v-model="banner.width"></input-width>
+        <input-height v-model="banner.height"></input-height>
+    </div>
+
+    <div v-bind:style="{width: px(container_width)}" class="ma dashed bs5">
+
+        <!--
+            A a container for a banner. Will resize its height proportionally to width.
+            min-width: 200
+            min-height: 200
+            max-width: banner.width
+            max-height: banner.height
+        -->
+        <div v-bind:style="{minWidth: px(200), minHeight: px(200), maxWidth: px(banner.width), maxHeight: px(banner.height)}" class="rel white">
+            <div v-bind:style="{paddingTop: (banner.height/banner.width*100)+'%'}"></div>
+            <!-- app-banner component should render a banner inside of a provided container -->
+            <app-banner v-model="banner" class="abs-f"></app-banner>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+<script src="../vue/vue-sizemon.js"></script>
+<script src="../vue/input-width.js"></script>
+<script src="../vue/input-height.js"></script>
+
+<script id="templ-app-banner" type="text/html">
+    <div class="rel">
+        <div v-bind:style="{width: px(banner.width*scale_up), height: px(banner.height*scale_up)}" class="abs-f ma flex-row-center green">
+            {{ banner.width }}x{{ banner.height }}*{{ scale_down.toFixed(2) }}
+        </div>
+        <div class="abs-br white">
+            {{ (scale_up*100).toFixed(0) }}%/{{ (scale_down*100).toFixed(0) }}%
+        </div>
+        <vue-sizemon v-model="sizemon"></vue-sizemon>
+    </div>
+</script>
+<script>
+
+    function px(v)
+    {
+        return v ? `${v}px` : 0;
+    }
+
+    Vue.mixin({
+        methods: {
+            px,
+        }
+    });
+
+    Vue.component('app-banner', {
+        props: ['value'],
+        template: '#templ-app-banner',
+        data: function () {
+            return {
+                sizemon: {},
+            };
+        },
+        computed: {
+            banner: function () {
+                return this.value;
+            },
+            scale: function () {
+                return this.sizemon.width/this.banner.width;
+            },
+            scale_up: function () {
+                return Math.min(this.sizemon.width/this.banner.width, this.sizemon.height/this.banner.height);
+            },
+            scale_down: function () {
+                return Math.min(1, this.sizemon.width/this.banner.width);
+            },
+        },
+    });
+
+    new Vue({
+        el: '#app',
+        data: {
+            container_width: 800,
+            banner: {
+                width: 50,
+                height: 150,
+            },
+        },
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>docs • smcss (a css for prototyping)</title>
+    <link href="../app.css?t=1578512591" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1578512915" rel="stylesheet" />
+</head>
+<body>
+
+<div id="app" class="abs-f vsplit app-ff-roboto">
+
+    <div class="hsplit app-pal-header app-border xborder-ht">
+        <div class="w250 h50 mla">
+            <ul class="xls xm xp ww hh flex-row">
+                <li class="lh20 p15 mla">smcss</li>
+            </ul>
+        </div>
+        <div class="fluid h50">
+            <ul class="xls xm xp ww hh flex-row">
+                <li>
+                    <a href="../concepts" class="db lh20 p15">Concepts</a
+                </li>
+                <li class="app-pal-active">
+                    <a href="../reference" class="db lh20 p15">Reference</a>
+                </li>
+                <li>
+                    <a href="../demos" class="db lh20 p15">Demos</a>
+                </li>
+                <li>
+                    <a href="../try" class="db lh20 p15">Try it out</a>
+                </li>
+                <li class="mla">
+                    <a href="https://github.com/vbarbarosh/smcss" target="_blank" class="db lh20 p15">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fluid hsplit">
+        <div class="bbox w200 ph10 vsplit">
+            <ul class="fluid pv15 oa">
+                <li><a href="#background">background</a></li>
+                <li><a href="#border">border</a></li>
+                <li><a href="#box-shadow">box-shadow</a></li>
+                <li><a href="#box-sizing">box-sizing</a></li>
+                <li><a href="#button">button</a></li>
+                <li><a href="#cursor">cursor</a></li>
+                <li><a href="#display">display</a></li>
+                <li><a href="#display-flex">display-flex</a></li>
+                <li><a href="#display-flex-hsplit">display-flex-hsplit</a></li>
+                <li><a href="#expand">expand</a></li>
+                <li><a href="#float">float</a></li>
+                <li><a href="#list">list</a></li>
+                <li><a href="#margin">margin</a></li>
+                <li><a href="#margin-group">margin-group</a></li>
+                <li><a href="#opacity">opacity</a></li>
+                <li><a href="#outline">outline</a></li>
+                <li><a href="#overflow">overflow</a></li>
+                <li><a href="#padding">padding</a></li>
+                <li><a href="#padding-group">padding-group</a></li>
+                <li><a href="#pointer-events">pointer-events</a></li>
+                <li><a href="#position">position</a></li>
+                <li><a href="#position-abs">position-abs</a></li>
+                <li><a href="#position-fix">position-fix</a></li>
+                <li><a href="#position-sticky">position-sticky</a></li>
+                <li><a href="#scrollbar">scrollbar</a></li>
+                <li><a href="#size">size</a></li>
+                <li><a href="#text">text</a></li>
+                <li><a href="#text-ellipsis">text-ellipsis</a></li>
+                <li><a href="#theme">theme</a></li>
+                <li><a href="#toggle">toggle</a></li>
+                <li><a href="#transform">transform</a></li>
+                <li><a href="#user-select">user-select</a></li>
+                <li><a href="#zindex">zindex</a></li>
+            </ul>
+        </div>
+        <div class="fluid p20 mg25 oa">
+
+            <h1 class="xm">smcss &mdash; a css for prototyping</h1>
+
+            <h2>Installation</h2>
+<pre class="dashed p5 app-ff-roboto-mono">
+npm i vbarbarosh/smcss
+</pre>
+
+            <h2>First try</h2>
+<pre class="dashed p5 app-ff-roboto-mono">
+echo -e "@import 'smcss'\n.foo\n\t@include sm('w100 h100 red')" > a.sass
+sass -I node_modules a.sass > a.css
+</pre>
+
+            <div class="mg15">
+
+    <h3 id="background">background</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xbg</th><td><code>background: none</code></td></tr>
+    <tr><th>black</th><td><code>background: #000</code></td></tr>
+    <tr><th>gray</th><td><code>background: #888</code></td></tr>
+    <tr><th>silver</th><td><code>background: #ccc</code></td></tr>
+    <tr><th>white</th><td><code>background: #fff</code></td></tr>
+    <tr><th>red</th><td><code>background: #f88</code></td></tr>
+    <tr><th>green</th><td><code>background: #8f8</code></td></tr>
+    <tr><th>blue</th><td><code>background: #88f</code></td></tr>
+    <tr><th>yellow</th><td><code>background: #ff8</code></td></tr>
+    <tr><th>cyan</th><td><code>background: #8ff</code></td></tr>
+    <tr><th>checkerboard</th><td><code>background: url('data:image/png;base64,...')</code></td></tr>
+    <tr><th>rainbow</th><td><pre>
+& > :nth-child(3n+1)
+    @include red
+& > :nth-child(3n+2)
+    @include green
+& > :nth-child(3n+3)
+    @include blue</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="border">border</h3>
+
+    <div class="flex-row mi15">
+        <div>
+            <table>
+                <tbody>
+                <tr><th>xborder</th><td><code>border: none</code></td></tr>
+                <tr><th>xborder-t</th><td><code>border-top: none</code></td></tr>
+                <tr><th>xborder-l</th><td><code>border-left: none</code></td></tr>
+                <tr><th>xborder-r</th><td><code>border-right: none</code></td></tr>
+                <tr><th>xborder-b</th><td><code>border-bottom: none</code></td></tr>
+                <tr><th>xborder-v</th><td><code>border-top: none<br>border-bottom: none</code></td></tr>
+                <tr><th>xborder-h</th><td><code>border-left: none<br>border-right: none</code></td></tr>
+                <tr><th>xborder-vl</th><td><code>border-top: none<br>border-left: none<br>border-bottom: none</code></td></tr>
+                <tr><th>xborder-vr</th><td><code>border-top: none<br>border-right: none<br>border-bottom: none</code></td></tr>
+                <tr><th>xborder-ht</th><td><code>border-top: none<br>border-left: none<br>border-right: none</code></td></tr>
+                <tr><th>xborder-hb</th><td><code>border-left: none<br>border-right: none<br>border-bottom: none</code></td></tr>
+                <tr><th>border</th><td><code>border: 1px solid</code></td></tr>
+                <tr><th>dashed</th><td><code>border: 1px dashed</code></td></tr>
+                <tr><th>xbr</th><td><code>border-radius: 0</code></td></tr>
+                <tr><th>br<span class="n">N</span></th><td><code>border-radius: <span class="n">N</span></code></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mg15">
+
+            <p>Cut unwanted borders</p>
+
+            <pre class="dashed p5 app-ff-roboto-mono">
+.app-border-style1 {
+    border: 1px solid black;
+}
+.app-border-style2 {
+    border: 1px solid red;
+}
+</pre>
+
+            <pre class="dashed p5 app-ff-roboto-mono">
+&lt;div class=&quot;app-border-style1 xborder-v&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;app-border-style2 xborder-h&quot;&gt;&lt;/div&gt;
+</pre>
+
+            <div class="w500 p5 mg5 bs5">
+
+                <div>
+                    <div class="flex-row-center cbox w75 h75 silver fs12 border"></div>
+                </div>
+
+                <div class="flex-row mi5">
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-t">.xborder-t</div>
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-l">.xborder-l</div>
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-r">.xborder-r</div>
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-b">.xborder-b</div>
+                </div>
+
+                <div class="flex-row mi5">
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-h">.xborder-h</div>
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-ht">.xborder-ht</div>
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-hb">.xborder-hb</div>
+                </div>
+
+                <div class="flex-row mi5">
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-v">.xborder-v</div>
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-vl">.xborder-vl</div>
+                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-vr">.xborder-vr</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="shadow">shadow</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xbs</th><td><pre>box-shadow: none</pre></td></tr>
+    <tr><th>bs<span class="n">N</span></th><td><pre>box-shadow: 0 0 <span class="n">N</span> rgba(0, 0, 0, 0.75)</pre></td></tr>
+    <tr><th>is<span class="n">N</span></th><td><pre>box-shadow: inset 0 0 <span class="n">N</span> rgba(0, 0, 0, 0.75)</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="box-sizing">box-sizing</h3>
+
+    <table>
+    <tbody>
+    <tr><th>bbox</th><td><code>box-sizing: border-box</code></td></tr>
+    <tr><th>cbox</th><td><code>box-sizing: content-box</code></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="button">button</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xbutton</th><td><pre>
+@mixin xbutton
+    box-sizing: content-box // `chrome: box-sizing: border-box;`
+    font-size: inherit // chrome: `padding: 1px 6px;`
+    color: inherit // chrome: `color: buttontext;`
+    border: none
+    padding: 0
+    background: none
+    // &:hover
+    // &:active
+    // &:hover:active
+    &:focus
+        outline: none // chrome
+    &::-moz-focus-inner
+        border: none
+</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="cursor">cursor</h3>
+
+    <div class="flex-row mi15">
+        <table>
+        <tbody>
+        <tr><th>cur-alias</th><td><code>cursor: alias</code></td></tr>
+        <tr><th>cur-all-scroll</th><td><code>cursor: all-scroll</code></td></tr>
+        <tr><th>cur-auto</th><td><code>cursor: auto</code></td></tr>
+        <tr><th>cur-cell</th><td><code>cursor: cell</code></td></tr>
+        <tr><th>cur-col-resize</th><td><code>cursor: col-resize</code></td></tr>
+        <tr><th>cur-context-menu</th><td><code>cursor: context-menu</code></td></tr>
+        <tr><th>cur-copy</th><td><code>cursor: copy</code></td></tr>
+        <tr><th>cur-crosshair</th><td><code>cursor: crosshair</code></td></tr>
+        <tr><th>cur-default</th><td><code>cursor: default</code></td></tr>
+        <tr><th>cur-e-resize</th><td><code>cursor: e-resize</code></td></tr>
+        <tr><th>cur-ew-resize</th><td><code>cursor: ew-resize</code></td></tr>
+        <tr><th>cur-help</th><td><code>cursor: help</code></td></tr>
+        <tr><th>cur-inherit</th><td><code>cursor: inherit</code></td></tr>
+        <tr><th>cur-initial</th><td><code>cursor: initial</code></td></tr>
+        <tr><th>cur-move</th><td><code>cursor: move</code></td></tr>
+        <tr><th>cur-n-resize</th><td><code>cursor: n-resize</code></td></tr>
+        <tr><th>cur-ne-resize</th><td><code>cursor: ne-resize</code></td></tr>
+        <tr><th>cur-nesw-resize</th><td><code>cursor: nesw-resize</code></td></tr>
+        <tr><th>cur-no-drop</th><td><code>cursor: no-drop</code></td></tr>
+        <tr><th>cur-none</th><td><code>cursor: none</code></td></tr>
+        <tr><th>cur-not-allowed</th><td><code>cursor: not-allowed</code></td></tr>
+        <tr><th>cur-ns-resize</th><td><code>cursor: ns-resize</code></td></tr>
+        <tr><th>cur-nw-resize</th><td><code>cursor: nw-resize</code></td></tr>
+        <tr><th>cur-nwse-resize</th><td><code>cursor: nwse-resize</code></td></tr>
+        <tr><th>cur-pointer</th><td><code>cursor: pointer</code></td></tr>
+        <tr><th>cur-progress</th><td><code>cursor: progress</code></td></tr>
+        <tr><th>cur-row-resize</th><td><code>cursor: row-resize</code></td></tr>
+        <tr><th>cur-s-resize</th><td><code>cursor: s-resize</code></td></tr>
+        <tr><th>cur-se-resize</th><td><code>cursor: se-resize</code></td></tr>
+        <tr><th>cur-sw-resize</th><td><code>cursor: sw-resize</code></td></tr>
+        <tr><th>cur-text</th><td><code>cursor: text</code></td></tr>
+        <tr><th>cur-vertical-text</th><td><code>cursor: vertical-text</code></td></tr>
+        <tr><th>cur-w-resize</th><td><code>cursor: w-resize</code></td></tr>
+        <tr><th>cur-wait</th><td><code>cursor: wait</code></td></tr>
+        </tbody>
+        </table>
+        <div class="flex-fluid">
+            <iframe src="../../../demos/cursor/index.html" frameborder="0" class="hh w400"></iframe>
+        </div>
+    </div>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="display">display</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xd</th><td><code>display: none</code></td></tr>
+    <tr><th>db</th><td><code>display: block</code></td></tr>
+    <tr><th>di</th><td><code>display: inline</code></td></tr>
+    <tr><th>dib</th><td><code>display: inline-block</code></td></tr>
+    <tr><th>dt</th><td><code>display: table</code></td></tr>
+    <tr><th>dtc</th><td><code>display: table-cell</code></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="display-flex">display-flex</h3>
+
+    <table>
+    <tbody>
+    <tr><th>flex-row</th><td><code>display: flex<br>flex-direction: row</code></td></tr>
+    <tr><th>flex-irow</th><td><code>display: inline-flex<br>flex-direction: row</code></td></tr>
+    <tr><th>flex-row-center</th><td><code>@include flex-row<br>@include flex-center</code></td></tr>
+    <tr><th>flex-irow-center</th><td><code>@include flex-irow<br>@include flex-center</code></td></tr>
+    <tr><th>flex-col</th><td><code>display: flex<br>flex-direction: col</code></td></tr>
+    <tr><th>flex-icol</th><td><code>display: inline-flex<br>flex-direction: col</code></td></tr>
+    <tr><th>flex-col-center</th><td><code>@include flex-col<br>@include flex-center</code></td></tr>
+    <tr><th>flex-icol-center</th><td><code>@include flex-icol<br>@include flex-center</code></td></tr>
+    <tr><th>flex-wrap</th><td></td></tr>
+    <tr><th>flex-nowrap</th><td></td></tr>
+    <tr><th>flex-wrap-r</th><td></td></tr>
+    <tr><th>flex-center</th><td></td></tr>
+    <tr><th>flex-align-start</th><td><code>align-items: flex-start</code></td></tr>
+    <tr><th>flex-align-end</th><td><code>align-items: flex-end</code></td></tr>
+    <tr><th>flex-align-center</th><td><code>align-items: center</code></td></tr>
+    <tr><th>flex-align-baseline</th><td><code>align-items: baseline</code></td></tr>
+    <tr><th>flex-align-stretch</th><td><code>align-items: stretch</code></td></tr>
+    <tr><th>flex-justify-start</th><td><code>justify-content: flex-start</code></td></tr>
+    <tr><th>flex-justify-end</th><td><code>justify-content: flex-end</code></td></tr>
+    <tr><th>flex-justify-center</th><td><code>justify-content: center</code></td></tr>
+    <tr><th>flex-justify-between</th><td><code>justify-content: space-between</code></td></tr>
+    <tr><th>flex-justify-around</th><td><code>justify-content: space-around</code></td></tr>
+    <tr><th>flex-grow</th><td><code>flex-grow: 1</code></td></tr>
+    <tr><th>flex-nogrow</th><td><code>flex-grow: 0</code></td></tr>
+    <tr><th>flex-shrink</th><td><pre>
+flex-shrink: 1
+flex-basis: auto
+min-width: 0
+min-height: 0
+</pre></td></tr>
+    <tr><th>flex-fluid</th><td><pre>
+@include flex-grow
+@include flex-shrink
+// Fix for IE10 and IE11; *flex-basis: auto* doesn't work
+-ms-flex-preferred-size: 0
+</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="display-flex-hsplit">display-flex-hsplit</h3>
+
+    <table>
+    <tbody>
+    <tr><th>hsplit</th><td></td></tr>
+    <tr><th>vsplit</th><td></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="expand">expand</h3>
+
+    <table>
+    <tbody>
+    <tr><th>expand</th><td><pre>
+@mixin expand($width, $height)
+    @include db     // Very often target of this class will be A element
+    @include rel    // Almost always children will be absolutely positioned
+    &:before
+        @include db
+        content: ''
+        padding-top: to-number($height) / to-number($width) * 100%
+</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="float">float</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xf</th><td><code>float: none</code></td></tr>
+    <tr><th>fl</th><td><code>float: left</code></td></tr>
+    <tr><th>fr</th><td><code>float: right</code></td></tr>
+    <tr><th>xc</th><td><code>clear: none</code></td></tr>
+    <tr><th>cb</th><td><code>clear: both</code></td></tr>
+    <tr><th>cl</th><td><code>clear: left</code></td></tr>
+    <tr><th>cr</th><td><code>clear: right</code></td></tr>
+    <tr><th>clearfix</th><td><pre>
+// http://compass-style.org/reference/compass/utilities/general/clearfix/
+@mixin clearfix
+    *zoom: 1
+    &:after
+        content: '\0020'
+        display: block
+        height: 0
+        clear: both
+        overflow: hidden
+        visibility: hidden
+</pre></td></tr>
+    <tr><th>floats</th><td><pre>
+@include clearfix
+    > *
+        @include fl
+</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="font">font</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xfs</th><td><code>font-size: inherit</code></td></tr>
+    <tr><th>fs<span class="n">N</span></th><td><code>font-size: <span class="n">N</span></code></td></tr>
+    <tr><th>ls<span class="n">N</span></th><td><code>letter-spacing: <span class="n">N</span></code></td></tr>
+    <tr><th>lh<span class="n">N</span></th><td><code>line-height: <span class="n">N</span></code></td></tr>
+    <tr><th>n</th><td><code>font-style: normal</code></td></tr>
+    <tr><th>i</th><td><code>font-style: italic</code></td></tr>
+    <tr><th>q</th><td><code>font-style: oblique</code></td></tr>
+    <tr><th>ii</th><td><code>font-style: inherit</code></td></tr>
+    <tr><th>b</th><td><code>font-weight: bold</code></td></tr>
+    <tr><th>xfw</th><td><code>font-weight: normal</code></td></tr>
+    <tr><th>fw3</th><td><code>font-weight: 300</code></td></tr>
+    <tr><th>fw4</th><td><code>font-weight: 400</code></td></tr>
+    <tr><th>fw5</th><td><code>font-weight: 500</code></td></tr>
+    <tr><th>fw6</th><td><code>font-weight: 600</code></td></tr>
+    <tr><th>fw7</th><td><code>font-weight: 700</code></td></tr>
+    <tr><th>fw8</th><td><code>font-weight: 800</code></td></tr>
+    <tr><th>fw9</th><td><code>font-weight: 900</code></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="list">list</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xls</th><td><code>list-style: none</code></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="margin">margin</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xm</th><td><pre>margin: 0</pre></td></tr>
+    <tr><th>xmt</th><td><pre>margin-top: 0</pre></td></tr>
+    <tr><th>xml</th><td><pre>margin-left: 0</pre></td></tr>
+    <tr><th>xmr</th><td><pre>margin-right: 0</pre></td></tr>
+    <tr><th>xmb</th><td><pre>margin-bottom: 0</pre></td></tr>
+    <tr><th>m<span class="n">N</span></th><td><pre>margin: <span class="n">N</span></pre></td></tr>
+    <tr><th>mv<span class="n">N</span></th><td><pre>margin-top: <span class="n">N</span><br>margin-bottom: <span class="n">N</span></pre></td></tr>
+    <tr><th>mh<span class="n">N</span></th><td><pre>margin-left: <span class="n">N</span><br>margin-right: <span class="n">N</span></pre></td></tr>
+    <tr><th>mt<span class="n">N</span></th><td><pre>margin-top: <span class="n">N</span></pre></td></tr>
+    <tr><th>ml<span class="n">N</span></th><td><pre>margin-left: <span class="n">N</span></pre></td></tr>
+    <tr><th>mr<span class="n">N</span></th><td><pre>margin-right: <span class="n">N</span></pre></td></tr>
+    <tr><th>mb<span class="n">N</span></th><td><pre>margin-bottom: <span class="n">N</span></pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="margin-group">margin groups</h3>
+
+    <div class="flex-row mi15">
+        <div>
+            <table>
+            <tbody>
+            <tr><th>mg<span class="n">N</span></th><td><pre>.mg<span class="n">N</span> > :not(:last-child) { margin-bottom: <span class="n">N</span>; }</pre></td></tr>
+            <tr><th>mi<span class="n">N</span></th><td><pre>.mi<span class="n">N</span> > :not(:last-child) { margin-right: <span class="n">N</span>; }</pre></td></tr>
+            </tbody>
+            </table>
+        </div>
+        <div>
+            <p><strong>mg</strong> &mdash; vertical space between immediate children.</p>
+            <p><strong>mi</strong> &mdash; horizontal space between immediate children.</p>
+        </div>
+    </div>
+
+    <p>Margins and paddings should be distributed by container.</p>
+
+    <h4>block-level margin groups <small>(children are distributed vertically)</small></h4>
+
+    <pre class="dashed p5 app-ff-roboto-mono">
+.mg5 > :not(:last-child) { margin-bottom: 5px; }
+.mg10 > :not(:last-child) { margin-bottom: 10px; }
+</pre>
+
+    <div class="flex-row flex-wrap">
+        <div class="w250 ma dashed p5 bs5">
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+        </div>
+
+        <div class="w250 ma dashed p5 bs5 mg5">
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+        </div>
+
+        <div class="w250 ma dashed p5 bs5 mg10">
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+        </div>
+
+        <div class="w250 ma dashed p5 bs5 mg15">
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+            <div class="h100 dashed"></div>
+        </div>
+    </div>
+
+    <h4>inline-level margin groups <small>(children are distributed horizontally)</small></h4>
+
+    <pre class="dashed p5 app-ff-roboto-mono">
+.mi5 > :not(:last-child) { margin-right: 5px; }
+.mi10 > :not(:last-child) { margin-right: 10px; }
+</pre>
+
+    <div class="w500 ma mg20">
+
+        <div class="flex-row flex-wrap w250 ma dashed p5 bs5">
+            <div class="w25 dashed">a</div>
+            <div class="w25 dashed">b</div>
+            <div class="w25 dashed">c</div>
+        </div>
+
+        <div class="flex-row flex-wrap w250 ma dashed p5 bs5 mi5">
+            <div class="w25 dashed">a</div>
+            <div class="w25 dashed">b</div>
+            <div class="w25 dashed">c</div>
+        </div>
+
+        <div class="flex-row flex-wrap w250 ma dashed p5 bs5 mi10">
+            <div class="w25 dashed">a</div>
+            <div class="w25 dashed">b</div>
+            <div class="w25 dashed">c</div>
+        </div>
+
+        <div class="flex-row flex-wrap w250 ma dashed p5 bs5 mi15">
+            <div class="w25 dashed">a</div>
+            <div class="w25 dashed">b</div>
+            <div class="w25 dashed">c</div>
+        </div>
+    </div>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="opacity">opacity</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xo</th><td><pre>opacity: 1</pre></td></tr>
+    <tr><th>o<span class="n">N</span></th><td><pre>opacity: <span class="n">N/100</span></pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="outline">outline</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xoutline</th><td><pre>outline: none</pre></td></tr>
+    <tr><th>outline</th><td><pre>outline: 1px currentColor</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="overflow">overflow</h3>
+
+    <table>
+    <tbody>
+    <tr><th>oa</th><td><pre>overflow: auto</pre></td></tr>
+    <tr><th>oh</th><td><pre>overflow: hidden</pre></td></tr>
+    <tr><th>os</th><td><pre>overflow: scroll</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="padding">padding</h3>
+
+    <table>
+    <tbody>
+    <tr><th>xp</th><td><pre>margin: 0</pre></td></tr>
+    <tr><th>xpt</th><td><pre>padding-top: 0</pre></td></tr>
+    <tr><th>xpl</th><td><pre>padding-left: 0</pre></td></tr>
+    <tr><th>xpr</th><td><pre>padding-right: 0</pre></td></tr>
+    <tr><th>xpb</th><td><pre>padding-bottom: 0</pre></td></tr>
+    <tr><th>p<span class="n">N</span></th><td><pre>padding: <span class="n">N</span></pre></td></tr>
+    <tr><th>pv<span class="n">N</span></th><td><pre>padding-top: <span class="n">N</span><br>padding-bottom: <span class="n">N</span></pre></td></tr>
+    <tr><th>ph<span class="n">N</span></th><td><pre>padding-left: <span class="n">N</span><br>padding-right: <span class="n">N</span></pre></td></tr>
+    <tr><th>pt<span class="n">N</span></th><td><pre>padding-top: <span class="n">N</span></pre></td></tr>
+    <tr><th>pl<span class="n">N</span></th><td><pre>padding-left: <span class="n">N</span></pre></td></tr>
+    <tr><th>pr<span class="n">N</span></th><td><pre>padding-right: <span class="n">N</span></pre></td></tr>
+    <tr><th>pb<span class="n">N</span></th><td><pre>padding-bottom: <span class="n">N</span></pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="padding-group">padding-group</h3>
+
+    <div class="flex-row mi15">
+        <div>
+            <table>
+            <tbody>
+            <tr><th>pg<span class="n">N</span></th><td><pre>.pg<span class="n">N</span> > :not(:last-child) { padding-bottom: <span class="n">N</span>; }</pre></td></tr>
+            <tr><th>pi<span class="n">N</span></th><td><pre>.pi<span class="n">N</span> > :not(:last-child) { padding-right: <span class="n">N</span>; }</pre></td></tr>
+            </tbody>
+            </table>
+        </div>
+        <div>
+            <p><code class="fw5">pg</code> &mdash; vertical space between immediate children</p>
+            <p><code class="fw5">pi</code> &mdash; horizontal space between immediate children</p>
+        </div>
+    </div>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="pointer-events">pointer-events</h3>
+
+    <table>
+    <tbody>
+    <tr><th>no-pointer-events</th><td><pre>pointer-events: none</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="position">position</h3>
+
+    <table>
+    <tbody>
+    <tr><th>stat</th><td><pre>position: static</pre></td></tr>
+    <tr><th>rel</th><td><pre>position: relative</pre></td></tr>
+    <tr><th>abs</th><td><pre>position: absolute</pre></td></tr>
+    <tr><th>fix</th><td><pre>position: fixed</pre></td></tr>
+    <tr><th>sticky</th><td><pre>position: sticky</pre></td></tr>
+    <tr><th>tlbr<span class="n">[N=0]</span></th><td><pre>
+top: <span class="n">N</span>
+left: <span class="n">N</span>
+right: <span class="n">N</span>
+bottom: <span class="n">N</span>
+</pre></td></tr>
+    <tr><th>ta</th><td><pre>top: auto</pre></td></tr>
+    <tr><th>la</th><td><pre>left: auto</pre></td></tr>
+    <tr><th>ra</th><td><pre>right: auto</pre></td></tr>
+    <tr><th>ba</th><td><pre>bottom: auto</pre></td></tr>
+    <tr><th>t<span class="n">N</span></th><td><pre>top: <span class="n">N</span></pre></td></tr>
+    <tr><th>l<span class="n">N</span></th><td><pre>left: <span class="n">N</span></pre></td></tr>
+    <tr><th>r<span class="n">N</span></th><td><pre>right: <span class="n">N</span></pre></td></tr>
+    <tr><th>b<span class="n">N</span></th><td><pre>bottom: <span class="n">N</span></pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="position-abs">position-abs</h3>
+
+    <div class="flex-row mi15">
+        <table>
+        <tbody>
+        <tr><th>abs-f</th></tr>
+        <tr><th>abs-t</th></tr>
+        <tr><th>abs-b</th></tr>
+        <tr><th>abs-l</th></tr>
+        <tr><th>abs-r</th></tr>
+        <tr><th>abs-c</th></tr>
+        <tr><th>abs-tl</th></tr>
+        <tr><th>abs-tl-c</th></tr>
+        <tr><th>abs-tl-ct</th></tr>
+        <tr><th>abs-tl-cb</th></tr>
+        <tr><th>abs-tl-cl</th></tr>
+        <tr><th>abs-tl-cr</th></tr>
+        <tr><th>abs-tl-tr</th></tr>
+        <tr><th>abs-tl-bl</th></tr>
+        <tr><th>abs-tl-br</th></tr>
+        <tr><th>abs-tr</th></tr>
+        <tr><th>abs-tr-c</th></tr>
+        <tr><th>abs-tr-ct</th></tr>
+        <tr><th>abs-tr-cb</th></tr>
+        <tr><th>abs-tr-cl</th></tr>
+        <tr><th>abs-tr-cr</th></tr>
+        <tr><th>abs-tr-tl</th></tr>
+        <tr><th>abs-tr-bl</th></tr>
+        <tr><th>abs-tr-br</th></tr>
+        <tr><th>abs-bl</th></tr>
+        <tr><th>abs-bl-c</th></tr>
+        <tr><th>abs-bl-ct</th></tr>
+        <tr><th>abs-bl-cb</th></tr>
+        <tr><th>abs-bl-cl</th></tr>
+        <tr><th>abs-bl-cr</th></tr>
+        <tr><th>abs-bl-tl</th></tr>
+        <tr><th>abs-bl-tr</th></tr>
+        <tr><th>abs-bl-br</th></tr>
+        <tr><th>abs-br</th></tr>
+        <tr><th>abs-br-c</th></tr>
+        <tr><th>abs-br-ct</th></tr>
+        <tr><th>abs-br-cb</th></tr>
+        <tr><th>abs-br-cl</th></tr>
+        <tr><th>abs-br-cr</th></tr>
+        <tr><th>abs-br-tl</th></tr>
+        <tr><th>abs-br-tr</th></tr>
+        <tr><th>abs-br-bl</th></tr>
+        <tr><th>abs-c-ct</th></tr>
+        <tr><th>abs-c-cb</th></tr>
+        <tr><th>abs-c-cl</th></tr>
+        <tr><th>abs-c-cr</th></tr>
+        <tr><th>abs-c-tl</th></tr>
+        <tr><th>abs-c-tr</th></tr>
+        <tr><th>abs-c-bl</th></tr>
+        <tr><th>abs-c-br</th></tr>
+        <tr><th>abs-ct</th></tr>
+        <tr><th>abs-ct-c</th></tr>
+        <tr><th>abs-ct-cb</th></tr>
+        <tr><th>abs-ct-cl</th></tr>
+        <tr><th>abs-ct-cr</th></tr>
+        <tr><th>abs-ct-tl</th></tr>
+        <tr><th>abs-ct-tr</th></tr>
+        <tr><th>abs-ct-bl</th></tr>
+        <tr><th>abs-ct-br</th></tr>
+        <tr><th>abs-cb</th></tr>
+        <tr><th>abs-cb-c</th></tr>
+        <tr><th>abs-cb-ct</th></tr>
+        <tr><th>abs-cb-cb</th></tr>
+        <tr><th>abs-cb-cl</th></tr>
+        <tr><th>abs-cb-cr</th></tr>
+        <tr><th>abs-cb-tl</th></tr>
+        <tr><th>abs-cb-tr</th></tr>
+        <tr><th>abs-cb-bl</th></tr>
+        <tr><th>abs-cb-br</th></tr>
+        <tr><th>abs-cl</th></tr>
+        <tr><th>abs-cl-c</th></tr>
+        <tr><th>abs-cl-ct</th></tr>
+        <tr><th>abs-cl-cb</th></tr>
+        <tr><th>abs-cl-cr</th></tr>
+        <tr><th>abs-cl-tl</th></tr>
+        <tr><th>abs-cl-tr</th></tr>
+        <tr><th>abs-cl-bl</th></tr>
+        <tr><th>abs-cl-br</th></tr>
+        <tr><th>abs-cr</th></tr>
+        <tr><th>abs-cr-c</th></tr>
+        <tr><th>abs-cr-ct</th></tr>
+        <tr><th>abs-cr-cb</th></tr>
+        <tr><th>abs-cr-cl</th></tr>
+        <tr><th>abs-cr-tl</th></tr>
+        <tr><th>abs-cr-tr</th></tr>
+        <tr><th>abs-cr-bl</th></tr>
+        <tr><th>abs-cr-br</th></tr>
+        </tbody>
+        </table>
+        <div class="flex-fluid">
+            <div class="flex-row flex-align-start sticky-t">
+                <div class="ma mg20 bs10" v-bind:style="{width: px(width)}">
+                    <div class="rel h200 fs13 blue dashed">
+                        <div v-bind:class="resulted_class" class="green p10 flex-row-center transition">
+                            {{ resulted_class }}
+                            <div v-bind:class="inner.active.orig.preview" class="w5 h5 br999 black transition"></div>
+                        </div>
+                        <div v-bind:class="outer.active.orig.preview" class="w10 h10 br999 border transition"></div>
+                    </div>
+                </div>
+                <div class="flex-col-center p30 m30 mla mg30 dashed" style="background: rgba(0,0,0,0.1)">
+                    <div class="w100 h100 green rel">
+                        <button v-for="v in inner.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
+                            <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
+                        </button>
+                    </div>
+                    <div class="w100 h100 blue rel">
+                        <button v-for="v in outer.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
+                            <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
+                        </button>
+                    </div>
+                    <p>{{ resulted_class }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="position-fix">position-fix</h3>
+
+    <table>
+    <tbody>
+    <tr><th>fix-f</th></tr>
+    <tr><th>fix-t</th></tr>
+    <tr><th>fix-b</th></tr>
+    <tr><th>fix-l</th></tr>
+    <tr><th>fix-r</th></tr>
+    <tr><th>fix-c</th></tr>
+    <tr><th>fix-tl</th></tr>
+    <tr><th>fix-tl-c</th></tr>
+    <tr><th>fix-tl-ct</th></tr>
+    <tr><th>fix-tl-cb</th></tr>
+    <tr><th>fix-tl-cl</th></tr>
+    <tr><th>fix-tl-cr</th></tr>
+    <tr><th>fix-tl-tr</th></tr>
+    <tr><th>fix-tl-bl</th></tr>
+    <tr><th>fix-tl-br</th></tr>
+    <tr><th>fix-tr</th></tr>
+    <tr><th>fix-tr-c</th></tr>
+    <tr><th>fix-tr-ct</th></tr>
+    <tr><th>fix-tr-cb</th></tr>
+    <tr><th>fix-tr-cl</th></tr>
+    <tr><th>fix-tr-cr</th></tr>
+    <tr><th>fix-tr-tl</th></tr>
+    <tr><th>fix-tr-bl</th></tr>
+    <tr><th>fix-tr-br</th></tr>
+    <tr><th>fix-bl</th></tr>
+    <tr><th>fix-bl-c</th></tr>
+    <tr><th>fix-bl-ct</th></tr>
+    <tr><th>fix-bl-cb</th></tr>
+    <tr><th>fix-bl-cl</th></tr>
+    <tr><th>fix-bl-cr</th></tr>
+    <tr><th>fix-bl-tl</th></tr>
+    <tr><th>fix-bl-tr</th></tr>
+    <tr><th>fix-bl-br</th></tr>
+    <tr><th>fix-br</th></tr>
+    <tr><th>fix-br-c</th></tr>
+    <tr><th>fix-br-ct</th></tr>
+    <tr><th>fix-br-cb</th></tr>
+    <tr><th>fix-br-cl</th></tr>
+    <tr><th>fix-br-cr</th></tr>
+    <tr><th>fix-br-tl</th></tr>
+    <tr><th>fix-br-tr</th></tr>
+    <tr><th>fix-br-bl</th></tr>
+    <tr><th>fix-c-ct</th></tr>
+    <tr><th>fix-c-cb</th></tr>
+    <tr><th>fix-c-cl</th></tr>
+    <tr><th>fix-c-cr</th></tr>
+    <tr><th>fix-c-tl</th></tr>
+    <tr><th>fix-c-tr</th></tr>
+    <tr><th>fix-c-bl</th></tr>
+    <tr><th>fix-c-br</th></tr>
+    <tr><th>fix-ct</th></tr>
+    <tr><th>fix-ct-c</th></tr>
+    <tr><th>fix-ct-cb</th></tr>
+    <tr><th>fix-ct-cl</th></tr>
+    <tr><th>fix-ct-cr</th></tr>
+    <tr><th>fix-ct-tl</th></tr>
+    <tr><th>fix-ct-tr</th></tr>
+    <tr><th>fix-ct-bl</th></tr>
+    <tr><th>fix-ct-br</th></tr>
+    <tr><th>fix-cb</th></tr>
+    <tr><th>fix-cb-c</th></tr>
+    <tr><th>fix-cb-ct</th></tr>
+    <tr><th>fix-cb-cb</th></tr>
+    <tr><th>fix-cb-cl</th></tr>
+    <tr><th>fix-cb-cr</th></tr>
+    <tr><th>fix-cb-tl</th></tr>
+    <tr><th>fix-cb-tr</th></tr>
+    <tr><th>fix-cb-bl</th></tr>
+    <tr><th>fix-cb-br</th></tr>
+    <tr><th>fix-cl</th></tr>
+    <tr><th>fix-cl-c</th></tr>
+    <tr><th>fix-cl-ct</th></tr>
+    <tr><th>fix-cl-cb</th></tr>
+    <tr><th>fix-cl-cr</th></tr>
+    <tr><th>fix-cl-tl</th></tr>
+    <tr><th>fix-cl-tr</th></tr>
+    <tr><th>fix-cl-bl</th></tr>
+    <tr><th>fix-cl-br</th></tr>
+    <tr><th>fix-cr</th></tr>
+    <tr><th>fix-cr-c</th></tr>
+    <tr><th>fix-cr-ct</th></tr>
+    <tr><th>fix-cr-cb</th></tr>
+    <tr><th>fix-cr-cl</th></tr>
+    <tr><th>fix-cr-tl</th></tr>
+    <tr><th>fix-cr-tr</th></tr>
+    <tr><th>fix-cr-bl</th></tr>
+    <tr><th>fix-cr-br</th></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="position-sticky">position-sticky</h3>
+
+    <table>
+    <tbody>
+    <tr><th>sticky-t</th><td>position: sticky<br>top: 0</td></tr>
+    <tr><th>sticky-l</th><td>position: sticky<br>left: 0</td></tr>
+    <tr><th>sticky-r</th><td>position: sticky<br>right: 0</td></tr>
+    <tr><th>sticky-b</th><td>position: sticky<br>bottom: 0</td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="scrollbar">scrollbar</h3>
+
+    <table>
+    <tbody>
+    <tr><th>no-scrollbars</th><td><pre>
+@mixin no-scrollbars
+    overflow: scroll
+    overflow: -moz-scrollbars-none
+    -ms-overflow-style: none
+    &::-webkit-scrollbar
+        display: none
+</pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="size">size</h3>
+
+    <table>
+    <tbody>
+    <tr><th>ww</th><td><pre>width: 100%</pre></td></tr>
+    <tr><th>hh</th><td><pre>height: 100%</pre></td></tr>
+    <tr><th>w<span class="n">N</span></th><td><pre>width: <span class="n">N</span></pre></td></tr>
+    <tr><th>h<span class="n">N</span></th><td><pre>height: <span class="n">N</span></pre></td></tr>
+    <tr><th>min-w<span class="n">N</span></th><td><pre>min-width: <span class="n">N</span></pre></td></tr>
+    <tr><th>min-h<span class="n">N</span></th><td><pre>min-height: <span class="n">N</span></pre></td></tr>
+    <tr><th>max-w<span class="n">N</span></th><td><pre>max-width: <span class="n">N</span></pre></td></tr>
+    <tr><th>max-h<span class="n">N</span></th><td><pre>max-height: <span class="n">N</span></pre></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="text">text</h3>
+
+    <div class="flex-row mi15">
+        <table class="sticky-t50 z1n">
+            <tbody>
+            <tr><th>l</th><td><code>text-align: left</code></td></tr>
+            <tr><th>r</th><td><code>text-align: right</code></td></tr>
+            <tr><th>c</th><td><code>text-align: center</code></td></tr>
+            <tr><th>j</th><td><code>text-align: justify</code></td></tr>
+            <tr><th>vm</th><td><code>vertical-align: middle</code></td></tr>
+            <tr><th>vt</th><td><code>vertical-align: top</code></td></tr>
+            <tr><th>vb</th><td><code>vertical-align: bottom</code></td></tr>
+            </tbody>
+        </table>
+        <div class="flex-fluid">
+            <div class="w325 ma mg20">
+                <div class="l p5 dashed bs5">left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left left </div>
+                <div class="r p5 dashed bs5">right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right </div>
+                <div class="c p5 dashed bs5">center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center center </div>
+                <div class="j p5 dashed bs5">justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify justify </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="text-ellipsis">text-ellipsis</h3>
+
+    <div class="flex-row mi15">
+        <table>
+            <tbody>
+            <tr><th>ellipsis</th><td class="app-ff-roboto">Show single line of text, cut overflow with ellipsis</td></tr>
+            <tr><th>ellipsis2</th><td class="app-ff-roboto">
+                Show only two lines of text, cut overflow with ellipsis <strong>(line-height + max-height)</strong>.
+                <br>
+                <strong>Cons:</strong>
+                <br>
+                It's no allowed to use <code>padding-bottom</code> on elements with <code>ellipsis2</code>.
+                Text on it won't be hidden.
+            </td></tr>
+            </tbody>
+        </table>
+        <div class="flex-fluid mg5">
+            <div class="w200 ma p5 bs5 dashed ellipsis">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at deserunt dicta doloremque et facere harum hic incidunt, labore molestias nam nemo nisi pariatur placeat possimus quos reiciendis sed veniam?
+            </div>
+            <div class="w200 ma p20 bs5 dashed ellipsis2">
+                <span class="green border db">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at deserunt dicta doloremque et facere harum hic incidunt, labore molestias nam nemo nisi pariatur placeat possimus quos reiciendis sed veniam?</span>
+            </div>
+            <div class="w200 ma p5 bs5 dashed">
+                <div class="ellipsis2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, at deserunt dicta doloremque et facere harum hic incidunt, labore molestias nam nemo nisi pariatur placeat possimus quos reiciendis sed veniam?
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="theme">theme</h3>
+
+    <table>
+    <tbody>
+    <tr><th>theme-navy</th><td class="theme-navy">theme-navy</td></tr>
+    <tr><th>theme-blue</th><td class="theme-blue">theme-blue</td></tr>
+    <tr><th>theme-aqua</th><td class="theme-aqua">theme-aqua</td></tr>
+    <tr><th>theme-teal</th><td class="theme-teal">theme-teal</td></tr>
+    <tr><th>theme-olive</th><td class="theme-olive">theme-olive</td></tr>
+    <tr><th>theme-green</th><td class="theme-green">theme-green</td></tr>
+    <tr><th>theme-lime</th><td class="theme-lime">theme-lime</td></tr>
+    <tr><th>theme-yellow</th><td class="theme-yellow">theme-yellow</td></tr>
+    <tr><th>theme-orange</th><td class="theme-orange">theme-orange</td></tr>
+    <tr><th>theme-red</th><td class="theme-red">theme-red</td></tr>
+    <tr><th>theme-maroon</th><td class="theme-maroon">theme-maroon</td></tr>
+    <tr><th>theme-fuchsia</th><td class="theme-fuchsia">theme-fuchsia</td></tr>
+    <tr><th>theme-purple</th><td class="theme-purple">theme-purple</td></tr>
+    <tr><th>theme-black</th><td class="theme-black">theme-black</td></tr>
+    <tr><th>theme-gray</th><td class="theme-gray">theme-gray</td></tr>
+    <tr><th>theme-silver</th><td class="theme-silver">theme-silver</td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="toggle">toggle</h3>
+
+    <p>Define <code>.toggle</code> classes with <code>.if-on</code> and <code>.if-off</code> </p>
+
+    <p>The most basic <strong>toggle</strong></p>
+    <pre class="dashed p5 app-ff-roboto-mono">
+.toggle.active .if-off { display: none; }
+.toggle:not(.active) .if-on { display: none; }
+</pre>
+    <pre class="dashed p5 app-ff-roboto-mono">
+&lt;button v-on:click=&quot;toggle&quot; v-bind:class=&quot;{active: is_active}&quot; class=&quot;toggle&quot;&gt;
+    &lt;span class=&quot;if-on&quot;&gt;ON&lt;/span&gt;
+    &lt;span class=&quot;if-off&quot;&gt;OFF&lt;/span&gt;
+&lt;/button&gt;
+</pre>
+
+    <div class="w500 ma p5 mg5 bs5 dashed">
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle">
+                <span class="if-on">ON</span>
+                <span class="if-off">OFF</span>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle">
+                <span class="if-on">ON</span>
+                <span class="if-off">OFF</span>
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-hov1">
+                toggle
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-hov1">
+                toggle
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-rot90">
+                toggle
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="behavior-rot90">
+                toggle
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle2 mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle2 mi5">
+                <span>common</span>
+                <span class="if-on">toggle [on]</span>
+                <span class="if-off">toggle [off]</span>
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-opacity mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <span class="if-on abs-c">toggle [on]</span>
+                <span class="if-off abs-c">toggle [off]</span>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-opacity mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <span class="if-on abs-c">toggle [on]</span>
+                <span class="if-off abs-c">toggle [off]</span>
+            </button>
+        </div>
+        <div>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-rot90 mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <div class="abs-c"><div class="if-on">toggle rot90</div></div>
+            </button>
+            <button v-on:click="toggle" v-bind:class="{active: is_active}" class="toggle-rot90 mi5 rel rainbow" style="height: 50px;">
+                <span>common</span>
+                <div class="abs-c"><div class="if-on">toggle rot90</div></div>
+            </button>
+        </div>
+    </div>
+</div>
+            <div class="mg15">
+
+    <h3 id="transform">transform</h3>
+
+    <table>
+    <tbody>
+    <tr><th>hflip</th><td>transform: scale(-1, 1)</td></tr>
+    <tr><th>vflip</th><td>transform: scale(1, -1)</td></tr>
+    <tr><th>scale<span class="n">N</span></th><td>transform: scale(<span class="n">N/100</span>)</td></tr>
+    <tr><th>rotate<span class="n">D</span></th><td>transform: rotate(<span class="n">D</span>deg)</td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="user-select">user-select</h3>
+
+    <table>
+    <tbody>
+    <tr><th>no-user-select</th><td>user-select: none</td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="zindex">z-index</h3>
+
+    <table>
+    <tbody>
+    <tr><th>z<span class="n">N</span></th><td>z-index: <span class="n">N</span></td></tr>
+    </tbody>
+    </table>
+
+</div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+
+<script>
+(function () {
+
+    function px(v) {
+        return v ? `${v}px` : 0;
+    }
+
+    class Checked
+    {
+        constructor(items) {
+            const _this = this;
+            this.items = items.map(function (orig) {
+                const tmp = {
+                    orig,
+                    check() {
+                        _this.active = tmp;
+                    },
+                    get is_checked() {
+                        return _this.active === tmp;
+                    }
+                };
+                return tmp;
+            });
+            this.active = this.items[0];
+        }
+    }
+
+    new Vue({
+        el: '#app',
+        data: {
+            width: 500,
+            is_active: false,
+            inner: new Checked([
+                {preview: 'abs-c', name: 'c'},
+                {preview: 'abs-c-tl', name: 'tl'},
+                {preview: 'abs-c-tr', name: 'tr'},
+                {preview: 'abs-c-bl', name: 'bl'},
+                {preview: 'abs-c-br', name: 'br'},
+                {preview: 'abs-c-ct', name: 'ct'},
+                {preview: 'abs-c-cb', name: 'cb'},
+                {preview: 'abs-c-cl', name: 'cl'},
+                {preview: 'abs-c-cr', name: 'cr'},
+            ]),
+            outer: new Checked([
+                {preview: 'abs-c', name: 'c'},
+                {preview: 'abs-c-tl', name: 'tl'},
+                {preview: 'abs-c-tr', name: 'tr'},
+                {preview: 'abs-c-bl', name: 'bl'},
+                {preview: 'abs-c-br', name: 'br'},
+                {preview: 'abs-c-ct', name: 'ct'},
+                {preview: 'abs-c-cb', name: 'cb'},
+                {preview: 'abs-c-cl', name: 'cl'},
+                {preview: 'abs-c-cr', name: 'cr'},
+            ]),
+            active: null,
+        },
+        computed: {
+            resulted_class: function () {
+                const a = this.inner.active.orig.name;
+                const b = this.outer.active.orig.name;
+                return (a == b) ? `abs-${a}` : `abs-${a}-${b}`;
+            },
+        },
+        methods: {
+            px,
+            toggle: function () {
+                this.is_active = !this.is_active;
+            },
+        },
+    });
+
+})();
+</script>
+
+</body>
+</html>

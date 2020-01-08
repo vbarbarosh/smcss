@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+        .transition { transition: all .5s; }
+    </style>
+</head>
+<body class="checkerboard">
+
+<div id="app" class="mt50">
+
+    <div class="fix-t z1 ph15 bs10 white">
+        <input v-model="width" class="ww" type="range" min="10" max="1200">
+    </div>
+
+    <br>
+    <br>
+
+    <div class="abs-cr">
+        <div class="flex-col-center p30 m30 mg30 dashed silver">
+            <div class="w100 h100 green rel">
+                <button v-for="v in inner.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
+                    <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
+                </button>
+            </div>
+            <div class="w100 h100 blue rel">
+                <button v-for="v in outer.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
+                    <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>
+                </button>
+            </div>
+            <p class="white p10 pv5">{{ resulted_class }}</p>
+        </div>
+    </div>
+
+    <div class="ma mg20 bs10" v-bind:style="{width: px(width)}">
+        <div class="rel h200 fs13 blue dashed">
+            <div v-bind:class="resulted_class" class="green p10 flex-row-center transition">
+                {{ resulted_class }}
+                <div v-bind:class="inner.active.orig.preview" class="w5 h5 br999 black transition"></div>
+            </div>
+            <div v-bind:class="outer.active.orig.preview" class="w10 h10 br999 border transition"></div>
+        </div>
+    </div>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.5/vue.min.js" type="text/javascript"></script>
+<script>
+(function () {
+
+    function px(v) {
+        return v ? `${v}px` : 0;
+    }
+
+    class Checked
+    {
+        constructor(items) {
+            const _this = this;
+            this.items = items.map(function (orig) {
+                const tmp = {
+                    orig,
+                    check() {
+                        _this.active = tmp;
+                    },
+                    get is_checked() {
+                        return _this.active === tmp;
+                    }
+                };
+                return tmp;
+            });
+            this.active = this.items[0];
+        }
+    }
+
+    new Vue({
+        el: '#app',
+        data: {
+            width: 500,
+            inner: new Checked([
+                {preview: 'abs-c', name: 'c'},
+                {preview: 'abs-c-tl', name: 'tl'},
+                {preview: 'abs-c-tr', name: 'tr'},
+                {preview: 'abs-c-bl', name: 'bl'},
+                {preview: 'abs-c-br', name: 'br'},
+                {preview: 'abs-c-ct', name: 'ct'},
+                {preview: 'abs-c-cb', name: 'cb'},
+                {preview: 'abs-c-cl', name: 'cl'},
+                {preview: 'abs-c-cr', name: 'cr'},
+            ]),
+            outer: new Checked([
+                {preview: 'abs-c', name: 'c'},
+                {preview: 'abs-c-tl', name: 'tl'},
+                {preview: 'abs-c-tr', name: 'tr'},
+                {preview: 'abs-c-bl', name: 'bl'},
+                {preview: 'abs-c-br', name: 'br'},
+                {preview: 'abs-c-ct', name: 'ct'},
+                {preview: 'abs-c-cb', name: 'cb'},
+                {preview: 'abs-c-cl', name: 'cl'},
+                {preview: 'abs-c-cr', name: 'cr'},
+            ]),
+            active: null,
+        },
+        computed: {
+            resulted_class: function () {
+                const a = this.inner.active.orig.name;
+                const b = this.outer.active.orig.name;
+                return (a == b) ? `abs-${a}` : `abs-${a}-${b}`;
+            },
+        },
+        methods: {
+            px,
+        },
+    });
+
+})();
+</script>
+
+</body>
+</html>
