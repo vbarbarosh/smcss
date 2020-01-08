@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>reference | smcss (a css for prototyping)</title>
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1578517703" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1578517958" rel="stylesheet" />
 </head>
 <body>
 
@@ -154,7 +154,7 @@ sass -I node_modules a.sass > a.css
         </div>
         <div class="mg15">
 
-            <p>Cut unwanted borders</p>
+            <p>Cut unwanted borders approach</p>
 
             <pre class="dashed p5 app-ff-roboto-mono">
 .app-border-style1 {
@@ -232,22 +232,7 @@ sass -I node_modules a.sass > a.css
 
     <table>
     <tbody>
-    <tr><th>xbutton</th><td><pre>
-@mixin xbutton
-    box-sizing: content-box // `chrome: box-sizing: border-box;`
-    font-size: inherit // chrome: `padding: 1px 6px;`
-    color: inherit // chrome: `color: buttontext;`
-    border: none
-    padding: 0
-    background: none
-    // &:hover
-    // &:active
-    // &:hover:active
-    &:focus
-        outline: none // chrome
-    &::-moz-focus-inner
-        border: none
-</pre></td></tr>
+    <tr><th>xbutton</th><td>Reset any BUTTON styles. After it a BUTTON will have no look (e.g. just like DIV element).</td></tr>
     </tbody>
     </table>
 
