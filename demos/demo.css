@@ -2173,6 +2173,30 @@ h2 {
   position: sticky;
 }
 
+.sticky-t {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sticky-l {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+}
+
+.sticky-r {
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0;
+}
+
+.sticky-b {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
 .abs-f {
   position: absolute;
   top: 0;

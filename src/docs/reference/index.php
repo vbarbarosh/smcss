@@ -1,11 +1,12 @@
+<?php $d = __DIR__ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>docs • smcss (a css for prototyping)</title>
-    <link href="../app.css?t=<?php echo filemtime('../app.css') ?>" rel="stylesheet" />
-    <link href="../../../demos/demo.css?t=<?php echo filemtime('../../../demos/demo.css') ?>" rel="stylesheet" />
+    <link href="../app.css?t=<?php echo filemtime("$d/../app.css") ?>" rel="stylesheet" />
+    <link href="../demos/demo.css?t=<?php echo filemtime("$d/../demos/demo.css") ?>" rel="stylesheet" />
 </head>
 <body>
 
@@ -125,6 +126,21 @@ sass -I node_modules a.sass > a.css
             <?php include 'transform.php' ?>
             <?php include 'user-select.php' ?>
             <?php include 'zindex.php' ?>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
         </div>
     </div>
