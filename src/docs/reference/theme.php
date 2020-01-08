@@ -2,6 +2,12 @@
 
     <h3 id="theme">theme</h3>
 
+    <p class="p5 ph10 dashed theme-yellow">
+        <strong>Work in progress.</strong>
+        <br>
+        This is an attempt to specify both <code>color</code> and <code>background</code> at the same time.
+    </p>
+
     <table>
     <tbody>
     <tr><th>theme-navy</th><td class="theme-navy">theme-navy</td></tr>

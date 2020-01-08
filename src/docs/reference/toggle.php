@@ -2,6 +2,12 @@
 
     <h3 id="toggle">toggle</h3>
 
+    <p class="p5 ph10 dashed theme-yellow">
+        <strong>Work in progress.</strong>
+        <br>
+        This is an attempt to structure html/css for elements like checkboxes and radio buttons.
+    </p>
+
     <p>Define <code>.toggle</code> classes with <code>.if-on</code> and <code>.if-off</code> </p>
 
     <p>The most basic <strong>toggle</strong></p>
