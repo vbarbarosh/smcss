@@ -4,22 +4,7 @@
 
     <table>
     <tbody>
-    <tr><th>xbutton</th><td><pre>
-@mixin xbutton
-    box-sizing: content-box // `chrome: box-sizing: border-box;`
-    font-size: inherit // chrome: `padding: 1px 6px;`
-    color: inherit // chrome: `color: buttontext;`
-    border: none
-    padding: 0
-    background: none
-    // &:hover
-    // &:active
-    // &:hover:active
-    &:focus
-        outline: none // chrome
-    &::-moz-focus-inner
-        border: none
-</pre></td></tr>
+    <tr><th>xbutton</th><td>Reset any BUTTON styles. After it a BUTTON will have no look (e.g. just like DIV element).</td></tr>
     </tbody>
     </table>
 

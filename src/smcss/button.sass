@@ -1,13 +1,13 @@
-// The following two snippets should look the same:
+// The following two elements should look the same:
 //
 // * <button class="xbutton w100 h100 border red"></button>
 // * <div class="w100 h100 border red"></div>
 @mixin xbutton
     box-sizing: content-box // `chrome: box-sizing: border-box;`
-    font-size: inherit // chrome: `padding: 1px 6px;`
+    font-size: inherit
     color: inherit // chrome: `color: buttontext;`
     border: none
-    padding: 0
+    padding: 0 // chrome: `padding: 1px 6px;`
     background: none
     // &:hover
     // &:active
