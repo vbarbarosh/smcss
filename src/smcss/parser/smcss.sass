@@ -399,6 +399,14 @@
             @include fix
         @else if $expr == sticky // sticky
             @include sticky
+        @else if $expr == sticky-t // sticky-t
+            @include sticky-t
+        @else if $expr == sticky-l // sticky-l
+            @include sticky-l
+        @else if $expr == sticky-r // sticky-r
+            @include sticky-r
+        @else if $expr == sticky-b // sticky-b
+            @include sticky-b
         @else if $expr == abs-f // abs-f
                 @include abs-f
         @else if $expr == abs-t // abs-t
