@@ -1,6 +1,6 @@
 # smcss
 
-A way to organize and write CSS
+A way to organize and write CSS https://smcss.vbarbarosh.com
 
 ## Installation
 
