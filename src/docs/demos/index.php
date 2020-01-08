@@ -1,4 +1,4 @@
-<?php require 'php/app.php' ?>
+<?php require '../php/app.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
-    <link href="app.css?t=<?php echo filemtime('app.css') ?>" rel="stylesheet" />
-    <link href="../../demos/demo.css?t=<?php echo filemtime('../../demos/demo.css') ?>" rel="stylesheet" />
+    <link href="../app.css?t=<?php echo filemtime('../app.css') ?>" rel="stylesheet" />
+    <link href="../../../demos/demo.css?t=<?php echo filemtime('../../../demos/demo.css') ?>" rel="stylesheet" />
 </head>
 <body>
 
@@ -24,16 +24,16 @@
         <div class="fluid h50">
             <ul class="xls xm xp ww hh flex-row">
                 <li>
-                    <a href="concepts.php" class="db lh20 p15">Concepts</a>
+                    <a href="../concepts" class="db lh20 p15">Concepts</a>
                 </li>
                 <li>
-                    <a href="reference.php" class="db lh20 p15">Reference</a>
+                    <a href="../reference" class="db lh20 p15">Reference</a>
                 </li>
                 <li class="app-pal-active">
-                    <a href="demos.php" class="db lh20 p15">Demos</a>
+                    <a href="../demos" class="db lh20 p15">Demos</a>
                 </li>
                 <li>
-                    <a href="try.php" class="db lh20 p15">Try it out</a>
+                    <a href="../try" class="db lh20 p15">Try it out</a>
                 </li>
                 <li class="mla">
                     <a href="https://github.com/vbarbarosh/smcss" target="_blank" class="db lh20 p15">GitHub</a>
@@ -69,22 +69,22 @@
 
             <!-- Syntax highilighting https://portal-vue.linusb.org/ -->
 
-            <?php include 'demos/abs.php' ?>
-            <?php include 'demos/basic.php' ?>
-            <?php include 'demos/border.php' ?>
-            <?php include 'demos/box-shadow.php' ?>
-            <?php include 'demos/button.php' ?>
-            <?php include 'demos/center-text.php' ?>
-            <?php include 'demos/container.php' ?>
-            <?php include 'demos/cursor.php' ?>
-            <?php include 'demos/float.php' ?>
-            <?php include 'demos/hsplit.php' ?>
-            <?php include 'demos/media-query.php' ?>
-            <?php include 'demos/modal.php' ?>
-            <?php include 'demos/object-fit.php' ?>
-            <?php include 'demos/specificity.php' ?>
-            <?php include 'demos/text.php' ?>
-            <?php include 'demos/toggle.php' ?>
+            <?php include 'abs.php' ?>
+            <?php include 'basic.php' ?>
+            <?php include 'border.php' ?>
+            <?php include 'box-shadow.php' ?>
+            <?php include 'button.php' ?>
+            <?php include 'center-text.php' ?>
+            <?php include 'container.php' ?>
+            <?php include 'cursor.php' ?>
+            <?php include 'float.php' ?>
+            <?php include 'hsplit.php' ?>
+            <?php include 'media-query.php' ?>
+            <?php include 'modal.php' ?>
+            <?php include 'object-fit.php' ?>
+            <?php include 'specificity.php' ?>
+            <?php include 'text.php' ?>
+            <?php include 'toggle.php' ?>
 
             <br>
             <br>

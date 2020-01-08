@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>docs • smcss (a css for prototyping)</title>
-    <link href="app.css?t=<?php echo filemtime('app.css') ?>" rel="stylesheet" />
-    <link href="../../demos/demo.css?t=<?php echo filemtime('../../demos/demo.css') ?>" rel="stylesheet" />
+    <link href="../app.css?t=<?php echo filemtime('../app.css') ?>" rel="stylesheet" />
+    <link href="../../../demos/demo.css?t=<?php echo filemtime('../../../demos/demo.css') ?>" rel="stylesheet" />
 </head>
 <body>
 
@@ -20,16 +20,16 @@
         <div class="fluid h50">
             <ul class="xls xm xp ww hh flex-row">
                 <li>
-                    <a href="concepts.php" class="db lh20 p15">Concepts</a
+                    <a href="../concepts" class="db lh20 p15">Concepts</a
                 </li>
                 <li class="app-pal-active">
-                    <a href="reference.php" class="db lh20 p15">Reference</a>
+                    <a href="../reference" class="db lh20 p15">Reference</a>
                 </li>
                 <li>
-                    <a href="demos.php" class="db lh20 p15">Demos</a>
+                    <a href="../demos" class="db lh20 p15">Demos</a>
                 </li>
                 <li>
-                    <a href="try.php" class="db lh20 p15">Try it out</a>
+                    <a href="../try" class="db lh20 p15">Try it out</a>
                 </li>
                 <li class="mla">
                     <a href="https://github.com/vbarbarosh/smcss" target="_blank" class="db lh20 p15">GitHub</a>
@@ -91,40 +91,40 @@ echo -e "@import 'smcss'\n.foo\n\t@include sm('w100 h100 red')" > a.sass
 sass -I node_modules a.sass > a.css
 </pre>
 
-            <?php include 'reference/background.php' ?>
-            <?php include 'reference/border.php' ?>
-            <?php include 'reference/box-shadow.php' ?>
-            <?php include 'reference/box-sizing.php' ?>
-            <?php include 'reference/button.php' ?>
-            <?php include 'reference/cursor.php' ?>
-            <?php include 'reference/display.php' ?>
-            <?php include 'reference/display-flex.php' ?>
-            <?php include 'reference/display-flex-hsplit.php' ?>
-            <?php include 'reference/expand.php' ?>
-            <?php include 'reference/float.php' ?>
-            <?php include 'reference/font.php' ?>
-            <?php include 'reference/list.php' ?>
-            <?php include 'reference/margin.php' ?>
-            <?php include 'reference/margin-group.php' ?>
-            <?php include 'reference/opacity.php' ?>
-            <?php include 'reference/outline.php' ?>
-            <?php include 'reference/overflow.php' ?>
-            <?php include 'reference/padding.php' ?>
-            <?php include 'reference/padding-group.php' ?>
-            <?php include 'reference/pointer-events.php' ?>
-            <?php include 'reference/position.php' ?>
-            <?php include 'reference/position-abs.php' ?>
-            <?php include 'reference/position-fix.php' ?>
-            <?php include 'reference/position-sticky.php' ?>
-            <?php include 'reference/scrollbar.php' ?>
-            <?php include 'reference/size.php' ?>
-            <?php include 'reference/text.php' ?>
-            <?php include 'reference/text-ellipsis.php' ?>
-            <?php include 'reference/theme.php' ?>
-            <?php include 'reference/toggle.php' ?>
-            <?php include 'reference/transform.php' ?>
-            <?php include 'reference/user-select.php' ?>
-            <?php include 'reference/zindex.php' ?>
+            <?php include 'background.php' ?>
+            <?php include 'border.php' ?>
+            <?php include 'box-shadow.php' ?>
+            <?php include 'box-sizing.php' ?>
+            <?php include 'button.php' ?>
+            <?php include 'cursor.php' ?>
+            <?php include 'display.php' ?>
+            <?php include 'display-flex.php' ?>
+            <?php include 'display-flex-hsplit.php' ?>
+            <?php include 'expand.php' ?>
+            <?php include 'float.php' ?>
+            <?php include 'font.php' ?>
+            <?php include 'list.php' ?>
+            <?php include 'margin.php' ?>
+            <?php include 'margin-group.php' ?>
+            <?php include 'opacity.php' ?>
+            <?php include 'outline.php' ?>
+            <?php include 'overflow.php' ?>
+            <?php include 'padding.php' ?>
+            <?php include 'padding-group.php' ?>
+            <?php include 'pointer-events.php' ?>
+            <?php include 'position.php' ?>
+            <?php include 'position-abs.php' ?>
+            <?php include 'position-fix.php' ?>
+            <?php include 'position-sticky.php' ?>
+            <?php include 'scrollbar.php' ?>
+            <?php include 'size.php' ?>
+            <?php include 'text.php' ?>
+            <?php include 'text-ellipsis.php' ?>
+            <?php include 'theme.php' ?>
+            <?php include 'toggle.php' ?>
+            <?php include 'transform.php' ?>
+            <?php include 'user-select.php' ?>
+            <?php include 'zindex.php' ?>
 
         </div>
     </div>
@@ -207,16 +207,6 @@ sass -I node_modules a.sass > a.css
             },
         },
     });
-
-    async function am(fn)
-    {
-        return function (...args) {
-            return Promise.method(fn).apply(this, args).catch(function (error) {
-                console.log(error);
-                return modal_error(error).promise();
-            });
-        };
-    }
 
 })();
 </script>

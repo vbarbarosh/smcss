@@ -42,7 +42,7 @@
         </tbody>
         </table>
         <div class="flex-fluid">
-            <iframe src="../../demos/cursor/index.html" frameborder="0" class="hh w400"></iframe>
+            <iframe src="../../../demos/cursor/index.html" frameborder="0" class="hh w400"></iframe>
         </div>
     </div>
 
