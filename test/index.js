@@ -39,7 +39,7 @@ const table = {
     'blue': '.foo { background: #88f; }',
     'yellow': '.foo { background: #ff8; }',
     'cyan': '.foo { background: #8ff; }',
-    'gradient': '.foo { background: linear-gradient(to bottom, #f00 0%, #0f0 50%, #00f 100%); }',
+    'gradient': '.foo { background: linear-gradient(to right, #f00 0%, #0f0 50%, #00f 100%); }',
     'checkerboard': '.foo { background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX///+/v7+jQ3Y5AAAAEUlEQVQI12P4z8CAFWEX/Q8Afr8P8erzE9cAAAAASUVORK5CYII="); }',
     'rainbow': '.foo > :nth-child(3n+1) { background: #f88; }\n\n.foo > :nth-child(3n+2) { background: #8f8; }\n\n.foo > :nth-child(3n+3) { background: #88f; }',
 
