@@ -1,4 +1,5 @@
 <?php $d = __DIR__ ?>
+<?php require "$d/../php/app.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss</li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v<?php e(version()) ?></sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">

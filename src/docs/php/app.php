@@ -10,6 +10,12 @@ function ee($string)
     echo $string;
 }
 
+function version()
+{
+    $d = __DIR__;
+    return json_decode(file_get_contents("$d/../../../package.json"), true)['version'];
+}
+
 function snippet($file)
 {
     $s = file_get_contents($file);
