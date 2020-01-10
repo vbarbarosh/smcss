@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1578517958" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1578688050" rel="stylesheet" />
 </head>
 <body>
 
@@ -54,7 +54,8 @@
                                                         <li><a href="#float">float</a></li>
                                                         <li><a href="#hsplit">hsplit</a></li>
                                                                             <li><a href="#modal">modal</a></li>
-                                                                            <li><a href="#specificity">specificity</a></li>
+                                                                            <li><a href="#progress">progress</a></li>
+                                                        <li><a href="#specificity">specificity</a></li>
                                                         <li><a href="#text">text</a></li>
                                                         <li><a href="#toggle">toggle</a></li>
                                                         <li><a href="#vertical-alignment">vertical-alignment</a></li>
@@ -1888,6 +1889,42 @@
                                     </div>
             
                 
+                
+                <div class="mg15">
+                    <h3 id="progress">progress</h3>
+                                            <h4>progress/1.html</h4>
+                        <button v-on:click="modal_iframe(&quot;progress\/1.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;progress&quot;,&quot;html&quot;:&quot;&lt;!-- A way to create a progress bar by displaying only first % part of it  --&gt;\n\n&lt;div id=\&quot;app\&quot; class=\&quot;w500 ma mv15 mg15\&quot;&gt;\n\n    &lt;div class=\&quot;abs-t white ph5 bs5 hsplit\&quot;&gt;\n        &lt;input v-model=\&quot;range\&quot; class=\&quot;fluid\&quot; type=\&quot;range\&quot; min=\&quot;0\&quot; max=\&quot;100\&quot;&gt;\n    &lt;\/div&gt;\n\n    &lt;br&gt;\n    &lt;br&gt;\n\n    &lt;div class=\&quot;h20 gradient\&quot;&gt;&lt;\/div&gt;\n\n    &lt;div v-bind:style=\&quot;{right: `${100-range}%`}\&quot; class=\&quot;rel oh\&quot;&gt;\n        &lt;div v-bind:style=\&quot;{left: `${100-range}%`}\&quot; class=\&quot;rel\&quot;&gt;\n            &lt;div class=\&quot;h20 gradient\&quot;&gt;&lt;\/div&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n\n    &lt;div class=\&quot;c\&quot;&gt;&lt;span class=\&quot;white p5 bs5 br5\&quot;&gt;{{ range }}%&lt;\/span&gt;&lt;\/div&gt;\n\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.js\&quot;&gt;&lt;\/script&gt;\n&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- A way to create a progress bar by displaying only first % part of it  --&gt;
+
+&lt;div id=&quot;app&quot; class=&quot;w500 ma mv15 mg15&quot;&gt;
+
+    &lt;div class=&quot;abs-t white ph5 bs5 hsplit&quot;&gt;
+        &lt;input v-model=&quot;range&quot; class=&quot;fluid&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;div class=&quot;h20 gradient&quot;&gt;&lt;/div&gt;
+
+    &lt;div v-bind:style=&quot;{right: `${100-range}%`}&quot; class=&quot;rel oh&quot;&gt;
+        &lt;div v-bind:style=&quot;{left: `${100-range}%`}&quot; class=&quot;rel&quot;&gt;
+            &lt;div class=&quot;h20 gradient&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;c&quot;&gt;&lt;span class=&quot;white p5 bs5 br5&quot;&gt;{{ range }}%&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;/script&gt;"></vue-codemirror>
+                                    </div>
+            
                 
                 <div class="mg15">
                     <h3 id="specificity">specificity</h3>
