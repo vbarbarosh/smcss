@@ -34,6 +34,7 @@
 </div>
 
 <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+<script src="../vue/mixins.js"></script>
 <script src="../vue/vue-sizemon.js"></script>
 <script src="../vue/input-width.js"></script>
 <script src="../vue/input-height.js"></script>
@@ -50,18 +51,6 @@
     </div>
 </script>
 <script>
-
-    function px(v)
-    {
-        return v ? `${v}px` : 0;
-    }
-
-    Vue.mixin({
-        methods: {
-            px,
-        }
-    });
-
     Vue.component('app-banner', {
         props: ['value'],
         template: '#templ-app-banner',

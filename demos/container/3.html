@@ -10,7 +10,7 @@
     <div class="fix-t z1 ph15 bs10 white">
         <input v-model="width" class="ww" type="range" min="100" max="1200">
     </div>
-    <div class="ma dashed bs10 red" v-bind:style="{width: width + 'px'}">
+    <div class="ma dashed bs10 red" v-bind:style="{width: px(width)}">
         <ul class="xls xp xm flex-row-fluid flex-wrap mt10n ml10n">
             <li v-for="clipart in cliparts" class="w100 mt10 ml10 expand-1-1 br3 theme-white">
                 <button class="abs tlbr p5 xbutton">

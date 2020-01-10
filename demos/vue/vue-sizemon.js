@@ -7,9 +7,7 @@ Vue.component('vue-sizemon', {
         };
     },
     watch: {
-        size: function () {
-            this.$emit('input', this.size);
-        },
+        size: 'emit_input',
     },
     methods: {
         on_iframe_load: function () {

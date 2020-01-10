@@ -10,7 +10,7 @@
     <div class="fix-t z1 ph15 bs10 white">
         <input v-model="width" class="ww" type="range" min="100" max="1200">
     </div>
-    <div class="flex-row-center ma dashed bs10 rainbow" v-bind:style="{width: width + 'px'}">
+    <div class="flex-row-center ma dashed bs10 rainbow" v-bind:style="{width: px(width)}">
         <button v-for="button in buttons" class="w0 max-w200 flex-grow p5 xbutton">
             {{ button }}
         </button>
@@ -18,6 +18,7 @@
 </div>
 
 <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+<script src="../vue/mixins.js"></script>
 <script type="text/javascript">
     new Vue({
         el: '#app',
