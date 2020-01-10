@@ -45,13 +45,10 @@
     </div>
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.5/vue.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+<script src="../vue/mixins.js"></script>
 <script>
 (function () {
-
-    function px(v) {
-        return v ? `${v}px` : 0;
-    }
 
     class Checked
     {
@@ -107,9 +104,6 @@
                 const b = this.outer.active.orig.name;
                 return (a == b) ? `abs-${a}` : `abs-${a}-${b}`;
             },
-        },
-        methods: {
-            px,
         },
     });
 
