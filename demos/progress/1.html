@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<!-- A way to create a progress bar by displaying only first % part of it  -->
+
+<div id="app" class="w500 ma mv15 mg15">
+
+    <div class="abs-t white ph5 bs5 hsplit">
+        <input v-model="range" class="fluid" type="range" min="0" max="100">
+    </div>
+
+    <br>
+    <br>
+
+    <div class="h20 gradient"></div>
+
+    <div v-bind:style="{right: `${100-range}%`}" class="rel oh">
+        <div v-bind:style="{left: `${100-range}%`}" class="rel">
+            <div class="h20 gradient"></div>
+        </div>
+    </div>
+
+    <div class="c"><span class="white p5 bs5 br5">{{ range }}%</span></div>
+
+</div>
+
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+<script>new Vue({el: '#app', data: {range: 25}});</script>
+
+</body>
+</html>
