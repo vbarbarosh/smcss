@@ -3794,6 +3794,10 @@ h2 {
   background: #8ff;
 }
 
+.gradient {
+  background: linear-gradient(to bottom, #f00 0%, #0f0 50%, #00f 100%);
+}
+
 .checkerboard {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX///+/v7+jQ3Y5AAAAEUlEQVQI12P4z8CAFWEX/Q8Afr8P8erzE9cAAAAASUVORK5CYII=");
 }
