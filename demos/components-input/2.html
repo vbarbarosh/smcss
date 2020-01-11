@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+        .foo-input:hover ~ .if-hover,
+        .foo-input:focus ~ .if-focus,
+        .foo-input:active ~ .if-active,
+        .foo-input:enabled ~ .if-enabled,
+        .foo-input:disabled ~ .if-disabled,
+        .foo-input:checked ~ .if-checked,
+        .foo-input:invalid ~ .if-invalid,
+        .foo-input:optional ~ .if-optional,
+        .foo-input:required ~ .if-required,
+        .foo-input:read-only ~ .if-read-only,
+        .foo-input:read-write ~ .if-read-write,
+        .foo-input:valid ~ .if-valid { background: #8f8; }
+    </style>
+</head>
+<body class="checkerboard">
+
+<!-- Input: :hover, :focus, :active, :enabled, :disabled, :checked states -->
+
+<div class="w500 ma mg15">
+
+    <br>
+    <br>
+
+    <div class="white p5 bs5 mg5 dashed">
+        <input id="foo" class="foo-input">
+        <br>
+        <p class="xm if-hover"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover" target="_blank">:hover</a></p>
+        <p class="xm if-focus"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus" target="_blank">:focus</a></p>
+        <p class="xm if-active"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active" target="_blank">:active</a></p>
+        <p class="xm if-enabled"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled" target="_blank">:enabled</a></p>
+        <p class="xm if-disabled"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled" target="_blank">:disabled</a></p>
+        <p class="xm if-checked"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:checked" target="_blank">:checked</a></p>
+        <p class="xm if-invalid"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid" target="_blank">:invalid</a></p>
+        <p class="xm if-optional"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:optional" target="_blank">:optional</a></p>
+        <p class="xm if-required"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:required" target="_blank">:required</a></p>
+        <p class="xm if-read-only"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only" target="_blank">:read-only</a></p>
+        <p class="xm if-read-write"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write" target="_blank">:read-write</a></p>
+        <p class="xm if-valid"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write" target="_blank">:valid</a></p>
+        <label for="foo" class="db border bs5">
+            LABEL: Lorem ipsum dolor sit amet
+        </label>
+    </div>
+
+    <div class="white p5 bs5">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">MDN: Pseudo-classes</a>
+    </div>
+</div>
+
+</body>
+</html>
