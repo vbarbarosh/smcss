@@ -1,3 +1,5 @@
+Notes on making demos
+
 ## Images
 
 If you need an image in one of your demo feel free to use

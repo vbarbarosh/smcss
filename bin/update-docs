@@ -19,6 +19,7 @@ mkdir -p docs/{concepts,reference}
 
 cp -r demos docs
 rm -f docs/demos/index.php
+rm -f docs/demos/README.md
 
 cp -r src/docs/app.css docs
 echo -n smcss.vbarbarosh.com > docs/CNAME
