@@ -10,7 +10,7 @@ scriptname=`basename $script`
 
 cd $scriptdir/..
 
-case $1 in
+case "${1-}"  in
 major|minor|patch)
     ;;
 *)
