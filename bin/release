@@ -20,7 +20,7 @@ major|minor|patch)
 esac
 
 # Increase a version without commiting it and making a tag
-npm version $1 --no-git
+npm version $1 --git=/bin/true # this is a hack; substitute `true` for `git`
 # Rebuild docs
 bin/update-docs
 git add package.json package-lock.json docs
