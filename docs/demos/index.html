@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1578692053" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1578737396" rel="stylesheet" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.3</sub></sub></li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.4</sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">
@@ -48,14 +48,15 @@
                                                         <li><a href="#basic">basic</a></li>
                                                         <li><a href="#border">border</a></li>
                                                         <li><a href="#button">button</a></li>
+                                                        <li><a href="#components-input">components-input</a></li>
+                                                        <li><a href="#components-progress">components-progress</a></li>
                                                         <li><a href="#container">container</a></li>
                                                         <li><a href="#cursor">cursor</a></li>
                                                         <li><a href="#flex">flex</a></li>
                                                         <li><a href="#float">float</a></li>
                                                         <li><a href="#hsplit">hsplit</a></li>
                                                                             <li><a href="#modal">modal</a></li>
-                                                                            <li><a href="#progress">progress</a></li>
-                                                        <li><a href="#specificity">specificity</a></li>
+                                                                            <li><a href="#specificity">specificity</a></li>
                                                         <li><a href="#text">text</a></li>
                                                         <li><a href="#toggle">toggle</a></li>
                                                         <li><a href="#vertical-alignment">vertical-alignment</a></li>
@@ -352,6 +353,135 @@
         &lt;/span&gt;
     &lt;/button&gt;
 &lt;/p&gt;"></vue-codemirror>
+                                    </div>
+            
+                
+                <div class="mg15">
+                    <h3 id="components-input">components-input</h3>
+                                            <h4>components-input/1.html</h4>
+                        <button v-on:click="modal_iframe(&quot;components-input\/1.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;components-input&quot;,&quot;html&quot;:&quot;&lt;!-- Input: Mouse events from LABEL are passed to INPUT but not vice versa  --&gt;\n\n&lt;div class=\&quot;w500 ma\&quot;&gt;\n\n    &lt;br&gt;\n    &lt;br&gt;\n\n    &lt;div class=\&quot;white p5 bs5 dashed\&quot;&gt;\n        &lt;p class=\&quot;xm xp fs8\&quot;&gt;Mouse events from &lt;em&gt;LABEL&lt;\/em&gt; are passed to &lt;em&gt;INPUT&lt;\/em&gt; but not vice versa&lt;\/p&gt;\n        &lt;input id=\&quot;foo\&quot; class=\&quot;foo-input\&quot;&gt;\n        &lt;label for=\&quot;foo\&quot; class=\&quot;foo-label\&quot;&gt;\n            Lorem ipsum dolor sit amet\n        &lt;\/label&gt;\n    &lt;\/div&gt;\n\n&lt;\/div&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Input: Mouse events from LABEL are passed to INPUT but not vice versa  --&gt;
+
+&lt;div class=&quot;w500 ma&quot;&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;div class=&quot;white p5 bs5 dashed&quot;&gt;
+        &lt;p class=&quot;xm xp fs8&quot;&gt;Mouse events from &lt;em&gt;LABEL&lt;/em&gt; are passed to &lt;em&gt;INPUT&lt;/em&gt; but not vice versa&lt;/p&gt;
+        &lt;input id=&quot;foo&quot; class=&quot;foo-input&quot;&gt;
+        &lt;label for=&quot;foo&quot; class=&quot;foo-label&quot;&gt;
+            Lorem ipsum dolor sit amet
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;"></vue-codemirror>
+                                            <h4>components-input/2.html</h4>
+                        <button v-on:click="modal_iframe(&quot;components-input\/2.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;components-input&quot;,&quot;html&quot;:&quot;&lt;!-- Input: :hover, :focus, :active, :enabled, :disabled, :checked states --&gt;\n\n&lt;div class=\&quot;w500 ma mg15\&quot;&gt;\n\n    &lt;br&gt;\n    &lt;br&gt;\n\n    &lt;div class=\&quot;white p5 bs5 mg5 dashed\&quot;&gt;\n        &lt;input id=\&quot;foo\&quot; class=\&quot;foo-input\&quot;&gt;\n        &lt;br&gt;\n        &lt;p class=\&quot;xm if-hover\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:hover\&quot; target=\&quot;_blank\&quot;&gt;:hover&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-focus\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:focus\&quot; target=\&quot;_blank\&quot;&gt;:focus&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-active\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:active\&quot; target=\&quot;_blank\&quot;&gt;:active&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-enabled\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:enabled\&quot; target=\&quot;_blank\&quot;&gt;:enabled&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-disabled\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:disabled\&quot; target=\&quot;_blank\&quot;&gt;:disabled&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-checked\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:checked\&quot; target=\&quot;_blank\&quot;&gt;:checked&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-invalid\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:invalid\&quot; target=\&quot;_blank\&quot;&gt;:invalid&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-optional\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:optional\&quot; target=\&quot;_blank\&quot;&gt;:optional&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-required\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:required\&quot; target=\&quot;_blank\&quot;&gt;:required&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-read-only\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:read-only\&quot; target=\&quot;_blank\&quot;&gt;:read-only&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-read-write\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:read-write\&quot; target=\&quot;_blank\&quot;&gt;:read-write&lt;\/a&gt;&lt;\/p&gt;\n        &lt;p class=\&quot;xm if-valid\&quot;&gt;&lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/:read-write\&quot; target=\&quot;_blank\&quot;&gt;:valid&lt;\/a&gt;&lt;\/p&gt;\n        &lt;label for=\&quot;foo\&quot; class=\&quot;db border bs5\&quot;&gt;\n            LABEL: Lorem ipsum dolor sit amet\n        &lt;\/label&gt;\n    &lt;\/div&gt;\n\n    &lt;div class=\&quot;white p5 bs5\&quot;&gt;\n        &lt;a href=\&quot;https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/CSS\/Pseudo-classes\&quot; target=\&quot;_blank\&quot;&gt;MDN: Pseudo-classes&lt;\/a&gt;\n    &lt;\/div&gt;\n&lt;\/div&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Input: :hover, :focus, :active, :enabled, :disabled, :checked states --&gt;
+
+&lt;div class=&quot;w500 ma mg15&quot;&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;div class=&quot;white p5 bs5 mg5 dashed&quot;&gt;
+        &lt;input id=&quot;foo&quot; class=&quot;foo-input&quot;&gt;
+        &lt;br&gt;
+        &lt;p class=&quot;xm if-hover&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:hover&quot; target=&quot;_blank&quot;&gt;:hover&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-focus&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:focus&quot; target=&quot;_blank&quot;&gt;:focus&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-active&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:active&quot; target=&quot;_blank&quot;&gt;:active&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-enabled&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled&quot; target=&quot;_blank&quot;&gt;:enabled&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-disabled&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled&quot; target=&quot;_blank&quot;&gt;:disabled&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-checked&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:checked&quot; target=&quot;_blank&quot;&gt;:checked&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-invalid&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid&quot; target=&quot;_blank&quot;&gt;:invalid&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-optional&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:optional&quot; target=&quot;_blank&quot;&gt;:optional&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-required&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:required&quot; target=&quot;_blank&quot;&gt;:required&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-read-only&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:read-only&quot; target=&quot;_blank&quot;&gt;:read-only&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-read-write&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write&quot; target=&quot;_blank&quot;&gt;:read-write&lt;/a&gt;&lt;/p&gt;
+        &lt;p class=&quot;xm if-valid&quot;&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/:read-write&quot; target=&quot;_blank&quot;&gt;:valid&lt;/a&gt;&lt;/p&gt;
+        &lt;label for=&quot;foo&quot; class=&quot;db border bs5&quot;&gt;
+            LABEL: Lorem ipsum dolor sit amet
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;white p5 bs5&quot;&gt;
+        &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes&quot; target=&quot;_blank&quot;&gt;MDN: Pseudo-classes&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"></vue-codemirror>
+                                    </div>
+            
+                
+                <div class="mg15">
+                    <h3 id="components-progress">components-progress</h3>
+                                            <h4>components-progress/1.html</h4>
+                        <button v-on:click="modal_iframe(&quot;components-progress\/1.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;components-progress&quot;,&quot;html&quot;:&quot;&lt;!-- Progress bar: reveal only % of an element  --&gt;\n\n&lt;div id=\&quot;app\&quot; class=\&quot;w500 ma mv15 mg15\&quot;&gt;\n\n    &lt;div class=\&quot;abs-t white ph5 bs5 hsplit\&quot;&gt;\n        &lt;input v-model=\&quot;range\&quot; class=\&quot;fluid\&quot; type=\&quot;range\&quot; min=\&quot;0\&quot; max=\&quot;100\&quot;&gt;\n    &lt;\/div&gt;\n\n    &lt;br&gt;\n    &lt;br&gt;\n\n    &lt;div class=\&quot;h20 gradient\&quot;&gt;&lt;\/div&gt;\n\n    &lt;div v-bind:style=\&quot;{right: `${100-range}%`}\&quot; class=\&quot;rel oh\&quot;&gt;\n        &lt;div v-bind:style=\&quot;{left: `${100-range}%`}\&quot; class=\&quot;rel\&quot;&gt;\n            &lt;div class=\&quot;h20 gradient\&quot;&gt;&lt;\/div&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n\n    &lt;div class=\&quot;c\&quot;&gt;&lt;span class=\&quot;white p5 bs5 br5\&quot;&gt;{{ range }}%&lt;\/span&gt;&lt;\/div&gt;\n\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.js\&quot;&gt;&lt;\/script&gt;\n&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Progress bar: reveal only % of an element  --&gt;
+
+&lt;div id=&quot;app&quot; class=&quot;w500 ma mv15 mg15&quot;&gt;
+
+    &lt;div class=&quot;abs-t white ph5 bs5 hsplit&quot;&gt;
+        &lt;input v-model=&quot;range&quot; class=&quot;fluid&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;div class=&quot;h20 gradient&quot;&gt;&lt;/div&gt;
+
+    &lt;div v-bind:style=&quot;{right: `${100-range}%`}&quot; class=&quot;rel oh&quot;&gt;
+        &lt;div v-bind:style=&quot;{left: `${100-range}%`}&quot; class=&quot;rel&quot;&gt;
+            &lt;div class=&quot;h20 gradient&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;c&quot;&gt;&lt;span class=&quot;white p5 bs5 br5&quot;&gt;{{ range }}%&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;/script&gt;"></vue-codemirror>
+                                            <h4>components-progress/2.html</h4>
+                        <button v-on:click="modal_iframe(&quot;components-progress\/2.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;components-progress&quot;,&quot;html&quot;:&quot;&lt;!-- Progress bar: draw ready part on top of static background  --&gt;\n\n&lt;div id=\&quot;app\&quot; class=\&quot;w500 ma mv15 mg15\&quot;&gt;\n\n    &lt;div class=\&quot;abs-t white ph5 bs5 hsplit\&quot;&gt;\n        &lt;input v-model=\&quot;range\&quot; class=\&quot;fluid\&quot; type=\&quot;range\&quot; min=\&quot;0\&quot; max=\&quot;100\&quot;&gt;\n    &lt;\/div&gt;\n\n    &lt;br&gt;\n    &lt;br&gt;\n\n    &lt;div class=\&quot;h20 red\&quot;&gt;&lt;\/div&gt;\n\n    &lt;div class=\&quot;red\&quot;&gt;\n        &lt;div v-bind:style=\&quot;{width: `${range}%`}\&quot; class=\&quot;h20 green\&quot;&gt;&lt;\/div&gt;\n    &lt;\/div&gt;\n\n    &lt;div class=\&quot;c\&quot;&gt;&lt;span class=\&quot;white p5 bs5 br5\&quot;&gt;{{ range }}%&lt;\/span&gt;&lt;\/div&gt;\n\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.js\&quot;&gt;&lt;\/script&gt;\n&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Progress bar: draw ready part on top of static background  --&gt;
+
+&lt;div id=&quot;app&quot; class=&quot;w500 ma mv15 mg15&quot;&gt;
+
+    &lt;div class=&quot;abs-t white ph5 bs5 hsplit&quot;&gt;
+        &lt;input v-model=&quot;range&quot; class=&quot;fluid&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;div class=&quot;h20 red&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;red&quot;&gt;
+        &lt;div v-bind:style=&quot;{width: `${range}%`}&quot; class=&quot;h20 green&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;c&quot;&gt;&lt;span class=&quot;white p5 bs5 br5&quot;&gt;{{ range }}%&lt;/span&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;/script&gt;"></vue-codemirror>
                                     </div>
             
                 
@@ -1871,71 +2001,6 @@
                                     </div>
             
                 
-                
-                <div class="mg15">
-                    <h3 id="progress">progress</h3>
-                                            <h4>progress/1.html</h4>
-                        <button v-on:click="modal_iframe(&quot;progress\/1.html&quot;)">Preview</button>
-                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
-                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;progress&quot;,&quot;html&quot;:&quot;&lt;!-- Progress bar: reveal only % of an element  --&gt;\n\n&lt;div id=\&quot;app\&quot; class=\&quot;w500 ma mv15 mg15\&quot;&gt;\n\n    &lt;div class=\&quot;abs-t white ph5 bs5 hsplit\&quot;&gt;\n        &lt;input v-model=\&quot;range\&quot; class=\&quot;fluid\&quot; type=\&quot;range\&quot; min=\&quot;0\&quot; max=\&quot;100\&quot;&gt;\n    &lt;\/div&gt;\n\n    &lt;br&gt;\n    &lt;br&gt;\n\n    &lt;div class=\&quot;h20 gradient\&quot;&gt;&lt;\/div&gt;\n\n    &lt;div v-bind:style=\&quot;{right: `${100-range}%`}\&quot; class=\&quot;rel oh\&quot;&gt;\n        &lt;div v-bind:style=\&quot;{left: `${100-range}%`}\&quot; class=\&quot;rel\&quot;&gt;\n            &lt;div class=\&quot;h20 gradient\&quot;&gt;&lt;\/div&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n\n    &lt;div class=\&quot;c\&quot;&gt;&lt;span class=\&quot;white p5 bs5 br5\&quot;&gt;{{ range }}%&lt;\/span&gt;&lt;\/div&gt;\n\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.js\&quot;&gt;&lt;\/script&gt;\n&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
-                            <input type="submit" value="CodePen">
-                        </form>
-                        <vue-codemirror value="&lt;!-- Progress bar: reveal only % of an element  --&gt;
-
-&lt;div id=&quot;app&quot; class=&quot;w500 ma mv15 mg15&quot;&gt;
-
-    &lt;div class=&quot;abs-t white ph5 bs5 hsplit&quot;&gt;
-        &lt;input v-model=&quot;range&quot; class=&quot;fluid&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;br&gt;
-    &lt;br&gt;
-
-    &lt;div class=&quot;h20 gradient&quot;&gt;&lt;/div&gt;
-
-    &lt;div v-bind:style=&quot;{right: `${100-range}%`}&quot; class=&quot;rel oh&quot;&gt;
-        &lt;div v-bind:style=&quot;{left: `${100-range}%`}&quot; class=&quot;rel&quot;&gt;
-            &lt;div class=&quot;h20 gradient&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;c&quot;&gt;&lt;span class=&quot;white p5 bs5 br5&quot;&gt;{{ range }}%&lt;/span&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;/script&gt;"></vue-codemirror>
-                                            <h4>progress/2.html</h4>
-                        <button v-on:click="modal_iframe(&quot;progress\/2.html&quot;)">Preview</button>
-                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
-                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;progress&quot;,&quot;html&quot;:&quot;&lt;!-- Progress bar: draw ready part on top of static background  --&gt;\n\n&lt;div id=\&quot;app\&quot; class=\&quot;w500 ma mv15 mg15\&quot;&gt;\n\n    &lt;div class=\&quot;abs-t white ph5 bs5 hsplit\&quot;&gt;\n        &lt;input v-model=\&quot;range\&quot; class=\&quot;fluid\&quot; type=\&quot;range\&quot; min=\&quot;0\&quot; max=\&quot;100\&quot;&gt;\n    &lt;\/div&gt;\n\n    &lt;br&gt;\n    &lt;br&gt;\n\n    &lt;div class=\&quot;h20 red\&quot;&gt;&lt;\/div&gt;\n\n    &lt;div class=\&quot;red\&quot;&gt;\n        &lt;div v-bind:style=\&quot;{width: `${range}%`}\&quot; class=\&quot;h20 green\&quot;&gt;&lt;\/div&gt;\n    &lt;\/div&gt;\n\n    &lt;div class=\&quot;c\&quot;&gt;&lt;span class=\&quot;white p5 bs5 br5\&quot;&gt;{{ range }}%&lt;\/span&gt;&lt;\/div&gt;\n\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.js\&quot;&gt;&lt;\/script&gt;\n&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
-                            <input type="submit" value="CodePen">
-                        </form>
-                        <vue-codemirror value="&lt;!-- Progress bar: draw ready part on top of static background  --&gt;
-
-&lt;div id=&quot;app&quot; class=&quot;w500 ma mv15 mg15&quot;&gt;
-
-    &lt;div class=&quot;abs-t white ph5 bs5 hsplit&quot;&gt;
-        &lt;input v-model=&quot;range&quot; class=&quot;fluid&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;br&gt;
-    &lt;br&gt;
-
-    &lt;div class=&quot;h20 red&quot;&gt;&lt;/div&gt;
-
-    &lt;div class=&quot;red&quot;&gt;
-        &lt;div v-bind:style=&quot;{width: `${range}%`}&quot; class=&quot;h20 green&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;c&quot;&gt;&lt;span class=&quot;white p5 bs5 br5&quot;&gt;{{ range }}%&lt;/span&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;new Vue({el: '#app', data: {range: 25}});&lt;/script&gt;"></vue-codemirror>
-                                    </div>
-            
                 
                 <div class="mg15">
                     <h3 id="specificity">specificity</h3>
