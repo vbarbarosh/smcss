@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+    /* XXX Merge into parser */
+    .abs-v { position: absolute; top: 0; bottom: 0; }
+    </style>
 </head>
 <body class="checkerboard">
 
@@ -23,6 +27,17 @@
         <label for="foo1" class="db blue rel">
             <span v-bind:style="{width: `${range}%`}" class="db h20 green"></span>
             <span v-bind:style="{left: `${range}%`}" class="abs-c w25 h25 br999 o75 bs5 white"></span>
+        </label>
+    </div>
+
+    <!-- This thing works not as expected -->
+    <div v-on:mousedown="mousedown" class="dashed">
+        <input id="foo1" class="xd" type="number" />
+        <label for="foo1" class="db blue rel">
+            <span v-bind:style="{width: `${range}%`}" class="db h20 green"></span>
+            <span class="abs-f mr25">
+                <span v-bind:style="{left: `${range}%`}" class="abs-v ma w25 h25 br999 o75 bs5 white"></span>
+            </span>
         </label>
     </div>
 
