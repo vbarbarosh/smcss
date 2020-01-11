@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+        .foo-input:focus { background: red; }
+        .foo-input:hover { background: yellow; }
+        .foo-input:active { background: green; }
+        .foo-label:focus { background: red; }
+        .foo-label:hover { background: yellow; }
+        .foo-label:active { background: green; }
+    </style>
+</head>
+<body class="checkerboard">
+
+<!-- Input: Mouse events from LABEL are passed to INPUT but not vice versa  -->
+
+<div class="w500 ma">
+
+    <br>
+    <br>
+
+    <div class="white p5 bs5 dashed">
+        <p class="xm xp fs8">Mouse events from <em>LABEL</em> are passed to <em>INPUT</em> but not vice versa</p>
+        <input id="foo" class="foo-input">
+        <label for="foo" class="foo-label">
+            Lorem ipsum dolor sit amet
+        </label>
+    </div>
+
+</div>
+
+</body>
+</html>
