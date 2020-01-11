@@ -23,7 +23,7 @@ esac
 npm version $1 --no-git
 # Rebuild docs
 bin/update-docs
-git add package.json docs
+git add package.json package-lock.json docs
 git commit -m "release $1 v$(node -e 'console.log(require("./package.json").version)')"
 # Create a tag
 git tag v$(node -e 'console.log(require("./package.json").version)')
