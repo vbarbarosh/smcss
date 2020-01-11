@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# http://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin
+# http://redsymbol.net/articles/unofficial-bash-strict-mode/
+set -o nounset -o errexit -o pipefail
+
+script=`realpath $0`
+scriptdir=`dirname $script`
+scriptname=`basename $script`
+
+cd $scriptdir/..
+
+case $1 in
+major|minor|patch)
+    ;;
+*)
+    echo usage: release 'major|minor|patch' 2>&1
+    exit 1
+    ;;
+esac
+
+# Increase a version without commiting it and making a tag
+npm version $1 --no-git
+# Rebuild docs
+bin/update-docs
+git add package.json docs
+git commit -m "release $1 v$(node -e 'console.log(require("./package.json").version)')"
+# Create a tag
+git tag v$(node -e 'console.log(require("./package.json").version)')
