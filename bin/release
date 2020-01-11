@@ -24,6 +24,6 @@ npm version $1 --git=/bin/true # this is a hack; substitute `true` for `git`
 # Rebuild docs
 bin/update-docs
 git add package.json package-lock.json docs
-git commit -m "release $1 v$(node -e 'console.log(require("./package.json").version)')"
+git commit -m "release v$(node -e 'console.log(require("./package.json").version)')"
 # Create a tag
 git tag v$(node -e 'console.log(require("./package.json").version)')
