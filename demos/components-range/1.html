@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<!-- Range: a simple slider  -->
+
+<div id="app" class="w500 ma mv15 mg15">
+
+    <div class="abs-t white ph5 bs5 hsplit">
+        <input v-model="range" class="fluid" type="range" min="0" max="100">
+    </div>
+
+    <br>
+    <br>
+
+    <div v-on:mousedown="mousedown" class="dashed">
+        <input id="foo1" class="xd" type="number" />
+        <label for="foo1" class="db blue rel">
+            <span v-bind:style="{width: `${range}%`}" class="db h20 green"></span>
+            <span v-bind:style="{left: `${range}%`}" class="abs-c w25 h25 br999 o75 bs5 white"></span>
+        </label>
+    </div>
+
+    <div v-on:mousedown="mousedown" class="white p10 dashed">
+        <input id="foo2" class="xd" type="number" />
+        <label for="foo2" class="db blue rel">
+            <span v-bind:style="{width: `${range}%`}" class="db h2 green"></span>
+            <span v-bind:style="{left: `${range}%`}" class="abs-c w25 h25 br999 o75 bs5 white"></span>
+        </label>
+    </div>
+
+    <div class="c"><span class="white p5 bs5 br5">{{ range }}%</span></div>
+
+</div>
+
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
+<script src="../vue/dd.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            range: 25,
+        },
+        methods: {
+            mousedown: function (event) {
+                if (jQuery(this.$refs.input).is(':disabled')) {
+                    return;
+                }
+                const _this = this;
+                const {left, right} = event.currentTarget.getBoundingClientRect();
+                dd({
+                    event,
+                    begin: function ({x}) {
+                        _this.range = Math.min(1, Math.max(0, (x-left)/(right-left)))*100;
+                    },
+                    move: function ({x}) {
+                        _this.range = Math.min(1, Math.max(0, (x-left)/(right-left)))*100;
+                    },
+                });
+            },
+        }
+    });
+</script>
+
+</body>
+</html>
