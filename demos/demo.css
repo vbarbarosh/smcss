@@ -318,8 +318,40 @@ h2 {
   width: 0;
 }
 
+.w1 {
+  width: 1px;
+}
+
+.w2 {
+  width: 2px;
+}
+
+.w3 {
+  width: 3px;
+}
+
+.w4 {
+  width: 4px;
+}
+
 .w5 {
   width: 5px;
+}
+
+.w6 {
+  width: 6px;
+}
+
+.w7 {
+  width: 7px;
+}
+
+.w8 {
+  width: 8px;
+}
+
+.w9 {
+  width: 9px;
 }
 
 .w10 {
@@ -402,8 +434,40 @@ h2 {
   height: 0;
 }
 
+.h1 {
+  height: 1px;
+}
+
+.h2 {
+  height: 2px;
+}
+
+.h3 {
+  height: 3px;
+}
+
+.h4 {
+  height: 4px;
+}
+
 .h5 {
   height: 5px;
+}
+
+.h6 {
+  height: 6px;
+}
+
+.h7 {
+  height: 7px;
+}
+
+.h8 {
+  height: 8px;
+}
+
+.h9 {
+  height: 9px;
 }
 
 .h10 {
