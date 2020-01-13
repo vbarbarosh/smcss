@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<!-- Issue: position:absolute before position:relative got overflown by the latter  -->
+
+<div class="w500 ma mv15">
+
+    <div class="abs ml25 w500 red bs5">
+        Absolute<br>
+        Absolute<br>
+        Absolute<br>
+        Absolute<br>
+    </div>
+
+    <div class="ml50 rel white bs5 mb5">position:relative is draw on top of preceding position:absolute</div>
+    <div class="ml50 o75 white bs5">opacity:75% is draw on to of preceding position:absolute</div>
+
+    <div class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci commodi doloremque, fuga itaque iure laborum laudantium, nihil nulla quaerat quam tenetur, voluptates. Eius facere molestiae mollitia natus neque!</div>
+
+    <br>
+
+    <div class="white p5 bs5">
+        This will be important when you try to create a dropdown which, inevitable,
+        will use <code>position:absolute</code> or <code>position:fixed</code>.
+    </div>
+
+</div>
+
+</body>
+</html>
