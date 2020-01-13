@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>concepts | smcss (a css for prototyping)</title>
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1578939260" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1578940472" rel="stylesheet" />
 </head>
 <body>
 
@@ -14,7 +14,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.7</sub></sub></li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.8</sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">
@@ -72,7 +72,57 @@
 
     <h3 id="margin-group">Margin Group</h3>
 
-    <p>A way to distribute space among immediate children. </p>
+    <p>Margin group &mdash; is a way to distribute space among immediate children.
+    Technically, its a class on an element which will set
+    <code>margin-bottom</code> (or <code>margin-right</code>) on each of
+    its immediate children except the last one.</p>
+
+    <div class="flex-row border silver mi15">
+        <div class="w25p">
+            <div>-</div>
+            <div class="dashed blue">child 1</div>
+            <div class="dashed blue">child 2</div>
+            <div class="dashed blue">child 3</div>
+            <div class="dashed blue">child 4</div>
+            <div class="dashed blue">child 5</div>
+            <div class="dashed blue">child 6</div>
+            <div class="dashed blue">child 7</div>
+            <div class="dashed blue">child 8</div>
+        </div>
+        <div class="w25p mg5">
+            <div><strong>mg5</strong></div>
+            <div class="dashed blue">child 1</div>
+            <div class="dashed blue">child 2</div>
+            <div class="dashed blue">child 3</div>
+            <div class="dashed blue">child 4</div>
+            <div class="dashed blue">child 5</div>
+            <div class="dashed blue">child 6</div>
+            <div class="dashed blue">child 7</div>
+            <div class="dashed blue">child 8</div>
+        </div>
+        <div class="w25p mg10">
+            <div><strong>mg10</strong></div>
+            <div class="dashed blue">child 1</div>
+            <div class="dashed blue">child 2</div>
+            <div class="dashed blue">child 3</div>
+            <div class="dashed blue">child 4</div>
+            <div class="dashed blue">child 5</div>
+            <div class="dashed blue">child 6</div>
+            <div class="dashed blue">child 7</div>
+            <div class="dashed blue">child 8</div>
+        </div>
+        <div class="w25p mg15">
+            <div><strong>mg15</strong></div>
+            <div class="dashed blue">child 1</div>
+            <div class="dashed blue">child 2</div>
+            <div class="dashed blue">child 3</div>
+            <div class="dashed blue">child 4</div>
+            <div class="dashed blue">child 5</div>
+            <div class="dashed blue">child 6</div>
+            <div class="dashed blue">child 7</div>
+            <div class="dashed blue">child 8</div>
+        </div>
+    </div>
 
 <!--
     <p>Groups separates adjacent siblings by equal amount of space.</p>
