@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1578755009" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1578939260" rel="stylesheet" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.6</sub></sub></li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.7</sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">
@@ -56,7 +56,8 @@
                                                         <li><a href="#flex">flex</a></li>
                                                         <li><a href="#float">float</a></li>
                                                         <li><a href="#hsplit">hsplit</a></li>
-                                                                            <li><a href="#modal">modal</a></li>
+                                                                            <li><a href="#issues">issues</a></li>
+                                                        <li><a href="#modal">modal</a></li>
                                                                             <li><a href="#specificity">specificity</a></li>
                                                         <li><a href="#text">text</a></li>
                                                         <li><a href="#toggle">toggle</a></li>
@@ -1919,6 +1920,41 @@
                                     </div>
             
                 
+                
+                <div class="mg15">
+                    <h3 id="issues">issues</h3>
+                                            <h4>issues/1.html</h4>
+                        <button v-on:click="modal_iframe(&quot;issues\/1.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;issues&quot;,&quot;html&quot;:&quot;&lt;!-- Issue: position:absolute before position:relative got overflown by the latter  --&gt;\n\n&lt;div class=\&quot;w500 ma mv15\&quot;&gt;\n\n    &lt;div class=\&quot;abs ml25 w500 red bs5\&quot;&gt;\n        Absolute&lt;br&gt;\n        Absolute&lt;br&gt;\n        Absolute&lt;br&gt;\n        Absolute&lt;br&gt;\n    &lt;\/div&gt;\n\n    &lt;div class=\&quot;ml50 rel white bs5 mb5\&quot;&gt;position:relative is draw on top of preceding position:absolute&lt;\/div&gt;\n    &lt;div class=\&quot;ml50 o75 white bs5\&quot;&gt;opacity:75% is draw on to of preceding position:absolute&lt;\/div&gt;\n\n    &lt;div class=\&quot;blue\&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci commodi doloremque, fuga itaque iure laborum laudantium, nihil nulla quaerat quam tenetur, voluptates. Eius facere molestiae mollitia natus neque!&lt;\/div&gt;\n\n    &lt;br&gt;\n\n    &lt;div class=\&quot;white p5 bs5\&quot;&gt;\n        This will be important when you try to create a dropdown which, inevitable,\n        will use &lt;code&gt;position:absolute&lt;\/code&gt; or &lt;code&gt;position:fixed&lt;\/code&gt;.\n    &lt;\/div&gt;\n\n&lt;\/div&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Issue: position:absolute before position:relative got overflown by the latter  --&gt;
+
+&lt;div class=&quot;w500 ma mv15&quot;&gt;
+
+    &lt;div class=&quot;abs ml25 w500 red bs5&quot;&gt;
+        Absolute&lt;br&gt;
+        Absolute&lt;br&gt;
+        Absolute&lt;br&gt;
+        Absolute&lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;ml50 rel white bs5 mb5&quot;&gt;position:relative is draw on top of preceding position:absolute&lt;/div&gt;
+    &lt;div class=&quot;ml50 o75 white bs5&quot;&gt;opacity:75% is draw on to of preceding position:absolute&lt;/div&gt;
+
+    &lt;div class=&quot;blue&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium adipisci commodi doloremque, fuga itaque iure laborum laudantium, nihil nulla quaerat quam tenetur, voluptates. Eius facere molestiae mollitia natus neque!&lt;/div&gt;
+
+    &lt;br&gt;
+
+    &lt;div class=&quot;white p5 bs5&quot;&gt;
+        This will be important when you try to create a dropdown which, inevitable,
+        will use &lt;code&gt;position:absolute&lt;/code&gt; or &lt;code&gt;position:fixed&lt;/code&gt;.
+    &lt;/div&gt;
+
+&lt;/div&gt;"></vue-codemirror>
+                                    </div>
+            
                 
                 <div class="mg15">
                     <h3 id="modal">modal</h3>
