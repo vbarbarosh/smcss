@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1578940472" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1579025309" rel="stylesheet" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.8</sub></sub></li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.9</sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">
@@ -1950,6 +1950,26 @@
     &lt;div class=&quot;white p5 bs5&quot;&gt;
         This will be important when you try to create a dropdown which, inevitable,
         will use &lt;code&gt;position:absolute&lt;/code&gt; or &lt;code&gt;position:fixed&lt;/code&gt;.
+    &lt;/div&gt;
+
+&lt;/div&gt;"></vue-codemirror>
+                                            <h4>issues/2.html</h4>
+                        <button v-on:click="modal_iframe(&quot;issues\/2.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;issues&quot;,&quot;html&quot;:&quot;&lt;!-- Issue: padding-top:83.33% with top:EVEN% on child makes iframe jumps 1px up and down\n     This happens only in Safari --&gt;\n\n&lt;div class=\&quot;w500 ma mv15\&quot;&gt;\n\n    &lt;div class=\&quot;w400 h300 bs5 red\&quot;&gt;\n        &lt;div class=\&quot;w300\&quot;&gt;\n            &lt;div class=\&quot;rel\&quot; style=\&quot;padding-top:83.33%;\&quot;&gt;&lt;!-- 83.33% from 300px --&gt;\n                &lt;iframe src=\&quot;2\/index.html\&quot; class=\&quot;xborder black\&quot; style=\&quot;position:absolute;top:4%;left:0;width:300px;height:250px;\&quot;&gt;&lt;\/iframe&gt;\n            &lt;\/div&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n\n&lt;\/div&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Issue: padding-top:83.33% with top:EVEN% on child makes iframe jumps 1px up and down
+     This happens only in Safari --&gt;
+
+&lt;div class=&quot;w500 ma mv15&quot;&gt;
+
+    &lt;div class=&quot;w400 h300 bs5 red&quot;&gt;
+        &lt;div class=&quot;w300&quot;&gt;
+            &lt;div class=&quot;rel&quot; style=&quot;padding-top:83.33%;&quot;&gt;&lt;!-- 83.33% from 300px --&gt;
+                &lt;iframe src=&quot;2/index.html&quot; class=&quot;xborder black&quot; style=&quot;position:absolute;top:4%;left:0;width:300px;height:250px;&quot;&gt;&lt;/iframe&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 
 &lt;/div&gt;"></vue-codemirror>
