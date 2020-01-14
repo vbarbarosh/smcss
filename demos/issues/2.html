@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<!-- Issue: padding-top:83.33% with top:EVEN% on child makes iframe jumps 1px up and down
+     This happens only in Safari -->
+
+<div class="w500 ma mv15">
+
+    <div class="w400 h300 bs5 red">
+        <div class="w300">
+            <div class="rel" style="padding-top:83.33%;"><!-- 83.33% from 300px -->
+                <iframe src="2/index.html" class="xborder black" style="position:absolute;top:4%;left:0;width:300px;height:250px;"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
