@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1579116879" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1579130655" rel="stylesheet" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.12</sub></sub></li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.13</sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">
@@ -1992,6 +1992,34 @@
             Duis feugiat aliquam odio et accumsan. Nam in neque convallis massa finibus mattis. Sed a suscipit odio. Integer dictum quam a sapien cursus, in aliquet felis sagittis. Nam eu mauris ac libero tempus tincidunt. Duis convallis, erat a aliquet sollicitudin, elit purus bibendum eros, eu molestie nisl nunc varius enim. Quisque accumsan, augue in mattis facilisis, odio nisi interdum nunc, nec posuere ante mauris at ex. Morbi placerat, est sed aliquam dignissim, ex ipsum tristique nulla, vitae mattis odio erat ut erat. Nullam vitae facilisis diam. Suspendisse accumsan, ligula sed maximus blandit, arcu quam vulputate augue, vitae consequat ipsum elit sit amet neque. Pellentesque sed neque nulla. Donec placerat turpis ac eros molestie, sit amet mollis nisi pharetra. Aliquam sed neque in ante commodo aliquet et non massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam rutrum odio in turpis condimentum sodales. Nunc at laoreet nisl.
             Cras rutrum felis ullamcorper felis ultricies volutpat. Vivamus commodo ultricies faucibus. Aliquam molestie velit non dolor fermentum, ac tincidunt felis porttitor. Ut non lorem sit amet ante porta fermentum. Praesent porttitor odio eu iaculis ultricies. Duis sollicitudin ligula ut lobortis efficitur. Sed volutpat nisl quis turpis interdum, fermentum eleifend leo aliquet. Nunc imperdiet diam nec laoreet aliquam. In mattis dolor in venenatis dignissim. Vivamus eu varius sem. Pellentesque feugiat vel nisl in facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed gravida aliquam turpis sit amet vestibulum. In luctus nulla et tellus elementum varius.
             Suspendisse potenti. Curabitur tempor dapibus consectetur. Nam pulvinar cursus dolor ut fringilla. Phasellus condimentum porta magna, quis dictum mauris mattis malesuada. Donec nulla felis, mattis varius ex nec, ultricies sollicitudin nulla. Vestibulum eu diam in nulla dapibus dapibus. Pellentesque eu tortor est. Fusce scelerisque fermentum risus, vitae finibus augue semper vitae. Nulla rutrum ex ut arcu efficitur venenatis. Integer a ante vitae dolor tristique laoreet a eleifend turpis. Aliquam sit amet semper lorem. Etiam et consequat ante. Sed risus augue, volutpat fringilla porta vitae, blandit id sem. Ut quis felis mollis, facilisis est non, sollicitudin lacus. Sed placerat in nulla in gravida.
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;"></vue-codemirror>
+                                            <h4>issues/4.html</h4>
+                        <button v-on:click="modal_iframe(&quot;issues\/4.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;issues&quot;,&quot;html&quot;:&quot;&lt;!-- Issue: .abs-f.ma works differently under element with transform set --&gt;\n&lt;!-- https:\/\/stackoverflow.com\/a\/31829509\/1478566 --&gt;\n\n&lt;div class=\&quot;flex-col-center mv15 mg15\&quot;&gt;\n\n    &lt;div class=\&quot;rel w200 h200 bs5 white\&quot;&gt;\n        &lt;div&gt;\n            &lt;div class=\&quot;abs-f ma w50 h50 green\&quot;&gt;&lt;\/div&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n    &lt;div class=\&quot;rel w200 h200 bs5 white\&quot;&gt;\n        &lt;div style=\&quot;transform:translate(0,0)\&quot;&gt;\n            &lt;div class=\&quot;abs-f ma w50 h50 green\&quot;&gt;&lt;\/div&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n    &lt;div class=\&quot;rel w200 h200 bs5 white\&quot;&gt;\n        &lt;div style=\&quot;transform:translate(0,0) ww hh\&quot;&gt;\n            &lt;div class=\&quot;abs-f ma w50 h50 green\&quot;&gt;&lt;\/div&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n\n&lt;\/div&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Issue: .abs-f.ma works differently under element with transform set --&gt;
+&lt;!-- https://stackoverflow.com/a/31829509/1478566 --&gt;
+
+&lt;div class=&quot;flex-col-center mv15 mg15&quot;&gt;
+
+    &lt;div class=&quot;rel w200 h200 bs5 white&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;abs-f ma w50 h50 green&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;rel w200 h200 bs5 white&quot;&gt;
+        &lt;div style=&quot;transform:translate(0,0)&quot;&gt;
+            &lt;div class=&quot;abs-f ma w50 h50 green&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;rel w200 h200 bs5 white&quot;&gt;
+        &lt;div style=&quot;transform:translate(0,0) ww hh&quot;&gt;
+            &lt;div class=&quot;abs-f ma w50 h50 green&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 

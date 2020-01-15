@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<!-- Issue: .abs-f.ma works differently under element with transform set -->
+<!-- https://stackoverflow.com/a/31829509/1478566 -->
+
+<div class="flex-col-center mv15 mg15">
+
+    <div class="rel w200 h200 bs5 white">
+        <div>
+            <div class="abs-f ma w50 h50 green"></div>
+        </div>
+    </div>
+    <div class="rel w200 h200 bs5 white">
+        <div style="transform:translate(0,0)">
+            <div class="abs-f ma w50 h50 green"></div>
+        </div>
+    </div>
+    <div class="rel w200 h200 bs5 white">
+        <div style="transform:translate(0,0) ww hh">
+            <div class="abs-f ma w50 h50 green"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
