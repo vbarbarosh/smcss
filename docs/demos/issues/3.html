@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+    /* https://stackoverflow.com/a/10100209/1478566 */
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.5);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+    </style>
+</head>
+<body class="checkerboard">
+
+<!-- Issue: using position:absolute and left:-99999999px on Safari will eliminate horizontal scrollbar -->
+
+<div class="w500 ma mv15">
+
+    <div class="w400 h300 bs5 red os">
+        <div class="rel w500 h500">
+            <div class="abs w1 h1" style="left:-99999999px;"></div>
+            In condimentum ultrices ex, quis gravida nunc tristique sit amet. In non auctor mauris. Mauris sit amet tincidunt diam, ac rutrum purus. Praesent rhoncus, felis vel lobortis vehicula, tellus velit lobortis sem, vitae fermentum ex lorem a felis. Donec vehicula semper dapibus. Vivamus nec felis lacus. Donec fermentum convallis sodales. Quisque sapien sem, imperdiet id leo a, auctor viverra ante. Nulla facilisi. Nulla imperdiet, magna quis mattis mollis, dui augue pharetra dui, vitae vehicula urna enim vitae nunc. Sed aliquet sit amet leo eu dapibus. Nam aliquam lorem augue, a mattis dolor condimentum maximus.
+            Nunc ex sem, ornare id aliquam id, aliquam tempor eros. In mattis, neque ac eleifend pulvinar, purus velit dapibus metus, a interdum enim massa et metus. Maecenas viverra convallis rhoncus. Quisque lobortis, diam sed commodo rutrum, tortor nunc porta nibh, non ornare diam ex pharetra sem. Nunc faucibus vitae eros id fringilla. Mauris commodo commodo sagittis. Aenean blandit lectus sed porttitor lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam placerat orci ut odio feugiat, at cursus sapien efficitur. Aliquam justo sapien, semper vel bibendum at, eleifend eu velit. Ut ac lacus viverra, tincidunt purus eu, molestie diam.
+            Duis feugiat aliquam odio et accumsan. Nam in neque convallis massa finibus mattis. Sed a suscipit odio. Integer dictum quam a sapien cursus, in aliquet felis sagittis. Nam eu mauris ac libero tempus tincidunt. Duis convallis, erat a aliquet sollicitudin, elit purus bibendum eros, eu molestie nisl nunc varius enim. Quisque accumsan, augue in mattis facilisis, odio nisi interdum nunc, nec posuere ante mauris at ex. Morbi placerat, est sed aliquam dignissim, ex ipsum tristique nulla, vitae mattis odio erat ut erat. Nullam vitae facilisis diam. Suspendisse accumsan, ligula sed maximus blandit, arcu quam vulputate augue, vitae consequat ipsum elit sit amet neque. Pellentesque sed neque nulla. Donec placerat turpis ac eros molestie, sit amet mollis nisi pharetra. Aliquam sed neque in ante commodo aliquet et non massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam rutrum odio in turpis condimentum sodales. Nunc at laoreet nisl.
+            Cras rutrum felis ullamcorper felis ultricies volutpat. Vivamus commodo ultricies faucibus. Aliquam molestie velit non dolor fermentum, ac tincidunt felis porttitor. Ut non lorem sit amet ante porta fermentum. Praesent porttitor odio eu iaculis ultricies. Duis sollicitudin ligula ut lobortis efficitur. Sed volutpat nisl quis turpis interdum, fermentum eleifend leo aliquet. Nunc imperdiet diam nec laoreet aliquam. In mattis dolor in venenatis dignissim. Vivamus eu varius sem. Pellentesque feugiat vel nisl in facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed gravida aliquam turpis sit amet vestibulum. In luctus nulla et tellus elementum varius.
+            Suspendisse potenti. Curabitur tempor dapibus consectetur. Nam pulvinar cursus dolor ut fringilla. Phasellus condimentum porta magna, quis dictum mauris mattis malesuada. Donec nulla felis, mattis varius ex nec, ultricies sollicitudin nulla. Vestibulum eu diam in nulla dapibus dapibus. Pellentesque eu tortor est. Fusce scelerisque fermentum risus, vitae finibus augue semper vitae. Nulla rutrum ex ut arcu efficitur venenatis. Integer a ante vitae dolor tristique laoreet a eleifend turpis. Aliquam sit amet semper lorem. Etiam et consequat ante. Sed risus augue, volutpat fringilla porta vitae, blandit id sem. Ut quis felis mollis, facilisis est non, sollicitudin lacus. Sed placerat in nulla in gravida.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
