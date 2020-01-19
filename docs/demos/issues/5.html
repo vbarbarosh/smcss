@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<!-- Issue: Width of the absolutely positioned non-replaced element is shrink-to-fit -->
+<!-- https://www.w3.org/TR/CSS2/visudet.html#abs-non-replaced-width -->
+<!-- https://stackoverflow.com/questions/26546948/why-is-absolute-element-width-limited-by-inline-block-parent#comment41717858_26547290 -->
+
+<div class="rel w500 h200 ma mv15 bs5 border white">
+
+    <div class="abs red">
+        Ut mattis gravida lacus eu tempor.
+    </div>
+
+    <div class="abs green" style="top:25px;left:25px;">
+        Ut mattis gravida lacus eu tempor. Pellentesque est lorem,
+        commodo sit amet nulla non, vulputate feugiat lectus. Fusce
+        porta fringilla erat, quis sagittis sapien malesuada
+        fringilla.
+    </div>
+
+</div>
+
+</body>
+</html>
