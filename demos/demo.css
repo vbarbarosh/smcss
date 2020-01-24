@@ -478,6 +478,10 @@ h2 {
   width: 800px;
 }
 
+.w1200 {
+  width: 1200px;
+}
+
 .h0 {
   height: 0;
 }
@@ -596,6 +600,10 @@ h2 {
 
 .h800 {
   height: 800px;
+}
+
+.h1200 {
+  height: 1200px;
 }
 
 .w5p {
