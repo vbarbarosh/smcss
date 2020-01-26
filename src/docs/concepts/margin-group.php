@@ -7,50 +7,117 @@
     <code>margin-bottom</code> (or <code>margin-right</code>) on each of
     its immediate children except the last one.</p>
 
+    <p>Block-level margin group <strong>mg<snap class="n">N</snap></strong></p>
+
     <div class="flex-row border silver mi15">
         <div class="w25p">
-            <div>-</div>
-            <div class="dashed blue">child 1</div>
-            <div class="dashed blue">child 2</div>
-            <div class="dashed blue">child 3</div>
-            <div class="dashed blue">child 4</div>
-            <div class="dashed blue">child 5</div>
-            <div class="dashed blue">child 6</div>
-            <div class="dashed blue">child 7</div>
-            <div class="dashed blue">child 8</div>
+            <div><strong>-</strong></div>
+            <div>
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
         </div>
-        <div class="w25p mg5">
+        <div class="w25p">
             <div><strong>mg5</strong></div>
-            <div class="dashed blue">child 1</div>
-            <div class="dashed blue">child 2</div>
-            <div class="dashed blue">child 3</div>
-            <div class="dashed blue">child 4</div>
-            <div class="dashed blue">child 5</div>
-            <div class="dashed blue">child 6</div>
-            <div class="dashed blue">child 7</div>
-            <div class="dashed blue">child 8</div>
+            <div class="mg5">
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
         </div>
-        <div class="w25p mg10">
+        <div class="w25p">
             <div><strong>mg10</strong></div>
-            <div class="dashed blue">child 1</div>
-            <div class="dashed blue">child 2</div>
-            <div class="dashed blue">child 3</div>
-            <div class="dashed blue">child 4</div>
-            <div class="dashed blue">child 5</div>
-            <div class="dashed blue">child 6</div>
-            <div class="dashed blue">child 7</div>
-            <div class="dashed blue">child 8</div>
+            <div class="mg10">
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
         </div>
-        <div class="w25p mg15">
+        <div class="w25p">
             <div><strong>mg15</strong></div>
-            <div class="dashed blue">child 1</div>
-            <div class="dashed blue">child 2</div>
-            <div class="dashed blue">child 3</div>
-            <div class="dashed blue">child 4</div>
-            <div class="dashed blue">child 5</div>
-            <div class="dashed blue">child 6</div>
-            <div class="dashed blue">child 7</div>
-            <div class="dashed blue">child 8</div>
+            <div class="mg15">
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
+        </div>
+    </div>
+
+    <p>Inline-level margin group <strong>mi<span class="n">N</span></strong></p>
+
+    <div class="flex-col border silver mg15">
+        <div class="flex-row">
+            <div class="w50"><strong>-</strong></div>
+            <div class="flex-row">
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="w50"><strong>mi5</strong></div>
+            <div class="flex-row mi5">
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="w50"><strong>mi10</strong></div>
+            <div class="flex-row mi10">
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="w50"><strong>mi15</strong></div>
+            <div class="flex-row mi15">
+                <div class="dashed blue">child 1</div>
+                <div class="dashed blue">child 2</div>
+                <div class="dashed blue">child 3</div>
+                <div class="dashed blue">child 4</div>
+                <div class="dashed blue">child 5</div>
+                <div class="dashed blue">child 6</div>
+                <div class="dashed blue">child 7</div>
+                <div class="dashed blue">child 8</div>
+            </div>
         </div>
     </div>
 
