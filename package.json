@@ -9,7 +9,7 @@
   "jsdelivr": "dist/sm.css",
   "homepage": "https://smcss.vbarbarosh.com",
   "files": [
-    "src",
+    "src/smcss",
     "dist/*.css"
   ],
   "repository": {
