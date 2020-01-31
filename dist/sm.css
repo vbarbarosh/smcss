@@ -4319,31 +4319,3 @@
 .grid10 > .col10 {
   width: 100%;
 }
-
-svg {
-  fill: currentColor;
-}
-
-button {
-  cursor: pointer;
-}
-
-h2 {
-  margin: 0;
-}
-
-.theme-white {
-  color: #7f8893;
-  background: white;
-  font-family: "Open Sans", serif;
-  font-size: 15px;
-}
-.theme-white button:hover {
-  color: #36beff;
-}
-.theme-white button:active {
-  color: #2f72ff;
-}
-.theme-white .active {
-  background: yellow;
-}
