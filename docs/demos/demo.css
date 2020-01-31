@@ -1,31 +1,3 @@
-svg {
-  fill: currentColor;
-}
-
-button {
-  cursor: pointer;
-}
-
-h2 {
-  margin: 0;
-}
-
-.theme-white {
-  color: #7f8893;
-  background: white;
-  font-family: "Open Sans", serif;
-  font-size: 15px;
-}
-.theme-white button:hover {
-  color: #36beff;
-}
-.theme-white button:active {
-  color: #2f72ff;
-}
-.theme-white .active {
-  background: yellow;
-}
-
 .xbutton {
   box-sizing: content-box;
   font-size: inherit;
@@ -130,6 +102,42 @@ h2 {
 
 .xfs {
   font-size: inherit;
+}
+
+.fs1 {
+  font-size: 1px;
+}
+
+.fs2 {
+  font-size: 2px;
+}
+
+.fs3 {
+  font-size: 3px;
+}
+
+.fs4 {
+  font-size: 4px;
+}
+
+.fs5 {
+  font-size: 5px;
+}
+
+.fs6 {
+  font-size: 6px;
+}
+
+.fs7 {
+  font-size: 7px;
+}
+
+.fs8 {
+  font-size: 8px;
+}
+
+.fs9 {
+  font-size: 9px;
 }
 
 .fs10 {
@@ -478,6 +486,18 @@ h2 {
   width: 800px;
 }
 
+.w900 {
+  width: 900px;
+}
+
+.w1000 {
+  width: 1000px;
+}
+
+.w1100 {
+  width: 1100px;
+}
+
 .w1200 {
   width: 1200px;
 }
@@ -602,6 +622,18 @@ h2 {
   height: 800px;
 }
 
+.h900 {
+  height: 900px;
+}
+
+.h1000 {
+  height: 1000px;
+}
+
+.h1100 {
+  height: 1100px;
+}
+
 .h1200 {
   height: 1200px;
 }
@@ -682,6 +714,10 @@ h2 {
   width: 95%;
 }
 
+.w100p {
+  width: 100%;
+}
+
 .h5p {
   height: 5%;
 }
@@ -756,6 +792,10 @@ h2 {
 
 .h95p {
   height: 95%;
+}
+
+.h100p {
+  height: 100%;
 }
 
 .max-ww {
@@ -4346,4 +4386,32 @@ h2 {
 }
 .grid10 > .col10 {
   width: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+
+button {
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0;
+}
+
+.theme-white {
+  color: #7f8893;
+  background: white;
+  font-family: "Open Sans", serif;
+  font-size: 15px;
+}
+.theme-white button:hover {
+  color: #36beff;
+}
+.theme-white button:active {
+  color: #2f72ff;
+}
+.theme-white .active {
+  background: yellow;
 }
