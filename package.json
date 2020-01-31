@@ -1,6 +1,6 @@
 {
   "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (https://github.com/vbarbarosh)",
-  "name": "smcss",
+  "name": "@vbarbarosh/smcss",
   "version": "0.3.18",
   "description": "A CSS Framework for Prototyping",
   "license": "ISC",
