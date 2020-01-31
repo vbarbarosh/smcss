@@ -104,6 +104,42 @@
   font-size: inherit;
 }
 
+.fs1 {
+  font-size: 1px;
+}
+
+.fs2 {
+  font-size: 2px;
+}
+
+.fs3 {
+  font-size: 3px;
+}
+
+.fs4 {
+  font-size: 4px;
+}
+
+.fs5 {
+  font-size: 5px;
+}
+
+.fs6 {
+  font-size: 6px;
+}
+
+.fs7 {
+  font-size: 7px;
+}
+
+.fs8 {
+  font-size: 8px;
+}
+
+.fs9 {
+  font-size: 9px;
+}
+
 .fs10 {
   font-size: 10px;
 }
@@ -450,6 +486,18 @@
   width: 800px;
 }
 
+.w900 {
+  width: 900px;
+}
+
+.w1000 {
+  width: 1000px;
+}
+
+.w1100 {
+  width: 1100px;
+}
+
 .w1200 {
   width: 1200px;
 }
@@ -574,6 +622,18 @@
   height: 800px;
 }
 
+.h900 {
+  height: 900px;
+}
+
+.h1000 {
+  height: 1000px;
+}
+
+.h1100 {
+  height: 1100px;
+}
+
 .h1200 {
   height: 1200px;
 }
@@ -654,6 +714,10 @@
   width: 95%;
 }
 
+.w100p {
+  width: 100%;
+}
+
 .h5p {
   height: 5%;
 }
@@ -728,6 +792,10 @@
 
 .h95p {
   height: 95%;
+}
+
+.h100p {
+  height: 100%;
 }
 
 .max-ww {
