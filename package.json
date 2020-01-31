@@ -1,14 +1,29 @@
 {
+  "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (https://github.com/vbarbarosh)",
   "name": "smcss",
   "version": "0.3.16",
   "description": "A CSS Framework for Prototyping",
+  "license": "ISC",
   "main": "index.sass",
+  "unpkg": "dist/sm.css",
+  "jsdelivr": "dist/sm.css",
+  "homepage": "https://smcss.vbarbarosh.com",
+  "files": [
+    "src",
+    "dist/*.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbarbarosh/smcss.git"
+  },
+  "keywords": [
+    "css",
+    "sass"
+  ],
   "scripts": {
-    "build": "rm -rf build && sass demos/demo.sass | postcss -o demos/demo.css",
+    "build": "rm -rf build dist && mkdir dist && sass demos/demo.sass | postcss -o demos/demo.css && cp demos/demo.css dist/sm.css",
     "test": "mocha --bail --require intelli-espower-loader"
   },
-  "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (https://github.com/vbarbarosh)",
-  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.7.3",
     "bluebird": "^3.7.2",
