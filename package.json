@@ -2,7 +2,7 @@
   "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (https://github.com/vbarbarosh)",
   "name": "@vbarbarosh/smcss",
   "version": "0.3.19",
-  "description": "A CSS Framework for Prototyping",
+  "description": "A way to organize and write CSS",
   "license": "ISC",
   "main": "index.sass",
   "unpkg": "dist/sm.css",
