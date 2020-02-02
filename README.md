@@ -10,6 +10,10 @@ A way to organize and write CSS https://smcss.vbarbarosh.com
 
     $ npm i @vbarbarosh/smcss
 
+## Using from browser
+
+    <link href="https://unpkg.com/@vbarbarosh/smcss@0.3.20/dist/sm.css" rel="stylesheet" />
+
 ## Interesting Projects
 
 * [Easy Toggle State](https://twikito.github.io/easy-toggle-state)
