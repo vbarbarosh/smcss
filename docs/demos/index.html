@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1580514794" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1580682564" rel="stylesheet" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.20</sub></sub></li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v0.3.21</sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">
@@ -540,7 +540,7 @@
 
 &lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://unpkg.com/jquery@3.4.1/dist/jquery.js&quot;&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/@vbarbarosh/dd@1.0.6/dist/dd.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;../vue/dd.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
     new Vue({
         el: '#app',
@@ -922,7 +922,7 @@
                                             <h4>container/8.html</h4>
                         <button v-on:click="modal_iframe(&quot;container\/8.html&quot;)">Preview</button>
                         <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
-                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;container&quot;,&quot;html&quot;:&quot;&lt;div id=\&quot;app\&quot; class=\&quot;fix-f flex-row\&quot;&gt;\n\n    &lt;div class=\&quot;abs-t white flex-col mg5\&quot;&gt;\n        &lt;input-width v-model=\&quot;container_width\&quot;&gt;&lt;\/input-width&gt;\n        &lt;input-width v-model=\&quot;banner.width\&quot;&gt;&lt;\/input-width&gt;\n        &lt;input-height v-model=\&quot;banner.height\&quot;&gt;&lt;\/input-height&gt;\n    &lt;\/div&gt;\n\n    &lt;div v-bind:style=\&quot;{width: px(container_width)}\&quot; class=\&quot;ma dashed bs5\&quot;&gt;\n\n        &lt;!--\n            A a container for a banner. Will resize its height proportionally to width.\n            min-width: 200\n            min-height: 200\n            max-width: banner.width\n            max-height: banner.height\n        --&gt;\n        &lt;div v-bind:style=\&quot;{minWidth: px(200), minHeight: px(200), maxWidth: px(banner.width), maxHeight: px(banner.height)}\&quot; class=\&quot;rel white\&quot;&gt;\n            &lt;div v-bind:style=\&quot;{paddingTop: (banner.height\/banner.width*100)+'%'}\&quot;&gt;&lt;\/div&gt;\n            &lt;!-- app-banner component should render a banner inside of a provided container --&gt;\n            &lt;app-banner v-model=\&quot;banner\&quot; class=\&quot;abs-f\&quot;&gt;&lt;\/app-banner&gt;\n        &lt;\/div&gt;\n\n    &lt;\/div&gt;\n\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;..\/vue\/mixins.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;..\/vue\/vue-sizemon.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;..\/vue\/input-width.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;..\/vue\/input-height.js\&quot;&gt;&lt;\/script&gt;\n\n&lt;script id=\&quot;templ-app-banner\&quot; type=\&quot;text\/html\&quot;&gt;\n    &lt;div class=\&quot;rel\&quot;&gt;\n        &lt;div v-bind:style=\&quot;{width: px(banner.width*scale_up), height: px(banner.height*scale_up)}\&quot; class=\&quot;abs-f ma flex-row-center green\&quot;&gt;\n            {{ banner.width }}x{{ banner.height }}*{{ scale_down.toFixed(2) }}\n        &lt;\/div&gt;\n        &lt;div class=\&quot;abs-br white\&quot;&gt;\n            {{ (scale_up*100).toFixed(0) }}%\/{{ (scale_down*100).toFixed(0) }}%\n        &lt;\/div&gt;\n        &lt;vue-sizemon v-model=\&quot;sizemon\&quot;&gt;&lt;\/vue-sizemon&gt;\n    &lt;\/div&gt;\n&lt;\/script&gt;\n&lt;script&gt;\n    Vue.component('app-banner', {\n        props: ['value'],\n        template: '#templ-app-banner',\n        data: function () {\n            return {\n                sizemon: {},\n            };\n        },\n        computed: {\n            banner: function () {\n                return this.value;\n            },\n            scale: function () {\n                return this.sizemon.width\/this.banner.width;\n            },\n            scale_up: function () {\n                return Math.min(this.sizemon.width\/this.banner.width, this.sizemon.height\/this.banner.height);\n            },\n            scale_down: function () {\n                return Math.min(1, this.sizemon.width\/this.banner.width);\n            },\n        },\n    });\n\n    new Vue({\n        el: '#app',\n        data: {\n            container_width: 800,\n            banner: {\n                width: 50,\n                height: 150,\n            },\n        },\n    });\n\n&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;container&quot;,&quot;html&quot;:&quot;&lt;div id=\&quot;app\&quot; class=\&quot;fix-f flex-row\&quot;&gt;\n\n    &lt;div class=\&quot;abs-t white flex-col mg5\&quot;&gt;\n        &lt;input-width v-model=\&quot;container_width\&quot;&gt;&lt;\/input-width&gt;\n        &lt;input-width v-model=\&quot;banner.width\&quot;&gt;&lt;\/input-width&gt;\n        &lt;input-height v-model=\&quot;banner.height\&quot;&gt;&lt;\/input-height&gt;\n    &lt;\/div&gt;\n\n    &lt;div v-bind:style=\&quot;{width: px(container_width)}\&quot; class=\&quot;ma dashed bs5\&quot;&gt;\n\n        &lt;!--\n            A a container for a banner. Will resize its height proportionally to width.\n            min-width: 200\n            min-height: 200\n            max-width: banner.width\n            max-height: banner.height\n        --&gt;\n        &lt;div v-bind:style=\&quot;{minWidth: px(200), minHeight: px(200), maxWidth: px(banner.width), maxHeight: px(banner.height)}\&quot; class=\&quot;rel white\&quot;&gt;\n            &lt;div v-bind:style=\&quot;{paddingTop: (banner.height\/banner.width*100)+'%'}\&quot;&gt;&lt;\/div&gt;\n            &lt;!-- app-banner component should render a banner inside of a provided container --&gt;\n            &lt;app-banner v-model=\&quot;banner\&quot; class=\&quot;abs-f\&quot;&gt;&lt;\/app-banner&gt;\n        &lt;\/div&gt;\n\n    &lt;\/div&gt;\n\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;https:\/\/unpkg.com\/@vbarbarosh\/vue-sizemon@1.0.0\/dist\/vue-sizemon.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;..\/vue\/mixins.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;..\/vue\/input-width.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;..\/vue\/input-height.js\&quot;&gt;&lt;\/script&gt;\n\n&lt;script id=\&quot;templ-app-banner\&quot; type=\&quot;text\/html\&quot;&gt;\n    &lt;div class=\&quot;rel\&quot;&gt;\n        &lt;div v-bind:style=\&quot;{width: px(banner.width*scale_up), height: px(banner.height*scale_up)}\&quot; class=\&quot;abs-f ma flex-row-center green\&quot;&gt;\n            {{ banner.width }}x{{ banner.height }}*{{ scale_down.toFixed(2) }}\n        &lt;\/div&gt;\n        &lt;div class=\&quot;abs-br white\&quot;&gt;\n            {{ (scale_up*100).toFixed(0) }}%\/{{ (scale_down*100).toFixed(0) }}%\n        &lt;\/div&gt;\n        &lt;vue-sizemon v-model=\&quot;sizemon\&quot;&gt;&lt;\/vue-sizemon&gt;\n    &lt;\/div&gt;\n&lt;\/script&gt;\n&lt;script&gt;\n    Vue.component('app-banner', {\n        props: ['value'],\n        template: '#templ-app-banner',\n        data: function () {\n            return {\n                sizemon: {},\n            };\n        },\n        computed: {\n            banner: function () {\n                return this.value;\n            },\n            scale: function () {\n                return this.sizemon.width\/this.banner.width;\n            },\n            scale_up: function () {\n                return Math.min(this.sizemon.width\/this.banner.width, this.sizemon.height\/this.banner.height);\n            },\n            scale_down: function () {\n                return Math.min(1, this.sizemon.width\/this.banner.width);\n            },\n        },\n    });\n\n    new Vue({\n        el: '#app',\n        data: {\n            container_width: 800,\n            banner: {\n                width: 50,\n                height: 150,\n            },\n        },\n    });\n\n&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
                             <input type="submit" value="CodePen">
                         </form>
                         <vue-codemirror value="&lt;div id=&quot;app&quot; class=&quot;fix-f flex-row&quot;&gt;
@@ -953,8 +953,8 @@
 &lt;/div&gt;
 
 &lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@vbarbarosh/vue-sizemon@1.0.0/dist/vue-sizemon.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;../vue/mixins.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;../vue/vue-sizemon.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;../vue/input-width.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;../vue/input-height.js&quot;&gt;&lt;/script&gt;
 
@@ -2368,7 +2368,7 @@ document.getElementById('content').addEventListener('scroll', function (event) {
 &lt;script src=&quot;https://unpkg.com/bluebird@3.7.0/js/browser/bluebird.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;../vue/mixins.js&quot;&gt;&lt;/script&gt;
-&lt;script src="https://unpkg.com/@vbarbarosh/dd@1.0.6/dist/dd.js"&gt;&lt;/script&gt;
+&lt;script src=&quot;../vue/dd.js&quot;&gt;&lt;/script&gt;
 
 &lt;script&gt;
 (function () {
