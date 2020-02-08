@@ -203,18 +203,22 @@
             @include iflex-col-center
         @else if $expr == flex-row // flex-row
             @include flex-row
+        @else if $expr == flex-row-rev // flex-row-rev
+            @include flex-row-rev
         @else if $expr == flex-row-center // flex-row-center
             @include flex-row-center
         @else if $expr == flex-col // flex-col
             @include flex-col
+        @else if $expr == flex-col-rev // flex-col-rev
+            @include flex-col-rev
         @else if $expr == flex-col-center // flex-col-center
             @include flex-col-center
         @else if $expr == flex-wrap // flex-wrap
             @include flex-wrap
         @else if $expr == flex-nowrap // flex-nowrap
             @include flex-nowrap
-        @else if $expr == flex-wrap-r // flex-wrap-r
-            @include flex-wrap-r
+        @else if $expr == flex-wrap-rev // flex-wrap-rev
+            @include flex-wrap-rev
         @else if $expr == flex-center // flex-center
             @include flex-center
         @else if $expr == flex-align-start // flex-align-start
