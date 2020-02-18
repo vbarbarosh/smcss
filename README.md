@@ -19,3 +19,5 @@ A way to organize and write CSS https://smcss.vbarbarosh.com
 * [Easy Toggle State](https://twikito.github.io/easy-toggle-state)
 * [Responsive Font Sizes](https://github.com/MartijnCuppens/rfs)
 * [Tailwind CSS](https://github.com/tailwindcss/tailwindcss)
+* [PaperCSS - The less formal CSS framework, with a quick and easy integration](https://github.com/papercss/papercss)
+* [Construct.css - Focus on the content and structure of your HTML](https://github.com/t7/construct.css/)
