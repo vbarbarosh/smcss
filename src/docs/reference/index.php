@@ -67,6 +67,7 @@
                 <li><a href="#position-abs">position-abs</a></li>
                 <li><a href="#position-fix">position-fix</a></li>
                 <li><a href="#position-sticky">position-sticky</a></li>
+                <li><a href="#resize">resize</a></li>
                 <li><a href="#scrollbar">scrollbar</a></li>
                 <li><a href="#size">size</a></li>
                 <li><a href="#text">text</a></li>
@@ -118,6 +119,7 @@ sass -I node_modules a.sass > a.css
             <?php include 'position-abs.php' ?>
             <?php include 'position-fix.php' ?>
             <?php include 'position-sticky.php' ?>
+            <?php include 'resize.php' ?>
             <?php include 'scrollbar.php' ?>
             <?php include 'size.php' ?>
             <?php include 'text.php' ?>
