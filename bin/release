@@ -19,6 +19,9 @@ major|minor|patch)
     ;;
 esac
 
+# Run tests before each release
+bin/test
+
 # Increase a version without commiting it and making a tag
 npm version $1 --git=/bin/true # this is a hack; substitute `true` for `git`
 
@@ -30,3 +33,7 @@ git commit -m "release v$(node -e 'console.log(require("./package.json").version
 
 # Create a tag
 git tag v$(node -e 'console.log(require("./package.json").version)')
+
+git push
+git push --tags
+npm publish
