@@ -769,10 +769,19 @@
             @include t($b1)
         @else if $a1 == l and $expr != lc // l5
             @include l($b1)
-        @else if $a1 == r and $a6 != rotate // r5
+        @else if $a1 == r and $a6 != rotate and $a6 != resize // r5
             @include r($b1)
         @else if $a1 == b // b5
             @include b($b1)
+            // resize
+        @else if $expr == xresize
+            @include xresize // xresize
+        @else if $expr == resize
+            @include resize // resize
+        @else if $expr == resize-h
+            @include resize-h // resize-h
+        @else if $expr == resize-v
+            @include resize-v // resize-v
             // scrollbar
         @else if $expr == no-scrollbars // no-scrollbars
             @include no-scrollbars

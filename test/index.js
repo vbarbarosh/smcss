@@ -440,6 +440,12 @@ const table = {
     'ba': '.foo { bottom: auto; }',
     'ra': '.foo { right: auto; }',
 
+    // resize
+    'xresize': '.foo { resize: none; }',
+    'resize': '.foo { resize: both; }',
+    'resize-h': '.foo { resize: horizontal; }',
+    'resize-v': '.foo { resize: vertical; }',
+
     // scrollbar
     'no-scrollbars': '.foo { overflow: scroll; overflow: -moz-scrollbars-none; -ms-overflow-style: none; }\n\n.foo::-webkit-scrollbar { display: none; }',
 
