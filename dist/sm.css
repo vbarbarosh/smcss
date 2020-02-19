@@ -4405,3 +4405,19 @@
 .grid10 > .col10 {
   width: 100%;
 }
+
+.xresize {
+  resize: none;
+}
+
+.resize {
+  resize: both;
+}
+
+.resize-h {
+  resize: horizontal;
+}
+
+.resize-v {
+  resize: vertical;
+}
