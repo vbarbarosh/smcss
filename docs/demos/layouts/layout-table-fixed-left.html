@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+    <style>
+    .table-foo {
+        white-space: nowrap;
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+    .stripe-borders > * + * {
+        border-top: 1px solid;
+    }
+    </style>
+</head>
+<body class="checkerboard">
+
+<!-- Table with fixed left column -->
+<!-- https://stackoverflow.com/a/57524791/1478566 -->
+
+<div class="ma mt50 p20 bs5 white" style="width: max-content;">
+    <div class="w800 h250 oa resize">
+    <table class="table-foo dashed">
+        <thead>
+            <tr>
+                <th class="red sticky-l t0 z1">Column 1 aaa aaa aaa aaa aaa</th>
+                <th class="red sticky-t">Column 2 bbb bbb bbb</th>
+                <th class="red sticky-t">Column 3 ccc ccc ccc</th>
+            </tr>
+        </thead>
+        <tbody class="stripe-borders">
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb bbb bbb bbb bbb</p><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+            <tr>
+                <td class="green sticky-l"><p>Column 1 aaa aaa aaa</p></td>
+                <td><p>Column 2 bbb bbb bbb</p></td>
+                <td><p>Column 3 ccc ccc ccc</p></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
+
+</body>
+</html>

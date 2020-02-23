@@ -1,7 +1,7 @@
 {
   "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com> (https://github.com/vbarbarosh)",
   "name": "@vbarbarosh/smcss",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "A way to organize and write CSS",
   "license": "ISC",
   "main": "index.sass",
