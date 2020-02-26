@@ -96,4 +96,38 @@
             </button>
         </div>
     </div>
+
+    <h4>Use Case #1</h4>
+
+    <p>There is a BUTTON with SVG icon and text inside. This two
+    elements should have slightly different gray colors by default,
+    but they should have the same red color when button is hovered by
+    mouse.</p>
+
+    <p>One solution for this task is to use two separate elements with
+    when generic .if-on and .if-off classes</p>
+
+    <button class="toggle-hover app-color-silver1 app-hover-color-red">
+        <svg-icon-close class="if-on app-color-silver2"></svg>
+        <svg-icon-close class="if-off app-color-red"></svg>
+        Disconnect
+    </button>
+
+    <p>Another solution would be to use just one element but with
+    a class prefixed with if-on</p>
+
+    <div class="flex-row mi10">
+        <pre class="w0 flex-fluid dashed p5 app-ff-roboto-mono oa">
+&lt;button class="toggle-hover app-color-silver1 app-hover-color-red"&gt;
+    &lt;svg-icon-close class="if-on-app-color-red app-color-silver2"&gt;&lt;/svg&gt;
+    Disconnect
+&lt;/button&gt;
+</pre>
+        <pre class="w0 flex-fluid dashed p5 app-ff-roboto-mono oa">
+&lt;style&gt;
+.toggle-hover .if-on-app-color-red { color: red; }
+&lt;/style&gt;
+</pre>
+    </div>
+
 </div>
