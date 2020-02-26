@@ -107,11 +107,13 @@
     <p>One solution for this task is to use two separate elements with
     when generic .if-on and .if-off classes</p>
 
-    <button class="toggle-hover app-color-silver1 app-hover-color-red">
-        <svg-icon-close class="if-on app-color-silver2"></svg>
-        <svg-icon-close class="if-off app-color-red"></svg>
-        Disconnect
-    </button>
+    <pre class="fluid dashed p5 app-ff-roboto-mono">
+&lt;button class="toggle-hover app-color-silver1 app-hover-color-red"&gt;
+    &lt;svg-icon-close class="if-on app-color-silver2"&gt;&lt;/svg&gt;
+    &lt;svg-icon-close class="if-off app-color-red"&gt;&lt;/svg&gt;
+    Disconnect
+&lt;/button&gt;
+</pre>
 
     <p>Another solution would be to use just one element but with
     a class prefixed with if-on</p>
