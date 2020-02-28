@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1582755029" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1582910291" rel="stylesheet" />
 </head>
 <body>
 
@@ -2114,6 +2114,38 @@
                 
                 <div class="mg15">
                     <h3 id="layouts">layouts</h3>
+                                            <h4>layouts/layout-adjust-transform.html</h4>
+                        <button v-on:click="modal_iframe(&quot;layouts\/layout-adjust-transform.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;layouts&quot;,&quot;html&quot;:&quot;&lt;!-- Adjust width\/height of an element to fit its transformed child --&gt;\n&lt;!-- XXX This solution requires a bit of JavaScript --&gt;\n\n&lt;!--\nhttps:\/\/developer.mozilla.org\/en-US\/docs\/Web\/API\/CSS_Object_Model\/Determining_the_dimensions_of_elements#How_much_room_does_it_use_up.3F\nhttps:\/\/stackoverflow.com\/q\/60456419\/1478566\n--&gt;\n\n&lt;div class=\&quot;w500 ma mt50 p20 bs5 white flex-row-center\&quot;&gt;\n    &lt;div class=\&quot;border\&quot;&gt;\n        &lt;div class=\&quot;red w100 h100\&quot;&gt;&lt;\/div&gt;\n    &lt;\/div&gt;\n&lt;\/div&gt;\n\n&lt;script&gt;\nfunction adjust()\n{\n    const contaienr = document.querySelector('#container');\n    const child = document.querySelector('#child');\n    const {width, height} = child.getBoundingClientRect();\n    child.style.transformOrigin = 'top left';\n    container.style.width = `${width}px`;\n    container.style.height = `${height}px`;\n}\nadjust();\n&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- Adjust width/height of an element to fit its transformed child --&gt;
+&lt;!-- XXX This solution requires a bit of JavaScript --&gt;
+
+&lt;!--
+https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements#How_much_room_does_it_use_up.3F
+https://stackoverflow.com/q/60456419/1478566
+--&gt;
+
+&lt;div class=&quot;w500 ma mt50 p20 bs5 white flex-row-center&quot;&gt;
+    &lt;div class=&quot;border&quot;&gt;
+        &lt;div class=&quot;red w100 h100&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function adjust()
+{
+    const contaienr = document.querySelector('#container');
+    const child = document.querySelector('#child');
+    const {width, height} = child.getBoundingClientRect();
+    child.style.transformOrigin = 'top left';
+    container.style.width = `${width}px`;
+    container.style.height = `${height}px`;
+}
+adjust();
+&lt;/script&gt;"></vue-codemirror>
                                             <h4>layouts/layout-scroll-sync.html</h4>
                         <button v-on:click="modal_iframe(&quot;layouts\/layout-scroll-sync.html&quot;)">Preview</button>
                         <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
