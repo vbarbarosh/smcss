@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="checkerboard">
+
+<!-- Adjust width/height of an element to fit its transformed child -->
+<!-- XXX This solution requires a bit of JavaScript -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements#How_much_room_does_it_use_up.3F -->
+
+<div class="w500 ma mt50 p20 bs5 white flex-row-center">
+    <div class="border">
+        <div class="red w100 h100"></div>
+    </div>
+</div>
+
+<script>
+function adjust()
+{
+    const contaienr = document.querySelector('#container');
+    const child = document.querySelector('#child');
+    const {width, height} = child.getBoundingClientRect();
+    child.style.transformOrigin = 'top left';
+    container.style.width = `${width}px`;
+    container.style.height = `${height}px`;
+}
+adjust();
+</script>
+
+</body>
+</html>
