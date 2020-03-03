@@ -1652,6 +1652,11 @@
   margin: -50px;
 }
 
+.xmv {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .mva {
   margin-top: auto;
   margin-bottom: auto;
@@ -1705,6 +1710,11 @@
 .mv50 {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.xmh {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .mha {
@@ -2215,6 +2225,16 @@
 }
 
 .xpb {
+  padding-bottom: 0;
+}
+
+.xph {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.xpv {
+  padding-top: 0;
   padding-bottom: 0;
 }
 
