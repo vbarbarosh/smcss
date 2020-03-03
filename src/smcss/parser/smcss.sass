@@ -320,6 +320,10 @@
             @include xmt
         @else if $expr == xmb // xmb
             @include xmb
+        @else if $expr == xmv // xmv
+            @include xmv
+        @else if $expr == xmh // xmh
+            @include xmh
         @else if $a2 == mv // mv5
             @include mv($b2)
         @else if $a2 == mh // mh5
@@ -366,6 +370,10 @@
             @include xpt
         @else if $expr == xpb // xpb
             @include xpb
+        @else if $expr == xpv // xpv
+            @include xpv
+        @else if $expr == xph // xph
+            @include xph
         @else if $a2 == pv // pv5
             @include pv($b2)
         @else if $a2 == ph // ph5
