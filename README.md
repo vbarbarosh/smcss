@@ -16,6 +16,7 @@ A way to organize and write CSS https://smcss.vbarbarosh.com
 
 ## Interesting Projects
 
+* [TACHYONS - Functional CSS for humans](https://github.com/tachyons-css/tachyons/)
 * [Easy Toggle State](https://twikito.github.io/easy-toggle-state)
 * [Responsive Font Sizes](https://github.com/MartijnCuppens/rfs)
 * [Tailwind CSS](https://github.com/tailwindcss/tailwindcss)
