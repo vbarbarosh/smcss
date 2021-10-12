@@ -65,7 +65,7 @@ const table = {
     'cbox': '.foo { box-sizing: content-box; }',
 
     // button
-    'xbutton': '.foo { box-sizing: content-box; font: inherit; color: inherit; border: none; padding: 0; background: none; }\n\n.foo:focus { outline: none; }\n\n.foo::-moz-focus-inner { border: none; }',
+    'xbutton': '.foo { box-sizing: content-box; font: inherit; color: inherit; border: none; margin: 0; padding: 0; background: none; }\n\n.foo:focus { outline: none; }\n\n.foo::-moz-focus-inner { border: none; }',
 
     // cursor
     'cur-alias': '.foo { cursor: alias; }',
