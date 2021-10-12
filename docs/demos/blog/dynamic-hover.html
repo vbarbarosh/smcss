@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/@vbarbarosh/smcss@0.6.1/dist/sm.css" rel="stylesheet" />
+    <title>dynamic hover</title>
+    <style>
+    .foo-hover:hover {
+        background: var(--foo-hover) !important;
+    }
+    </style>
+</head>
+<body>
+
+<br>
+<br>
+
+<div id="app" class="ma p10 w500 bs5">
+    <div class="flex-row mi10">
+        <span v-for="color in colors" v-bind:style="{'--foo-hover': color.hover, background: color.background, border: '1px solid', borderColor: color.border}" class="ph10 pv5 foo-hover cur-pointer">
+            {{ color.name }}
+        </span>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+
+<script>
+(function () {
+
+    const colors = [
+        {name: 'blue', foreground: '#4a90e2', background: '#d0e6ff', border: '#4a90e2', hover: '#7ab1f1'},
+        {name: 'green', foreground: '#1ca342', background: '#d9feca', border: '#19a942', hover: '#79db76'},
+        {name: 'orange', foreground: '#d98336', background: '#ffe7b9', border: '#f2994a', hover: '#f2b84b'},
+    ];
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            colors,
+        },
+    });
+
+})();
+</script>
+
+</body>
+</html>

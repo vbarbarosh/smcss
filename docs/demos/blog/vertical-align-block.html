@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/@vbarbarosh/smcss@0.6.1/dist/sm.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- There is a bit of whitespace under dib container -->
+
+<div id="outer" class="ma w400 red oa resize" style="line-height:300px;height:300px;">
+    <div class="dib vb green" style="line-height:1;font-size:26px;">
+        Nulla et euismod lacus. Fusce vitae magna quis enim congue
+        vulputate nec laoreet lacus. Donec a est sit amet dui egestas
+        congue at a risus. Duis viverra urna sed libero tempus, at
+        suscipit odio tempor.
+    </div>
+</div>
+
+<script>
+setInterval(function () {
+    outer.style.lineHeight = outer.offsetHeight + 'px';
+}, 100);
+</script>
+
+</body>
+</html>

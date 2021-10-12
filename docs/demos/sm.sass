@@ -216,6 +216,9 @@
 //     <div class="rel">...</div>
 //     1) generic container which requires position:relative
 //     2) <some-element class="abs-c" /> --> <div class="rel abs-c"></div>
+//     A component could declare its container as .rel to be able to use position:absolute inside.
+//     At the same time it is allowed for this container to be positioned using .abs, .fix, or event .sticky.
+//     All of them will create a positioned container (as .rel do).
 @include smx('stat rel abs fix sticky')
 @include smx('sticky-t sticky-l sticky-r sticky-b')
 @include smx('abs-f abs-t abs-b abs-l abs-r abs-c abs-tl abs-tl-c abs-tl-ct abs-tl-cb abs-tl-cl abs-tl-cr abs-tl-tr abs-tl-bl abs-tl-br abs-tr abs-tr-c abs-tr-ct abs-tr-cb abs-tr-cl abs-tr-cr abs-tr-tl abs-tr-bl abs-tr-br abs-bl abs-bl-c abs-bl-ct abs-bl-cb abs-bl-cl abs-bl-cr abs-bl-tl abs-bl-tr abs-bl-br abs-br abs-br-c abs-br-ct abs-br-cb abs-br-cl abs-br-cr abs-br-tl abs-br-tr abs-br-bl abs-c-ct abs-c-cb abs-c-cl abs-c-cr abs-c-tl abs-c-tr abs-c-bl abs-c-br abs-ct abs-ct-c abs-ct-cb abs-ct-cl abs-ct-cr abs-ct-tl abs-ct-tr abs-ct-bl abs-ct-br abs-cb abs-cb-c abs-cb-ct abs-cb-cb abs-cb-cl abs-cb-cr abs-cb-tl abs-cb-tr abs-cb-bl abs-cb-br abs-cl abs-cl-c abs-cl-ct abs-cl-cb abs-cl-cr abs-cl-tl abs-cl-tr abs-cl-bl abs-cl-br abs-cr abs-cr-c abs-cr-ct abs-cr-cb abs-cr-cl abs-cr-tl abs-cr-tr abs-cr-bl abs-cr-br')

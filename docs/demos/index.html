@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/theme/monokai.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
-    <link href="../app.css?t=1578512591" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1587062354" rel="stylesheet" />
+    <link href="../app.css?t=1632723308" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1634059660" rel="stylesheet" />
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <div class="hsplit app-pal-header app-border xborder-ht">
         <div class="w250 h50 mla">
             <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v0.6.1</sub></sub></li>
+                <li class="lh20 p15 mla">smcss<sub><sub>v0.6.2</sub></sub></li>
             </ul>
         </div>
         <div class="fluid h50">
@@ -46,6 +46,7 @@
             <ul class="fluid pv15 oa">
                                                         <li><a href="#abs">abs</a></li>
                                                         <li><a href="#basic">basic</a></li>
+                                                        <li><a href="#blog">blog</a></li>
                                                         <li><a href="#border">border</a></li>
                                                         <li><a href="#button">button</a></li>
                                                         <li><a href="#components-input">components-input</a></li>
@@ -242,6 +243,153 @@
     &lt;/div&gt;
 
 &lt;/div&gt;"></vue-codemirror>
+                                    </div>
+            
+                
+                <div class="mg15">
+                    <h3 id="blog">blog</h3>
+                                            <h4>blog/dynamic-hover.html</h4>
+                        <button v-on:click="modal_iframe(&quot;blog\/dynamic-hover.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;blog&quot;,&quot;html&quot;:&quot;&lt;br&gt;\n&lt;br&gt;\n\n&lt;div id=\&quot;app\&quot; class=\&quot;ma p10 w500 bs5\&quot;&gt;\n    &lt;div class=\&quot;flex-row mi10\&quot;&gt;\n        &lt;span v-for=\&quot;color in colors\&quot; v-bind:style=\&quot;{'--foo-hover': color.hover, background: color.background, border: '1px solid', borderColor: color.border}\&quot; class=\&quot;ph10 pv5 foo-hover cur-pointer\&quot;&gt;\n            {{ color.name }}\n        &lt;\/span&gt;\n    &lt;\/div&gt;\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.min.js\&quot;&gt;&lt;\/script&gt;\n\n&lt;script&gt;\n(function () {\n\n    const colors = [\n        {name: 'blue', foreground: '#4a90e2', background: '#d0e6ff', border: '#4a90e2', hover: '#7ab1f1'},\n        {name: 'green', foreground: '#1ca342', background: '#d9feca', border: '#19a942', hover: '#79db76'},\n        {name: 'orange', foreground: '#d98336', background: '#ffe7b9', border: '#f2994a', hover: '#f2b84b'},\n    ];\n\n    const app = new Vue({\n        el: '#app',\n        data: {\n            colors,\n        },\n    });\n\n})();\n&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;br&gt;
+&lt;br&gt;
+
+&lt;div id=&quot;app&quot; class=&quot;ma p10 w500 bs5&quot;&gt;
+    &lt;div class=&quot;flex-row mi10&quot;&gt;
+        &lt;span v-for=&quot;color in colors&quot; v-bind:style=&quot;{'--foo-hover': color.hover, background: color.background, border: '1px solid', borderColor: color.border}&quot; class=&quot;ph10 pv5 foo-hover cur-pointer&quot;&gt;
+            {{ color.name }}
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+(function () {
+
+    const colors = [
+        {name: 'blue', foreground: '#4a90e2', background: '#d0e6ff', border: '#4a90e2', hover: '#7ab1f1'},
+        {name: 'green', foreground: '#1ca342', background: '#d9feca', border: '#19a942', hover: '#79db76'},
+        {name: 'orange', foreground: '#d98336', background: '#ffe7b9', border: '#f2994a', hover: '#f2b84b'},
+    ];
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            colors,
+        },
+    });
+
+})();
+&lt;/script&gt;"></vue-codemirror>
+                                            <h4>blog/scrollbars-hide-right.html</h4>
+                        <button v-on:click="modal_iframe(&quot;blog\/scrollbars-hide-right.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;blog&quot;,&quot;html&quot;:&quot;&lt;div id=\&quot;app\&quot; class=\&quot;vsplit ma p5 w800 h200 bs5 oa resize\&quot;&gt;\n    scrollbar_width={{ scrollbar_width }}\n    &lt;br&gt;\n    scrollbar_height={{ scrollbar_height }}\n    &lt;br&gt;\n    &lt;div class=\&quot;fluid hsplit dashed oa\&quot;&gt;\n        &lt;div class=\&quot;w250 nowrap oa red border xborder-r\&quot; style=\&quot;border-color:red;\&quot;&gt;\n            &lt;h2&gt;left&lt;\/h2&gt;\n&lt;p&gt;Curabitur accumsan &lt;span&gt;dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;\/span&gt;&lt;\/p&gt;\n&lt;p&gt;Ut laoreet convallis &lt;span&gt;lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;\/span&gt;&lt;\/p&gt;\n&lt;p&gt;Nulla eros eros, &lt;span&gt;lacinia scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;\/span&gt;&lt;\/p&gt;\n&lt;p&gt;Sed ultrices nisl &lt;span&gt;in commodo imperdiet. Quisque tristique auctor metus aliquam scelerisque. Donec eleifend convallis dui vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In egestas in ligula id dapibus. Aliquam vel tortor urna. Curabitur volutpat, ligula eget vulputate euismod, libero sapien facilisis risus, eget rhoncus odio leo eu velit. Suspendisse sed pulvinar tortor. Donec finibus, quam ac congue egestas, sapien felis fringilla mi, vitae molestie nisi lectus sit amet nisl.&lt;\/span&gt;&lt;\/p&gt;\n&lt;p&gt;Curabitur accumsan &lt;span&gt;dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;\/span&gt;&lt;\/p&gt;\n&lt;p&gt;Ut laoreet convallis &lt;span&gt;lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;\/span&gt;&lt;\/p&gt;\n&lt;p&gt;Nulla eros eros, lacinia &lt;span&gt;scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;\/span&gt;&lt;\/p&gt;\n        &lt;\/div&gt;\n        &lt;div class=\&quot;fluid nowrap o50 oa border blue ml-scrollbar-width-neg\&quot;&gt;\n            &lt;h2&gt;right&lt;\/h2&gt;\n&lt;p&gt;Curabitur accumsan dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;\/p&gt;\n&lt;p&gt;Ut laoreet convallis lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;\/p&gt;\n&lt;p&gt;Nulla eros eros, lacinia scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;\/p&gt;\n&lt;p&gt;Sed ultrices nisl in commodo imperdiet. Quisque tristique auctor metus aliquam scelerisque. Donec eleifend convallis dui vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In egestas in ligula id dapibus. Aliquam vel tortor urna. Curabitur volutpat, ligula eget vulputate euismod, libero sapien facilisis risus, eget rhoncus odio leo eu velit. Suspendisse sed pulvinar tortor. Donec finibus, quam ac congue egestas, sapien felis fringilla mi, vitae molestie nisi lectus sit amet nisl.&lt;\/p&gt;\n&lt;p&gt;Curabitur accumsan dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;\/p&gt;\n&lt;p&gt;Ut laoreet convallis lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;\/p&gt;\n&lt;p&gt;Nulla eros eros, lacinia scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;\/p&gt;\n        &lt;\/div&gt;\n    &lt;\/div&gt;\n&lt;\/div&gt;\n\n&lt;script src=\&quot;https:\/\/unpkg.com\/jquery@3.4.1\/dist\/jquery.min.js\&quot;&gt;&lt;\/script&gt;\n&lt;script src=\&quot;https:\/\/unpkg.com\/vue@2.6.11\/dist\/vue.min.js\&quot;&gt;&lt;\/script&gt;\n\n&lt;script&gt;\n(function () {\n\n\/\/ https:\/\/davidwalsh.name\/detect-scrollbar-width\nconst elem = document.createElement('DIV');\nelem.style.position = 'absolute';\nelem.style.overflow = 'scroll';\nelem.style.width = '100px';\nelem.style.height = '100px';\ndocument.body.appendChild(elem);\nconst scrollbar_width = elem.offsetWidth - elem.clientWidth;\nconst scrollbar_height = elem.offsetHeight - elem.clientHeight;\ndocument.documentElement.style.setProperty('--scrollbar-width', scrollbar_width + 'px');\ndocument.documentElement.style.setProperty('--scrollbar-height', scrollbar_height + 'px');\nelem.parentElement.removeChild(elem);\n\n    const app = new Vue({\n        el: '#app',\n        data: {\n            scrollbar_width: scrollbar_width,\n            scrollbar_height: scrollbar_height,\n        },\n    });\n\n})();\n&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;div id=&quot;app&quot; class=&quot;vsplit ma p5 w800 h200 bs5 oa resize&quot;&gt;
+    scrollbar_width={{ scrollbar_width }}
+    &lt;br&gt;
+    scrollbar_height={{ scrollbar_height }}
+    &lt;br&gt;
+    &lt;div class=&quot;fluid hsplit dashed oa&quot;&gt;
+        &lt;div class=&quot;w250 nowrap oa red border xborder-r&quot; style=&quot;border-color:red;&quot;&gt;
+            &lt;h2&gt;left&lt;/h2&gt;
+&lt;p&gt;Curabitur accumsan &lt;span&gt;dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ut laoreet convallis &lt;span&gt;lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nulla eros eros, &lt;span&gt;lacinia scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Sed ultrices nisl &lt;span&gt;in commodo imperdiet. Quisque tristique auctor metus aliquam scelerisque. Donec eleifend convallis dui vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In egestas in ligula id dapibus. Aliquam vel tortor urna. Curabitur volutpat, ligula eget vulputate euismod, libero sapien facilisis risus, eget rhoncus odio leo eu velit. Suspendisse sed pulvinar tortor. Donec finibus, quam ac congue egestas, sapien felis fringilla mi, vitae molestie nisi lectus sit amet nisl.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Curabitur accumsan &lt;span&gt;dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ut laoreet convallis &lt;span&gt;lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nulla eros eros, lacinia &lt;span&gt;scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;fluid nowrap o50 oa border blue ml-scrollbar-width-neg&quot;&gt;
+            &lt;h2&gt;right&lt;/h2&gt;
+&lt;p&gt;Curabitur accumsan dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;/p&gt;
+&lt;p&gt;Ut laoreet convallis lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+&lt;p&gt;Nulla eros eros, lacinia scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;/p&gt;
+&lt;p&gt;Sed ultrices nisl in commodo imperdiet. Quisque tristique auctor metus aliquam scelerisque. Donec eleifend convallis dui vel aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus. In egestas in ligula id dapibus. Aliquam vel tortor urna. Curabitur volutpat, ligula eget vulputate euismod, libero sapien facilisis risus, eget rhoncus odio leo eu velit. Suspendisse sed pulvinar tortor. Donec finibus, quam ac congue egestas, sapien felis fringilla mi, vitae molestie nisi lectus sit amet nisl.&lt;/p&gt;
+&lt;p&gt;Curabitur accumsan dignissim posuere. Proin consequat tellus enim, vitae fringilla massa luctus vitae. Duis at dolor vitae nunc pretium pellentesque id sit amet nisi. Vestibulum auctor ex tortor, et vestibulum enim iaculis eget. Phasellus felis mauris, dignissim sed bibendum vel, vestibulum eu sapien. Praesent metus velit, euismod eget dictum et, porttitor id ipsum. Suspendisse faucibus convallis risus a molestie. Maecenas ornare pulvinar lacus, eget euismod diam accumsan et. Proin sit amet eros eget est mattis venenatis in quis ex. Donec mollis lacus nec justo suscipit, eu tristique eros fringilla. Proin aliquet, arcu eu dignissim varius, diam ante ultricies dui, non interdum urna ex sit amet nibh. Pellentesque dolor erat, suscipit vitae magna ut, cursus efficitur ipsum. Vestibulum imperdiet erat id cursus vestibulum. Fusce ultricies metus nec dolor sodales venenatis.&lt;/p&gt;
+&lt;p&gt;Ut laoreet convallis lorem, in placerat dui ultrices vitae. Ut finibus nulla ex, non congue dolor pulvinar nec. Vestibulum arcu ante, commodo ac congue tempus, gravida ac enim. Quisque eget pretium ex. Morbi vitae nulla vestibulum, ultricies sapien sed, dictum nibh. Maecenas sit amet lacus vel sapien pharetra cursus eu in velit. Praesent blandit risus non ligula laoreet suscipit. Donec dictum at mauris ac interdum. Pellentesque porttitor fermentum volutpat. Integer tortor velit, imperdiet at tempor eu, tincidunt quis ex. Etiam in ultrices nibh. Vestibulum tempus velit neque, eget rhoncus nisi pellentesque ac. Praesent non arcu non justo luctus mattis ultricies eget augue. Vestibulum dictum justo varius, interdum lectus et, imperdiet justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+&lt;p&gt;Nulla eros eros, lacinia scelerisque malesuada non, viverra quis nunc. Ut pharetra, risus a ornare dictum, urna ligula laoreet ante, non tincidunt nisi nunc et libero. Etiam ullamcorper orci sed enim suscipit, nec tempor justo volutpat. Donec tincidunt interdum erat, sollicitudin congue mi gravida vitae. Quisque venenatis lectus in ligula commodo imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sit amet nunc faucibus, volutpat eros ut, rhoncus dolor. Nulla ut nisl neque. Pellentesque in neque lacinia, tristique augue eget, accumsan neque. Mauris mollis urna at efficitur sodales.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/jquery@3.4.1/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/vue@2.6.11/dist/vue.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+(function () {
+
+// https://davidwalsh.name/detect-scrollbar-width
+const elem = document.createElement('DIV');
+elem.style.position = 'absolute';
+elem.style.overflow = 'scroll';
+elem.style.width = '100px';
+elem.style.height = '100px';
+document.body.appendChild(elem);
+const scrollbar_width = elem.offsetWidth - elem.clientWidth;
+const scrollbar_height = elem.offsetHeight - elem.clientHeight;
+document.documentElement.style.setProperty('--scrollbar-width', scrollbar_width + 'px');
+document.documentElement.style.setProperty('--scrollbar-height', scrollbar_height + 'px');
+elem.parentElement.removeChild(elem);
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            scrollbar_width: scrollbar_width,
+            scrollbar_height: scrollbar_height,
+        },
+    });
+
+})();
+&lt;/script&gt;"></vue-codemirror>
+                                            <h4>blog/scrollbars-size.html</h4>
+                        <button v-on:click="modal_iframe(&quot;blog\/scrollbars-size.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;blog&quot;,&quot;html&quot;:&quot;&lt;br&gt;\n&lt;br&gt;\n&lt;br&gt;\n\n&lt;div class=\&quot;ma p5 w500 bs5\&quot;&gt;\n    &lt;div id=\&quot;elem\&quot; class=\&quot;w100 h100 os bs5\&quot;&gt;&lt;\/div&gt;\n&lt;\/div&gt;\n\n&lt;script&gt;\n\/\/ https:\/\/davidwalsh.name\/detect-scrollbar-width\nconsole.log(elem.offsetWidth - elem.clientWidth);\nconsole.log(elem.offsetHeight - elem.clientHeight);\n&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;ma p5 w500 bs5&quot;&gt;
+    &lt;div id=&quot;elem&quot; class=&quot;w100 h100 os bs5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// https://davidwalsh.name/detect-scrollbar-width
+console.log(elem.offsetWidth - elem.clientWidth);
+console.log(elem.offsetHeight - elem.clientHeight);
+&lt;/script&gt;"></vue-codemirror>
+                                            <h4>blog/vertical-align-block.html</h4>
+                        <button v-on:click="modal_iframe(&quot;blog\/vertical-align-block.html&quot;)">Preview</button>
+                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                            <input type="hidden" name="data" value="{&quot;title&quot;:&quot;blog&quot;,&quot;html&quot;:&quot;&lt;!-- There is a bit of whitespace under dib container --&gt;\n\n&lt;div id=\&quot;outer\&quot; class=\&quot;ma w400 red oa resize\&quot; style=\&quot;line-height:300px;height:300px;\&quot;&gt;\n    &lt;div class=\&quot;dib vb green\&quot; style=\&quot;line-height:1;font-size:26px;\&quot;&gt;\n        Nulla et euismod lacus. Fusce vitae magna quis enim congue\n        vulputate nec laoreet lacus. Donec a est sit amet dui egestas\n        congue at a risus. Duis viverra urna sed libero tempus, at\n        suscipit odio tempor.\n    &lt;\/div&gt;\n&lt;\/div&gt;\n\n&lt;script&gt;\nsetInterval(function () {\n    outer.style.lineHeight = outer.offsetHeight + 'px';\n}, 100);\n&lt;\/script&gt;&quot;,&quot;css_pre_processor&quot;:&quot;sass&quot;}">
+                            <input type="submit" value="CodePen">
+                        </form>
+                        <vue-codemirror value="&lt;!-- There is a bit of whitespace under dib container --&gt;
+
+&lt;div id=&quot;outer&quot; class=&quot;ma w400 red oa resize&quot; style=&quot;line-height:300px;height:300px;&quot;&gt;
+    &lt;div class=&quot;dib vb green&quot; style=&quot;line-height:1;font-size:26px;&quot;&gt;
+        Nulla et euismod lacus. Fusce vitae magna quis enim congue
+        vulputate nec laoreet lacus. Donec a est sit amet dui egestas
+        congue at a risus. Duis viverra urna sed libero tempus, at
+        suscipit odio tempor.
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+setInterval(function () {
+    outer.style.lineHeight = outer.offsetHeight + 'px';
+}, 100);
+&lt;/script&gt;"></vue-codemirror>
                                     </div>
             
                 
