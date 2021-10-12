@@ -23,7 +23,7 @@ esac
 bin/test
 
 # Increase a version without commiting it and making a tag
-npm version $1 --git=/bin/true # this is a hack; substitute `true` for `git`
+npm version $1 --no-git-tag-version
 
 # Rebuild docs
 bin/update-docs
