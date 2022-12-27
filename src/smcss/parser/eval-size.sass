@@ -14,6 +14,8 @@
         #{$prop}: to-number(str-insert(str-slice($size, 1, -2), '', -1)) * -1px
     @else if $size == '0'
         #{$prop}: 0
+    @else if str-slice($size, -1) == 'm' // lh10m
+        #{$prop}: to-number(str-slice($size, 1, -2)) / 10 * 1em
     @else if str-slice($size, -1) == '%'
         #{$prop}: to-number(str-slice($size, 1, -2)) * 1%
     @else

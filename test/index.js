@@ -167,6 +167,7 @@ const table = {
     'fs12': '.foo { font-size: 12px; }',
     'ls12': '.foo { letter-spacing: 12px; }',
     'lh12': '.foo { line-height: 12px; }',
+    'lh12m': '.foo { line-height: 1.2em; }',
     'n': '.foo { font-style: normal; }',
     'i': '.foo { font-style: italic; }',
     'q': '.foo { font-style: oblique; }',
