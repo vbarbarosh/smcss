@@ -21,7 +21,7 @@
     "sass"
   ],
   "scripts": {
-    "build": "rm -rf build && node-sass demos/demo.sass | postcss -o demos/demo.css && rm -rf dist && mkdir dist && node-sass demos/sm.sass | postcss -o dist/sm.css",
+    "build": "rm -rf build && node-sass demos/demo.sass | postcss -o demos/demo.css && rm -rf dist && mkdir dist && node-sass demos/sm.sass | postcss -o dist/sm.css && cp reset/reset.css dist/reset.css",
     "test": "mocha --bail --require intelli-espower-loader"
   },
   "dependencies": {
