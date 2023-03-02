@@ -28721,3 +28721,21 @@
 
 .resize-v {
   resize: vertical; }
+
+.hov-u:hover {
+  text-decoration: underline; }
+
+.hov-o:hover {
+  text-decoration: overline; }
+
+.hov-s:hover {
+  text-decoration: line-through; }
+
+.hov-u.hov-o:hover {
+  text-decoration: underline overline; }
+
+.hov-u.hov-s:hover {
+  text-decoration: underline line-through; }
+
+.hov-u.hov-o.hov-s:hover {
+  text-decoration: underline overline line-through; }
