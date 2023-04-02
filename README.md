@@ -23,3 +23,7 @@ A way to organize and write CSS https://smcss.vbarbarosh.com
 * [PaperCSS - The less formal CSS framework, with a quick and easy integration](https://github.com/papercss/papercss)
 * [Construct.css - Focus on the content and structure of your HTML](https://github.com/t7/construct.css/)
 * [rscss - Reasonable System for CSS Stylesheet Structure](https://github.com/rstacruz/rscss)
+
+## Links
+
+* [https://codepen.io/dbushell/pen/wGaamR](CSS only Responsive Tables)
