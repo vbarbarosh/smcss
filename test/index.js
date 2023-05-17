@@ -32,7 +32,7 @@ const table = {
     'xbg': '.foo { background: none; }',
     'black': '.foo { background: #000; }',
     'gray': '.foo { background: #888; }',
-    'silver': '.foo { background: #ccc; }',
+    'silver': '.foo { background: #ddd; }',
     'white': '.foo { background: #fff; }',
     'red': '.foo { background: #f88; }',
     'green': '.foo { background: #8f8; }',
