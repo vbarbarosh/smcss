@@ -26,4 +26,4 @@ A way to organize and write CSS https://smcss.vbarbarosh.com
 
 ## Links
 
-* [https://codepen.io/dbushell/pen/wGaamR](CSS only Responsive Tables)
+* [CSS only Responsive Tables](https://codepen.io/dbushell/pen/wGaamR)
