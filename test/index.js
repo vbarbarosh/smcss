@@ -180,6 +180,7 @@ const table = {
     'fw6': '.foo { font-weight: 600; }',
     'fw7': '.foo { font-weight: 700; }',
     'fw8': '.foo { font-weight: 800; }',
+    'fw9': '.foo { font-weight: 900; }',
 
     // hsplit
     'hsplit': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > * { flex: none; }',
