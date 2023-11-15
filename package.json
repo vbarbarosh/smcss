@@ -29,7 +29,7 @@
     "bluebird": "^3.7.2",
     "intelli-espower-loader": "^1.1.0",
     "mocha": "^10.2.0",
-    "node-sass": "^8.0.0",
+    "node-sass": "^9.0.0",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
     "power-assert": "^1.6.1"
