@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../demo.css" type="text/css" rel="stylesheet">
+</head>
+<body class="mg20">
+
+<p>In order to make align contents at center and display scrollbars when no enough space,
+use <code>.flex-row</code> with nested <code>.ma</code>.</p>
+
+<blockquote cite="https://stackoverflow.com/questions/32663055/how-can-you-use-flexbox-to-vertically-center-text-in-a-fixed-height-div-without">
+    <p>When <code>align-self</code> computes to <b>center</b>, the flex item is centered in the cross axis within the line.</p>
+    <p>That's problematic if the flex item is bigger than the flex container,
+    because it will overflow it both from above and below. And in case overflow is not visible,
+    the upper part will be cut.</p>
+    <p>To avoid this, you can center by using <a href="http://www.w3.org/TR/css-flexbox-1/#auto-margins">auto margins</a>.</p>
+</blockquote>
+
+<div class="w500 h200 ma flex-row dashed oa">
+    <div class="ma flex-row rainbow">
+        <div class="w50 h50">1</div>
+        <div class="w50 h50">2</div>
+        <div class="w50 h50">3</div>
+        <div class="w50 h50">4</div>
+        <div class="w50 h50">5</div>
+        <div class="w50 h50">6</div>
+        <div class="w50 h50">7</div>
+        <div class="w50 h50">8</div>
+        <div class="w50 h50">9</div>
+        <div class="w50 h50">10</div>
+        <div class="w50 h50">11</div>
+        <div class="w50 h50">12</div>
+        <div class="w50 h50">13</div>
+        <div class="w50 h50">14</div>
+        <div class="w50 h50">15</div>
+        <div class="w50 h50">16</div>
+        <div class="w50 h50">17</div>
+        <div class="w50 h50">18</div>
+        <div class="w50 h50">19</div>
+        <div class="w50 h50">20</div>
+    </div>
+</div>
+<div class="w500 min-h200 ma flex-row dashed oa">
+    <div class="ma flex-row rainbow">
+        <div class="w50 h50">1</div>
+        <div class="w50 h50">2</div>
+        <div class="w50 h50">3</div>
+        <div class="w50 h50">4</div>
+        <div class="w50 h50">5</div>
+        <div class="w50 h50">6</div>
+        <div class="w50 h50">7</div>
+        <div class="w50 h50">8</div>
+        <div class="w50 h50">9</div>
+        <div class="w50 h50">10</div>
+        <div class="w50 h50">11</div>
+        <div class="w50 h50">12</div>
+        <div class="w50 h50">13</div>
+        <div class="w50 h50">14</div>
+        <div class="w50 h50">15</div>
+        <div class="w50 h50">16</div>
+        <div class="w50 h50">17</div>
+        <div class="w50 h50">18</div>
+        <div class="w50 h50">19</div>
+        <div class="w50 h50">20</div>
+    </div>
+</div>
+
+</body>
+</html>
