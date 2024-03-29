@@ -1,21 +1,29 @@
 const Promise = require('bluebird');
 const assert = require('power-assert');
-const node_sass = require('node-sass');
+const csso = require('csso');
+const postcss = require('postcss');
+const sass = require('sass');
 
-function scss(s)
+async function scss(s)
 {
-    return new Promise(function (resolve, reject) {
-        const options = {data: s, outputStyle: 'compact', includePaths: [__dirname]};
-        node_sass.render(options, function (error, result) {
+    const css = await new Promise(function (resolve, reject) {
+        const options = {data: s, includePaths: [__dirname]};
+        sass.render(options, function (error, result) {
             error ? reject(error) : resolve(result.css.toString());
         });
     });
+    return cssmin(css);
 }
 
-function smcss(expr)
+async function smcss(expr)
 {
-    return scss('@import "../index";\n.foo{@include smcss(' + expr + ');}')
-        .then(v => v.trim());
+    const css = await scss('@import "../index";\n.foo{@include smcss(' + expr + ');}');
+    return cssmin(css);
+}
+
+async function cssmin(css)
+{
+    return csso.minify(css).css;
 }
 
 const table = {
@@ -526,7 +534,7 @@ const table = {
     'z1n': '.foo { z-index: -1; }',
 
     // container/grid
-    'grid3': '.foo > .col1 { width: 33.33333%; }\n\n.foo > .col2 { width: 66.66667%; }\n\n.foo > .col3 { width: 100%; }',
+    'grid3': '.foo > .col1 { width: 33.3333333333%; }\n\n.foo > .col2 { width: 66.6666666667%; }\n\n.foo > .col3 { width: 100%; }',
     'grid4': '.foo > .col1 { width: 25%; }\n\n.foo > .col2 { width: 50%; }\n\n.foo > .col3 { width: 75%; }\n\n.foo > .col4 { width: 100%; }'
 
 };
@@ -535,14 +543,14 @@ describe('smcss', function () {
 
     it('basic', async function () {
         const s = await scss('.foo { color: red; }');
-        assert(s == '.foo { color: red; }\n');
+        assert(s == await cssmin('.foo { color: red; }\n'));
     });
 
     for (let a = Object.keys(table); a.length; ) {
         const expr = a.shift();
         it(expr, async function () {
             const s = await smcss(expr);
-            const s2 = table[expr];
+            const s2 = await cssmin(table[expr]);
             assert(expr && s == s2);
         });
     }
