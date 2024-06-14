@@ -24,6 +24,7 @@
     display: inline-flex
     flex-direction: row
 
+// TODO Deprecated
 @mixin iflex-row-center
     @include iflex-row
     @include flex-center
@@ -32,6 +33,7 @@
     display: inline-flex
     flex-direction: column
 
+// TODO Deprecated
 @mixin iflex-col-center
     @include iflex-col
     @include flex-center
@@ -45,9 +47,64 @@
     display: flex
     flex-direction: row-reverse
 
+// TODO Deprecated
 @mixin flex-row-center
     @include flex-row
     @include flex-center
+
+@mixin flex-row-c
+    @include flex-row
+    align-items: center
+    align-content: center
+    justify-content: center
+
+@mixin flex-row-cl
+    @include flex-row
+    align-items: center
+    align-content: center
+    justify-content: flex-start
+
+@mixin flex-row-cr
+    @include flex-row
+    align-items: center
+    align-content: center
+    justify-content: flex-end
+
+@mixin flex-row-ct
+    @include flex-row
+    align-items: flex-start
+    align-content: flex-start
+    justify-content: center
+
+@mixin flex-row-cb
+    @include flex-row
+    align-items: flex-end
+    align-content: flex-end
+    justify-content: center
+
+@mixin flex-row-tl
+    @include flex-row
+    align-items: flex-start
+    align-content: flex-start
+    justify-content: flex-start
+
+@mixin flex-row-tr
+    @include flex-row
+    align-items: flex-start
+    align-content: flex-start
+    justify-content: flex-end
+
+@mixin flex-row-bl
+    @include flex-row
+    align-items: flex-end
+    align-content: flex-end
+    justify-content: flex-start
+
+@mixin flex-row-br
+    @include flex-row
+    align-items: flex-end
+    align-content: flex-end
+    justify-content: flex-end
 
 // iflex-row-fluid, iflex-col-fluid, flex-row-fluid,
 // and flex-col-fluid should be removed. I read them
@@ -83,9 +140,64 @@
     display: flex
     flex-direction: column-reverse
 
+// TODO Deprecated
 @mixin flex-col-center
     @include flex-col
     @include flex-center
+
+@mixin flex-col-c
+    @include flex-col
+    align-items: center
+    align-content: center
+    justify-content: center
+
+@mixin flex-col-cl
+    @include flex-col
+    align-items: flex-start
+    align-content: flex-start
+    justify-content: center
+
+@mixin flex-col-cr
+    @include flex-col
+    align-items: flex-end
+    align-content: flex-end
+    justify-content: center
+
+@mixin flex-col-ct
+    @include flex-col
+    align-items: center
+    align-content: center
+    justify-content: flex-start
+
+@mixin flex-col-cb
+    @include flex-col
+    align-items: center
+    align-content: center
+    justify-content: flex-end
+
+@mixin flex-col-tl
+    @include flex-col
+    align-items: flex-start
+    align-content: flex-start
+    justify-content: flex-start
+
+@mixin flex-col-tr
+    @include flex-col
+    align-items: flex-end
+    align-content: flex-end
+    justify-content: flex-start
+
+@mixin flex-col-bl
+    @include flex-col
+    align-items: flex-start
+    align-content: flex-start
+    justify-content: flex-end
+
+@mixin flex-col-br
+    @include flex-col
+    align-items: flex-end
+    align-content: flex-end
+    justify-content: flex-end
 
 // wrap
 @mixin flex-wrap
