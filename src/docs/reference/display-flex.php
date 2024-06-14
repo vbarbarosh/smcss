@@ -7,10 +7,28 @@
     <tr><th>flex-row</th><td><code>display: flex<br>flex-direction: row</code></td></tr>
     <tr><th>flex-irow</th><td><code>display: inline-flex<br>flex-direction: row</code></td></tr>
     <tr><th>flex-row-center</th><td><code>@include flex-row<br>@include flex-center</code></td></tr>
+    <tr><th>flex-row-c</th><td></td></tr>
+    <tr><th>flex-row-cl</th><td></td></tr>
+    <tr><th>flex-row-cr</th><td></td></tr>
+    <tr><th>flex-row-ct</th><td></td></tr>
+    <tr><th>flex-row-cb</th><td></td></tr>
+    <tr><th>flex-row-tl</th><td></td></tr>
+    <tr><th>flex-row-tr</th><td></td></tr>
+    <tr><th>flex-row-bl</th><td></td></tr>
+    <tr><th>flex-row-br</th><td></td></tr>
     <tr><th>flex-irow-center</th><td><code>@include flex-irow<br>@include flex-center</code></td></tr>
     <tr><th>flex-col</th><td><code>display: flex<br>flex-direction: col</code></td></tr>
     <tr><th>flex-icol</th><td><code>display: inline-flex<br>flex-direction: col</code></td></tr>
     <tr><th>flex-col-center</th><td><code>@include flex-col<br>@include flex-center</code></td></tr>
+    <tr><th>flex-col-c</th><td></td></tr>
+    <tr><th>flex-col-cl</th><td></td></tr>
+    <tr><th>flex-col-cr</th><td></td></tr>
+    <tr><th>flex-col-ct</th><td></td></tr>
+    <tr><th>flex-col-cb</th><td></td></tr>
+    <tr><th>flex-col-tl</th><td></td></tr>
+    <tr><th>flex-col-tr</th><td></td></tr>
+    <tr><th>flex-col-bl</th><td></td></tr>
+    <tr><th>flex-col-br</th><td></td></tr>
     <tr><th>flex-icol-center</th><td><code>@include flex-icol<br>@include flex-center</code></td></tr>
     <tr><th>flex-wrap</th><td></td></tr>
     <tr><th>flex-nowrap</th><td></td></tr>
