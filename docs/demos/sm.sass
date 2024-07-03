@@ -94,6 +94,14 @@
 // Box Sizing
 @include smx('bbox cbox')
 
+// .fluid should come before .min-h100 in to allow the latest have higher specificity.
+//
+// hsplit
+@include smx('hsplit vsplit')
+// The following three classes should come after hsplit and vsplit to be
+// able to override its *> selectors
+@include smx('shrink grow fluid')
+
 // Box Sizes
 @include smx('wa ww')
 @include smx('ha hh')
