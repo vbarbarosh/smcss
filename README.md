@@ -1,5 +1,7 @@
 A way to organize and write CSS https://smcss.vbarbarosh.com
 
+![](img/smcss-logo-by-chat-gpt.webp)
+
     <div class="abs-f ma hsplit w800 h200 bs10 rainbow">
         <div class="w200"></div>
         <div class="fluid"></div>
