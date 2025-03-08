@@ -1,7 +1,6 @@
 const Promise = require('bluebird');
-const assert = require('power-assert');
+const assert = require('assert');
 const csso = require('csso');
-const postcss = require('postcss');
 const sass = require('sass');
 
 async function scss(s)
@@ -561,16 +560,17 @@ const table = {
 describe('smcss', function () {
 
     it('basic', async function () {
-        const s = await scss('.foo { color: red; }');
-        assert(s == await cssmin('.foo { color: red; }\n'));
+        const actual = await scss('.foo { color: red; }');
+        const expected = await cssmin('.foo { color: red; }\n');
+        assert.strictEqual(actual, expected);
     });
 
     for (let a = Object.keys(table); a.length; ) {
         const expr = a.shift();
         it(expr, async function () {
-            const s = await smcss(expr);
-            const s2 = await cssmin(table[expr]);
-            assert(expr && s == s2);
+            const actual = await smcss(expr);
+            const expected = await cssmin(table[expr]);
+            assert.strictEqual(actual, expected);
         });
     }
 
