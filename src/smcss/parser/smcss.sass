@@ -186,6 +186,8 @@
             @include ellipsis()
         @else if $expr == ellipsis2 // ellipsis2
             @include ellipsis(2)
+        @else if $expr == ellipsis3 // ellipsis3
+            @include ellipsis(3)
             // expand
         @else if $a7 == expand- // expand-1-2
             $index: str-index($b7, '-')

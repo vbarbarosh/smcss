@@ -1,5 +1,6 @@
 // ellipsis
 // ellipsis2
+// ellipsis3
 // https://codepen.io/vbarbarosh/pen/QWLezbj
 // https://www.youtube.com/watch?v=OhCzEjXvY9A → How To Limit Lines Of Text With CSS Only
 @mixin ellipsis($lines: 1)
@@ -15,6 +16,17 @@
         -webkit-line-clamp: 2 // number of lines to show
         line-height: 1.25em // fallback
         max-height: 2.5em // fallback
+        box-sizing: content-box // fallback
+        word-break: break-all // break loooooooooooong words
+        overflow-wrap: break-word // break loooooooooooong words
+    @else if ($lines == 3)
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 3 // number of lines to show
+        line-height: 1.25em // fallback
+        max-height: 3.75em // fallback
         box-sizing: content-box // fallback
         word-break: break-all // break loooooooooooong words
         overflow-wrap: break-word // break loooooooooooong words

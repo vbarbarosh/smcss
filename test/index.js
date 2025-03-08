@@ -122,6 +122,7 @@ const table = {
     // ellipsis
     'ellipsis': '.foo { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }',
     'ellipsis2': '.foo { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.25em; max-height: 2.5em; box-sizing: content-box; word-break: break-all; overflow-wrap: break-word; }',
+    'ellipsis3': '.foo { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-height: 1.25em; max-height: 3.75em; box-sizing: content-box; word-break: break-all; overflow-wrap: break-word; }',
 
     // expand
     'expand-1-2': '.foo { display: block; position: relative; }\n\n.foo:before { display: block; content: \'\'; padding-top: 200%; }',
