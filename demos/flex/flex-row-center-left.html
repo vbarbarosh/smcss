@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/@vbarbarosh/smcss@1.4.0/dist/reset.css" rel="stylesheet">
+    <link href="https://unpkg.com/@vbarbarosh/smcss@1.4.0/dist/sm.css" rel="stylesheet">
+    <title>templ-html/smcss-vue3.html</title>
+    <style>
+.gap10 { gap: 10px; }
+.bg-hatch {
+    background: repeating-linear-gradient(135deg, rgba(from currentColor r g b / 0.2) 0 1px,transparent 0 5px);
+}
+th, td { padding: 5px; }
+
+.xx-tabs {
+    display: flex;
+    gap: 10px;
+}
+.xx-tabs li {
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+}
+.xx-tabs li:hover {
+    background: #ccc;
+}
+h3 { font-size: 18px; font-weight: bold; }
+    </style>
+</head>
+<body class="m15 hsplit gap10">
+
+    <div class="p15 w200 silver">
+        <ul>
+            <li>
+                flex-row
+                <ul class="pl20">
+                    <li>flex-row-c</li>
+                    <li>flex-row-cl</li>
+                    <li>flex-row-cr</li>
+                    <li>flex-row-ct</li>
+                    <li>flex-row-cb</li>
+                    <li>flex-row-tl</li>
+                    <li>flex-row-tr</li>
+                    <li>flex-row-bl</li>
+                    <li>flex-row-br</li>
+                </ul>
+            </li>
+            <li>
+                flex-col
+                <ul class="pl20">
+                    <li>flex-col-c</li>
+                    <li>flex-col-cl</li>
+                    <li>flex-col-cr</li>
+                    <li>flex-col-ct</li>
+                    <li>flex-col-cb</li>
+                    <li>flex-col-tl</li>
+                    <li>flex-col-tr</li>
+                    <li>flex-col-bl</li>
+                    <li>flex-col-br</li>
+                </ul>
+            </li>
+        </ul>
+        <div>flex</div>
+        <div>flex-align</div>
+    </div>
+    <div class="fluid mg15">
+        <table>
+        <colgroup>
+            <col style="vertical-align:top;">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>class</th>
+            <th>description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>flex-row-c</td><td></td></tr>
+        <tr><td>flex-row-cl</td><td></td></tr>
+        <tr><td>flex-row-cr</td><td></td></tr>
+        <tr><td>flex-row-ct</td><td></td></tr>
+        <tr><td>flex-row-cb</td><td></td></tr>
+        <tr><td>flex-row-tl</td><td></td></tr>
+        <tr><td>flex-row-tr</td><td></td></tr>
+        <tr><td>flex-row-bl</td><td></td></tr>
+        <tr><td>flex-row-br</td><td></td></tr>
+        </tbody>
+        </table>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-c</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-c">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-cl</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-cl">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-cr</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-cr">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-ct</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-ct">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-cb</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-cb">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-tl</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-tl">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-tr</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-tr">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-bl</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-bl">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+        <div class="flex-row-tl gap10">
+            <div class="w400">
+                <h3>flex-row-br</h3>
+            </div>
+            <div class="rel bg-hatch border">
+                <div class="w300 h100 flex-row-br">
+                    <div class="w25 h25 red">1</div>
+                    <div class="w50 h50 green">2</div>
+                    <div class="w75 h75 blue">3</div>
+                    <div class="w50 h50 green">4</div>
+                    <div class="w25 h25 red">5</div>
+                </div>
+                <div class="abs-c ww dashed xborder-ht"></div>
+            </div>
+        </div>
+
+    </div>
+
+<script src="https://unpkg.com/jquery@3.7.1/dist/jquery.js"></script>
+<script>
+jQuery(document).on('mouseover', '.xx-tabs li', function () {
+    const elem = $(this).parent().next()[0].firstElementChild;
+    const tmp = Array.from(elem.classList).filter(v => v.startsWith('flex-row'));
+    elem.classList.remove(...tmp);
+    elem.classList.add($(this).text());
+});
+</script>
+
+</body>
+</html>
