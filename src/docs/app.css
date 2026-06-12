@@ -1,22 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono:400,400i,500,500i|Roboto+Slab:400,500|Roboto:400,500,500i&display=swap&subset=cyrillic');
+
+:root,
+[data-theme="light"] {
+    --bg: #ffffff;
+    --bg-soft: #f6f8fa;
+    --bg-hover: #eaeef3;
+    --text: #0f172a;
+    --text-muted: #5b6b81;
+    --border: #e3e8ef;
+    --accent: #2563eb;
+    --accent-2: #7c3aed;
+    --accent-soft: rgba(37, 99, 235, 0.09);
+    --red: #d1242f;
+    --shadow: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] {
+    --bg: #0b1220;
+    --bg-soft: #121a2b;
+    --bg-hover: #1b2740;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #243349;
+    --accent: #60a5fa;
+    --accent-2: #a78bfa;
+    --accent-soft: rgba(96, 165, 250, 0.13);
+    --red: #ff7b72;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+::selection {
+    background: var(--accent-soft);
+}
 
 body {
     margin: 0;
     padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 h1, h2, h3, h4, strong {
-    font-weight: 500;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 h3 {
     position: sticky;
     top: 0;
+    z-index: 3;
+    margin: 0 -16px;
+    padding: 10px 16px;
+    font-size: 20px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+h3::before {
+    content: '';
     display: inline-block;
-    padding: 5px 10px;
-    margin: 0 0 0 -10px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    width: 9px;
+    height: 9px;
+    margin-right: 12px;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
+h4 {
+    font-size: 14px;
+    color: var(--text-muted);
 }
 
 a {
@@ -25,8 +91,7 @@ a {
 }
 
 a:hover {
-    color: #555;
-    background: #e7e7e7;
+    color: var(--accent);
 }
 
 ul, ol {
@@ -39,45 +104,294 @@ ul, ol, p {
 }
 
 table {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
-    border-collapse: collapse;
-}
-
-table, tr, td, th {
-    border: 1px solid #ddd;
+    font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 td, th {
     text-align: left;
-    padding: 2px 5px;
+    padding: 5px 12px;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+}
+
+td + td, td + th, th + td, th + th {
+    border-left: 1px solid var(--border);
+}
+
+tr:last-child > td, tr:last-child > th {
+    border-bottom: 0;
 }
 
 th {
     vertical-align: top;
     font-weight: 500;
+    background: var(--bg-soft);
 }
 
 pre, code {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
+    font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+    font-size: 13px;
 }
 
-.app-background { background: #f8f8f8; }
-.app-border { border: 1px solid #e7e7e7; }
-.app-border-red { border: 1px solid #f00; }
+code {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1px 6px;
+}
+
+td code, th code, pre code {
+    background: none;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+button,
+input[type="submit"] {
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 12px;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* header ------------------------------------------------------------ */
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 56px;
+    padding: 0 24px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.app-brand {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-brand:hover {
+    color: inherit;
+}
+
+.app-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 1px 8px;
+}
+
+.app-nav {
+    display: flex;
+    gap: 4px;
+    margin-left: 24px;
+}
+
+.app-nav a,
+.app-actions a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+.app-nav a:hover,
+.app-actions a:hover {
+    color: var(--text);
+    background: var(--bg-hover);
+}
+
+.app-nav a.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.app-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+}
+
+.app-actions .app-theme-toggle {
+    width: 30px;
+    height: 30px;
+    padding: 4px 0;
+    line-height: 22px;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid var(--border);
+    box-sizing: border-box;
+}
+
+[data-theme="dark"] .app-theme-toggle .if-light { display: none; }
+:root:not([data-theme="dark"]) .app-theme-toggle .if-dark { display: none; }
+
+/* sidebar ------------------------------------------------------------ */
+
+.app-side {
+    width: 240px;
+    box-sizing: border-box;
+    padding: 16px 12px;
+    border-right: 1px solid var(--border);
+}
+
+.app-side-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: 0 10px 10px;
+}
+
+.app-toc a {
+    display: block;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.app-toc a:hover {
+    color: var(--text);
+    background: var(--bg-hover);
+}
+
+.app-toc a.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+    font-weight: 500;
+}
+
+/* content ------------------------------------------------------------ */
+
+.app-main {
+    background: var(--bg);
+}
+
+.app-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 40px 50vh;
+}
+
+/* demo cards (demos page) -------------------------------------------- */
+
+.app-demo {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.app-demo-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border);
+}
+
+.app-demo-head h4 {
+    flex: 1;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.app-demo .CodeMirror {
+    border: 0;
+    border-radius: 0;
+}
+
+/* preview modal (demos page) ----------------------------------------- */
+
+.app-modal {
+    z-index: 100;
+    background: rgba(2, 6, 23, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+.app-resize-body {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.app-resize-handle {
+    border-radius: 8px;
+}
+
+.app-resize-handle:hover {
+    background: rgba(148, 163, 184, 0.35);
+}
+
+/* demo blocks keep their fixed light backgrounds (sm.css color classes),
+   so text inside them must stay dark even when the page theme is dark */
+[data-theme="dark"] .silver,
+[data-theme="dark"] .white,
+[data-theme="dark"] .red,
+[data-theme="dark"] .green,
+[data-theme="dark"] .blue,
+[data-theme="dark"] .yellow,
+[data-theme="dark"] .cyan,
+[data-theme="dark"] .checkerboard,
+[data-theme="dark"] .rainbow {
+    color: #1f2328;
+}
+
+/* helpers used by the content partials ------------------------------- */
+
+.app-background { background: var(--bg-soft); }
+.app-border { border: 1px solid var(--border); }
+.app-border-red { border: 1px solid var(--red); }
 
 .app-ff-roboto { font-family: 'Roboto', sans-serif; }
 .app-ff-roboto-con { font-family: 'Roboto Condensed', sans-serif; }
 .app-ff-roboto-mono { font-family: 'Roboto Mono', monospace; }
 .app-ff-roboto-slab { font-family: 'Roboto Slab', serif; }
 
-.app-pal-header { background: #f8f8f8; color: #333; }
-.app-pal-active { background: #e7e7e7; color: #555; }
+.app-pal-header { background: var(--bg-soft); color: var(--text); }
+.app-pal-active { background: var(--accent-soft); color: var(--accent); }
 
-.n { color: red; }
+.n { color: var(--red); }
 
 .max-w1140 { max-width: 1140px; }
 .lh20 { line-height: 20px; }
@@ -122,10 +436,12 @@ pre, code {
 .CodeMirror {
     width: auto;
     height: auto;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
-    line-height: 1.25em;
+    font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
+    font-size: 13px;
+    line-height: 1.4em;
     z-index: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
 }
 
 .CodeMirror-scroll {

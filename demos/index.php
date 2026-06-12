@@ -11,48 +11,46 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto+Mono">
     <link href="../app.css?t=<?php echo filemtime("$d/../src/docs/app.css") ?>" rel="stylesheet" />
     <link href="../demos/demo.css?t=<?php echo filemtime("$d/demo.css") ?>" rel="stylesheet" />
+    <script>
+    document.documentElement.dataset.theme = localStorage.smcss_theme || 'light';
+    function theme_toggle() {
+        const next = document.documentElement.dataset.theme == 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.smcss_theme = next;
+    }
+    </script>
 </head>
 <body>
 
-<div id="app" class="abs-f vsplit app-ff-roboto">
+<div id="app" class="abs-f vsplit">
 
-    <div class="hsplit app-pal-header app-border xborder-ht">
-        <div class="w250 h50 mla">
-            <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v<?php e(version()) ?></sub></sub></li>
-            </ul>
-        </div>
-        <div class="fluid h50">
-            <ul class="xls xm xp ww hh flex-row">
-                <li>
-                    <a href="../concepts" class="db lh20 p15">Concepts</a>
-                </li>
-                <li>
-                    <a href="../reference" class="db lh20 p15">Reference</a>
-                </li>
-                <li class="app-pal-active">
-                    <a href="../demos" class="db lh20 p15">Demos</a>
-                </li>
-                <li>
-                    <a href="../try" class="db lh20 p15">Try it out</a>
-                </li>
-                <li class="mla">
-                    <a href="https://github.com/vbarbarosh/smcss" target="_blank" class="db lh20 p15">GitHub</a>
-                </li>
-            </ul>
+    <div class="app-header">
+        <a href="../concepts" class="app-brand">smcss</a>
+        <span class="app-badge">v<?php e(version()) ?></span>
+        <ul class="app-nav">
+            <li><a href="../concepts">Concepts</a></li>
+            <li><a href="../reference">Reference</a></li>
+            <li><a href="../demos" class="active">Demos</a></li>
+            <li><a href="../try">Try it out</a></li>
+        </ul>
+        <div class="app-actions">
+            <a href="https://github.com/vbarbarosh/smcss" target="_blank">GitHub</a>
+            <a href="#" onclick="theme_toggle(); return false" title="Toggle theme" class="app-theme-toggle"><span class="if-light">&#9789;</span><span class="if-dark">&#9788;</span></a>
         </div>
     </div>
 
     <div class="fluid hsplit">
-        <div class="bbox w200 ph10 vsplit">
-            <ul class="fluid pv15 oa">
+        <div class="app-side vsplit">
+            <div class="app-side-title">On this page</div>
+            <ul class="app-toc fluid oa">
                 <?php foreach (array_filter(glob("$d/*"), 'is_dir') as $dir): ?>
                     <?php if (count(glob("$dir/*.html")) == 0) continue; ?>
                     <li><a href="#<?php e(substr($dir, strlen("$d/"))) ?>"><?php e(substr($dir, strlen("$d/"))) ?></a></li>
                 <?php endforeach ?>
             </ul>
         </div>
-        <div class="fluid p20 mg25 oa">
+        <div class="fluid oa app-main">
+            <div class="app-content mg25">
 
             <h1 class="xm">demos • smcss (a css for prototyping)</h1>
 
@@ -65,28 +63,22 @@
                 <div class="mg15">
                     <h3 id="<?php e(substr($dir, strlen("$d/"))) ?>"><?php e(substr($dir, strlen("$d/"))) ?></h3>
                     <?php foreach (glob("$dir/*.html") as $file): ?>
-                        <h4><?php e(substr($file, strlen("$d/"))) ?></h4>
-                        <button v-on:click="modal_iframe(<?php e(json_encode(substr($file, strlen("$d/")))) ?>)">Preview</button>
-                        <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
-                            <input type="hidden" name="data" value="<?php e(json_encode(['title' => substr($dir, strlen("$d/")), 'html' => snippet($file), 'css_pre_processor' => 'sass'])) ?>">
-                            <input type="submit" value="CodePen">
-                        </form>
-                        <vue-codemirror value="<?php e(snippet($file)) ?>"></vue-codemirror>
+                        <div class="app-demo">
+                            <div class="app-demo-head">
+                                <h4><?php e(substr($file, strlen("$d/"))) ?></h4>
+                                <button v-on:click="modal_iframe(<?php e(json_encode(substr($file, strlen("$d/")))) ?>)">Preview</button>
+                                <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                                    <input type="hidden" name="data" value="<?php e(json_encode(['title' => substr($dir, strlen("$d/")), 'html' => snippet($file), 'css_pre_processor' => 'sass'])) ?>">
+                                    <input type="submit" value="CodePen">
+                                </form>
+                            </div>
+                            <vue-codemirror value="<?php e(snippet($file)) ?>"></vue-codemirror>
+                        </div>
                     <?php endforeach ?>
                 </div>
             <?php endforeach ?>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
+            </div>
         </div>
     </div>
 
@@ -108,25 +100,25 @@
 
 <script id="templ-vue-resize" type="text/html">
     <div v-bind:style="{width: px(width), height: px(height)}" class="rel ma p15">
-        <div v-on:mousedown="dd_top" class="abs-t h15 red cur-row-resize"></div>
-        <div v-on:mousedown="dd_left" class="abs-l w15 red cur-col-resize"></div>
-        <div v-on:mousedown="dd_right" class="abs-r w15 red cur-col-resize"></div>
-        <div v-on:mousedown="dd_bottom" class="abs-b h15 red cur-row-resize"></div>
-        <div v-on:mousedown="dd_top_left" class="abs-tl w15 h15 green cur-nwse-resize"></div>
-        <div v-on:mousedown="dd_top_right" class="abs-tr w15 h15 green cur-nesw-resize"></div>
-        <div v-on:mousedown="dd_bottom_left" class="abs-bl w15 h15 green cur-nesw-resize"></div>
-        <div v-on:mousedown="dd_bottom_right" class="abs-br w15 h15 green cur-nwse-resize"></div>
-        <div class="rel ww hh checkerboard">
+        <div v-on:mousedown="dd_top" class="abs-t h15 cur-row-resize app-resize-handle"></div>
+        <div v-on:mousedown="dd_left" class="abs-l w15 cur-col-resize app-resize-handle"></div>
+        <div v-on:mousedown="dd_right" class="abs-r w15 cur-col-resize app-resize-handle"></div>
+        <div v-on:mousedown="dd_bottom" class="abs-b h15 cur-row-resize app-resize-handle"></div>
+        <div v-on:mousedown="dd_top_left" class="abs-tl w15 h15 cur-nwse-resize app-resize-handle"></div>
+        <div v-on:mousedown="dd_top_right" class="abs-tr w15 h15 cur-nesw-resize app-resize-handle"></div>
+        <div v-on:mousedown="dd_bottom_left" class="abs-bl w15 h15 cur-nesw-resize app-resize-handle"></div>
+        <div v-on:mousedown="dd_bottom_right" class="abs-br w15 h15 cur-nwse-resize app-resize-handle"></div>
+        <div class="rel ww hh app-resize-body">
             <slot />
         </div>
     </div>
 </script>
 
 <script id="templ-modal-iframe" type="text/html">
-    <div v-on:click="click_shadow" class="fix-f oa flex-row" style="background: rgba(0, 0, 0, 0.25)">
+    <div v-on:click="click_shadow" class="fix-f oa flex-row app-modal">
         <div class="ma">
             <vue-resize v-model="value">
-                <iframe v-bind:src="value.url" class="db ww hh xborder"></iframe>
+                <iframe v-bind:src="value.url" v-on:load="load" class="db ww hh xborder"></iframe>
             </vue-resize>
         </div>
     </div>
@@ -226,6 +218,11 @@
                 if (event.currentTarget === event.target) {
                     this.$emit('end');
                 }
+            },
+            load: function (event) {
+                // demos use body.checkerboard as a standalone authoring aid;
+                // the preview surface is already solid
+                event.target.contentDocument.body.classList.remove('checkerboard');
             }
         }
     });
@@ -447,6 +444,22 @@
     }
 
 })();
+</script>
+
+<script>
+document.addEventListener('scroll', function () {
+    const links = Array.from(document.querySelectorAll('.app-toc a[href^="#"]'));
+    let current = links[0];
+    for (const a of links) {
+        const target = document.getElementById(a.getAttribute('href').slice(1));
+        if (target && target.getBoundingClientRect().top < 120) {
+            current = a;
+        }
+    }
+    for (const a of links) {
+        a.classList.toggle('active', a == current);
+    }
+}, true);
 </script>
 
 </body>

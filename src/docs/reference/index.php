@@ -8,41 +8,38 @@
     <title>reference | smcss (a css for prototyping)</title>
     <link href="../app.css?t=<?php echo filemtime("$d/../app.css") ?>" rel="stylesheet" />
     <link href="../demos/demo.css?t=<?php echo filemtime("$d/../demos/demo.css") ?>" rel="stylesheet" />
+    <script>
+    document.documentElement.dataset.theme = localStorage.smcss_theme || 'light';
+    function theme_toggle() {
+        const next = document.documentElement.dataset.theme == 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.smcss_theme = next;
+    }
+    </script>
 </head>
 <body>
 
-<div id="app" class="abs-f vsplit app-ff-roboto">
+<div id="app" class="abs-f vsplit">
 
-    <div class="hsplit app-pal-header app-border xborder-ht">
-        <div class="w250 h50 mla">
-            <ul class="xls xm xp ww hh flex-row">
-                <li class="lh20 p15 mla">smcss<sub><sub>v<?php e(version()) ?></sub></sub></li>
-            </ul>
-        </div>
-        <div class="fluid h50">
-            <ul class="xls xm xp ww hh flex-row">
-                <li>
-                    <a href="../concepts" class="db lh20 p15">Concepts</a
-                </li>
-                <li class="app-pal-active">
-                    <a href="../reference" class="db lh20 p15">Reference</a>
-                </li>
-                <li>
-                    <a href="../demos" class="db lh20 p15">Demos</a>
-                </li>
-                <li>
-                    <a href="../try" class="db lh20 p15">Try it out</a>
-                </li>
-                <li class="mla">
-                    <a href="https://github.com/vbarbarosh/smcss" target="_blank" class="db lh20 p15">GitHub</a>
-                </li>
-            </ul>
+    <div class="app-header">
+        <a href="../concepts" class="app-brand">smcss</a>
+        <span class="app-badge">v<?php e(version()) ?></span>
+        <ul class="app-nav">
+            <li><a href="../concepts">Concepts</a></li>
+            <li><a href="../reference" class="active">Reference</a></li>
+            <li><a href="../demos">Demos</a></li>
+            <li><a href="../try">Try it out</a></li>
+        </ul>
+        <div class="app-actions">
+            <a href="https://github.com/vbarbarosh/smcss" target="_blank">GitHub</a>
+            <a href="#" onclick="theme_toggle(); return false" title="Toggle theme" class="app-theme-toggle"><span class="if-light">&#9789;</span><span class="if-dark">&#9788;</span></a>
         </div>
     </div>
 
     <div class="fluid hsplit">
-        <div class="bbox w200 ph10 vsplit">
-            <ul class="fluid pv15 oa">
+        <div class="app-side vsplit">
+            <div class="app-side-title">On this page</div>
+            <ul class="app-toc fluid oa">
                 <li><a href="#background">background</a></li>
                 <li><a href="#border">border</a></li>
                 <li><a href="#box-shadow">box-shadow</a></li>
@@ -79,7 +76,8 @@
                 <li><a href="#zindex">zindex</a></li>
             </ul>
         </div>
-        <div class="fluid p20 mg25 oa">
+        <div class="fluid oa app-main">
+            <div class="app-content mg25">
 
             <h1 class="xm">smcss &mdash; a css for prototyping</h1>
 
@@ -130,21 +128,7 @@ sass -I node_modules a.sass > a.css
             <?php include 'user-select.php' ?>
             <?php include 'zindex.php' ?>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
+            </div>
         </div>
     </div>
 
@@ -228,6 +212,22 @@ sass -I node_modules a.sass > a.css
     });
 
 })();
+</script>
+
+<script>
+document.addEventListener('scroll', function () {
+    const links = Array.from(document.querySelectorAll('.app-toc a[href^="#"]'));
+    let current = links[0];
+    for (const a of links) {
+        const target = document.getElementById(a.getAttribute('href').slice(1));
+        if (target && target.getBoundingClientRect().top < 120) {
+            current = a;
+        }
+    }
+    for (const a of links) {
+        a.classList.toggle('active', a == current);
+    }
+}, true);
 </script>
 
 </body>
