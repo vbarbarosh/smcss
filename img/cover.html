@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>cover</title>
+    <style>
+body {
+    margin: 0;
+    width: 1280px;
+    height: 640px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'JetBrains Mono', monospace;
+    color: #fff;
+    background-color: #133e85;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.10) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+}
+
+.abs { position: absolute; }
+
+.frame {
+    position: absolute;
+    inset: 14px;
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    pointer-events: none;
+}
+
+/* ---- the drawing ---- */
+
+.page {
+    position: absolute;
+    left: 80px;
+    top: 130px;
+    width: 560px;
+    height: 420px;
+    border: 2px solid rgba(255, 255, 255, 0.95);
+}
+
+.region {
+    position: absolute;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hatch {
+    background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 9px);
+}
+
+.hatch span {
+    background: #133e85;
+    padding: 3px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* ---- dimension lines ---- */
+
+.dim {
+    position: absolute;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.8);
+}
+
+.dim:before, .dim:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    border: 4.5px solid transparent;
+}
+
+.dim:before { left: -2px; border-right-color: rgba(255, 255, 255, 0.9); border-left: 0; }
+.dim:after { right: -2px; border-left-color: rgba(255, 255, 255, 0.9); border-right: 0; }
+
+.dim-label {
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    background: #133e85;
+    padding: 0 8px;
+    transform: translate(-50%, -50%);
+}
+
+.tick {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* ---- leader callouts ---- */
+
+.leader {
+    position: absolute;
+    border-top: 1px dashed rgba(255, 255, 255, 0.7);
+}
+
+.leader-text {
+    position: absolute;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* ---- right column ---- */
+
+.title {
+    position: absolute;
+    left: 720px;
+    top: 150px;
+    font-size: 96px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1;
+}
+
+.subtitle {
+    position: absolute;
+    left: 724px;
+    top: 268px;
+    font-size: 19px;
+    letter-spacing: 0.32em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.npm {
+    position: absolute;
+    left: 724px;
+    top: 318px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* ---- title block ---- */
+
+.tblock {
+    position: absolute;
+    left: 720px;
+    top: 420px;
+    width: 486px;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+}
+
+.tblock .row {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.tblock .row:first-child { border-top: 0; }
+
+.tblock .k {
+    width: 130px;
+    padding: 8px 12px;
+    color: rgba(255, 255, 255, 0.55);
+    border-right: 1px solid rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.08em;
+}
+
+.tblock .v {
+    flex: 1;
+    padding: 8px 12px;
+    letter-spacing: 0.04em;
+}
+
+.tblock .row .v + .k { border-left: 1px solid rgba(255, 255, 255, 0.55); }
+
+.cross {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    opacity: 0.55;
+}
+
+.cross:before, .cross:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+}
+
+.cross:before { left: 8px; top: 0; width: 1px; height: 17px; }
+.cross:after { left: 0; top: 8px; width: 17px; height: 1px; }
+    </style>
+</head>
+<body>
+
+    <div class="frame"></div>
+
+    <!-- drawing: classic app shell -->
+    <div class="page">
+        <div class="region" style="left:-2px; top:-2px; width:560px; height:50px;">h50</div>
+        <div class="region" style="left:-2px; top:48px; width:200px; height:324px;">w200</div>
+        <div class="region hatch" style="left:198px; top:48px; width:362px; height:324px;"><span>fluid</span></div>
+        <div class="region" style="left:-2px; top:370px; width:560px; height:50px;">h50</div>
+    </div>
+
+    <!-- ww dimension (top) -->
+    <div class="dim" style="left:80px; top:100px; width:560px;"></div>
+    <div class="tick" style="left:80px; top:92px; width:1px; height:16px;"></div>
+    <div class="tick" style="left:639px; top:92px; width:1px; height:16px;"></div>
+    <div class="dim-label" style="left:360px; top:100px;">ww</div>
+
+    <!-- hh dimension (left) -->
+    <div class="dim" style="left:50px; top:130px; width:420px; transform:rotate(90deg); transform-origin:0 0;"></div>
+    <div class="tick" style="left:42px; top:130px; width:16px; height:1px;"></div>
+    <div class="tick" style="left:42px; top:549px; width:16px; height:1px;"></div>
+    <div class="dim-label" style="left:50px; top:340px; transform:translate(-50%,-50%) rotate(-90deg);">hh</div>
+
+    <!-- crosses -->
+    <div class="cross" style="left:671px; top:91px;"></div>
+    <div class="cross" style="left:30px; top:580px;"></div>
+    <div class="cross" style="left:1230px; top:30px;"></div>
+
+    <!-- right column -->
+    <div class="title">smcss</div>
+    <div class="subtitle">A CSS FOR PROTOTYPING</div>
+    <div class="npm">$ npm i @vbarbarosh/smcss</div>
+
+    <div class="tblock">
+        <div class="row">
+            <div class="k">PROJECT</div>
+            <div class="v">smcss</div>
+        </div>
+        <div class="row">
+            <div class="k">TITLE</div>
+            <div class="v">a css for prototyping</div>
+        </div>
+        <div class="row">
+            <div class="k">DRAWN BY</div>
+            <div class="v">vbarbarosh</div>
+            <div class="k">VERSION</div>
+            <div class="v">v1.4.0</div>
+        </div>
+        <div class="row">
+            <div class="k">SCALE</div>
+            <div class="v">1:1</div>
+            <div class="k">SHEET</div>
+            <div class="v">1 OF 1</div>
+        </div>
+    </div>
+
+</body>
+</html>

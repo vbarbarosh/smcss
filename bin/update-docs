@@ -22,6 +22,7 @@ rm -f docs/demos/index.php
 rm -f docs/demos/README.md
 
 cp -r src/docs/app.css docs
+cp img/cover.png docs
 echo -n smcss.vbarbarosh.com > docs/CNAME
 
 php src/docs/index.php > docs/index.html

@@ -309,6 +309,13 @@ input[type="submit"]:hover {
     padding: 28px 40px 50vh;
 }
 
+.app-cover {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
 /* demo cards (demos page) -------------------------------------------- */
 
 .app-demo {

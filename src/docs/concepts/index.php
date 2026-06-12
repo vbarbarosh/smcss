@@ -48,6 +48,8 @@
         <div class="fluid oa app-main">
             <div class="app-content mg25">
 
+            <img src="../cover.png?t=<?php echo filemtime("$d/../../../img/cover.png") ?>" alt="smcss &mdash; a css for prototyping" class="app-cover">
+
             <h1 class="xm">smcss &mdash; a css for prototyping</h1>
 
             <?php include 'container.php' ?>
