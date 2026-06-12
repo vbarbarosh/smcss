@@ -15,7 +15,7 @@ bin/build
 
 rm -rf docs
 
-mkdir -p docs/{concepts,reference}
+mkdir -p docs/{concepts,reference,try}
 
 cp -r demos docs
 rm -f docs/demos/index.php
@@ -28,3 +28,4 @@ php src/docs/index.php > docs/index.html
 php src/docs/concepts/index.php > docs/concepts/index.html
 php src/docs/demos/index.php > docs/demos/index.html
 php src/docs/reference/index.php > docs/reference/index.html
+php src/docs/try/index.php > docs/try/index.html

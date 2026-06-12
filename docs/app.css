@@ -340,6 +340,68 @@ input[type="submit"]:hover {
     border-radius: 0;
 }
 
+/* playground (try page) ----------------------------------------------- */
+
+.app-try-pane-editor {
+    width: 50%;
+}
+
+.app-try-divider {
+    width: 5px;
+    background: var(--border);
+    cursor: col-resize;
+}
+
+.app-try-divider:hover,
+.app-try-dragging .app-try-divider {
+    background: var(--accent);
+}
+
+.app-try-dragging {
+    cursor: col-resize;
+    user-select: none;
+}
+
+.app-try-dragging .app-try-preview {
+    pointer-events: none;
+}
+
+.app-try-label {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: 6px 16px;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border);
+}
+
+.app-try-prefill {
+    font: inherit;
+    font-size: 12px;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin-left: auto;
+}
+
+.app-try-editor .CodeMirror {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+
+.app-try-preview {
+    background: #fff;
+}
+
 /* preview modal (demos page) ----------------------------------------- */
 
 .app-modal {
