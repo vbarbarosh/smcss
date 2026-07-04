@@ -399,6 +399,17 @@ input[type="submit"]:hover {
     margin-left: auto;
 }
 
+.app-try-codepen {
+    margin-left: auto;
+}
+
+.app-try-codepen input[type="submit"] {
+    font-size: 12px;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 2px 8px;
+}
+
 .app-try-editor .CodeMirror {
     height: 100%;
     border: 0;

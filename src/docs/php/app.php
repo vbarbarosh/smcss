@@ -38,3 +38,8 @@ function snippet($file)
     }
     return rtrim($ret);
 }
+
+function codepen_snippet($file)
+{
+    return '<link href="https://unpkg.com/@vbarbarosh/smcss@latest/dist/sm.css" rel="stylesheet">' . "\n\n" . snippet($file);
+}

@@ -68,7 +68,7 @@
                                 <h4><?php e(substr($file, strlen("$d/"))) ?></h4>
                                 <button v-on:click="modal_iframe(<?php e(json_encode(substr($file, strlen("$d/")))) ?>)">Preview</button>
                                 <form class="dib" action="https://codepen.io/pen/define" method="POST" target="_blank">
-                                    <input type="hidden" name="data" value="<?php e(json_encode(['title' => substr($dir, strlen("$d/")), 'html' => snippet($file), 'css_pre_processor' => 'sass'])) ?>">
+                                    <input type="hidden" name="data" value="<?php e(json_encode(['title' => substr($dir, strlen("$d/")), 'html' => codepen_snippet($file), 'css_pre_processor' => 'sass'])) ?>">
                                     <input type="submit" value="CodePen">
                                 </form>
                             </div>

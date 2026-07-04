@@ -157,7 +157,13 @@
         </div>
         <div class="app-try-divider"></div>
         <div class="fluid vsplit">
-            <div class="app-try-label"><span>preview</span></div>
+            <div class="app-try-label">
+                <span>preview</span>
+                <form class="app-try-codepen" action="https://codepen.io/pen/define" method="POST" target="_blank">
+                    <input type="hidden" name="data">
+                    <input type="submit" value="CodePen">
+                </form>
+            </div>
             <iframe class="fluid xborder app-try-preview"></iframe>
         </div>
     </div>
@@ -183,6 +189,8 @@
     ].join('\n');
 
     const preview = document.querySelector('.app-try-preview');
+    const codepen_form = document.querySelector('.app-try-codepen');
+    const codepen_data = codepen_form.querySelector('input[name="data"]');
 
     const editor = CodeMirror(document.querySelector('.app-try-editor'), {
         theme: 'monokai',
@@ -227,6 +235,15 @@
         // file and must not find one inside this string
         preview.srcdoc = '<!DOCTYPE html><html><head><base href="' + base + '"><link href="' + css + '" rel="stylesheet"><\/head><body>' + absolutize(code) + '<\/body><\/html>';
     }
+
+    codepen_form.addEventListener('submit', function () {
+        const link = '<link href="https://unpkg.com/@vbarbarosh/smcss@latest/dist/sm.css" rel="stylesheet">';
+        codepen_data.value = JSON.stringify({
+            title: 'smcss try',
+            html: link + '\n\n' + editor.getValue(),
+            css_pre_processor: 'sass',
+        });
+    });
 
     update();
 
