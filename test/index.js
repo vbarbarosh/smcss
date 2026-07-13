@@ -1,8 +1,11 @@
 const Promise = require('bluebird');
 const assert = require('assert');
+const autoprefixer = require('autoprefixer');
 const child_process = require('child_process');
 const csso = require('csso');
+const fs = require('fs');
 const path = require('path');
+const postcss = require('postcss');
 const sass = require('sass');
 
 async function scss(s)
@@ -566,6 +569,19 @@ describe('smcss', function () {
         assert.strictEqual(actual, expected);
     });
 
+    for (let a = Object.keys(table); a.length; ) {
+        const expr = a.shift();
+        it(expr, async function () {
+            const actual = await smcss(expr);
+            const expected = await cssmin(table[expr]);
+            assert.strictEqual(actual, expected);
+        });
+    }
+
+});
+
+describe('sync', function () {
+
     it('version pins', async function () {
         await new Promise(function (resolve, reject) {
             const script = path.join(__dirname, '..', 'bin', 'sync-version');
@@ -575,13 +591,18 @@ describe('smcss', function () {
         });
     });
 
-    for (let a = Object.keys(table); a.length; ) {
-        const expr = a.shift();
-        it(expr, async function () {
-            const actual = await smcss(expr);
-            const expected = await cssmin(table[expr]);
-            assert.strictEqual(actual, expected);
+    it('dist/sm.css is in sync with demos/sm.sass', async function () {
+        this.timeout(120000);
+        const file = path.join(__dirname, '..', 'demos', 'sm.sass');
+        const css = await new Promise(function (resolve, reject) {
+            sass.render({file}, function (error, result) {
+                error ? reject(error) : resolve(result.css.toString());
+            });
         });
-    }
+        const prefixed = await postcss([autoprefixer]).process(css, {from: file});
+        const actual = await cssmin(prefixed.css);
+        const expected = await cssmin(fs.readFileSync(path.join(__dirname, '..', 'dist', 'sm.css'), 'utf8'));
+        assert.strictEqual(actual, expected);
+    });
 
 });
