@@ -33,18 +33,19 @@
   ],
   "scripts": {
     "build": "rm -rf build && sass demos/demo.sass | postcss -o demos/demo.css && rm -rf dist && mkdir dist && sass demos/sm.sass | postcss -o dist/sm.css && cp reset/reset.css dist/reset.css",
-    "test": "mocha --bail --require intelli-espower-loader",
+    "test": "mocha",
     "version": "bin/sync-version"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "bluebird": "^3.7.2",
+    "autoprefixer": "^10.5.2",
     "csso": "^5.0.5",
-    "intelli-espower-loader": "^1.1.0",
-    "mocha": "^10.4.0",
-    "postcss": "^8.4.38",
-    "postcss-cli": "^11.0.0",
-    "power-assert": "^1.6.1",
-    "sass": "^1.72.0"
+    "mocha": "^11.7.6",
+    "postcss": "^8.5.19",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.101.0"
+  },
+  "overrides": {
+    "diff": "^9.0.0",
+    "serialize-javascript": "^7.0.7"
   }
 }

@@ -1,4 +1,3 @@
-const Promise = require('bluebird');
 const assert = require('assert');
 const autoprefixer = require('autoprefixer');
 const child_process = require('child_process');
@@ -8,14 +7,13 @@ const path = require('path');
 const postcss = require('postcss');
 const sass = require('sass');
 
+// silenced until the @use/@forward migration -- every test compile re-emits
+// these and floods the output; bin/build still reports them, deduplicated
+const silenceDeprecations = ['global-builtin', 'if-function', 'import', 'slash-div'];
+
 async function scss(s)
 {
-    const css = await new Promise(function (resolve, reject) {
-        const options = {data: s, includePaths: [__dirname]};
-        sass.render(options, function (error, result) {
-            error ? reject(error) : resolve(result.css.toString());
-        });
-    });
+    const css = sass.compileString(s, {loadPaths: [__dirname], silenceDeprecations}).css;
     return cssmin(css);
 }
 
@@ -594,11 +592,7 @@ describe('sync', function () {
     it('dist/sm.css is in sync with demos/sm.sass', async function () {
         this.timeout(120000);
         const file = path.join(__dirname, '..', 'demos', 'sm.sass');
-        const css = await new Promise(function (resolve, reject) {
-            sass.render({file}, function (error, result) {
-                error ? reject(error) : resolve(result.css.toString());
-            });
-        });
+        const css = sass.compile(file, {silenceDeprecations}).css;
         const prefixed = await postcss([autoprefixer]).process(css, {from: file});
         const actual = await cssmin(prefixed.css);
         const expected = await cssmin(fs.readFileSync(path.join(__dirname, '..', 'dist', 'sm.css'), 'utf8'));
