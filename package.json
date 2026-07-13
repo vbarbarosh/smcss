@@ -3,7 +3,7 @@
   "name": "@vbarbarosh/smcss",
   "version": "1.5.1",
   "description": "A way to organize and write CSS",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.sass",
   "unpkg": "dist/sm.css",
   "jsdelivr": "dist/sm.css",

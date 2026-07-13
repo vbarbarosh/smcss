@@ -89,3 +89,7 @@ last one. `mgN` is for blocks (margin-bottom), `miN` is for inline rows
 ## Links
 
 * [CSS only Responsive Tables](https://codepen.io/dbushell/pen/wGaamR)
+
+## License
+
+[MIT](LICENSE)
