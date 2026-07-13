@@ -23263,7 +23263,7 @@
 }
 
 .outline {
-  outline: 1px currentColor;
+  outline: 1px solid currentColor;
 }
 
 .oa {
@@ -29142,10 +29142,6 @@
   padding: 0;
 }
 
-.pa {
-  padding: auto;
-}
-
 .p1 {
   padding: 1px;
 }
@@ -29549,11 +29545,6 @@
 .xpv {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.pva {
-  padding-top: auto;
-  padding-bottom: auto;
 }
 
 .pv1 {
@@ -30061,11 +30052,6 @@
   padding-right: 0;
 }
 
-.pha {
-  padding-left: auto;
-  padding-right: auto;
-}
-
 .ph1 {
   padding-left: 1px;
   padding-right: 1px;
@@ -30570,10 +30556,6 @@
   padding-top: 0;
 }
 
-.pta {
-  padding-top: auto;
-}
-
 .pt1 {
   padding-top: 1px;
 }
@@ -30976,10 +30958,6 @@
 
 .xpl {
   padding-left: 0;
-}
-
-.pla {
-  padding-left: auto;
 }
 
 .pl1 {
@@ -31386,10 +31364,6 @@
   padding-right: 0;
 }
 
-.pra {
-  padding-right: auto;
-}
-
 .pr1 {
   padding-right: 1px;
 }
@@ -31792,10 +31766,6 @@
 
 .xpb {
   padding-bottom: 0;
-}
-
-.pba {
-  padding-bottom: auto;
 }
 
 .pb1 {

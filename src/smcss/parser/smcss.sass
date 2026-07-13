@@ -412,6 +412,8 @@
             @include xpv
         @else if $expr == xph // xph
             @include xph
+        @else if $a1 == p and ($b1 == a or $b2 == a) // pa pva pha pta pla pba pra pga pia -- padding: auto is not valid CSS
+            @error 'Invalid expression [#{$expr}]'
         @else if $a2 == pv // pv5
             @include pv($b2)
         @else if $a2 == ph // ph5

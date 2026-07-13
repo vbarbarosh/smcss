@@ -5,7 +5,7 @@
     <table>
     <tbody>
     <tr><th>xoutline</th><td><pre>outline: none</pre></td></tr>
-    <tr><th>outline</th><td><pre>outline: 1px currentColor</pre></td></tr>
+    <tr><th>outline</th><td><pre>outline: 1px solid currentColor</pre></td></tr>
     </tbody>
     </table>
 

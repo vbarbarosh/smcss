@@ -249,7 +249,7 @@ const table = {
 
     // outline
     'xoutline': '.foo { outline: none; }',
-    'outline': '.foo { outline: 1px currentColor; }',
+    'outline': '.foo { outline: 1px solid currentColor; }',
 
     // overflow
     'oa': '.foo { overflow: auto; }',
@@ -264,7 +264,6 @@ const table = {
     'xpr': '.foo { padding-right: 0; }',
     'xpv': '.foo { padding-top: 0; padding-bottom: 0; }',
     'xph': '.foo { padding-left: 0; padding-right: 0; }',
-    'pa': '.foo { padding: auto; }',
     'p5': '.foo { padding: 5px; }',
     'pv5': '.foo { padding-top: 5px; padding-bottom: 5px; }',
     'ph5': '.foo { padding-left: 5px; padding-right: 5px; }',
