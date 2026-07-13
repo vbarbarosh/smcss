@@ -10,6 +10,7 @@
   "homepage": "https://smcss.vbarbarosh.com",
   "files": [
     "src/smcss",
+    "!src/smcss/experimental",
     "dist/*.css"
   ],
   "repository": {
