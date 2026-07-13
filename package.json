@@ -20,6 +20,17 @@
     "css",
     "sass"
   ],
+  "engines": {
+    "node": ">=18"
+  },
+  "browserslist": [
+    "IE >= 10",
+    "Edge >= 12",
+    "Chrome >= 40",
+    "Firefox >= 40",
+    "Safari >= 7",
+    "iOS >= 7"
+  ],
   "scripts": {
     "build": "rm -rf build && sass demos/demo.sass | postcss -o demos/demo.css && rm -rf dist && mkdir dist && sass demos/sm.sass | postcss -o dist/sm.css && cp reset/reset.css dist/reset.css",
     "test": "mocha --bail --require intelli-espower-loader",
