@@ -76,6 +76,14 @@ last one. `mgN` is for blocks (margin-bottom), `miN` is for inline rows
 * [Reference](https://smcss.vbarbarosh.com/reference) — every class with its CSS
 * [Demos](https://smcss.vbarbarosh.com/demos) — live pages, also in the [demos](demos) directory of this repo
 
+## Development
+
+    $ bin/configure   # npm install
+    $ bin/test        # mocha test suite
+    $ bin/build       # rebuild dist/ and demos/demo.css
+    $ bin/update-docs # regenerate docs/ (requires php)
+    $ bin/release     # major|minor|patch — test, bump, rebuild, publish
+
 ## Interesting Projects
 
 * [TACHYONS - Functional CSS for humans](https://github.com/tachyons-css/tachyons/)

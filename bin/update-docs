@@ -10,6 +10,12 @@ scriptname=`basename $script`
 
 cd $scriptdir/..
 
+# docs pages are generated with php; check before wiping docs/
+if ! command -v php > /dev/null; then
+    echo "$scriptname: php is required to generate docs" >&2
+    exit 1
+fi
+
 # build demos/demo.sass
 bin/build
 
