@@ -7,19 +7,15 @@ const path = require('path');
 const postcss = require('postcss');
 const sass = require('sass');
 
-// silenced until the @use/@forward migration -- every test compile re-emits
-// these and floods the output; bin/build still reports them, deduplicated
-const silenceDeprecations = ['global-builtin', 'if-function', 'import', 'slash-div'];
-
 async function scss(s)
 {
-    const css = sass.compileString(s, {loadPaths: [__dirname], silenceDeprecations}).css;
+    const css = sass.compileString(s, {loadPaths: [__dirname]}).css;
     return cssmin(css);
 }
 
 async function smcss(expr)
 {
-    const css = await scss('@import "../index";\n.foo{@include smcss(' + expr + ');}');
+    const css = await scss('@use "../src/smcss/parser/smcss" as *;\n.foo{@include smcss(' + expr + ');}');
     return cssmin(css);
 }
 
@@ -592,7 +588,7 @@ describe('sync', function () {
     it('dist/sm.css is in sync with demos/sm.sass', async function () {
         this.timeout(120000);
         const file = path.join(__dirname, '..', 'demos', 'sm.sass');
-        const css = sass.compile(file, {silenceDeprecations}).css;
+        const css = sass.compile(file).css;
         const prefixed = await postcss([autoprefixer]).process(css, {from: file});
         const actual = await cssmin(prefixed.css);
         const expected = await cssmin(fs.readFileSync(path.join(__dirname, '..', 'dist', 'sm.css'), 'utf8'));

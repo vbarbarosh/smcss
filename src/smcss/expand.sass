@@ -1,3 +1,8 @@
+@use 'display' as *
+@use 'helpers/to-number' as *
+@use 'position' as *
+@use 'sass:math'
+
 // http://www.mademyday.de/css-height-equals-width-with-pure-css.html
 // http://zzzzbov.com/blag/scalable-videos-with-aspect-ratio
 // http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio
@@ -30,4 +35,4 @@
     &:before
         @include db
         content: ''
-        padding-top: to-number($height) / to-number($width) * 100%
+        padding-top: math.div(to-number($height), to-number($width)) * 100%

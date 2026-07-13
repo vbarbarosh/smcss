@@ -1,52 +1,5 @@
-// How to compile
-// $ sudo gem install --pre sass-css-importer
-// $ sudo npm install -g autoprefixer
-// $ sass -r sass-css-importer sm.sass > sm.css
-// $ autoprefixer sm.css -o sm.prefix.css
-//
-// References
-// https://github.com/chriseppstein/sass-css-importer
+// Public API: the sm() mixin and the smx() class exporter. Everything else
+// -- the smcss() parser, smx-direct/smx-amp, module mixins, helpers -- is
+// internal; @use it by path when hacking on the library itself.
 
-// @import 'CSS:experimental/image-list'
-// @import 'CSS:experimental/inline-menu'
-// @import 'CSS:experimental/overlay'
-
-@import background
-@import border
-@import box-shadow
-@import box-sizing
-@import button
-@import cursor
-@import display
-@import display-flex
-@import display-flex-hsplit
-@import expand
-@import float
-@import font
-@import list
-@import margin
-@import margin-group
-@import opacity
-@import outline
-@import overflow
-@import padding
-@import padding-group
-@import pointer-events
-@import position
-@import position-abs
-@import position-fix
-@import position-sticky
-@import resize
-@import scrollbar
-@import size
-@import text
-@import text-ellipsis
-@import theme
-@import transform
-@import user-select
-@import zindex
-
-@import helper/index
-@import parser/index
-
-@import container/grid
+@forward 'parser/sm' show sm, smx

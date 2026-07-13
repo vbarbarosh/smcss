@@ -25,6 +25,22 @@ above is an 800×200 box centered on the screen, split horizontally into two
 A minified build is available as
 [dist/sm.min.css](https://unpkg.com/@vbarbarosh/smcss@1.5.1/dist/sm.min.css).
 
+## Using from sass
+
+Requires dart-sass 1.33 or newer. The public API is `sm()` (apply tokens to
+the current selector) and `smx()` (emit classes).
+
+    // standalone sass >= 1.71: sass --pkg-importer=node
+    @use 'pkg:@vbarbarosh/smcss' as *; // exports only sm() and smx()
+    .card { @include sm('w200 p10 bbox'); }
+
+    // vite / webpack sass-loader resolve the package name directly
+    @use '@vbarbarosh/smcss' as *; // exports only sm() and smx()
+
+    // legacy @import still works, until Dart Sass 3.0 removes it
+    @import '@vbarbarosh/smcss';
+    .card { @include sm('w200 p10 bbox'); }
+
 ## Examples
 
 ### Splitting space

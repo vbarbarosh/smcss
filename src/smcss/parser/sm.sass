@@ -1,3 +1,6 @@
+@use '../helpers/str-split' as *
+@use 'smcss' as *
+
 @mixin sm($str)
     @each $expr in str-split($str, ' ')
         @include smcss($expr)

@@ -1,3 +1,6 @@
+@use '../helpers/to-number' as *
+@use 'sass:math'
+
 // References
 //
 // http://css-tricks.com/dont-overthink-it-grids/
@@ -15,4 +18,4 @@
     $cols: to-number($cols)
     @for $col-size from 1 through $cols
         & > .col#{$col-size}
-            width: $col-size / $cols * 100%
+            width: math.div($col-size, $cols) * 100%

@@ -1,3 +1,5 @@
+@use 'parser/eval-size' as *
+
 // wa (width: auto) and ww (width: 100%) are included
 @mixin w($size)
     @include eval-size(width, $size)

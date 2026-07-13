@@ -1,3 +1,5 @@
+@use 'helpers/to-number' as *
+
 // https://developer.mozilla.org/en-US/docs/Web/CSS/opacity
 
 @mixin xo
@@ -7,4 +9,4 @@
     @if $percent == '' // special case (see text.sass)
         text-decoration: overline
     @else
-        opacity: to-number($percent) / 100
+        opacity: to-number($percent) * 0.01
