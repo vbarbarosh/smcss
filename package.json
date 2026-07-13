@@ -32,13 +32,14 @@
     "iOS >= 7"
   ],
   "scripts": {
-    "build": "rm -rf build && sass demos/demo.sass | postcss -o demos/demo.css && rm -rf dist && mkdir dist && sass demos/sm.sass | postcss -o dist/sm.css && cp reset/reset.css dist/reset.css",
+    "build": "rm -rf build && sass demos/demo.sass | postcss -o demos/demo.css && rm -rf dist && mkdir dist && sass demos/sm.sass | postcss -o dist/sm.css && csso --no-restructure dist/sm.css -o dist/sm.min.css && cp reset/reset.css dist/reset.css",
     "test": "mocha",
     "version": "bin/sync-version"
   },
   "devDependencies": {
     "autoprefixer": "^10.5.2",
     "csso": "^5.0.5",
+    "csso-cli": "^4.0.2",
     "mocha": "^11.7.6",
     "postcss": "^8.5.19",
     "postcss-cli": "^11.0.1",
