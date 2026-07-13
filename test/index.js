@@ -1,6 +1,8 @@
 const Promise = require('bluebird');
 const assert = require('assert');
+const child_process = require('child_process');
 const csso = require('csso');
+const path = require('path');
 const sass = require('sass');
 
 async function scss(s)
@@ -563,6 +565,15 @@ describe('smcss', function () {
         const actual = await scss('.foo { color: red; }');
         const expected = await cssmin('.foo { color: red; }\n');
         assert.strictEqual(actual, expected);
+    });
+
+    it('version pins', async function () {
+        await new Promise(function (resolve, reject) {
+            const script = path.join(__dirname, '..', 'bin', 'sync-version');
+            child_process.execFile(script, ['--check'], function (error, stdout, stderr) {
+                error ? reject(new Error(stderr || error.message)) : resolve();
+            });
+        });
     });
 
     for (let a = Object.keys(table); a.length; ) {

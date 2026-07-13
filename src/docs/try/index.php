@@ -138,7 +138,7 @@
     }
 
     codepen_form.addEventListener('submit', function () {
-        const link = '<link href="https://unpkg.com/@vbarbarosh/smcss@latest/dist/sm.css" rel="stylesheet">';
+        const link = '<link href="https://unpkg.com/@vbarbarosh/smcss@<?php e(version()) ?>/dist/sm.css" rel="stylesheet">';
         codepen_data.value = JSON.stringify({
             title: 'smcss try',
             html: link + '\n\n' + editor.getValue(),

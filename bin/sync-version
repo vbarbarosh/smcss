@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+
+// Rewrite every @vbarbarosh/smcss@<version> pin in README.md and demos/
+// to the version from package.json. With --check, change nothing and
+// exit 1 if any pin is out of date.
+
+const fs = require('fs');
+const path = require('path');
+
+const root = path.join(__dirname, '..');
+const version = require(path.join(root, 'package.json')).version;
+const check = process.argv.includes('--check');
+
+const files = ['README.md', 'demos/README.md'];
+
+for (const file of walk(path.join(root, 'demos'))) {
+    if (file.endsWith('.html')) {
+        files.push(path.relative(root, file));
+    }
+}
+
+const stale = [];
+
+for (const file of files) {
+    const abs = path.join(root, file);
+    const prev = fs.readFileSync(abs, 'utf8');
+    const next = prev.replace(/@vbarbarosh\/smcss@[^/"'\s]+/g, `@vbarbarosh/smcss@${version}`);
+    if (next !== prev) {
+        stale.push(file);
+        if (!check) {
+            fs.writeFileSync(abs, next);
+        }
+    }
+}
+
+if (check && stale.length > 0) {
+    console.error(`version pins out of date (expected @vbarbarosh/smcss@${version}):`);
+    stale.forEach(file => console.error(`  ${file}`));
+    process.exit(1);
+}
+
+stale.forEach(file => console.log(`${file}: pinned @vbarbarosh/smcss@${version}`));
+
+function walk(dir)
+{
+    const out = [];
+    for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
+        const abs = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+            out.push(...walk(abs));
+        }
+        else {
+            out.push(abs);
+        }
+    }
+    return out;
+}
