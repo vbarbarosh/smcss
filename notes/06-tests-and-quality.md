@@ -1,5 +1,11 @@
 # Tests & quality
 
+> **Addendum 2026-07-14:** this describes v1.5.1 as of commit a91568d. The
+> [audit](audit-2026-07-13.md) has since landed: the harness is plain mocha 11
+> + `sass.compileString` (no bluebird/power-assert/`--bail`), a `sync` block
+> tests version pins and that dist/sm.css matches demos/sm.sass output, and CI
+> runs it all on every push. Factual corrections below are edited in place.
+
 ## How the tests work (test/index.js, mocha + power-assert)
 
 A single golden table: `token → expected CSS`. Each entry compiles
@@ -10,14 +16,15 @@ A single golden table: `token → expected CSS`. Each entry compiles
 ```
 
 with dart-sass (legacy `sass.render`, bluebird-wrapped), minifies both actual
-and expected with **csso**, and compares strings. ~530 table entries. `bin/release`
+and expected with **csso**, and compares strings. 467 table entries (recounted
+2026-07-13; an earlier draft said ~530). `bin/release`
 refuses to publish unless tests pass.
 
 Strengths:
 - Tests the *parser path* (token dispatch), not just the mixins.
 - Minified comparison makes expectations readable as plain CSS.
 - Very broad value coverage for `abs-*`/`fix-*` (every two-part combination is
-  spelled out — ~150 entries).
+  spelled out — 174 entries, 87 each).
 
 ## Coverage gaps
 
@@ -30,7 +37,9 @@ Strengths:
   dist (drift between src and committed dist/sm.css would go unnoticed until
   release).
 - Untested token families: `sticky`/`sticky-*`? — present (yes, tested);
-  missing: `fsi`, `lsN` negative forms beyond samples, `expand` only 2 samples,
+  missing: `lsN` negative forms beyond samples (`fsi` was listed here earlier,
+  but it is not a token — it exists only as a `// fsi seems more natural`
+  comment in font.sass), `expand` only 2 samples,
   `gridN` only 3/4, padding-group `pgN/piN` single sample each. Sampling is
   reasonable for a generator, but the *generator boundaries* (w0, w1200,
   br999) are not asserted.
