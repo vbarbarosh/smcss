@@ -1,11 +1,11 @@
 const assert = require('assert');
 const autoprefixer = require('autoprefixer');
-const child_process = require('child_process');
 const csso = require('csso');
-const fs = require('fs');
-const path = require('path');
+const fs_path_join = require('@vbarbarosh/node-helpers/src/fs_path_join');
+const fs_read_utf8 = require('@vbarbarosh/node-helpers/src/fs_read_utf8');
 const postcss = require('postcss');
 const sass = require('sass');
+const shell_stdall = require('@vbarbarosh/node-helpers/src/shell_stdall');
 
 async function scss(s)
 {
@@ -577,21 +577,16 @@ describe('smcss', function () {
 describe('sync', function () {
 
     it('version pins', async function () {
-        await new Promise(function (resolve, reject) {
-            const script = path.join(__dirname, '..', 'bin', 'sync-version');
-            child_process.execFile(script, ['--check'], function (error, stdout, stderr) {
-                error ? reject(new Error(stderr || error.message)) : resolve();
-            });
-        });
+        await shell_stdall([fs_path_join(__dirname, '..', 'bin', 'sync-version'), '--check']);
     });
 
     it('dist/sm.css is in sync with demos/sm.sass', async function () {
         this.timeout(120000);
-        const file = path.join(__dirname, '..', 'demos', 'sm.sass');
+        const file = fs_path_join(__dirname, '..', 'demos', 'sm.sass');
         const css = sass.compile(file).css;
         const prefixed = await postcss([autoprefixer]).process(css, {from: file});
         const actual = await cssmin(prefixed.css);
-        const expected = await cssmin(fs.readFileSync(path.join(__dirname, '..', 'dist', 'sm.css'), 'utf8'));
+        const expected = await cssmin(await fs_read_utf8(fs_path_join(__dirname, '..', 'dist', 'sm.css')));
         assert.strictEqual(actual, expected);
     });
 

@@ -46,6 +46,7 @@
     "version": "bin/sync-version"
   },
   "devDependencies": {
+    "@vbarbarosh/node-helpers": "^3.75.0",
     "autoprefixer": "^10.5.2",
     "csso": "^5.0.5",
     "csso-cli": "^4.0.2",

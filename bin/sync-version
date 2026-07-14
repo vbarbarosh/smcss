@@ -4,63 +4,58 @@
 // to the version from package.json. With --check, change nothing and
 // exit 1 if any pin is out of date.
 
-const fs = require('fs');
-const path = require('path');
+const ExitCodeError = require('@vbarbarosh/node-helpers/src/errors/ExitCodeError');
+const cli = require('@vbarbarosh/node-helpers/src/cli');
+const fs_list_deep = require('@vbarbarosh/node-helpers/src/fs_list_deep');
+const fs_path_join = require('@vbarbarosh/node-helpers/src/fs_path_join');
+const fs_path_relative = require('@vbarbarosh/node-helpers/src/fs_path_relative');
+const fs_read_utf8 = require('@vbarbarosh/node-helpers/src/fs_read_utf8');
+const fs_write = require('@vbarbarosh/node-helpers/src/fs_write');
 
-const root = path.join(__dirname, '..');
-const version = require(path.join(root, 'package.json')).version;
+const root = fs_path_join(__dirname, '..');
+const version = require(fs_path_join(root, 'package.json')).version;
 const check = process.argv.includes('--check');
 
-const files = ['README.md', 'demos/README.md'];
+cli(main);
 
-for (const file of walk(path.join(root, 'demos'))) {
-    if (file.endsWith('.html')) {
-        files.push(path.relative(root, file));
-    }
-}
-
-const stale = [];
-
-for (const file of files) {
-    sync(file, /@vbarbarosh\/smcss@[^/"'\s]+/g, `@vbarbarosh/smcss@${version}`);
-}
-
-// the VERSION cell in the cover's title block; after a bump img/cover.png
-// must be re-rendered from img/cover.html by hand (1280x640 screenshot)
-sync('img/cover.html', /<div class="v">v\d+[^<]*<\/div>/g, `<div class="v">v${version}</div>`);
-
-function sync(file, re, replacement)
+async function main()
 {
-    const abs = path.join(root, file);
-    const prev = fs.readFileSync(abs, 'utf8');
-    const next = prev.replace(re, replacement);
-    if (next !== prev) {
-        stale.push(file);
-        if (!check) {
-            fs.writeFileSync(abs, next);
+    const files = ['README.md', 'demos/README.md'];
+
+    for (const fi of await fs_list_deep(fs_path_join(root, 'demos'))) {
+        if (fi.isFile() && fi.pathname.endsWith('.html')) {
+            files.push(fs_path_relative(root, fi.pathname));
         }
     }
-}
 
-if (check && stale.length > 0) {
-    console.error(`version pins out of date (expected ${version}):`);
-    stale.forEach(file => console.error(`  ${file}`));
-    process.exit(1);
-}
+    const stale = [];
 
-stale.forEach(file => console.log(`${file}: pinned ${version}`));
+    for (const file of files) {
+        await sync(file, /@vbarbarosh\/smcss@[^/"'\s]+/g, `@vbarbarosh/smcss@${version}`);
+    }
 
-function walk(dir)
-{
-    const out = [];
-    for (const entry of fs.readdirSync(dir, {withFileTypes: true})) {
-        const abs = path.join(dir, entry.name);
-        if (entry.isDirectory()) {
-            out.push(...walk(abs));
-        }
-        else {
-            out.push(abs);
+    // the VERSION cell in the cover's title block; after a bump run
+    // bin/update-cover to re-render img/cover.png from img/cover.html
+    await sync('img/cover.html', /<div class="v">v\d+[^<]*<\/div>/g, `<div class="v">v${version}</div>`);
+
+    if (check && stale.length > 0) {
+        const lines = [`version pins out of date (expected ${version}):`];
+        stale.forEach(file => lines.push(`  ${file}`));
+        throw new ExitCodeError(1, lines.join('\n'));
+    }
+
+    stale.forEach(file => console.log(`${file}: pinned ${version}`));
+
+    async function sync(file, re, replacement)
+    {
+        const abs = fs_path_join(root, file);
+        const prev = await fs_read_utf8(abs);
+        const next = prev.replace(re, replacement);
+        if (next !== prev) {
+            stale.push(file);
+            if (!check) {
+                await fs_write(abs, next);
+            }
         }
     }
-    return out;
 }
