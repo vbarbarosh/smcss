@@ -1,5 +1,10 @@
 # Purpose & core concept
 
+> **Addendum 2026-07-14:** still accurate, with one grammar change: the
+> `pa`/`pva`/`pha`/`pta`/`pla`/`pra`/`pba` tokens (padding: auto — invalid
+> CSS) were removed; the parser now rejects them. See
+> [audit](audit-2026-07-13.md).
+
 **smcss** (`@vbarbarosh/smcss`, v1.5.1) is a small utility-class CSS library for
 *prototyping layouts*. Each class does exactly one thing, so an element's class
 list reads as a plain-language description of the element:

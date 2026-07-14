@@ -1,5 +1,10 @@
 # Utility class inventory
 
+> **Addendum 2026-07-14:** two inventory changes since this was written
+> ([audit](audit-2026-07-13.md) C1): the padding-auto family (`pa pva pha pta
+> pla pra pba`) was removed (invalid CSS), and `outline` now emits
+> `outline: 1px solid currentColor` (previously rendered nothing).
+
 Authoritative sources: `test/index.js` table (semantics), `demos/sm.sass`
 (what actually ships in dist/sm.css). Grouped as in the source modules.
 

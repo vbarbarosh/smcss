@@ -1,5 +1,13 @@
 # Architecture & source map
 
+> **Addendum 2026-07-14:** the module system migration landed since this was
+> written ([audit](audit-2026-07-13.md) A2): `@import` is now `@use`/`@forward`
+> throughout, `index.sass` forwards only `sm` and `smx` (the `smcss()` parser
+> and module mixins are internal), `helper/` is renamed `helpers/`, the
+> `helper/index` and `parser/index` aggregators are gone, `src/templates/` is
+> deleted, and `proto/` is renamed `research/`. The dispatch-chain description
+> below is otherwise still accurate.
+
 ## Layers
 
 ```

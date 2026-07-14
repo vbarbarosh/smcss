@@ -2,6 +2,11 @@
 
 Analysis of `@vbarbarosh/smcss` v1.5.1 as of 2026-07-04 (commit a91568d).
 
+**2026-07-14:** the [audit](audit-2026-07-13.md) that followed these notes is
+closed — every finding fixed, resolved, or shelved with measurements. Each
+note below carries an addendum banner listing what changed since it was
+written; the bodies are left as the point-in-time record.
+
 1. [Purpose & core concept](01-purpose-and-concept.md) — what smcss is, the
    token grammar, how it differs from Tailwind/Tachyons.
 2. [Architecture & source map](02-architecture.md) — modules → parser →

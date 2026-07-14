@@ -1,5 +1,11 @@
 # Observations & opportunities
 
+> **Addendum 2026-07-14:** this list fed the [audit](audit-2026-07-13.md),
+> which resolved nearly all of it: items 1-5 and 7-11 are done (version pins
+> automated, headers rewritten, templates deleted, module migration complete,
+> `pa`/`outline` fixed, `sm.min.css` published), item 6 partially (`proto/` →
+> `research/`, vendored libs pruned). Still open ideas: 12-17.
+
 Findings only — nothing here has been changed.
 
 ## Staleness / drift

@@ -1,5 +1,14 @@
 # Build, docs & release pipeline
 
+> **Addendum 2026-07-14:** since this was written ([audit](audit-2026-07-13.md)):
+> the build also emits a minified `dist/sm.min.css` (csso, no restructure);
+> `bin/sync-version` pins versions in README/demos on `npm version`;
+> `bin/update-docs` refuses to run without php instead of wiping docs/; CI
+> (.github/workflows/ci.yml) runs tests plus a dist-freshness diff; the
+> browserslist config moved into package.json (`.browserslistrc` deleted);
+> package.json declares `license: MIT`, `engines`, an optional `sass >= 1.33`
+> peer dependency, and excludes `src/smcss/experimental` from the tarball.
+
 ## npm scripts / bin
 
 ```

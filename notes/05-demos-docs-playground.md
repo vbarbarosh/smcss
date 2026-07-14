@@ -1,5 +1,11 @@
 # Demos, docs pages & playground
 
+> **Addendum 2026-07-14:** since this was written ([audit](audit-2026-07-13.md)):
+> `proto/` is renamed `research/` and its vendored jquery/vue files load from
+> unpkg instead; demo version pins are managed by `bin/sync-version`; the
+> broken `../vue/dd.js` references load `@vbarbarosh/dd` from unpkg; the
+> CodePen exports pin the release version instead of `@latest`.
+
 ## demos/ (copied into docs/demos at update-docs time)
 
 Standalone HTML files, one directory per topic; a directory appears in the
