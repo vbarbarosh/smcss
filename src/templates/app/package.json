@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "autoprefixer": "^7.1.6",
-    "smcss": "github:vbarbarosh/smcss"
-  },
-  "scripts": {
-    "build": "rm -rf build && sass -I node_modules src/sass/index.sass | postcss -o build/styles.css && cp src/index.html build/index.html"
-  }
-}
