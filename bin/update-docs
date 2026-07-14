@@ -19,6 +19,9 @@ fi
 # build demos/demo.sass
 bin/build
 
+# render img/cover.png from img/cover.html (version cell in the title block)
+bin/update-cover
+
 rm -rf docs
 
 mkdir -p docs/{concepts,reference,try}

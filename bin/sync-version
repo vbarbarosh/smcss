@@ -22,9 +22,18 @@ for (const file of walk(path.join(root, 'demos'))) {
 const stale = [];
 
 for (const file of files) {
+    sync(file, /@vbarbarosh\/smcss@[^/"'\s]+/g, `@vbarbarosh/smcss@${version}`);
+}
+
+// the VERSION cell in the cover's title block; after a bump img/cover.png
+// must be re-rendered from img/cover.html by hand (1280x640 screenshot)
+sync('img/cover.html', /<div class="v">v\d+[^<]*<\/div>/g, `<div class="v">v${version}</div>`);
+
+function sync(file, re, replacement)
+{
     const abs = path.join(root, file);
     const prev = fs.readFileSync(abs, 'utf8');
-    const next = prev.replace(/@vbarbarosh\/smcss@[^/"'\s]+/g, `@vbarbarosh/smcss@${version}`);
+    const next = prev.replace(re, replacement);
     if (next !== prev) {
         stale.push(file);
         if (!check) {
@@ -34,12 +43,12 @@ for (const file of files) {
 }
 
 if (check && stale.length > 0) {
-    console.error(`version pins out of date (expected @vbarbarosh/smcss@${version}):`);
+    console.error(`version pins out of date (expected ${version}):`);
     stale.forEach(file => console.error(`  ${file}`));
     process.exit(1);
 }
 
-stale.forEach(file => console.log(`${file}: pinned @vbarbarosh/smcss@${version}`));
+stale.forEach(file => console.log(`${file}: pinned ${version}`));
 
 function walk(dir)
 {
