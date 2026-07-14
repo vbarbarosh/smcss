@@ -24,6 +24,14 @@
   "engines": {
     "node": ">=18"
   },
+  "peerDependencies": {
+    "sass": ">=1.33.0"
+  },
+  "peerDependenciesMeta": {
+    "sass": {
+      "optional": true
+    }
+  },
   "browserslist": [
     "IE >= 10",
     "Edge >= 12",
