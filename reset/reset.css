@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ + my changes at the bottom */
+/* http://meyerweb.com/eric/tools/css/reset/ + table styles at the bottom */
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -49,6 +49,7 @@ table {
 	border-spacing: 0;
 }
 
-/* vb */
+/* Intentional addition to the Meyer reset: visible borders and header
+   shading so bare <table> markup is readable in quick snippets. */
 table, td, th { border: 1px solid #aaa; }
 th { background: #ddd; text-align: left; }
