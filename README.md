@@ -19,11 +19,11 @@ above is an 800×200 box centered on the screen, split horizontally into two
 
 ## Using from browser
 
-    <link href="https://unpkg.com/@vbarbarosh/smcss@1.5.1/dist/reset.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@vbarbarosh/smcss@1.5.1/dist/sm.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@vbarbarosh/smcss@2.0.0/dist/reset.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@vbarbarosh/smcss@2.0.0/dist/sm.css" rel="stylesheet" />
 
 A minified build is available as
-[dist/sm.min.css](https://unpkg.com/@vbarbarosh/smcss@1.5.1/dist/sm.min.css).
+[dist/sm.min.css](https://unpkg.com/@vbarbarosh/smcss@2.0.0/dist/sm.min.css).
 
 ## Using from sass
 

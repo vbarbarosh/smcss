@@ -17,8 +17,8 @@ Copy a nearby demo and strip it down. Two ways to get the styles:
   (`npm run build` regenerates it from `demo.sass`)
 * unpkg — as in [flex/flex-row-center-left.html](flex/flex-row-center-left.html):
 
-      <link href="https://unpkg.com/@vbarbarosh/smcss@1.5.1/dist/reset.css" rel="stylesheet">
-      <link href="https://unpkg.com/@vbarbarosh/smcss@1.5.1/dist/sm.css" rel="stylesheet">
+      <link href="https://unpkg.com/@vbarbarosh/smcss@2.0.0/dist/reset.css" rel="stylesheet">
+      <link href="https://unpkg.com/@vbarbarosh/smcss@2.0.0/dist/sm.css" rel="stylesheet">
 
 A directory appears in the demos index as soon as it contains at least one
 `*.html` file.
