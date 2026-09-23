@@ -22,4 +22,4 @@
     @else if string.slice($size, -1) == '%'
         #{$prop}: to-number(string.slice($size, 1, -2)) * 1%
     @else
-        #{$prop}: #{$size}px
+        #{$prop}: to-number($size) * 1px

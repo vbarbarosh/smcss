@@ -25,10 +25,11 @@
     @for $i from $start through string.length($value)
         $character: string.slice($value, $i, $i)
 
+        // A letter where a digit belongs is a misspelled token, not a unit:
+        // `rot90` (rotate90), `mm15`, `text-ellipsis` (ellipsis) all end
+        // here. Fail loudly instead of emitting `right: ot90px`.
         @if not (list.index(map.keys($numbers), $character) or $character == '.')
-            @if $minus
-                @return to-length(-$result, string.slice($value, $i))
-            @return to-length($result, string.slice($value, $i))
+            @error 'Invalid number [#{$value}]'
 
         @if $character == '.'
             $digits: 1

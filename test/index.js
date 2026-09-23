@@ -567,6 +567,8 @@ const table = {
 
 };
 
+const invalid = ['text-ellipsis', 'rot90', 'mm15', 'br4-left', 'bp50', 'minAxB', 'tl', 'w', 'ov', 'foo'];
+
 describe('smcss', function () {
 
     it('basic', async function () {
@@ -581,6 +583,15 @@ describe('smcss', function () {
             const actual = await smcss(expr);
             const expected = await cssmin(table[expr]);
             assert.strictEqual(actual, expected);
+        });
+    }
+
+    // misspelled tokens used to compile into garbage (`rot90` gave
+    // `right: ot90px`); a letter where a digit belongs is an error
+    for (let a = invalid.slice(); a.length; ) {
+        const expr = a.shift();
+        it(expr + ' is rejected', async function () {
+            await assert.rejects(smcss(expr), /Invalid (number|expression)/);
         });
     }
 
