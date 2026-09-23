@@ -128,13 +128,12 @@ const table = {
 
     // flex
     'iflex-row': '.foo { display: inline-flex; flex-direction: row; }',
-    'iflex-row-center': '.foo { display: inline-flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
+    'iflex-row-c': '.foo { display: inline-flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
     'iflex-col': '.foo { display: inline-flex; flex-direction: column; }',
-    'iflex-col-center': '.foo { display: inline-flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
+    'iflex-col-c': '.foo { display: inline-flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
     'flex-row': '.foo { display: flex; flex-direction: row; }',
     'flex-row-rev': '.foo { display: flex; flex-direction: row-reverse; }',
     'flex-row-wrap': '.foo { display: flex; flex-direction: row; flex-wrap: wrap; }',
-    'flex-row-center': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
     'flex-row-c': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
     'flex-row-cl': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: flex-start; }',
     'flex-row-cr': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: flex-end; }',
@@ -147,7 +146,6 @@ const table = {
     'flex-row-uniform': '.foo { display: flex; flex-direction: row; }\n\n.foo > * { flex: 1; min-width: 0; }',
     'flex-col': '.foo { display: flex; flex-direction: column; }',
     'flex-col-rev': '.foo { display: flex; flex-direction: column-reverse; }',
-    'flex-col-center': '.foo { display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
     'flex-col-c': '.foo { display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
     'flex-col-cl': '.foo { display: flex; flex-direction: column; align-items: flex-start; align-content: flex-start; justify-content: center; }',
     'flex-col-cr': '.foo { display: flex; flex-direction: column; align-items: flex-end; align-content: flex-end; justify-content: center; }',

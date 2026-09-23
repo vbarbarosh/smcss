@@ -33,7 +33,7 @@ src/smcss/
 
 `smcss($expr)` slices the token into prefixes (`$a1..$a7`) and suffixes
 (`$b1..$b7`) and dispatches: exact matches for keyword tokens
-(`flex-row-center`, `xbutton`), prefix matches for parameterized ones
+(`flex-row-c`, `xbutton`), prefix matches for parameterized ones
 (`$a2 == br` → `br($b2)`, `$a1 == w` → `w($b1)`). All numeric parsing funnels
 through `eval-size`.
 

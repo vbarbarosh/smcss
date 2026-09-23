@@ -18,7 +18,7 @@ color of the element it is applied to:
 ```
 
 Useful for marking reference areas — e.g.
-[demos/flex/flex-row-center-left.html](../../demos/flex/flex-row-center-left.html)
+[demos/flex/flex-row-cl.html](../../demos/flex/flex-row-cl.html)
 hatches the container behind each `flex-row-*` sample.
 
 ## Checkerboard

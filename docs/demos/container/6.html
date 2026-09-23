@@ -10,7 +10,7 @@
     <div class="fix-t z1 ph15 bs10 white">
         <input v-model="width" class="ww" type="range" min="100" max="1200">
     </div>
-    <div class="flex-row-center ma dashed bs10 rainbow" v-bind:style="{width: px(width)}">
+    <div class="flex-row-c ma dashed bs10 rainbow" v-bind:style="{width: px(width)}">
         <button v-for="button in buttons" class="w0 max-w200 flex-grow p5 xbutton">
             {{ button }}
         </button>

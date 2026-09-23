@@ -45,26 +45,26 @@
             <div class="w500 p5 mg5 bs5">
 
                 <div>
-                    <div class="flex-row-center cbox w75 h75 silver fs12 border"></div>
+                    <div class="flex-row-c cbox w75 h75 silver fs12 border"></div>
                 </div>
 
                 <div class="flex-row mi5">
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-t">.xborder-t</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-l">.xborder-l</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-r">.xborder-r</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-b">.xborder-b</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-t">.xborder-t</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-l">.xborder-l</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-r">.xborder-r</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-b">.xborder-b</div>
                 </div>
 
                 <div class="flex-row mi5">
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-h">.xborder-h</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-ht">.xborder-ht</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-hb">.xborder-hb</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-h">.xborder-h</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-ht">.xborder-ht</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-hb">.xborder-hb</div>
                 </div>
 
                 <div class="flex-row mi5">
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-v">.xborder-v</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-vl">.xborder-vl</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-vr">.xborder-vr</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-v">.xborder-v</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-vl">.xborder-vl</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-vr">.xborder-vr</div>
                 </div>
 
             </div>

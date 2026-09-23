@@ -8,7 +8,7 @@ put inside.
 In general it should have only one _container_ element:
 
     <button class="xbutton">
-        <span class="flex-col-center">
+        <span class="flex-col-c">
             <svg></svg>
         </span>
     </button>

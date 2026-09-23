@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>reference | smcss (a css for prototyping)</title>
     <link href="../app.css?t=1783157377" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1790189725" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1790191377" rel="stylesheet" />
     <script>
     document.documentElement.dataset.theme = localStorage.smcss_theme || 'light';
     function theme_toggle() {
@@ -174,26 +174,26 @@ sass -I node_modules a.sass > a.css
             <div class="w500 p5 mg5 bs5">
 
                 <div>
-                    <div class="flex-row-center cbox w75 h75 silver fs12 border"></div>
+                    <div class="flex-row-c cbox w75 h75 silver fs12 border"></div>
                 </div>
 
                 <div class="flex-row mi5">
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-t">.xborder-t</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-l">.xborder-l</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-r">.xborder-r</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-b">.xborder-b</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-t">.xborder-t</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-l">.xborder-l</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-r">.xborder-r</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-b">.xborder-b</div>
                 </div>
 
                 <div class="flex-row mi5">
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-h">.xborder-h</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-ht">.xborder-ht</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-hb">.xborder-hb</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-h">.xborder-h</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-ht">.xborder-ht</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-hb">.xborder-hb</div>
                 </div>
 
                 <div class="flex-row mi5">
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-v">.xborder-v</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-vl">.xborder-vl</div>
-                    <div class="flex-row-center bbox w75 h75 silver fs12 border xborder-vr">.xborder-vr</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-v">.xborder-v</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-vl">.xborder-vl</div>
+                    <div class="flex-row-c bbox w75 h75 silver fs12 border xborder-vr">.xborder-vr</div>
                 </div>
 
             </div>
@@ -310,9 +310,8 @@ sass -I node_modules a.sass > a.css
     <table>
     <tbody>
     <tr><th>flex-row</th><td><code>display: flex<br>flex-direction: row</code></td></tr>
-    <tr><th>flex-irow</th><td><code>display: inline-flex<br>flex-direction: row</code></td></tr>
+    <tr><th>iflex-row</th><td><code>display: inline-flex<br>flex-direction: row</code></td></tr>
     <tr><th>flex-row-wrap</th><td><code>@include flex-row<br>@include flex-wrap</code></td></tr>
-    <tr><th>flex-row-center</th><td><code>@include flex-row<br>@include flex-center</code></td></tr>
     <tr><th>flex-row-c</th><td></td></tr>
     <tr><th>flex-row-cl</th><td></td></tr>
     <tr><th>flex-row-cr</th><td></td></tr>
@@ -323,10 +322,9 @@ sass -I node_modules a.sass > a.css
     <tr><th>flex-row-bl</th><td></td></tr>
     <tr><th>flex-row-br</th><td></td></tr>
     <tr><th>flex-row-uniform</th><td><code>@include flex-row<br>&amp; > * { flex: 1; min-width: 0 }</code></td></tr>
-    <tr><th>flex-irow-center</th><td><code>@include flex-irow<br>@include flex-center</code></td></tr>
+    <tr><th>iflex-row-c</th><td><code>@include iflex-row<br>@include flex-center</code></td></tr>
     <tr><th>flex-col</th><td><code>display: flex<br>flex-direction: col</code></td></tr>
-    <tr><th>flex-icol</th><td><code>display: inline-flex<br>flex-direction: col</code></td></tr>
-    <tr><th>flex-col-center</th><td><code>@include flex-col<br>@include flex-center</code></td></tr>
+    <tr><th>iflex-col</th><td><code>display: inline-flex<br>flex-direction: column</code></td></tr>
     <tr><th>flex-col-c</th><td></td></tr>
     <tr><th>flex-col-cl</th><td></td></tr>
     <tr><th>flex-col-cr</th><td></td></tr>
@@ -337,7 +335,7 @@ sass -I node_modules a.sass > a.css
     <tr><th>flex-col-bl</th><td></td></tr>
     <tr><th>flex-col-br</th><td></td></tr>
     <tr><th>flex-col-uniform</th><td><code>@include flex-col<br>&amp; > * { flex: 1; min-height: 0 }</code></td></tr>
-    <tr><th>flex-icol-center</th><td><code>@include flex-icol<br>@include flex-center</code></td></tr>
+    <tr><th>iflex-col-c</th><td><code>@include iflex-col<br>@include flex-center</code></td></tr>
     <tr><th>flex-wrap</th><td></td></tr>
     <tr><th>flex-nowrap</th><td></td></tr>
     <tr><th>flex-wrap-r</th><td></td></tr>
@@ -854,14 +852,14 @@ bottom: <span class="n">N</span>
             <div class="flex-row flex-align-start sticky-t">
                 <div class="ma mg20 bs10" v-bind:style="{width: px(width)}">
                     <div class="rel h200 fs13 blue dashed">
-                        <div v-bind:class="resulted_class" class="green p10 flex-row-center transition">
+                        <div v-bind:class="resulted_class" class="green p10 flex-row-c transition">
                             {{ resulted_class }}
                             <div v-bind:class="inner.active.orig.preview" class="w5 h5 br999 black transition"></div>
                         </div>
                         <div v-bind:class="outer.active.orig.preview" class="w10 h10 br999 border transition"></div>
                     </div>
                 </div>
-                <div class="flex-col-center p30 m30 mla mg30 dashed" style="background: rgba(0,0,0,0.1)">
+                <div class="flex-col-c p30 m30 mla mg30 dashed" style="background: rgba(0,0,0,0.1)">
                     <div class="w100 h100 green rel">
                         <button v-for="v in inner.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
                             <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>

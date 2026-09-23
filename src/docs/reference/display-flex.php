@@ -5,9 +5,8 @@
     <table>
     <tbody>
     <tr><th>flex-row</th><td><code>display: flex<br>flex-direction: row</code></td></tr>
-    <tr><th>flex-irow</th><td><code>display: inline-flex<br>flex-direction: row</code></td></tr>
+    <tr><th>iflex-row</th><td><code>display: inline-flex<br>flex-direction: row</code></td></tr>
     <tr><th>flex-row-wrap</th><td><code>@include flex-row<br>@include flex-wrap</code></td></tr>
-    <tr><th>flex-row-center</th><td><code>@include flex-row<br>@include flex-center</code></td></tr>
     <tr><th>flex-row-c</th><td></td></tr>
     <tr><th>flex-row-cl</th><td></td></tr>
     <tr><th>flex-row-cr</th><td></td></tr>
@@ -18,10 +17,9 @@
     <tr><th>flex-row-bl</th><td></td></tr>
     <tr><th>flex-row-br</th><td></td></tr>
     <tr><th>flex-row-uniform</th><td><code>@include flex-row<br>&amp; > * { flex: 1; min-width: 0 }</code></td></tr>
-    <tr><th>flex-irow-center</th><td><code>@include flex-irow<br>@include flex-center</code></td></tr>
+    <tr><th>iflex-row-c</th><td><code>@include iflex-row<br>@include flex-center</code></td></tr>
     <tr><th>flex-col</th><td><code>display: flex<br>flex-direction: col</code></td></tr>
-    <tr><th>flex-icol</th><td><code>display: inline-flex<br>flex-direction: col</code></td></tr>
-    <tr><th>flex-col-center</th><td><code>@include flex-col<br>@include flex-center</code></td></tr>
+    <tr><th>iflex-col</th><td><code>display: inline-flex<br>flex-direction: column</code></td></tr>
     <tr><th>flex-col-c</th><td></td></tr>
     <tr><th>flex-col-cl</th><td></td></tr>
     <tr><th>flex-col-cr</th><td></td></tr>
@@ -32,7 +30,7 @@
     <tr><th>flex-col-bl</th><td></td></tr>
     <tr><th>flex-col-br</th><td></td></tr>
     <tr><th>flex-col-uniform</th><td><code>@include flex-col<br>&amp; > * { flex: 1; min-height: 0 }</code></td></tr>
-    <tr><th>flex-icol-center</th><td><code>@include flex-icol<br>@include flex-center</code></td></tr>
+    <tr><th>iflex-col-c</th><td><code>@include iflex-col<br>@include flex-center</code></td></tr>
     <tr><th>flex-wrap</th><td></td></tr>
     <tr><th>flex-nowrap</th><td></td></tr>
     <tr><th>flex-wrap-r</th><td></td></tr>

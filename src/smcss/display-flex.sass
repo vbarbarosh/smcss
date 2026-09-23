@@ -17,15 +17,14 @@
 // flex-i-row and flex-row-i
 //     Unnecessary dash in names.
 //
-// iflex-row, iflex-col, iflex-row-center, iflex-col-center
+// iflex-row, iflex-col, iflex-row-c, iflex-col-c
 //     This naming looks more natural even though it requires more names.
 
 @mixin iflex-row
     display: inline-flex
     flex-direction: row
 
-// TODO Deprecated
-@mixin iflex-row-center
+@mixin iflex-row-c
     @include iflex-row
     @include flex-center
 
@@ -33,8 +32,7 @@
     display: inline-flex
     flex-direction: column
 
-// TODO Deprecated
-@mixin iflex-col-center
+@mixin iflex-col-c
     @include iflex-col
     @include flex-center
 
@@ -50,11 +48,6 @@
 @mixin flex-row-wrap
     @include flex-row
     @include flex-wrap
-
-// TODO Deprecated
-@mixin flex-row-center
-    @include flex-row
-    @include flex-center
 
 @mixin flex-row-c
     @include flex-row
@@ -150,11 +143,6 @@
 @mixin flex-col-rev
     display: flex
     flex-direction: column-reverse
-
-// TODO Deprecated
-@mixin flex-col-center
-    @include flex-col
-    @include flex-center
 
 @mixin flex-col-c
     @include flex-col

@@ -98,14 +98,14 @@
             <div class="flex-row flex-align-start sticky-t">
                 <div class="ma mg20 bs10" v-bind:style="{width: px(width)}">
                     <div class="rel h200 fs13 blue dashed">
-                        <div v-bind:class="resulted_class" class="green p10 flex-row-center transition">
+                        <div v-bind:class="resulted_class" class="green p10 flex-row-c transition">
                             {{ resulted_class }}
                             <div v-bind:class="inner.active.orig.preview" class="w5 h5 br999 black transition"></div>
                         </div>
                         <div v-bind:class="outer.active.orig.preview" class="w10 h10 br999 border transition"></div>
                     </div>
                 </div>
-                <div class="flex-col-center p30 m30 mla mg30 dashed" style="background: rgba(0,0,0,0.1)">
+                <div class="flex-col-c p30 m30 mla mg30 dashed" style="background: rgba(0,0,0,0.1)">
                     <div class="w100 h100 green rel">
                         <button v-for="v in inner.items" v-on:mouseenter="v.check" v-bind:class="[v.orig.preview]" class="xbutton p5">
                             <span v-bind:class="{red: v.is_checked}" class="db w5 h5 border br999"></span>

@@ -15,7 +15,7 @@ Copy a nearby demo and strip it down. Two ways to get the styles:
 
 * local build — `<link href="../demo.css" rel="stylesheet">`
   (`npm run build` regenerates it from `demo.sass`)
-* unpkg — as in [flex/flex-row-center-left.html](flex/flex-row-center-left.html):
+* unpkg — as in [flex/flex-row-cl.html](flex/flex-row-cl.html):
 
       <link href="https://unpkg.com/@vbarbarosh/smcss@2.0.0/dist/reset.css" rel="stylesheet">
       <link href="https://unpkg.com/@vbarbarosh/smcss@2.0.0/dist/sm.css" rel="stylesheet">
