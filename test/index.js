@@ -214,6 +214,10 @@ const table = {
     'fw7': '.foo { font-weight: 700; }',
     'fw8': '.foo { font-weight: 800; }',
     'fw9': '.foo { font-weight: 900; }',
+    'xff': '.foo { font-family: inherit; }',
+    'ff-sans': '.foo { font-family: sans-serif; }',
+    'ff-serif': '.foo { font-family: serif; }',
+    'ff-mono': '.foo { font-family: monospace; }',
 
     // hsplit
     'hsplit': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > * { flex: none; }',

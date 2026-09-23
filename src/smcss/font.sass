@@ -94,3 +94,17 @@
         font-weight: 900
     @else
         @error 'Invalid font weight [#{$weight}]'
+
+// Font family: the generic families only. A named font is the app's
+// business; smcss picks the branch of the tree, not the leaf.
+@mixin xff
+    font-family: inherit
+
+@mixin ff-sans
+    font-family: sans-serif
+
+@mixin ff-serif
+    font-family: serif
+
+@mixin ff-mono
+    font-family: monospace

@@ -23,6 +23,10 @@
     <tr><th>fw7</th><td><code>font-weight: 700</code></td></tr>
     <tr><th>fw8</th><td><code>font-weight: 800</code></td></tr>
     <tr><th>fw9</th><td><code>font-weight: 900</code></td></tr>
+    <tr><th>xff</th><td><code>font-family: inherit</code></td></tr>
+    <tr><th>ff-sans</th><td><code>font-family: sans-serif</code></td></tr>
+    <tr><th>ff-serif</th><td><code>font-family: serif</code></td></tr>
+    <tr><th>ff-mono</th><td><code>font-family: monospace</code></td></tr>
     </tbody>
     </table>
 

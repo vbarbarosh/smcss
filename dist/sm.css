@@ -858,6 +858,22 @@
   font-weight: 900;
 }
 
+.xff {
+  font-family: inherit;
+}
+
+.ff-sans {
+  font-family: sans-serif;
+}
+
+.ff-serif {
+  font-family: serif;
+}
+
+.ff-mono {
+  font-family: monospace;
+}
+
 .xborder {
   border: none;
 }

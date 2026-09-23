@@ -377,6 +377,14 @@
             @include xfw
         @else if $a2 == fw // fw8
             @include fw($b2)
+        @else if $expr == xff // xff
+            @include xff
+        @else if $expr == ff-sans // ff-sans
+            @include ff-sans
+        @else if $expr == ff-serif // ff-serif
+            @include ff-serif
+        @else if $expr == ff-mono // ff-mono
+            @include ff-mono
             // gap
         @else if $a3 == gap // gap5
             @include gap($b3)
