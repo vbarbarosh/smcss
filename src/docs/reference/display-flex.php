@@ -6,6 +6,7 @@
     <tbody>
     <tr><th>flex-row</th><td><code>display: flex<br>flex-direction: row</code></td></tr>
     <tr><th>flex-irow</th><td><code>display: inline-flex<br>flex-direction: row</code></td></tr>
+    <tr><th>flex-row-wrap</th><td><code>@include flex-row<br>@include flex-wrap</code></td></tr>
     <tr><th>flex-row-center</th><td><code>@include flex-row<br>@include flex-center</code></td></tr>
     <tr><th>flex-row-c</th><td></td></tr>
     <tr><th>flex-row-cl</th><td></td></tr>
@@ -16,6 +17,7 @@
     <tr><th>flex-row-tr</th><td></td></tr>
     <tr><th>flex-row-bl</th><td></td></tr>
     <tr><th>flex-row-br</th><td></td></tr>
+    <tr><th>flex-row-uniform</th><td><code>@include flex-row<br>&amp; > * { flex: 1; min-width: 0 }</code></td></tr>
     <tr><th>flex-irow-center</th><td><code>@include flex-irow<br>@include flex-center</code></td></tr>
     <tr><th>flex-col</th><td><code>display: flex<br>flex-direction: col</code></td></tr>
     <tr><th>flex-icol</th><td><code>display: inline-flex<br>flex-direction: col</code></td></tr>
@@ -29,6 +31,7 @@
     <tr><th>flex-col-tr</th><td></td></tr>
     <tr><th>flex-col-bl</th><td></td></tr>
     <tr><th>flex-col-br</th><td></td></tr>
+    <tr><th>flex-col-uniform</th><td><code>@include flex-col<br>&amp; > * { flex: 1; min-height: 0 }</code></td></tr>
     <tr><th>flex-icol-center</th><td><code>@include flex-icol<br>@include flex-center</code></td></tr>
     <tr><th>flex-wrap</th><td></td></tr>
     <tr><th>flex-nowrap</th><td></td></tr>
@@ -58,6 +61,7 @@ min-height: 0
 // Fix for IE10 and IE11; *flex-basis: auto* doesn't work
 -ms-flex-preferred-size: 0
 </pre></td></tr>
+    <tr><th>flex-static</th><td><code>@include flex-nogrow<br>@include flex-noshrink</code></td></tr>
     </tbody>
     </table>
 

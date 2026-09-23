@@ -133,6 +133,7 @@ const table = {
     'iflex-col-center': '.foo { display: inline-flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
     'flex-row': '.foo { display: flex; flex-direction: row; }',
     'flex-row-rev': '.foo { display: flex; flex-direction: row-reverse; }',
+    'flex-row-wrap': '.foo { display: flex; flex-direction: row; flex-wrap: wrap; }',
     'flex-row-center': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
     'flex-row-c': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center; }',
     'flex-row-cl': '.foo { display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: flex-start; }',
@@ -143,6 +144,7 @@ const table = {
     'flex-row-tr': '.foo { display: flex; flex-direction: row; align-items: flex-start; align-content: flex-start; justify-content: flex-end; }',
     'flex-row-bl': '.foo { display: flex; flex-direction: row; align-items: flex-end; align-content: flex-end; justify-content: flex-start; }',
     'flex-row-br': '.foo { display: flex; flex-direction: row; align-items: flex-end; align-content: flex-end; justify-content: flex-end; }',
+    'flex-row-uniform': '.foo { display: flex; flex-direction: row; }\n\n.foo > * { flex: 1; min-width: 0; }',
     'flex-col': '.foo { display: flex; flex-direction: column; }',
     'flex-col-rev': '.foo { display: flex; flex-direction: column-reverse; }',
     'flex-col-center': '.foo { display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }',
@@ -155,6 +157,7 @@ const table = {
     'flex-col-tr': '.foo { display: flex; flex-direction: column; align-items: flex-end; align-content: flex-end; justify-content: flex-start; }',
     'flex-col-bl': '.foo { display: flex; flex-direction: column; align-items: flex-start; align-content: flex-start; justify-content: flex-end; }',
     'flex-col-br': '.foo { display: flex; flex-direction: column; align-items: flex-end; align-content: flex-end; justify-content: flex-end; }',
+    'flex-col-uniform': '.foo { display: flex; flex-direction: column; }\n\n.foo > * { flex: 1; min-height: 0; }',
     'flex-wrap': '.foo { flex-wrap: wrap; }',
     'flex-nowrap': '.foo { flex-wrap: nowrap; }',
     'flex-wrap-rev': '.foo { flex-wrap: wrap-reverse; }',
@@ -175,6 +178,7 @@ const table = {
     'flex-shrink': '.foo { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }',
     'flex-noshrink': '.foo { flex-shrink: 0; }',
     'flex-fluid': '.foo { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
+    'flex-static': '.foo { flex-grow: 0; flex-shrink: 0; }',
 
     // float
     'xf': '.foo { float: none; }',

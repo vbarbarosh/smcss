@@ -47,6 +47,10 @@
     display: flex
     flex-direction: row-reverse
 
+@mixin flex-row-wrap
+    @include flex-row
+    @include flex-wrap
+
 // TODO Deprecated
 @mixin flex-row-center
     @include flex-row
@@ -105,6 +109,13 @@
     align-items: flex-end
     align-content: flex-end
     justify-content: flex-end
+
+// every child takes an equal share of the width, whatever its content
+@mixin flex-row-uniform
+    @include flex-row
+    & > *
+        flex: 1
+        min-width: 0
 
 // iflex-row-fluid, iflex-col-fluid, flex-row-fluid,
 // and flex-col-fluid should be removed. I read them
@@ -199,6 +210,13 @@
     align-content: flex-end
     justify-content: flex-end
 
+// every child takes an equal share of the height, whatever its content
+@mixin flex-col-uniform
+    @include flex-col
+    & > *
+        flex: 1
+        min-height: 0
+
 // wrap
 @mixin flex-wrap
     flex-wrap: wrap
@@ -282,3 +300,8 @@
     @include flex-shrink
     // Fix for IE10 and IE11; *flex-basis: auto* doesn't work
     -ms-flex-preferred-size: 0
+
+// keeps its own size: neither grows nor shrinks
+@mixin flex-static
+    @include flex-nogrow
+    @include flex-noshrink
