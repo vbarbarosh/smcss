@@ -16,6 +16,7 @@
 @use '../list' as *
 @use '../margin' as *
 @use '../margin-group' as *
+@use '../object-fit' as *
 @use '../opacity' as *
 @use '../outline' as *
 @use '../overflow' as *
@@ -430,6 +431,17 @@
             @include mi($b2)
         @else if $a1 == m and $a3 != max and $a3 != min // m5
             @include m($b1)
+            // object-fit
+        @else if $expr == fit-none // fit-none
+            @include fit-none
+        @else if $expr == fit-fill // fit-fill
+            @include fit-fill
+        @else if $expr == fit-contain // fit-contain
+            @include fit-contain
+        @else if $expr == fit-cover // fit-cover
+            @include fit-cover
+        @else if $expr == fit-scale-down // fit-scale-down
+            @include fit-scale-down
             // opacity
         @else if $expr == xo // xo
             @include xo

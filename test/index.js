@@ -225,6 +225,13 @@ const table = {
     // list
     'xls': '.foo { list-style: none; }',
 
+    // object-fit
+    'fit-none': '.foo { object-fit: none; }',
+    'fit-fill': '.foo { object-fit: fill; }',
+    'fit-contain': '.foo { object-fit: contain; }',
+    'fit-cover': '.foo { object-fit: cover; }',
+    'fit-scale-down': '.foo { object-fit: scale-down; }',
+
     // margin
     'xm': '.foo { margin: 0; }',
     'xmt': '.foo { margin-top: 0; }',

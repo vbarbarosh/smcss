@@ -56,6 +56,7 @@
                 <li><a href="#list">list</a></li>
                 <li><a href="#margin">margin</a></li>
                 <li><a href="#margin-group">margin-group</a></li>
+                <li><a href="#object-fit">object-fit</a></li>
                 <li><a href="#opacity">opacity</a></li>
                 <li><a href="#outline">outline</a></li>
                 <li><a href="#overflow">overflow</a></li>
@@ -111,6 +112,7 @@ sass -I node_modules a.sass > a.css
             <?php include 'list.php' ?>
             <?php include 'margin.php' ?>
             <?php include 'margin-group.php' ?>
+            <?php include 'object-fit.php' ?>
             <?php include 'opacity.php' ?>
             <?php include 'outline.php' ?>
             <?php include 'overflow.php' ?>
