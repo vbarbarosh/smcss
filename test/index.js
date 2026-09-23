@@ -180,6 +180,10 @@ const table = {
     'flex-fluid': '.foo { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',
     'flex-static': '.foo { flex-grow: 0; flex-shrink: 0; }',
 
+    // grid
+    'grid-left-center-right': '.foo { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; }\n\n.foo > :first-child { max-width: 100%; justify-self: start; }\n\n.foo > :last-child { max-width: 100%; justify-self: end; }',
+    'grid-left-top-bottom': '.foo { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; align-items: start; }\n\n.foo > :nth-child(1) { grid-row: 1 / span 2; margin: auto; }\n\n.foo > :nth-child(2) { align-self: end; }',
+
     // float
     'xf': '.foo { float: none; }',
     'fl': '.foo { float: left; }',

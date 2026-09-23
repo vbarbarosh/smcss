@@ -22762,6 +22762,40 @@
           flex-shrink: 0;
 }
 
+.grid-left-center-right {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.grid-left-center-right > :first-child {
+  max-width: 100%;
+  justify-self: start;
+}
+.grid-left-center-right > :last-child {
+  max-width: 100%;
+  justify-self: end;
+}
+
+.grid-left-top-bottom {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.grid-left-top-bottom > :nth-child(1) {
+  grid-row: 1/span 2;
+  margin: auto;
+}
+.grid-left-top-bottom > :nth-child(2) {
+  -webkit-align-self: end;
+      -ms-flex-item-align: end;
+          align-self: end;
+}
+
 .expand-1-1 {
   display: block;
   position: relative;

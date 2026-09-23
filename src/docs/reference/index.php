@@ -49,6 +49,7 @@
                 <li><a href="#display">display</a></li>
                 <li><a href="#display-flex">display-flex</a></li>
                 <li><a href="#display-flex-hsplit">display-flex-hsplit</a></li>
+                <li><a href="#display-grid">display-grid</a></li>
                 <li><a href="#expand">expand</a></li>
                 <li><a href="#float">float</a></li>
                 <li><a href="#list">list</a></li>
@@ -101,6 +102,7 @@ sass -I node_modules a.sass > a.css
             <?php include 'display.php' ?>
             <?php include 'display-flex.php' ?>
             <?php include 'display-flex-hsplit.php' ?>
+            <?php include 'display-grid.php' ?>
             <?php include 'expand.php' ?>
             <?php include 'float.php' ?>
             <?php include 'font.php' ?>

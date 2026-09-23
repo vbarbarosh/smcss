@@ -1,0 +1,32 @@
+// https://codepen.io/vbarbarosh/pen/yyYppzQ
+//
+// | left       |  center  |       right |
+//
+// The middle column is as wide as its content; the sides share the rest
+// and may shrink to nothing, so the center stays centered whatever the sides hold.
+@mixin grid-left-center-right
+    display: grid
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr)
+    align-items: stretch // take whole height
+    & > :first-child
+        max-width: 100%
+        justify-self: start
+    & > :last-child
+        max-width: 100%
+        justify-self: end
+
+//       | top
+//  left | ---------------
+//       | bottom
+//
+// The left cell spans both rows and is centered on the seam between them.
+@mixin grid-left-top-bottom
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-template-rows: auto auto
+    align-items: start
+    & > :nth-child(1)
+        grid-row: 1 / span 2
+        margin: auto
+    & > :nth-child(2)
+        align-self: end

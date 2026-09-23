@@ -8,6 +8,7 @@
 @use '../display' as *
 @use '../display-flex' as *
 @use '../display-flex-hsplit' as *
+@use '../display-grid' as *
 @use '../expand' as *
 @use '../float' as *
 @use '../font' as *
@@ -985,6 +986,10 @@
         @else if $a1 == z // z1
             @include z($b1)
             // grid
+        @else if $expr == grid-left-center-right // grid-left-center-right
+            @include grid-left-center-right
+        @else if $expr == grid-left-top-bottom // grid-left-top-bottom
+            @include grid-left-top-bottom
         @else if $a4 == 'grid' // grid5
             @include grid($b4)
         @else

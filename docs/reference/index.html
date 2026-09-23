@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>reference | smcss (a css for prototyping)</title>
     <link href="../app.css?t=1783157377" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1790188360" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1790188834" rel="stylesheet" />
     <script>
     document.documentElement.dataset.theme = localStorage.smcss_theme || 'light';
     function theme_toggle() {
@@ -47,6 +47,7 @@
                 <li><a href="#display">display</a></li>
                 <li><a href="#display-flex">display-flex</a></li>
                 <li><a href="#display-flex-hsplit">display-flex-hsplit</a></li>
+                <li><a href="#display-grid">display-grid</a></li>
                 <li><a href="#expand">expand</a></li>
                 <li><a href="#float">float</a></li>
                 <li><a href="#list">list</a></li>
@@ -377,6 +378,31 @@ min-height: 0
     <tbody>
     <tr><th>hsplit</th><td></td></tr>
     <tr><th>vsplit</th><td></td></tr>
+    </tbody>
+    </table>
+
+</div>
+            <div class="mg15">
+
+    <h3 id="display-grid">display-grid</h3>
+
+    <table>
+    <tbody>
+    <tr><th>grid-left-center-right</th><td><pre>
+display: grid
+grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr)
+align-items: stretch
+& > :first-child { max-width: 100%; justify-self: start }
+& > :last-child { max-width: 100%; justify-self: end }
+</pre></td></tr>
+    <tr><th>grid-left-top-bottom</th><td><pre>
+display: grid
+grid-template-columns: auto 1fr
+grid-template-rows: auto auto
+align-items: start
+& > :nth-child(1) { grid-row: 1 / span 2; margin: auto }
+& > :nth-child(2) { align-self: end }
+</pre></td></tr>
     </tbody>
     </table>
 
