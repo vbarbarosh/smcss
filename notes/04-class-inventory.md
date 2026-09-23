@@ -37,7 +37,7 @@ Authoritative sources: `test/index.js` table (semantics), `demos/sm.sass`
   `l50p`, `tlbr[N]`
 - flex: `flex-row flex-col` (+`-rev`), `iflex-*` inline variants,
   9-point alignment shorthand `flex-row-{c,cl,cr,ct,cb,tl,tr,bl,br}` (same for
-  col), `flex-align-*`, `flex-justify-*`,
+  col), `flex-align-*`, `flex-self-*`, `flex-justify-*`,
   `flex-wrap flex-nowrap flex-wrap-rev`, `flex-grow/nogrow/shrink/noshrink/fluid`
 - split: `hsplit vsplit` (nowrap flex, children `flex:none`) with child
   modifiers `fluid shrink grow`

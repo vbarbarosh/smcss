@@ -241,6 +241,23 @@
     align-items: stretch
     align-content: stretch
 
+// The item-side counterpart of flex-align-*: one child overrides the
+// cross-axis alignment its container gave it.
+@mixin flex-self-start
+    align-self: flex-start
+
+@mixin flex-self-end
+    align-self: flex-end
+
+@mixin flex-self-center
+    align-self: center
+
+@mixin flex-self-baseline
+    align-self: baseline
+
+@mixin flex-self-stretch
+    align-self: stretch
+
 // Distributes space between and around content items along
 // the main-axis of a flex container
 @mixin flex-justify-start

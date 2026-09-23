@@ -315,6 +315,16 @@
             @include flex-align-baseline
         @else if $expr == flex-align-stretch // flex-align-stretch
             @include flex-align-stretch
+        @else if $expr == flex-self-start // flex-self-start
+            @include flex-self-start
+        @else if $expr == flex-self-end // flex-self-end
+            @include flex-self-end
+        @else if $expr == flex-self-center // flex-self-center
+            @include flex-self-center
+        @else if $expr == flex-self-baseline // flex-self-baseline
+            @include flex-self-baseline
+        @else if $expr == flex-self-stretch // flex-self-stretch
+            @include flex-self-stretch
         @else if $expr == flex-justify-start // flex-justify-start
             @include flex-justify-start
         @else if $expr == flex-justify-end // flex-justify-end

@@ -40,6 +40,11 @@
     <tr><th>flex-align-center</th><td><code>align-items: center</code></td></tr>
     <tr><th>flex-align-baseline</th><td><code>align-items: baseline</code></td></tr>
     <tr><th>flex-align-stretch</th><td><code>align-items: stretch</code></td></tr>
+    <tr><th>flex-self-start</th><td><code>align-self: flex-start</code></td></tr>
+    <tr><th>flex-self-end</th><td><code>align-self: flex-end</code></td></tr>
+    <tr><th>flex-self-center</th><td><code>align-self: center</code></td></tr>
+    <tr><th>flex-self-baseline</th><td><code>align-self: baseline</code></td></tr>
+    <tr><th>flex-self-stretch</th><td><code>align-self: stretch</code></td></tr>
     <tr><th>flex-justify-start</th><td><code>justify-content: flex-start</code></td></tr>
     <tr><th>flex-justify-end</th><td><code>justify-content: flex-end</code></td></tr>
     <tr><th>flex-justify-center</th><td><code>justify-content: center</code></td></tr>
