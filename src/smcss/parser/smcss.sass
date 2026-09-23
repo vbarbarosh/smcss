@@ -162,6 +162,10 @@
             @include cur-e-resize
         @else if $expr == cur-ew-resize // cur-ew-resize
             @include cur-ew-resize
+        @else if $expr == cur-grab // cur-grab
+            @include cur-grab
+        @else if $expr == cur-grabbing // cur-grabbing
+            @include cur-grabbing
         @else if $expr == cur-help // cur-help
             @include cur-help
         @else if $expr == cur-inherit // cur-inherit

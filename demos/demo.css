@@ -22080,6 +22080,16 @@
   cursor: ew-resize;
 }
 
+.cur-grab {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.cur-grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
 .cur-help {
   cursor: help;
 }

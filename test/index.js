@@ -85,6 +85,8 @@ const table = {
     'cur-default': '.foo { cursor: default; }',
     'cur-e-resize': '.foo { cursor: e-resize; }',
     'cur-ew-resize': '.foo { cursor: ew-resize; }',
+    'cur-grab': '.foo { cursor: grab; }',
+    'cur-grabbing': '.foo { cursor: grabbing; }',
     'cur-help': '.foo { cursor: help; }',
     'cur-inherit': '.foo { cursor: inherit; }',
     'cur-initial': '.foo { cursor: initial; }',

@@ -16,6 +16,8 @@
         <tr><th>cur-default</th><td><code>cursor: default</code></td></tr>
         <tr><th>cur-e-resize</th><td><code>cursor: e-resize</code></td></tr>
         <tr><th>cur-ew-resize</th><td><code>cursor: ew-resize</code></td></tr>
+        <tr><th>cur-grab</th><td><code>cursor: grab</code></td></tr>
+        <tr><th>cur-grabbing</th><td><code>cursor: grabbing</code></td></tr>
         <tr><th>cur-help</th><td><code>cursor: help</code></td></tr>
         <tr><th>cur-inherit</th><td><code>cursor: inherit</code></td></tr>
         <tr><th>cur-initial</th><td><code>cursor: initial</code></td></tr>
