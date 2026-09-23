@@ -822,6 +822,14 @@
   font-weight: normal;
 }
 
+.fw1 {
+  font-weight: 100;
+}
+
+.fw2 {
+  font-weight: 200;
+}
+
 .fw3 {
   font-weight: 300;
 }
@@ -844,6 +852,10 @@
 
 .fw8 {
   font-weight: 800;
+}
+
+.fw9 {
+  font-weight: 900;
 }
 
 .xborder {

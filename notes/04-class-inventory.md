@@ -13,7 +13,7 @@ Authoritative sources: `test/index.js` table (semantics), `demos/sm.sass`
 - decoration: `x u o s` (none/underline/overline/line-through);
   transform: `xx uc lc cc`; wrap: `nowrap`
 - ellipsis: `ellipsis` (1 line), `ellipsis2`, `ellipsis3` (line-clamp)
-- font: `fsN` (px, 1–30 + 36/48/60/72), `xfs`, `fw3..fw9`, `xfw`, `b n i q ii`
+- font: `fsN` (px, 1–30 + 36/48/60/72), `xfs`, `fw1..fw9`, `xfw`, `b n i q ii`
   (weight/style), `lhN` (px 0–100), `lhNNm` (em/10, 10–50), `lsN`
 
 ## Box model

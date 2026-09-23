@@ -56,6 +56,8 @@
 //
 // http://www.google.com/webfonts/specimen/Open+Sans
 // http://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
+// Thin 100
+// Extra-Light 200
 // Book 300
 // Normal 400
 // Semi-Bold 600
@@ -72,7 +74,11 @@
 
 @mixin fw($weight)
     $weight: to-number($weight)
-    @if $weight == 3
+    @if $weight == 1
+        font-weight: 100
+    @else if $weight == 2
+        font-weight: 200
+    @else if $weight == 3
         font-weight: 300
     @else if $weight == 4
         font-weight: 400

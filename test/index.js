@@ -205,6 +205,8 @@ const table = {
     'ii': '.foo { font-style: inherit; }',
     'b': '.foo { font-weight: bold; }',
     'xfw': '.foo { font-weight: normal; }',
+    'fw1': '.foo { font-weight: 100; }',
+    'fw2': '.foo { font-weight: 200; }',
     'fw3': '.foo { font-weight: 300; }',
     'fw4': '.foo { font-weight: 400; }',
     'fw5': '.foo { font-weight: 500; }',

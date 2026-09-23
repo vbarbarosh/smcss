@@ -14,6 +14,8 @@
     <tr><th>ii</th><td><code>font-style: inherit</code></td></tr>
     <tr><th>b</th><td><code>font-weight: bold</code></td></tr>
     <tr><th>xfw</th><td><code>font-weight: normal</code></td></tr>
+    <tr><th>fw1</th><td><code>font-weight: 100</code></td></tr>
+    <tr><th>fw2</th><td><code>font-weight: 200</code></td></tr>
     <tr><th>fw3</th><td><code>font-weight: 300</code></td></tr>
     <tr><th>fw4</th><td><code>font-weight: 400</code></td></tr>
     <tr><th>fw5</th><td><code>font-weight: 500</code></td></tr>
