@@ -6,6 +6,7 @@
     <tbody>
     <tr><th>ww</th><td><pre>width: 100%</pre></td></tr>
     <tr><th>hh</th><td><pre>height: 100%</pre></td></tr>
+    <tr><th>max-content</th><td><pre>width: max-content</pre></td></tr>
     <tr><th>w<span class="n">N</span></th><td><pre>width: <span class="n">N</span></pre></td></tr>
     <tr><th>h<span class="n">N</span></th><td><pre>height: <span class="n">N</span></pre></td></tr>
     <tr><th>min-w<span class="n">N</span></th><td><pre>min-width: <span class="n">N</span></pre></td></tr>

@@ -8,6 +8,10 @@
 @mixin h($size)
     @include eval-size(height, $size)
 
+// As wide as the content would be with no wrapping at all.
+@mixin max-content
+    width: max-content
+
 // maxAAAxBBB is included
 @mixin min($width: 100%, $height: $width)
     @include eval-size(min-width, $width)

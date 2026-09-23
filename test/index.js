@@ -516,6 +516,7 @@ const table = {
     'ha': '.foo { height: auto; }',
     'ww': '.foo { width: 100%; }',
     'hh': '.foo { height: 100%; }',
+    'max-content': '.foo { width: max-content; }',
     'w50p': '.foo { width: 50%; }',
     'w200': '.foo { width: 200px; }',
     'h200': '.foo { height: 200px; }',

@@ -1568,6 +1568,12 @@
   width: 100%;
 }
 
+.max-content {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .ha {
   height: auto;
 }

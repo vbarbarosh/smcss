@@ -21,7 +21,7 @@ Authoritative sources: `test/index.js` table (semantics), `demos/sm.sass`
 - padding: same grammar with `p`, `pa`, resets `xp xpt…`
 - **groups**: `mgN` (child margin-bottom), `miN` (child margin-right),
   `pgN`/`piN` padding analogs — gap between immediate children
-- sizing: `wN hN` (0–1200px), `wNp hNp` (%), `wa ww ha hh`,
+- sizing: `wN hN` (0–1200px), `wNp hNp` (%), `wa ww ha hh`, `max-content`,
   `min/max`, `minN maxN`, `minAxB maxAxB`, `min-wN max-wN min-hN max-hN`
   (0–500), `bbox cbox`
 - border: `border dashed` (1px currentColor), directional removals

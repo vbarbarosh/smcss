@@ -912,6 +912,8 @@
             @include w($b1)
         @else if $a1 == h and $expr != hflip // ha, hh, h200
             @include h($b1)
+        @else if $expr == max-content // max-content
+            @include max-content
         @else if $expr == max-w // max-w
             @include max-w
         @else if $expr == min-w // min-w
