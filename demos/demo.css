@@ -33585,6 +33585,7 @@
   overflow: scroll;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .no-scrollbars::-webkit-scrollbar {
   display: none;

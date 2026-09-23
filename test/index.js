@@ -509,7 +509,7 @@ const table = {
     'resize-v': '.foo { resize: vertical; }',
 
     // scrollbar
-    'no-scrollbars': '.foo { overflow: scroll; overflow: -moz-scrollbars-none; -ms-overflow-style: none; }\n\n.foo::-webkit-scrollbar { display: none; }',
+    'no-scrollbars': '.foo { overflow: scroll; overflow: -moz-scrollbars-none; -ms-overflow-style: none; scrollbar-width: none; }\n\n.foo::-webkit-scrollbar { display: none; }',
 
     // shadow
     'xbs': '.foo { box-shadow: none; }',

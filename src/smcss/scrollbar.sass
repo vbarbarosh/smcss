@@ -1,6 +1,9 @@
+// Firefox 64+ and Chrome 121+ read scrollbar-width; the other three lines
+// cover the engines before them (-moz-scrollbars-none died in Firefox 64).
 @mixin no-scrollbars
     overflow: scroll
     overflow: -moz-scrollbars-none
     -ms-overflow-style: none
+    scrollbar-width: none
     &::-webkit-scrollbar
         display: none
