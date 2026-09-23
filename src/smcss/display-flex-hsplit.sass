@@ -70,6 +70,37 @@
         // > equivalent to setting "flex: 0 0 auto".
         flex: none
 
+// Every child gets an even share. Once any child carries .fluid the others
+// snap back to flex: none and only the .fluid ones share the space, so the
+// container degrades to a plain hsplit the moment one child is marked.
+@mixin hsplit-uniform
+    @include flex-row
+    @include flex-nowrap
+    & > *
+        flex: 1 1 0
+        min-width: 0
+        min-height: 0
+    &:has(> .fluid) > *
+        flex: none
+    &:has(> .fluid) > .fluid
+        flex: 1 1 0
+        min-width: 0
+        min-height: 0
+
+@mixin vsplit-uniform
+    @include flex-col
+    @include flex-nowrap
+    & > *
+        flex: 1 1 0
+        min-width: 0
+        min-height: 0
+    &:has(> .fluid) > *
+        flex: none
+    &:has(> .fluid) > .fluid
+        flex: 1 1 0
+        min-width: 0
+        min-height: 0
+
 @mixin shrink
     @include flex-shrink
 

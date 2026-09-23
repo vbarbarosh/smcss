@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>reference | smcss (a css for prototyping)</title>
     <link href="../app.css?t=1783157377" rel="stylesheet" />
-    <link href="../demos/demo.css?t=1790188834" rel="stylesheet" />
+    <link href="../demos/demo.css?t=1790188962" rel="stylesheet" />
     <script>
     document.documentElement.dataset.theme = localStorage.smcss_theme || 'light';
     function theme_toggle() {
@@ -378,6 +378,18 @@ min-height: 0
     <tbody>
     <tr><th>hsplit</th><td></td></tr>
     <tr><th>vsplit</th><td></td></tr>
+    <tr><th>hsplit-uniform</th><td><pre>
+@include hsplit
+& > * { flex: 1 1 0; min-width: 0; min-height: 0 }
+&:has(> .fluid) > * { flex: none }
+&:has(> .fluid) > .fluid { flex: 1 1 0; min-width: 0; min-height: 0 }
+</pre></td></tr>
+    <tr><th>vsplit-uniform</th><td><pre>
+@include vsplit
+& > * { flex: 1 1 0; min-width: 0; min-height: 0 }
+&:has(> .fluid) > * { flex: none }
+&:has(> .fluid) > .fluid { flex: 1 1 0; min-width: 0; min-height: 0 }
+</pre></td></tr>
     </tbody>
     </table>
 

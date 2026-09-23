@@ -218,6 +218,8 @@ const table = {
     // hsplit
     'hsplit': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > * { flex: none; }',
     'vsplit': '.foo { display: flex; flex-direction: column; flex-wrap: nowrap; }\n\n.foo > * { flex: none; }',
+    'hsplit-uniform': '.foo { display: flex; flex-direction: row; flex-wrap: nowrap; }\n\n.foo > * { flex: 1 1 0; min-width: 0; min-height: 0; }\n\n.foo:has(> .fluid) > * { flex: none; }\n\n.foo:has(> .fluid) > .fluid { flex: 1 1 0; min-width: 0; min-height: 0; }',
+    'vsplit-uniform': '.foo { display: flex; flex-direction: column; flex-wrap: nowrap; }\n\n.foo > * { flex: 1 1 0; min-width: 0; min-height: 0; }\n\n.foo:has(> .fluid) > * { flex: none; }\n\n.foo:has(> .fluid) > .fluid { flex: 1 1 0; min-width: 0; min-height: 0; }',
     'shrink': '.foo { flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; }',
     'grow': '.foo { flex-grow: 1; }',
     'fluid': '.foo { flex-grow: 1; flex-shrink: 1; flex-basis: auto; min-width: 0; min-height: 0; -ms-flex-preferred-size: 0; }',

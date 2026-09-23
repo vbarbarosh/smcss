@@ -384,6 +384,10 @@
             @include hsplit
         @else if $expr == vsplit // vsplit
             @include vsplit
+        @else if $expr == hsplit-uniform // hsplit-uniform
+            @include hsplit-uniform
+        @else if $expr == vsplit-uniform // vsplit-uniform
+            @include vsplit-uniform
         @else if $expr == shrink // shrink
             @include shrink
         @else if $expr == grow // grow
