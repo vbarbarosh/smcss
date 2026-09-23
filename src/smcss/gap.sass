@@ -1,0 +1,6 @@
+@use 'parser/eval-size' as *
+
+// Space between the children of a flex or grid container. A block container
+// gets mgN/miN instead; the two never sit on the same element.
+@mixin gap($size)
+    @include eval-size(gap, $size)

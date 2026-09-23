@@ -52,6 +52,7 @@
                 <li><a href="#display-grid">display-grid</a></li>
                 <li><a href="#expand">expand</a></li>
                 <li><a href="#float">float</a></li>
+                <li><a href="#gap">gap</a></li>
                 <li><a href="#list">list</a></li>
                 <li><a href="#margin">margin</a></li>
                 <li><a href="#margin-group">margin-group</a></li>
@@ -106,6 +107,7 @@ sass -I node_modules a.sass > a.css
             <?php include 'expand.php' ?>
             <?php include 'float.php' ?>
             <?php include 'font.php' ?>
+            <?php include 'gap.php' ?>
             <?php include 'list.php' ?>
             <?php include 'margin.php' ?>
             <?php include 'margin-group.php' ?>

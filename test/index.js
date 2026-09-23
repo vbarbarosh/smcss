@@ -250,6 +250,10 @@ const table = {
     'mg5': '.foo > :not(:last-child) { margin-bottom: 5px; }',
     'mi5': '.foo > :not(:last-child) { margin-right: 5px; }',
 
+    // gap
+    'gap0': '.foo { gap: 0; }',
+    'gap5': '.foo { gap: 5px; }',
+
     // opacity
     'xo': '.foo { opacity: 1; }',
     'o25': '.foo { opacity: 0.25; }',

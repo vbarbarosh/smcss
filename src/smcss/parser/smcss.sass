@@ -12,6 +12,7 @@
 @use '../expand' as *
 @use '../float' as *
 @use '../font' as *
+@use '../gap' as *
 @use '../list' as *
 @use '../margin' as *
 @use '../margin-group' as *
@@ -379,6 +380,9 @@
             @include xfw
         @else if $a2 == fw // fw8
             @include fw($b2)
+            // gap
+        @else if $a3 == gap // gap5
+            @include gap($b3)
             // hsplit
         @else if $expr == hsplit // hsplit
             @include hsplit

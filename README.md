@@ -75,6 +75,14 @@ last one. `mgN` is for blocks (margin-bottom), `miN` is for inline rows
         <button>Cancel</button>
     </div>
 
+A flex or grid container can use `gapN` instead — the CSS `gap` property,
+which also spaces wrapped rows.
+
+    <div class="flex-row flex-wrap gap10">
+        <button>Save</button>
+        <button>Cancel</button>
+    </div>
+
 ### Centering
 
     <!-- center a fixed-size box inside the nearest positioned ancestor -->
