@@ -14,7 +14,7 @@
     @else if string.slice($size, -1) == p // w50p
         #{$prop}: to-number(string.slice($size, 1, -2)) * 1%
     @else if string.slice($size, -1) == n // mt10n
-        #{$prop}: to-number(string.insert(string.slice($size, 1, -2), '', -1)) * -1px
+        #{$prop}: 0px - to-number(string.insert(string.slice($size, 1, -2), '', -1)) * 1px
     @else if $size == '0'
         #{$prop}: 0
     @else if string.slice($size, -1) == 'm' // lh10m

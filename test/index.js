@@ -616,6 +616,12 @@ describe('smcss', function () {
         });
     }
 
+    // sass 1.104 writes negative zero as `-0px`; csso hides it from the table above
+    it('t0n is 0px, not -0px', async function () {
+        const css = sass.compileString('@use "../src/smcss/parser/smcss" as *;\n.foo{@include smcss(t0n);}', {loadPaths: [__dirname]}).css;
+        assert.strictEqual(css, '.foo {\n  top: 0px;\n}');
+    });
+
 });
 
 describe('sync', function () {
