@@ -2,6 +2,8 @@
 
 Conventions for working on this repo. See also the `## Development` section
 in [README.md](README.md) for the build/test/release scripts.
+[RULES.md](RULES.md) is the imported vbarbarosh/rules index, the rules
+every project follows; this file adds what is particular to smcss.
 
 ## Sass
 
