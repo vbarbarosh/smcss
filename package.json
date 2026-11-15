@@ -46,15 +46,15 @@
     "version": "bin/sync-version"
   },
   "devDependencies": {
-    "@vbarbarosh/node-helpers": "^3.78.1",
-    "autoprefixer": "^10.6.1",
+    "@vbarbarosh/node-helpers": "^3.80.1",
+    "autoprefixer": "^10.6.2",
     "csso": "^5.0.5",
     "csso-cli": "^4.0.2",
     "mocha": "^12.0.3",
-    "postcss": "^8.5.29",
+    "postcss": "^8.5.33",
     "postcss-cli": "^12.0.0",
-    "puppeteer": "^25.13.0",
-    "sass": "^1.105.1",
-    "sass-migrator": "^2.6.1"
+    "puppeteer": "^25.17.0",
+    "sass": "^1.108.2",
+    "sass-migrator": "^2.7.0"
   }
 }
