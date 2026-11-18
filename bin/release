@@ -24,9 +24,9 @@ if test -n "`git status -s`"; then
     exit 1
 fi
 
-# One branch: work and releases both go to main
-if test "`git branch --show-current`" != main; then
-    echo error: releases are made from main only >&2
+# One branch: work and releases both go to master
+if test "`git branch --show-current`" != master; then
+    echo error: releases are made from master only >&2
     exit 1
 fi
 

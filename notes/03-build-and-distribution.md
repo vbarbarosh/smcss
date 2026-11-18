@@ -21,7 +21,7 @@ bin/build       wrapper around npm run build
 bin/test        wrapper around npm test
 bin/configure   npm install
 bin/update-docs bin/build → regenerate docs/ from src/docs/*.php (needs PHP)
-bin/release     major|minor|patch, on main with a clean tree: test → npm version --no-git-tag-version →
+bin/release     major|minor|patch, on master with a clean tree: test → npm version --no-git-tag-version →
                 update-docs → git add README.md package.json package-lock.json docs demos dist img →
                 commit "release vX.Y.Z" → tag → push → push --tags; the pushed tag runs
                 .github/workflows/npm-publish.yml: checks → npm publish → docs to GitHub Pages
