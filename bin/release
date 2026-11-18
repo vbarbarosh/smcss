@@ -19,21 +19,35 @@ major|minor|patch)
     ;;
 esac
 
+if test -n "`git status -s`"; then
+    echo error: there are uncommitted changes >&2
+    exit 1
+fi
+
+# One branch: work and releases both go to main
+if test "`git branch --show-current`" != main; then
+    echo error: releases are made from main only >&2
+    exit 1
+fi
+
 # Run tests before each release
 bin/test
 
-# Increase a version without commiting it and making a tag
+# Increase a version without committing it and making a tag
 npm version $1 --no-git-tag-version
 
-# Rebuild docs
+# Rebuild dist/, demos/demo.css, the cover and docs/
 bin/update-docs
 
+version=$(node -e 'console.log(require("./package.json").version)')
+
 git add README.md package.json package-lock.json docs demos dist img
-git commit -m "release v$(node -e 'console.log(require("./package.json").version)')"
+git commit -m "release v$version"
 
 # Create a tag
-git tag v$(node -e 'console.log(require("./package.json").version)')
+git tag v$version
 
+# Submit changes to github; pushing the v* tag triggers the npm-publish
+# workflow, which runs the checks and publishes the package on npm
 git push
 git push --tags
-npm publish

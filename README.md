@@ -109,7 +109,7 @@ which also spaces wrapped rows.
     $ bin/test        # mocha test suite
     $ bin/build       # rebuild dist/ and demos/demo.css
     $ bin/update-docs # regenerate docs/ (requires php)
-    $ bin/release     # major|minor|patch — test, bump, rebuild, publish
+    $ bin/release     # major|minor|patch — test, bump, rebuild, tag; CI publishes the tag
 
 ## Interesting Projects
 

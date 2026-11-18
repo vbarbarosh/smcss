@@ -1,0 +1,71 @@
+# Publishes the package and its documentation when a release tag is pushed
+# (bin/release creates and pushes the tag).
+#
+# Authenticates via npm Trusted Publishing (OIDC) — no token/secret involved.
+# The trusted publisher is configured in the package settings on npmjs.com:
+# GitHub Actions, vbarbarosh/smcss, workflow npm-publish.yml.
+#
+# GitHub Pages must use "GitHub Actions" as its publishing source.
+
+name: npm publish and docs
+
+on:
+  push:
+    tags: [ "v*" ]
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write # npm Trusted Publishing (OIDC)
+
+    steps:
+    - uses: actions/checkout@v7
+    - uses: actions/setup-node@v7
+      with:
+        node-version: 22.x
+        cache: 'npm'
+        registry-url: 'https://registry.npmjs.org'
+    # Trusted Publishing requires npm >= 11.5.1; node 22 bundles npm 10
+    - run: npm install -g npm@latest
+    - run: npm ci
+    - name: Check tag matches package version
+      run: test "$GITHUB_REF_NAME" = "v$(node -p "require('./package.json').version")"
+    - run: npm run build
+    - name: Check committed dist and demos/demo.css are up to date with src
+      run: |
+        git add -A dist demos/demo.css
+        git diff --cached --exit-code -- dist demos/demo.css
+    - run: npm test
+    - run: npm publish --access public
+    - name: Upload GitHub Pages artifact
+      uses: actions/upload-pages-artifact@v5
+      with:
+        path: docs
+
+  deploy-docs:
+
+    needs: publish
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v6
+    - name: Deploy release documentation
+      id: deployment
+      uses: actions/deploy-pages@v5
