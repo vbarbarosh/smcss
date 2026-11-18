@@ -56,5 +56,11 @@
     "puppeteer": "^25.17.0",
     "sass": "^1.108.2",
     "sass-migrator": "^2.7.0"
+  },
+  "allowScripts": {
+    "puppeteer": true,
+    "@parcel/watcher": false,
+    "cpu-features": false,
+    "ssh2": false
   }
 }
