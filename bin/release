@@ -30,9 +30,6 @@ if test "`git branch --show-current`" != master; then
     exit 1
 fi
 
-# Run tests before each release
-bin/test
-
 # Increase a version without committing it and making a tag
 npm version $1 --no-git-tag-version
 

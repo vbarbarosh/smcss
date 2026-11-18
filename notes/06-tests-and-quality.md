@@ -17,8 +17,8 @@ A single golden table: `token → expected CSS`. Each entry compiles
 
 with dart-sass (legacy `sass.render`, bluebird-wrapped), minifies both actual
 and expected with **csso**, and compares strings. 467 table entries (recounted
-2026-07-13; an earlier draft said ~530). `bin/release`
-refuses to publish unless tests pass.
+2026-07-13; an earlier draft said ~530). A release tag
+is published only after its CI run passes the tests.
 
 Strengths:
 - Tests the *parser path* (token dispatch), not just the mixins.
